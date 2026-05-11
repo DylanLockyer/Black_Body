@@ -1,0 +1,428 @@
+
+**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source BLACK BODY SIM
+R_R1         N00322 N00300  10 TC=0,0 
+V_V1         N00264 0 25VDC
+
+R_R2         N00264 N00300  0.02 TC=0,0 
+X_U1         N00264 N00300 0 N02383 INA183A1
+V_V2         N03570 0 DC 0 AC 0
++PULSE 0 5 1n 1n 1n 1m 10m
+X_X1         N00322 N03570 0 CSD17527Q5A
+
+**** RESUMING Sim.cir ****
+.END
+
+INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
+
+**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.DBD        X_X1.DDx        X_X1.DD         
+  T_Measured   27              27              27            
+   T_Current   27              27              27            
+          IS    1.000000E-12    1.000000E-12  100.000000E-15 
+           N    1.01                                         
+          BV   33                              31            
+          RS    2.900000E-03     .1             1            
+          TT    2.000000E-09                                 
+         CJO    1.202000E-09   25.000000E-12  130.000000E-12 
+          VJ     .9              .45             .55         
+           M     .54             .8              .82         
+         XTI    3.5                                          
+        TRS1    4.200000E-03                                 
+
+
+**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.NMOS       X_X1.PMOSd      
+               NMOS            PMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .7             -.9          
+          KP   62.784430E-06   62.784430E-06 
+       GAMMA    0               4            
+         PHI                     .98105      
+      LAMBDA    0               0            
+          IS    1.000000E-15   60.000000E-15 
+          JS    0               0            
+          PB    1                .8          
+        PBSW    1                .8          
+          CJ    1.000000E-18    1.000000E-18 
+        CJSW    1.000000E-18    1.000000E-18 
+        CGSO  199.000000E-12    1.000000E-18 
+        CGDO   24.000000E-12    1.000000E-18 
+        CGBO    0               1.000000E-18 
+        NSUB   10.000000E+15    2.500000E+18 
+         TOX   33.000000E-09   33.000000E-09 
+          XJ  300.000000E-09    0            
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .025                        
+      DIOMOD    2               1            
+         VFB   -1               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0     .067           0            
+        TEMP                    0            
+         VDD                    5            
+       XPART    0               0            
+         NLX  178.000000E-09                 
+          UA    1.100000E-09                 
+          UB    1.500000E-18                 
+          UC  -46.500000E-12                 
+        VSAT   80.000000E+03                 
+        RDSW    0                            
+        VOFF    -.16                         
+     NFACTOR    1.9                          
+      PDIBL1    1.000000E-03                 
+      PDIBL2     .015                        
+       DROUT     .7                          
+      PSCBE1  600.000000E+06                 
+      PSCBE2   10.000000E-09                 
+          A0    1.1                          
+          A1    0                            
+          A2     .85                         
+       NPEAK  125.300000E+15                 
+         VBM   -5                            
+         LDD    0                            
+        LITL  172.336900E-09                 
+         KT1    -.81                         
+         UA1  900.000000E-12                 
+         UB1 -500.000000E-21                 
+         UC1  -56.000000E-12                 
+        PVAG     .08                         
+        ETA0     .045                        
+        KT1L    1.000000E-15                 
+        DSUB    1                            
+      MOBMOD    1                            
+        PRWG    0                            
+        LINT   45.000000E-09                 
+         DLC   45.000000E-09                 
+         DWC    0                            
+          CF    0                            
+        NOIA  100.000000E+18                 
+        NOIB   50.000000E+03                 
+        NOIC   -1.400000E-12                 
+         VTM     .025864                     
+     VERSION    3.2                          
+       PBSWG    1                            
+       MJSWG     .33                         
+       CJSWG    1.000000E-18                 
+       JTSCD    0                            
+        TOXM   33.000000E-09                 
+         LLC    0                            
+         LWC    0                            
+        LWLC    0                            
+         WLC    0                            
+         WWC    0                            
+        WWLC    0                            
+
+
+**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.R_NOISELESS                X_X1.RTEMP      
+  T_Measured   27                            
+   T_Current -273.15                         
+           R    1                               1            
+         TC1    3.750000E-03 
+         TC2    6.500000E-06 
+
+
+               X_U1.X_PZ1_14.R_NOISELESS 
+  T_Measured   27            
+   T_Current -273.15         
+           R    1            
+
+
+               X_U1.X_PZ1_22.R_NOISELESS 
+  T_Measured   27            
+   T_Current -273.15         
+           R    1            
+
+
+               X_U1.X_U10.R_NOISELESS 
+  T_Measured   27            
+   T_Current -273.15         
+           R    1            
+
+
+               X_U1.X_U3.R_NOISELESS 
+  T_Measured   27            
+   T_Current -273.15         
+           R    1            
+
+
+               X_U1.X_U30.R_NOISELESS 
+  T_Measured   27            
+   T_Current -273.15         
+           R    1            
+
+
+               X_U1.X_U4.R_NOISELESS 
+  T_Measured   27            
+   T_Current -273.15         
+           R    1            
+
+
+               X_U1.X_U75.R_NOISELESS 
+  T_Measured   27            
+   T_Current -273.15         
+           R    1            
+
+
+               X_U1.X_U75.R_DRIFT 
+           R    1            
+         TC1 -500.000000E-06 
+
+
+               X_U1.X_U76.R_NOISELESS 
+  T_Measured   27            
+   T_Current -273.15         
+           R    1            
+
+
+               X_U1.X_U76.R_DRIFT 
+           R    1            
+         TC1 -500.000000E-06 
+
+
+               X_U1.X_U9.R_NOISELESS 
+  T_Measured   27            
+   T_Current -273.15         
+           R    1            
+
+
+               X_U1.X_ZOUT_DC_SUB4.R_NOISELESS 
+  T_Measured   27            
+   T_Current -273.15         
+           R    1            
+
+
+               X_U1.X_ZP1LIM8.R_NOISELESS 
+  T_Measured   27            
+   T_Current -273.15         
+           R    1            
+
+
+**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.X_U77.ESD_SW 
+         RON  100            
+        ROFF    1.000000E+12 
+         VON   28.2          
+        VOFF   28            
+
+
+**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00264)   25.0000 (N00300)   25.0000 (N00322)   25.0000 (N02383)     .0120     
+
+(N03570)    0.0000 (X_X1.4)   25.0000 (X_X1.5)    0.0000 (X_X1.6)-207.4E-27     
+
+(X_X1.7)   25.0000 (X_X1.8) 1.611E-12 (X_X1.9) 1.615E-12 (X_X1.10)   25.0000    
+
+(X_X1.11)    0.0000                   (X_X1.12) 1.680E-12                       
+
+(X_X1.13) 1.611E-12                   (X_X1.14)     .1427                       
+
+(X_X1.20)    8.6259                   (X_U1.ACL)     .0120                      
+
+(X_U1.CMR) 99.53E-06                  (X_U1.VICM)   25.0000                     
+
+(X_U1.VS_B)   25.0000                 (X_U1.AOL_1)    -.0341                    
+
+(X_U1.CLAMP)  -36.0000                (X_U1.VIMON)    0.0000                    
+
+(X_U1.N05102)   24.5090               (X_U1.N35025)    0.0000                   
+
+(X_U1.N35669)   24.9500               (X_U1.N35813)   24.9500                   
+
+(X_U1.N38050)     .0480               (X_U1.N38096)     .0480                   
+
+(X_U1.N42663)    0.0000               (X_U1.N42834)    0.0000                   
+
+(X_U1.N44757)     .0360               (X_U1.N44799)     .0360                   
+
+(X_U1.N45856)    0.0000               (X_U1.N45892)    0.0000                   
+
+(X_U1.N45974)    0.0000               (X_U1.N45986)    0.0000                   
+
+(X_U1.N48550)  -12.0000               (X_U1.N50645)   15.0000                   
+
+(X_U1.VOUT_S)     .0120               (X_U1.VSENSE)  -36.0000                   
+
+(X_U1.VS_CLP)   24.9500               (X_U1.X_U3.2) 398.1E-12                   
+
+(X_U1.X_U4.2) 2.289E-06               (X_U1.GND_CLP)     .0480                  
+
+(X_U1.N110431)    0.0000              (X_U1.N112292)     .0120                  
+
+(X_U1.N516723)     .0120              (X_U1.N747447)  -25.0000                  
+
+(X_U1.N816482)   24.9990              (X_U1.N816536)   24.9990                  
+
+(X_U1.N819486)   24.9990              (X_U1.N819524)   24.9990                  
+
+(X_U1.N825687)   25.0000              (X_U1.N827996)   25.0000                  
+
+(X_U1.N853781)    0.0000              (X_U1.N853823)    0.0000                  
+
+(X_U1.N853899) 305.1E-06              (X_U1.N853917) 305.1E-06                  
+
+(X_U1.N854005)  -36.0000              (X_U1.N854059)   38.4000                  
+
+(X_U1.N854203)  -36.0000              (X_U1.N986744)   25.0000                  
+
+(X_U1.N988109)   25.0000              (X_U1.VCM_MAX)   26.5000                  
+
+(X_U1.VCM_MIN)    2.5500              (X_U1.X_U75.3)   24.0170                  
+
+(X_U1.X_U76.3)   24.0180              (X_U1.CL_CLAMP)     .0115                 
+
+(X_U1.N1304807)  -36.0000             (X_U1.N1436452)   25.0000                 
+
+(X_U1.N1604384)  -36.0000             (X_U1.N2116017)     .1319                 
+
+(X_U1.N2116025)     .1319             (X_U1.N2116031)     .1319                 
+
+(X_U1.N2116213)     .1319             (X_U1.N2127928)   25.0000                 
+
+(X_U1.N2144761)   24.5080             (X_U1.N2148559) 99.53E-06                 
+
+(X_U1.N2148565) 99.53E-06             (X_U1.N2159098)   25.0000                 
+
+(X_U1.CLAW_CLAMP)     .0115           (X_U1.X_PZ1_14.2)     .1319               
+
+(X_U1.X_PZ1_14.3)     .1319           (X_U1.X_PZ1_22.2)     .1319               
+
+(X_U1.X_PZ1_22.3)     .1319           (X_U1.X_VNOISE.5)    0.0000               
+
+(X_U1.X_ZP1LIM8.2) 131.9E-06          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.965E-04
+    V_V2         2.496E-11
+    X_U1.V_VCM_MAX  -2.650E-08
+    X_U1.V_VCM_MIN  -2.550E-09
+    X_U1.V_V_GRN   3.600E-08
+    X_U1.V_V_GRP  -3.840E-08
+    X_U1.V_V_ISCN   1.200E-08
+    X_U1.V_V_ISCP  -1.500E-08
+    X_U1.X_H3.VH_H3   0.000E+00
+
+    TOTAL POWER DISSIPATION   4.92E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .24
+

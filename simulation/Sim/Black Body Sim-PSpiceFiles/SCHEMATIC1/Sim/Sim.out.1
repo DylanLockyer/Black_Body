@@ -1,0 +1,50 @@
+
+**** 05/11/26 10:21:19 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source BLACK BODY SIM
+R_R1         N00322 N00300  10 TC=0,0 
+V_V1         N00264 0 25VDC
+
+R_R2         N00264 N00300  0.02 TC=0,0 
+M_M1         0 N01561 N00322 N00322 MbreakN           
+V_V2         N01561 0 5V
+X_U1         N00264 N00300 0 N02383 INA183A1
+C_C2         N00264 0  100n
+100n         TC=0,0 
+$
+ERROR(ORPSIM-16316): Invalid device
+
+**** RESUMING Sim.cir ****
+.END
+

@@ -1,0 +1,7 @@
+STATUS: PSpice Model Import Wizard for "Capture" (23.1.0.d001)
+STATUS:  
+   INFO: OLB driven flow
+   INFO: Input File: C:\USERS\DYLAN\DOCUMENTS\GITHUB\NOT_COMMITED\NRC BLACK BODY\SIM\BLACK BODY SIM00.olb
+   INFO: Symbol Name: VPULSE_0
+  ERROR: Symbol "VPULSE_0" not found in symbol library "C:\USERS\DYLAN\DOCUMENTS\GITHUB\NOT_COMMITED\NRC BLACK BODY\SIM\BLACK BODY SIM00.olb".
+STATUS: 1 Error messages, 0 Warning messages
