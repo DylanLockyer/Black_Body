@@ -1,0 +1,252 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0")
+	(paper "A4")
+	(lib_symbols)
+	(text "OVERVIEW (PAGE 1)"
+		(exclude_from_sim no)
+		(at 71.12 26.67 0)
+		(effects
+			(font
+				(size 7 7)
+			)
+		)
+		(uuid "cb04da03-5a15-44bd-ba56-c6749df9c547")
+	)
+	(wire
+		(pts
+			(xy 127 96.52) (xy 76.2 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5068d689-5aa0-4030-b44f-b2c1422a7f03")
+	)
+	(wire
+		(pts
+			(xy 127 105.41) (xy 76.2 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73b2740b-2764-49a4-904d-967234685eba")
+	)
+	(wire
+		(pts
+			(xy 127 101.6) (xy 76.2 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86177459-2fe8-46a6-8b4f-abd2af6e41f8")
+	)
+	(sheet
+		(at 25.4 76.2)
+		(size 50.8 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "1986740f-e0a2-4083-b861-6e4dc96daf6f")
+		(property "Sheetname" "Power_periferals"
+			(at 25.4 75.4884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power_periferals.kicad_sch"
+			(at 25.4 127.5846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "FET" input
+			(at 76.2 105.41 0)
+			(uuid "67b63ef6-3e02-4a32-b6ed-b2e052270331")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "V_SENSE" input
+			(at 76.2 101.6 0)
+			(uuid "1376d234-c4ea-406e-a3f6-dc64d288add8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "I_SENSE" input
+			(at 76.2 96.52 0)
+			(uuid "27458410-4eb5-480c-a8a4-a0f74f244501")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Black_Body_Heater_Control"
+				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 228.6 76.2)
+		(size 50.8 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "37ca99d5-84e3-4bd4-b3be-01d50a1d97ad")
+		(property "Sheetname" "Temperature_Sensor"
+			(at 228.6 75.4884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "temperature_sensor.kicad_sch"
+			(at 228.6 127.5846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Black_Body_Heater_Control"
+				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 127 76.2)
+		(size 50.8 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "81e90e05-0519-429e-85ab-ffede3727917")
+		(property "Sheetname" "ESP32"
+			(at 127 75.4884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ESP32.kicad_sch"
+			(at 127 127.5846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "I_SENSE" input
+			(at 127 96.52 180)
+			(uuid "e1182099-43d8-4f95-a495-461c5b93befa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FET" input
+			(at 127 105.41 180)
+			(uuid "2e0ede00-eca7-4432-ab92-38152843bba1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "V_SENSE" input
+			(at 127 101.6 180)
+			(uuid "c8e167db-9cd7-4e1e-aaad-0afb2a8b680c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Black_Body_Heater_Control"
+				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

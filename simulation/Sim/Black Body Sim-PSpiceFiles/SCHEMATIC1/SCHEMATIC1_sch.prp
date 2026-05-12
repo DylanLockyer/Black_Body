@@ -13,48 +13,48 @@
             ("level"	"0")
             ("model_params"
                 ("VALUE"
-                    ("value"	"10")
+                    ("value"	"40")
                     ("pspice_param"	"VALUE")
                 )
                 ("BiasValue Power"
-                    ("value"	"68.68e-18W")
+                    ("value"	"175.2e-18W")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("DIST"
-                    ("value"	"FLAT")
-                    ("pspice_param"	"DIST")
-                )
-                ("TOLERANCE"
-                    ("value"	"")
-                    ("pspice_param"	"TOLERANCE")
-                )
-                ("VOLTAGE"
-                    ("value"	"RVMAX")
-                    ("pspice_param"	"VOLTAGE")
-                )
-                ("SLOPE"
-                    ("value"	"RSMAX")
-                    ("pspice_param"	"SLOPE")
-                )
-                ("MAX_TEMP"
-                    ("value"	"RTMAX")
-                    ("pspice_param"	"MAX_TEMP")
-                )
-                ("POWER"
-                    ("value"	"RMAX")
-                    ("pspice_param"	"POWER")
-                )
-                ("TC1"
-                    ("value"	"0")
-                    ("pspice_param"	"TC1")
+                ("PSpice Model Type"
+                    ("value"	"0011")
+                    ("pspice_param"	"PSpice Model Type")
                 )
                 ("TC2"
                     ("value"	"0")
                     ("pspice_param"	"TC2")
                 )
-                ("PSpice Model Type"
-                    ("value"	"0011")
-                    ("pspice_param"	"PSpice Model Type")
+                ("TC1"
+                    ("value"	"0")
+                    ("pspice_param"	"TC1")
+                )
+                ("POWER"
+                    ("value"	"RMAX")
+                    ("pspice_param"	"POWER")
+                )
+                ("MAX_TEMP"
+                    ("value"	"RTMAX")
+                    ("pspice_param"	"MAX_TEMP")
+                )
+                ("SLOPE"
+                    ("value"	"RSMAX")
+                    ("pspice_param"	"SLOPE")
+                )
+                ("VOLTAGE"
+                    ("value"	"RVMAX")
+                    ("pspice_param"	"VOLTAGE")
+                )
+                ("TOLERANCE"
+                    ("value"	"")
+                    ("pspice_param"	"TOLERANCE")
+                )
+                ("DIST"
+                    ("value"	"FLAT")
+                    ("pspice_param"	"DIST")
                 )
             )
         )
@@ -64,12 +64,11 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"25VDC
-")
+                    ("value"	"20VDC")
                     ("pspice_param"	"DC")
                 )
                 ("BiasValue Power"
-                    ("value"	"-4.912mW")
+                    ("value"	"-3.676mW")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
@@ -84,48 +83,48 @@
             ("level"	"0")
             ("model_params"
                 ("VALUE"
-                    ("value"	"0.02")
+                    ("value"	"0.1")
                     ("pspice_param"	"VALUE")
                 )
                 ("BiasValue Power"
-                    ("value"	"47.37pW")
+                    ("value"	"88.20pW")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("DIST"
-                    ("value"	"FLAT")
-                    ("pspice_param"	"DIST")
-                )
-                ("TOLERANCE"
-                    ("value"	"")
-                    ("pspice_param"	"TOLERANCE")
-                )
-                ("VOLTAGE"
-                    ("value"	"RVMAX")
-                    ("pspice_param"	"VOLTAGE")
-                )
-                ("SLOPE"
-                    ("value"	"RSMAX")
-                    ("pspice_param"	"SLOPE")
-                )
-                ("MAX_TEMP"
-                    ("value"	"RTMAX")
-                    ("pspice_param"	"MAX_TEMP")
-                )
-                ("POWER"
-                    ("value"	"RMAX")
-                    ("pspice_param"	"POWER")
-                )
-                ("TC1"
-                    ("value"	"0")
-                    ("pspice_param"	"TC1")
+                ("PSpice Model Type"
+                    ("value"	"0011")
+                    ("pspice_param"	"PSpice Model Type")
                 )
                 ("TC2"
                     ("value"	"0")
                     ("pspice_param"	"TC2")
                 )
-                ("PSpice Model Type"
-                    ("value"	"0011")
-                    ("pspice_param"	"PSpice Model Type")
+                ("TC1"
+                    ("value"	"0")
+                    ("pspice_param"	"TC1")
+                )
+                ("POWER"
+                    ("value"	"RMAX")
+                    ("pspice_param"	"POWER")
+                )
+                ("MAX_TEMP"
+                    ("value"	"RTMAX")
+                    ("pspice_param"	"MAX_TEMP")
+                )
+                ("SLOPE"
+                    ("value"	"RSMAX")
+                    ("pspice_param"	"SLOPE")
+                )
+                ("VOLTAGE"
+                    ("value"	"RVMAX")
+                    ("pspice_param"	"VOLTAGE")
+                )
+                ("TOLERANCE"
+                    ("value"	"")
+                    ("pspice_param"	"TOLERANCE")
+                )
+                ("DIST"
+                    ("value"	"FLAT")
+                    ("pspice_param"	"DIST")
                 )
             )
         )
@@ -134,17 +133,17 @@
             ("pspice_path"	"X_U1")
             ("level"	"0")
             ("model_params"
-                ("BiasValue Power"
-                    ("value"	"4.912mW")
-                    ("pspice_param"	"BiasValue Power")
+                ("Testbenches"
+                    ("value"	"[{testbenchurl:https://software-dl.ti.com/pspice/esd/models/INA183A1_V1.0.zip,testbenchopj:INA183A1_PSPICE/INA183_PSPICE_Reference.opj,testbenchdisplayname:INA183A1 PSpice Model}]")
+                    ("pspice_param"	"Testbenches")
                 )
                 ("productURL"
                     ("value"	"http://www.ti.com/document-viewer/INA183/datasheet/")
                     ("pspice_param"	"productURL")
                 )
-                ("Testbenches"
-                    ("value"	"[{testbenchurl:https://software-dl.ti.com/pspice/esd/models/INA183A1_V1.0.zip,testbenchopj:INA183A1_PSPICE/INA183_PSPICE_Reference.opj,testbenchdisplayname:INA183A1 PSpice Model}]")
-                    ("pspice_param"	"Testbenches")
+                ("BiasValue Power"
+                    ("value"	"3.676mW")
+                    ("pspice_param"	"BiasValue Power")
                 )
             )
         )
@@ -161,37 +160,37 @@
                     ("value"	"0")
                     ("pspice_param"	"AC")
                 )
-                ("BiasValue Power"
-                    ("value"	"0W")
-                    ("pspice_param"	"BiasValue Power")
-                )
-                ("PW"
-                    ("value"	"1m")
-                    ("pspice_param"	"PW")
-                )
-                ("V1"
-                    ("value"	"0")
-                    ("pspice_param"	"V1")
-                )
-                ("PER"
-                    ("value"	"10m")
-                    ("pspice_param"	"PER")
-                )
-                ("V2"
-                    ("value"	"5")
-                    ("pspice_param"	"V2")
-                )
-                ("TD"
+                ("TR"
                     ("value"	"1n")
-                    ("pspice_param"	"TD")
+                    ("pspice_param"	"TR")
                 )
                 ("TF"
                     ("value"	"1n")
                     ("pspice_param"	"TF")
                 )
-                ("TR"
+                ("TD"
                     ("value"	"1n")
-                    ("pspice_param"	"TR")
+                    ("pspice_param"	"TD")
+                )
+                ("V2"
+                    ("value"	"5")
+                    ("pspice_param"	"V2")
+                )
+                ("PER"
+                    ("value"	"10m")
+                    ("pspice_param"	"PER")
+                )
+                ("V1"
+                    ("value"	"0")
+                    ("pspice_param"	"V1")
+                )
+                ("PW"
+                    ("value"	"1m")
+                    ("pspice_param"	"PW")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
                     ("value"	"0011")
@@ -204,17 +203,17 @@
             ("pspice_path"	"X_X1")
             ("level"	"0")
             ("model_params"
-                ("BiasValue Power"
-                    ("value"	"65.52nW")
-                    ("pspice_param"	"BiasValue Power")
+                ("Testbenches"
+                    ("value"	"[{testbenchurl:https://software-dl.ti.com/pspice/esd/models/CSD17527Q5A_V2.0.zip,testbenchopj:,testbenchdisplayname:CSD17527Q5A PSpice Model}]")
+                    ("pspice_param"	"Testbenches")
                 )
                 ("productURL"
                     ("value"	"http://www.ti.com/product/CSD17527Q5A")
                     ("pspice_param"	"productURL")
                 )
-                ("Testbenches"
-                    ("value"	"[{testbenchurl:https://software-dl.ti.com/pspice/esd/models/CSD17527Q5A_V2.0.zip,testbenchopj:,testbenchdisplayname:CSD17527Q5A PSpice Model}]")
-                    ("pspice_param"	"Testbenches")
+                ("BiasValue Power"
+                    ("value"	"41.86nW")
+                    ("pspice_param"	"BiasValue Power")
                 )
                 ("Schematics' Source Library"
                     ("value"	"C:\\ORCAD_DATA\\MYLIBRARIES\\CICLONSEMI.OLB")

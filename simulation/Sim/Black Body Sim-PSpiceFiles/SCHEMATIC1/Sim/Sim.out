@@ -1,7 +1,7 @@
 
-**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
 
 
  ****     CIRCUIT DESCRIPTION
@@ -33,10 +33,9 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source BLACK BODY SIM
-R_R1         N00322 N00300  10 TC=0,0 
-V_V1         N00264 0 25VDC
-
-R_R2         N00264 N00300  0.02 TC=0,0 
+R_R1         N00322 N00300  40 TC=0,0 
+V_V1         N00264 0 20VDC
+R_R2         N00264 N00300  0.1 TC=0,0 
 X_U1         N00264 N00300 0 N02383 INA183A1
 V_V2         N03570 0 DC 0 AC 0
 +PULSE 0 5 1n 1n 1n 1m 10m
@@ -47,9 +46,9 @@ X_X1         N00322 N03570 0 CSD17527Q5A
 
 INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
 
-**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
 
 
  ****     Diode MODEL PARAMETERS
@@ -75,9 +74,9 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
         TRS1    4.200000E-03                                 
 
 
-**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -174,9 +173,9 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
         WWLC    0                            
 
 
-**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
 
 
  ****     Resistor MODEL PARAMETERS
@@ -271,9 +270,9 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
            R    1            
 
 
-**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
 
 
  ****     Voltage Controlled Switch MODEL PARAMETERS
@@ -291,9 +290,9 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
         VOFF   28            
 
 
-**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -306,27 +305,27 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00264)   25.0000 (N00300)   25.0000 (N00322)   25.0000 (N02383)     .0120     
+(N00264)   20.0000 (N00300)   20.0000 (N00322)   20.0000 (N02383)     .0120     
 
-(N03570)    0.0000 (X_X1.4)   25.0000 (X_X1.5)    0.0000 (X_X1.6)-207.4E-27     
+(N03570)    0.0000 (X_X1.4)   20.0000 (X_X1.5)    0.0000 (X_X1.6) 11.92E-27     
 
-(X_X1.7)   25.0000 (X_X1.8) 1.611E-12 (X_X1.9) 1.615E-12 (X_X1.10)   25.0000    
+(X_X1.7)   20.0000 (X_X1.8) 1.284E-12 (X_X1.9) 1.287E-12 (X_X1.10)   20.0000    
 
-(X_X1.11)    0.0000                   (X_X1.12) 1.680E-12                       
+(X_X1.11)    0.0000                   (X_X1.12) 1.332E-12                       
 
-(X_X1.13) 1.611E-12                   (X_X1.14)     .1427                       
+(X_X1.13) 1.284E-12                   (X_X1.14)     .1369                       
 
-(X_X1.20)    8.6259                   (X_U1.ACL)     .0120                      
+(X_X1.20)    6.9594                   (X_U1.ACL)     .0120                      
 
-(X_U1.CMR) 99.53E-06                  (X_U1.VICM)   25.0000                     
+(X_U1.CMR) 79.62E-06                  (X_U1.VICM)   20.0000                     
 
-(X_U1.VS_B)   25.0000                 (X_U1.AOL_1)    -.0341                    
+(X_U1.VS_B)   20.0000                 (X_U1.AOL_1)    -.0357                    
 
 (X_U1.CLAMP)  -36.0000                (X_U1.VIMON)    0.0000                    
 
-(X_U1.N05102)   24.5090               (X_U1.N35025)    0.0000                   
+(X_U1.N05102)   19.6070               (X_U1.N35025)    0.0000                   
 
-(X_U1.N35669)   24.9500               (X_U1.N35813)   24.9500                   
+(X_U1.N35669)   19.9500               (X_U1.N35813)   19.9500                   
 
 (X_U1.N38050)     .0480               (X_U1.N38096)     .0480                   
 
@@ -342,47 +341,47 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
 
 (X_U1.VOUT_S)     .0120               (X_U1.VSENSE)  -36.0000                   
 
-(X_U1.VS_CLP)   24.9500               (X_U1.X_U3.2) 398.1E-12                   
+(X_U1.VS_CLP)   19.9500               (X_U1.X_U3.2) 318.5E-12                   
 
-(X_U1.X_U4.2) 2.289E-06               (X_U1.GND_CLP)     .0480                  
+(X_U1.X_U4.2) 1.831E-06               (X_U1.GND_CLP)     .0480                  
 
 (X_U1.N110431)    0.0000              (X_U1.N112292)     .0120                  
 
-(X_U1.N516723)     .0120              (X_U1.N747447)  -25.0000                  
+(X_U1.N516723)     .0120              (X_U1.N747447)  -20.0000                  
 
-(X_U1.N816482)   24.9990              (X_U1.N816536)   24.9990                  
+(X_U1.N816482)   19.9990              (X_U1.N816536)   19.9990                  
 
-(X_U1.N819486)   24.9990              (X_U1.N819524)   24.9990                  
+(X_U1.N819486)   20.0000              (X_U1.N819524)   20.0000                  
 
-(X_U1.N825687)   25.0000              (X_U1.N827996)   25.0000                  
+(X_U1.N825687)   20.0000              (X_U1.N827996)   20.0000                  
 
 (X_U1.N853781)    0.0000              (X_U1.N853823)    0.0000                  
 
-(X_U1.N853899) 305.1E-06              (X_U1.N853917) 305.1E-06                  
+(X_U1.N853899) 321.4E-06              (X_U1.N853917) 321.4E-06                  
 
 (X_U1.N854005)  -36.0000              (X_U1.N854059)   38.4000                  
 
-(X_U1.N854203)  -36.0000              (X_U1.N986744)   25.0000                  
+(X_U1.N854203)  -36.0000              (X_U1.N986744)   20.0000                  
 
-(X_U1.N988109)   25.0000              (X_U1.VCM_MAX)   26.5000                  
+(X_U1.N988109)   20.0000              (X_U1.VCM_MAX)   26.5000                  
 
-(X_U1.VCM_MIN)    2.5500              (X_U1.X_U75.3)   24.0170                  
+(X_U1.VCM_MIN)    2.5500              (X_U1.X_U75.3)   19.2140                  
 
-(X_U1.X_U76.3)   24.0180              (X_U1.CL_CLAMP)     .0115                 
+(X_U1.X_U76.3)   19.2150              (X_U1.CL_CLAMP)     .0116                 
 
-(X_U1.N1304807)  -36.0000             (X_U1.N1436452)   25.0000                 
+(X_U1.N1304807)  -36.0000             (X_U1.N1436452)   20.0000                 
 
 (X_U1.N1604384)  -36.0000             (X_U1.N2116017)     .1319                 
 
 (X_U1.N2116025)     .1319             (X_U1.N2116031)     .1319                 
 
-(X_U1.N2116213)     .1319             (X_U1.N2127928)   25.0000                 
+(X_U1.N2116213)     .1319             (X_U1.N2127928)   20.0000                 
 
-(X_U1.N2144761)   24.5080             (X_U1.N2148559) 99.53E-06                 
+(X_U1.N2144761)   19.6070             (X_U1.N2148559) 79.62E-06                 
 
-(X_U1.N2148565) 99.53E-06             (X_U1.N2159098)   25.0000                 
+(X_U1.N2148565) 79.62E-06             (X_U1.N2159098)   20.0000                 
 
-(X_U1.CLAW_CLAMP)     .0115           (X_U1.X_PZ1_14.2)     .1319               
+(X_U1.CLAW_CLAMP)     .0116           (X_U1.X_PZ1_14.2)     .1319               
 
 (X_U1.X_PZ1_14.3)     .1319           (X_U1.X_PZ1_22.2)     .1319               
 
@@ -396,8 +395,8 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V1        -1.965E-04
-    V_V2         2.496E-11
+    V_V1        -1.838E-04
+    V_V2         1.996E-11
     X_U1.V_VCM_MAX  -2.650E-08
     X_U1.V_VCM_MIN  -2.550E-09
     X_U1.V_V_GRN   3.600E-08
@@ -406,15 +405,15 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
     X_U1.V_V_ISCP  -1.500E-08
     X_U1.X_H3.VH_H3   0.000E+00
 
-    TOTAL POWER DISSIPATION   4.92E-03  WATTS
+    TOTAL POWER DISSIPATION   3.68E-03  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 05/11/26 11:13:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ c:\users\dylan\documents\github\not_commited\nrc black body\sim\black body sim-pspicefiles\schematic
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
 
 
  ****     JOB STATISTICS SUMMARY
