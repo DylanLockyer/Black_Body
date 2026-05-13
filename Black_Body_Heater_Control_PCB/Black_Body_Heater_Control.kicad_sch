@@ -122,52 +122,6 @@
 		)
 	)
 	(sheet
-		(at 228.6 76.2)
-		(size 50.8 50.8)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "37ca99d5-84e3-4bd4-b3be-01d50a1d97ad")
-		(property "Sheetname" "Temperature_Sensor"
-			(at 228.6 75.4884 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "temperature_sensor.kicad_sch"
-			(at 228.6 127.5846 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "Black_Body_Heater_Control"
-				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0"
-					(page "4")
-				)
-			)
-		)
-	)
-	(sheet
 		(at 127 76.2)
 		(size 50.8 50.8)
 		(exclude_from_sim no)

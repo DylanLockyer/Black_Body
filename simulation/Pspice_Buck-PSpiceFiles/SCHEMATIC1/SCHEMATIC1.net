@@ -1,0 +1,12 @@
+* source PSPICE_BUCK
+V_V1         V1 0 20Vdc
+R_R1         N00521 N00525  162k TC=0,0 
+R_R2         0 N00521  22.1k TC=0,0 
+C_C5         0 N00525  47u  TC=0,0 
+C_C6         0 V1  100n  TC=0,0 
+C_C7         0 V1  1u  TC=0,0 
+C_C8         0 V1  1u  TC=0,0 
+C_C9         0 V1  1u  TC=0,0 
+C_C10         N00437 N00441  100n  TC=0,0 
+L_L2         N00437 N00525  10uH  
+X_U2         N00441 V1 N00521 0 N00437 V1 LMR51420X_TRANS PARAMS: MODE=0

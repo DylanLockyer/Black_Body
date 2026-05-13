@@ -1,0 +1,387 @@
+
+**** 05/13/26 15:50:58 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Simulation"  [ c:\users\dylan\documents\github\black_body\simulation\pspice_buck-pspicefiles\schematic1\simu
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Simulation.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 20 20 1 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PSPICE_BUCK
+V_V1         V1 0 20Vdc
+R_R1         N00521 N00525  162k TC=0,0 
+R_R2         0 N00521  22.1k TC=0,0 
+C_C5         0 N00525  47u  TC=0,0 
+C_C6         0 V1  100n  TC=0,0 
+C_C7         0 V1  1u  TC=0,0 
+C_C8         0 V1  1u  TC=0,0 
+C_C9         0 V1  1u  TC=0,0 
+C_C10         N00437 N00441  100n  TC=0,0 
+L_L2         N00437 N00525  10uH  
+X_U2         N00441 V1 N00521 0 N00437 V1 LMR51420X_TRANS PARAMS: MODE=0
+
+**** RESUMING Simulation.cir ****
+.END
+
+Starting pseudo-transient algorithm.
+
+INFO(ORPSIM-16594): To improve Pseudotransient Convergence and Performance, set following options to relax stabilization criteria for capacitor currents and inductor voltages: PTRANABSTOL=1e-5, PTRANVNTOL=1e-4
+
+WARNING(ORPSIM-16534): Using high values of ITL4 for Speed Level > 0 may increase total simulation job time.
+
+ERROR -- Convergence problem in DC sweep
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V1)   10.0990  (N00437)     .1583 (N00441)    2.5181 (N00521)     .0190     
+
+(N00525)     .1583 
+
+
+  These voltages failed to converge:
+
+    V(X_U2.HK_N16770063)      =     3.150V  \     1.591V
+    V(X_U2.HK_EN_TH)          =   955.95mV  \   504.93mV
+    V(X_U2.EA_VCOMPVT)        =   580.99mV  \   911.25mV
+    V(X_U2.EA_N00088)         =    49.26mV  \    24.39mV
+    V(X_U2.EA_N16751770)      =   522.89mV  \   414.10mV
+    V(X_U2.EA_N16752031)      =   213.92mV  \   105.14mV
+    V(X_U2.EA_N16916628)      =    31.39uV  \    19.43uV
+    V(X_U2.EA_N16752093)      =   213.92mV  \   105.14mV
+    V(X_U2.EA_N16926236)      =  -691.52mV  \   676.70mV
+    V(X_U2.VCOMP)             =   213.92mV  \    53.09mV
+    V(X_U2.EA_N04078)         =   206.90mV  \    51.73mV
+    V(X_U2.EA_N16871423)      =    49.26mV  \    24.39mV
+    V(X_U2.REF_EA)            =    49.26mV  \    48.31mV
+    V(X_U2.SS_N16789056)      =    95.68mV  \    48.31mV
+    V(X_U2.REF_SS)            =    49.26mV  \    48.31mV
+    V(X_U2.RT)                =   504.93mV  \   254.95mV
+    V(X_U2.GmIp_VOFFSET)      =    23.64mV  \    6.027mV
+    V(X_U2.GmIp_N17078692)    =   213.92mV  \    26.81mV
+    V(X_U2.FPWM_PFM_NOT)      =   940.44mV  \   504.93mV
+    V(X_U2.GmIp_N00805)       =  -187.18mV  \   -11.84mV
+    V(X_U2.GmIp_N00668)       =   213.92mV  \    26.81mV
+    V(X_U2.VSLOPE_GATE)       =   943.23mV  \   476.26mV
+    V(X_U2.GmIp_HS_CMD)       =     10.08V  \     10.10V
+    V(X_U2.GmIp_N16841726)    =    23.64mV  \    11.94mV
+    V(X_U2.GmIp_VL_CMD)       =     1.350V  \    85.42mV
+    V(X_U2.MINON_OFFSET)      =    31.39uV  \    19.43uV
+    V(X_U2.Osc_N16758978)     =    2.035KV  \   679.50mV
+    V(X_U2.Osc_N16768120)     =   676.71mV  \   341.69mV
+    V(X_U2.Osc_N00124)        =   504.93mV  \   254.95mV
+    V(X_U2.Osc_N17035342)     =    1.832KV  \   945.73mV
+    V(X_U2.LGC_RESET)         =   940.44mV  \   504.93mV
+    V(X_U2.LGC_N16822521)     =   940.41mV  \   504.93mV
+    V(X_U2.LGC_N16822551)     =     1.000V  \   504.93mV
+    V(X_U2.X_HK_U8.INP2)      =   200.00mV  \   100.99mV
+    V(X_U2.X_HK_U8.1)         =   514.86mV  \   504.93mV
+    V(X_U2.HK_N16767174)      =     1.000V  \   504.93mV
+    V(X_U2.X_HK_U7.YINT1)     =     1.000V  \   504.93mV
+    V(X_U2.HK_N16766899)      =     1.000V  \   504.93mV
+    V(X_U2.X_HK_U7.YINT3)     =     1.000V  \   504.93mV
+    V(X_U2.HK_VINUVLO)        =   955.95mV  \   504.93mV
+    V(X_U2.X_HK_U9.YINT1)     =     1.000V  \   504.93mV
+    V(X_U2.X_HK_U9.YINT2)     =   505.63mV  \   504.92mV
+    V(X_U2.X_HK_U9.YINT3)     =     1.000V  \   504.93mV
+    V(X_U2.HK_VCCUVLO)        =   955.95mV  \   504.93mV
+    V(X_U2.X_HK_U836.YINT)    =     1.000V  \   504.93mV
+    V(X_U2.HK_N16780273)      =   940.44mV  \   504.93mV
+    V(X_U2.IC_ENABLE)         =   940.44mV  \   504.93mV
+    V(X_U2.X_HK_U10.INP2)     =   150.00mV  \    75.74mV
+    V(X_U2.X_HK_U10.1)        =   514.86mV  \   504.93mV
+    V(X_U2.HK_N16767534)      =     1.000V  \   504.93mV
+    V(X_U2.X_HK_U6.INP2)      =   300.00mV  \   151.48mV
+    V(X_U2.X_HK_U6.1)         =   514.86mV  \   504.93mV
+    V(X_U2.X_HK_U13.YINT)     =     1.000V  \   504.93mV
+    V(X_U2.HK_N16778205)      =   940.44mV  \   504.93mV
+    V(X_U2.X_HK_U16.YINT1)    =     1.000V  \   504.93mV
+    V(X_U2.X_HK_U16.YINT3)    =     1.000V  \   504.93mV
+    V(X_U2.HK_IC_ENABLE_DELAY) =   955.95mV  \   504.93mV
+    V(X_U2.X_HK_U12.YINT)     =     1.000V  \   504.93mV
+    V(X_U2.X_HK_U11.YINT1)    =     1.000V  \   504.93mV
+    V(X_U2.X_HK_U11.YINT3)    =     1.000V  \   504.93mV
+    V(X_U2.X_Drv_U688.YINT1)  =     1.000V  \         0V
+    V(X_U2.HSOFF)             =   940.44mV  \   504.93mV
+    V(X_U2.X_Drv_U688.YINT2)  =   506.69mV  \   503.12mV
+    V(X_U2.X_Drv_U688.YINT3)  =     1.000V  \   504.93mV
+    V(X_U2.Drv_N16937185)     =   955.95mV  \   504.93mV
+    V(X_U2.PREBIAS)           =   514.86mV  \   504.93mV
+    V(X_U2.X_Drv_U679.clkdel1) =   907.73mV  \   504.93mV
+    V(X_U2.X_Drv_U679.qbr)    =     1.000V  \   504.93mV
+    V(X_U2.N16948617)         =   514.86mV  \   504.93mV
+    V(X_U2.Drv_LDRVIN)        =     1.124V  \    2.057mV
+    V(X_U2.X_Drv_U617.YINT)   =     1.000V  \   504.93mV
+    V(X_U2.Drv_N16969157)     =   940.44mV  \   504.93mV
+    V(X_U2.X_Drv_U2.qint)     =   711.65mV  \   609.28mV
+    V(X_U2.Drv_N16928727)     =   955.95mV  \   504.93mV
+    V(X_U2.X_Drv_U2.qqq)      =   359.33mV  \   307.64mV
+    V(X_U2.X_Drv_U2.qbr)      =     1.000V  \   504.93mV
+    V(X_U2.N16775519)         =   710.64mV  \   504.93mV
+    V(X_U2.Drv_HDRVIN)        =     1.209V  \   160.23mV
+    V(X_U2.Drv_N16969351)     =   940.44mV  \   504.93mV
+    V(X_U2.X_Drv_U689.YINT1)  =     1.000V  \   504.93mV
+    V(X_U2.X_Drv_U689.YINT2)  =   506.69mV  \   504.92mV
+    V(X_U2.X_Drv_U689.YINT3)  =     1.000V  \   504.93mV
+    V(X_U2.X_Drv_U677.qbr)    =     1.000V  \   504.93mV
+    V(X_U2.N16921682)         =   514.86mV  \   504.93mV
+    V(X_U2.X_Drv_U616.YINT)   =     1.000V  \   504.93mV
+    V(X_U2.X_Drv_U843.qint)   =  -206.73mV  \   -92.68mV
+    V(X_U2.X_Drv_U843.qqq)    =  -104.38mV  \   -46.80mV
+    V(X_U2.X_Drv_U843.qbr)    =     1.000V  \   504.93mV
+    V(X_U2.N16960847)         =   710.64mV  \   504.93mV
+    V(X_U2.FPWM_GATE_BAR)     =   940.44mV  \   504.93mV
+    V(X_U2.X_EA_U677.clkdel1) =   907.73mV  \   504.93mV
+    V(X_U2.X_EA_U677.qbr)     =     1.000V  \   504.93mV
+    V(X_U2.N16784097)         =   514.86mV  \   504.93mV
+    V(X_U2.X_EA_U678.clkdel1) =   907.73mV  \   504.93mV
+    V(X_U2.X_EA_U678.qbr)     =     1.000V  \   504.93mV
+    V(X_U2.DCM_BAR)           =   514.86mV  \   504.93mV
+    V(X_U2.X_EA_U683.YINT)    =     1.000V  \   504.93mV
+    V(X_U2.X_EA_U10.INM1)     =    19.88mV  \    21.13mV
+    V(X_U2.EA_I2VSTEAL)       =    5.059mV  \    2.582mV
+    V(X_U2.X_EA_U684.qbr)     =     1.000V  \   504.93mV
+    V(X_U2.N16953936)         =   514.86mV  \   504.93mV
+    V(X_U2.X_PG_U17.YINT1)    =     1.000V  \   504.93mV
+    V(X_U2.PG_N16768998)      =   940.44mV  \   504.93mV
+    V(X_U2.X_PG_U10.INP2)     =    20.00mV  \    10.10mV
+    V(X_U2.X_PG_U10.1)        =   514.86mV  \   504.93mV
+    V(X_U2.PG_N16767710)      =     1.000V  \   504.93mV
+    V(X_U2.X_PG_U16.YINT)     =     1.000V  \   504.93mV
+    V(X_U2.PGOOD_UV)          =   955.95mV  \   504.93mV
+    V(X_U2.X_PG_U14.INP2)     =    40.00mV  \    20.20mV
+    V(X_U2.X_PG_U14.1)        =   514.86mV  \   504.93mV
+    V(X_U2.PG_N16768434)      =     1.000V  \   504.93mV
+    V(X_U2.X_PG_U11.YINT1)    =     1.000V  \   504.93mV
+    V(X_U2.X_PG_U11.YINT3)    =     1.000V  \   504.93mV
+    V(X_U2.HICCUP_UVP)        =   955.95mV  \   504.93mV
+    V(X_U2.X_PG_U15.YINT1)    =     1.000V  \   504.93mV
+    V(X_U2.X_PG_U15.YINT3)    =     1.000V  \   504.93mV
+    V(X_U2.X_SS_U834.qint)    =  -237.78mV  \  -135.40mV
+    V(X_U2.SS_N16793990)      =     1.000V  \   504.93mV
+    V(X_U2.X_SS_U834.qqq)     =  -120.06mV  \   -68.37mV
+    V(X_U2.X_SS_U834.qbr)     =     1.000V  \   504.93mV
+    V(X_U2.X_SS_U829.YINT)    =     1.000V  \   504.93mV
+    V(X_U2.SS_DONE_NOT)       =   940.44mV  \   504.93mV
+    V(X_U2.X_SS_U705.INM1)    =   -20.03mV  \   -19.55mV
+    V(X_U2.X_SS_U705.INP2)    =    10.10mV  \    5.099mV
+    V(X_U2.X_SS_U705.1)       =   506.94mV  \   504.93mV
+    V(X_U2.X_GmIp_U854.YINT)  =     1.000V  \   504.93mV
+    V(X_U2.GmIp_N16864798)    =   940.44mV  \   504.93mV
+    V(X_U2.X_GmIp_U850.YINT)  =     1.000V  \   504.93mV
+    V(X_U2.GmIp_N17078834)    =   940.44mV  \   504.93mV
+    V(X_U2.GmIp_N01420)       =   514.86mV  \   504.93mV
+    V(X_U2.X_GmIp_U852.YINT)  =     1.000V  \   504.93mV
+    V(X_U2.X_GmIp_U841.YINT1) =     1.000V  \   504.93mV
+    V(X_U2.GmIp_N17086195)    =   976.95mV  \   504.93mV
+    V(X_U2.X_GmIp_U841.YINT2) =   566.44mV  \   504.93mV
+    V(X_U2.X_GmIp_U841.YINT3) =     1.000V  \   504.93mV
+    V(X_U2.GmIp_N17086219)    =   955.95mV  \   504.93mV
+    V(X_U2.X_GmIp_U859.Yint)  =     1.000V  \   504.93mV
+    V(X_U2.GmIp_N16742838)    =   514.86mV  \   504.93mV
+    V(X_U2.X_GmIp_U839.Yint)  =     1.000V  \   504.93mV
+    V(X_U2.GmIp_HS_COMP_OUT)  =   514.86mV  \   504.93mV
+    V(X_U2.X_GmIp_U829.YINT)  =     1.000V  \   504.93mV
+    V(X_U2.X_GmIp_U860.YINT3) =     1.000V  \   504.93mV
+    V(X_U2.X_GmIp_U842.Yint)  =     1.000V  \   504.93mV
+    V(X_U2.Osc_N17035288)     =   504.93mV  \   254.95mV
+    V(X_U2.X_Osc_U836.Yint)   =     1.000V  \   504.93mV
+    V(X_U2.HS_TIMEOUT)        =   514.86mV  \   504.93mV
+    V(X_U2.Osc_RMPOKBAR)      =   710.64mV  \   504.93mV
+    V(X_U2.X_Osc_U840.YINT1)  =     1.000V  \   504.93mV
+    V(X_U2.X_Osc_U840.YINT3)  =     1.000V  \   504.93mV
+    V(X_U2.Osc_N16798749)     =   955.95mV  \   504.93mV
+    V(X_U2.Osc_N17035291)     =   504.93mV  \   254.95mV
+    V(X_U2.X_Osc_U683.YINT)   =     1.000V  \         0V
+    V(X_U2.Osc_N16794535)     =   940.44mV  \    60.74mV
+    V(X_U2.Osc_N16875288)     =         0V  \   442.66mV
+    V(X_U2.X_Osc_U863.qbr)    =     1.000V  \   504.93mV
+    V(X_U2.X_Osc_U860.YINT)   =         0V  \   504.93mV
+    V(X_U2.X_LGC_U624.qbr)    =     1.000V  \   504.93mV
+    V(X_U2.CONTBAR)           =   710.64mV  \   504.93mV
+    V(X_U2.X_LGC_U868.reset2) =   566.46mV  \   504.93mV
+    V(X_U2.X_LGC_U868.reset)  =     1.000V  \   504.93mV
+    V(X_U2.X_LGC_U677.clkdel1) =   907.73mV  \   504.93mV
+    V(X_U2.X_LGC_U677.qbr)    =     1.000V  \   504.93mV
+    V(X_U2.N16993270)         =   514.86mV  \   504.93mV
+    V(X_U2.X_LGC_U684.qbr)    =     1.000V  \   504.93mV
+    V(X_U2.LGC_N16783882)     =   514.86mV  \   504.93mV
+    V(X_U2.X_LGC_U687.YINT)   =     1.000V  \   504.93mV
+    V(X_U2.X_LGC_U1.YINT)     =     1.000V  \   504.93mV
+    V(X_U2.LGC_N17144847)     =   940.44mV  \   504.93mV
+    V(X_U2.X_LGC_U870.reset2) =         0V  \    62.75mV
+    V(X_U2.X_LGC_U870.ch)     =     1.000V  \   504.93mV
+    V(X_U2.X_LGC_U870.reset)  =         0V  \   504.93mV
+    V(X_U2.X_LGC_U681.clkdel1) =   907.73mV  \   504.93mV
+    V(X_U2.X_LGC_U681.qbr)    =     1.000V  \   504.93mV
+    V(X_U2.LGC_HICCUP_OK_BAR) =   514.86mV  \   504.93mV
+    V(X_U2.X_LGC_U841.YINT)   =     1.000V  \   504.93mV
+    V(X_U2.LGC_N16792480)     =   940.44mV  \   504.93mV
+    V(X_U2.X_LGC_U836.Yint)   =     1.000V  \   504.93mV
+    V(X_U2.LGC_TOFF_TIMEOUT)  =   514.86mV  \   504.93mV
+    V(X_U2.X_LGC_U871.YINT)   =     1.000V  \   504.93mV
+    V(X_U2.X_LGC_U685.clkdel1) =   907.73mV  \   504.93mV
+    V(X_U2.X_LGC_U685.qint)   =  -320.34mV  \  -181.12mV
+    V(X_U2.X_LGC_U685.qqq)    =  -161.75mV  \   -91.45mV
+    V(X_U2.X_LGC_U685.qbr)    =     1.000V  \   504.93mV
+    V(X_U2.N16785615)         =   514.86mV  \   504.93mV
+    V(X_U2.X_LGC_U850.YINT)   =     1.000V  \   504.93mV
+    V(X_U2.X_Drv_U679.x1.YINT) =     1.000V  \   504.93mV
+    V(X_U2.X_EA_U677.x1.YINT) =     1.000V  \   504.93mV
+    V(X_U2.X_EA_U678.x1.YINT) =     1.000V  \   504.93mV
+    V(X_U2.X_EA_U684.x1.YINT3) =     1.000V  \   504.93mV
+    V(X_U2.X_EA_U684.clkdel)  =   976.95mV  \   504.93mV
+    V(X_U2.X_LGC_U677.x1.YINT) =     1.000V  \   504.93mV
+    V(X_U2.X_LGC_U681.x1.YINT) =     1.000V  \   504.93mV
+    V(X_U2.X_LGC_U685.x1.YINT) =     1.000V  \   504.93mV
+
+  These supply currents failed to converge:
+
+    I(X_U2.E_HK_ABM1)         =  -625.37uA  \   934.11uA
+    I(X_U2.E_SS_ABM1)         =   -46.42uA  \   -57.34pA
+    I(X_U2.E_Osc_ABM2)        =   -3.676uA  \   -1.856uA
+    I(X_U2.X_HK_U8.EOUT)      =  -485.14mA  \  -200.00nA
+    I(X_U2.X_HK_U7.E_ABMGATE1) =  -494.95mA  \   -14.30uA
+    I(X_U2.X_HK_U7.E_ABMGATE2) =   -22.03mA  \  -200.00pA
+    I(X_U2.X_HK_U9.E_ABMGATE1) =  -494.37mA  \   -2.860uA
+    I(X_U2.X_HK_U9.E_ABMGATE2) =   -22.03mA  \  -200.00pA
+    I(X_U2.X_HK_U836.E_ABMGATE) =   -29.78mA  \  -280.00pA
+    I(X_U2.X_HK_U10.EOUT)     =  -485.14mA  \  -200.00nA
+    I(X_U2.X_HK_U6.EOUT)      =  -485.14mA  \  -200.00nA
+    I(X_U2.X_HK_U13.E_ABMGATE) =   -29.78mA  \  -280.00pA
+    I(X_U2.X_HK_U16.E_ABMGATE1) =  -494.95mA  \   -14.30uA
+    I(X_U2.X_HK_U16.E_ABMGATE2) =   -22.03mA  \  -200.00pA
+    I(X_U2.X_HK_U12.E_ABMGATE) =   -29.78mA  \  -280.00pA
+    I(X_U2.X_HK_U11.E_ABMGATE1) =  -494.95mA  \   -14.30uA
+    I(X_U2.X_HK_U11.E_ABMGATE2) =   -22.03mA  \  -200.00pA
+    I(X_U2.X_Drv_U688.E_ABMGATE1) =  -493.31mA  \   503.12mA
+    I(X_U2.X_Drv_U688.E_ABMGATE2) =   -22.03mA  \  -200.00pA
+    I(X_U2.X_Drv_U679.eqb)    =  -485.14mA  \  -200.00nA
+    I(X_U2.X_Drv_U617.E_ABMGATE) =   -29.78mA  \  -785.43pA
+    I(X_U2.X_Drv_U2.eqb)      =   -14.47mA  \  -288.00pA
+    I(X_U2.X_Drv_U689.E_ABMGATE1) =  -493.31mA  \   -1.144uA
+    I(X_U2.X_Drv_U689.E_ABMGATE2) =   -22.03mA  \  -200.00pA
+    I(X_U2.X_Drv_U677.eqb)    =  -485.14mA  \  -200.00nA
+    I(X_U2.X_Drv_U616.E_ABMGATE) =   -29.78mA  \  -785.43pA
+    I(X_U2.X_Drv_U843.eqb)    =   -14.47mA  \  -288.00pA
+    I(X_U2.X_EA_U677.eqb)     =  -485.14mA  \  -200.00nA
+    I(X_U2.X_EA_U678.eqb)     =  -485.14mA  \  -200.00nA
+    I(X_U2.X_EA_U683.E_ABMGATE) =  -247.54mA  \         0A
+    I(X_U2.X_EA_U684.eqb)     =  -485.14mA  \  -200.00nA
+    I(X_U2.X_PG_U17.E_ABMGATE1) =  -924.20mA  \  -429.13mA
+    I(X_U2.X_PG_U10.EOUT)     =  -485.14mA  \  -200.00nA
+    I(X_U2.X_PG_U16.E_ABMGATE) =   -29.78mA  \  -280.00pA
+    I(X_U2.X_PG_U14.EOUT)     =  -485.14mA  \  -200.00nA
+    I(X_U2.X_PG_U11.E_ABMGATE1) =  -494.95mA  \   -14.30uA
+    I(X_U2.X_PG_U11.E_ABMGATE2) =   -22.03mA  \  -200.00pA
+    I(X_U2.X_PG_U15.E_ABMGATE1) =  -494.95mA  \   -14.30uA
+    I(X_U2.X_PG_U15.E_ABMGATE2) =   -22.03mA  \  -200.00pA
+    I(X_U2.X_SS_U834.eqb)     =  -485.14mA  \  -200.00nA
+    I(X_U2.X_SS_U829.E_ABMGATE) =   -29.78mA  \  -280.00pA
+    I(X_U2.X_SS_U705.EOUT)    =  -493.06mA  \   -1.000uA
+    I(X_U2.X_GmIp_U854.E_ABMGATE) =   -29.78mA  \  -280.00pA
+    I(X_U2.X_GmIp_U850.E_ABMGATE) =   -29.78mA  \  -280.00pA
+    I(X_U2.X_GmIp_U852.E_ABMGATE) =   -29.78mA  \  -280.00pA
+    I(X_U2.X_GmIp_U841.E_ABMGATE1) =  -433.56mA  \   -28.86nA
+    I(X_U2.X_GmIp_U841.E_ABMGATE2) =   -22.03mA  \  -705.43pA
+    I(X_U2.X_GmIp_U859.E_ABM) =  -485.14mA  \  -200.00nA
+    I(X_U2.X_GmIp_U839.E_ABM) =  -485.14mA  \  -200.00nA
+    I(X_U2.X_GmIp_U829.E_ABMGATE) =   -29.78mA  \  -785.43pA
+    I(X_U2.X_GmIp_U860.E_ABMGATE2) =   -23.05mA  \  -200.00pA
+    I(X_U2.X_GmIp_U842.E_ABM) =  -485.14mA  \  -200.00nA
+    I(X_U2.X_Osc_U836.E_ABM)  =  -485.14mA  \  -206.08nA
+    I(X_U2.X_Osc_U840.E_ABMGATE1) =  -499.83mA  \   -4.896mA
+    I(X_U2.X_Osc_U840.E_ABMGATE2) =   -22.03mA  \    10.63nA
+    I(X_U2.X_Osc_U683.E_ABMGATE) =   -29.78mA  \    30.37mA
+    I(X_U2.X_Osc_U863.eqb)    =   -14.47mA  \   -1.299nA
+    I(X_U2.X_Osc_U860.E_ABMGATE) =         0A  \   -31.13mA
+    I(X_U2.X_LGC_U624.eqb)    =   -14.47mA  \  -288.00pA
+    I(X_U2.X_LGC_U868.e_abm2) =    -4.335A  \  -288.54nA
+    I(X_U2.X_LGC_U677.eqb)    =  -485.14mA  \  -200.00nA
+    I(X_U2.X_LGC_U684.eqb)    =  -485.14mA  \  -200.00nA
+    I(X_U2.X_LGC_U687.E_ABMGATE) =   -29.78mA  \  -280.00pA
+    I(X_U2.X_LGC_U1.E_ABMGATE) =   -29.78mA  \  -280.00pA
+    I(X_U2.X_LGC_U870.e_abm1) =   -4.532mA  \   -32.21uA
+    I(X_U2.X_LGC_U870.e_abm2) =         0A  \    -4.422A
+    I(X_U2.X_LGC_U681.eqb)    =  -485.14mA  \  -200.51nA
+    I(X_U2.X_LGC_U841.E_ABMGATE) =   -29.78mA  \  -280.00pA
+    I(X_U2.X_LGC_U836.E_ABM)  =  -485.14mA  \  -200.00nA
+    I(X_U2.X_LGC_U871.E_ABMGATE) =   -29.78mA  \  -280.00pA
+    I(X_U2.X_LGC_U685.eqb)    =  -485.14mA  \  -200.00nA
+    I(X_U2.X_LGC_U850.E_ABMGATE) =   -29.80mA  \  -568.00pA
+    I(X_U2.X_Drv_U679.x1.E_ABMGATE) =   -46.13mA  \  -200.28nA
+    I(X_U2.X_EA_U677.x1.E_ABMGATE) =   -46.13mA  \  -200.28nA
+    I(X_U2.X_EA_U678.x1.E_ABMGATE) =   -46.13mA  \  -200.28nA
+    I(X_U2.X_EA_U684.x1.E_ABMGATE2) =   -23.05mA  \  -200.00pA
+    I(X_U2.X_LGC_U677.x1.E_ABMGATE) =   -46.13mA  \  -200.28nA
+    I(X_U2.X_LGC_U681.x1.E_ABMGATE) =   -46.13mA  \  -200.28nA
+    I(X_U2.X_LGC_U685.x1.E_ABMGATE) =   -46.13mA  \  -200.28nA
+    I(X_U2.V_EA_V22)          =  -396.66nA  \   -74.73nA
+    I(X_U2.V_EA_V24)          =   247.54mA  \  -280.00pA
+    I(X_U2.V_V2)              =   -1.683mA  \   -3.240mA
+    I(X_U2.X_Drv_U2.v1)       =    2.949pA  \     2.525A
+    I(X_U2.X_Drv_U843.v2)     =   -2.893pA  \  -570.04mA
+    I(X_U2.X_EA_H1.VH_EA_H1)  =    1.002nA  \   511.25pA
+    I(X_U2.X_EA_H4.VH_EA_H4)  =    1.002nA  \   511.25pA
+    I(X_U2.X_EA_H2.VH_EA_H2)  =    4.775nA  \    2.368nA
+    I(X_U2.X_EA_H5.VH_EA_H5)  =    4.775nA  \    2.368nA
+    I(X_U2.X_SS_U834.v2)      =   -32.75pA  \    -2.525A
+    I(X_U2.X_GmIp_H1.VH_GmIp_H1) =   669.05nA  \   -43.23nA
+    I(X_U2.X_Osc_H2.VH_Osc_H2) =    3.676uA  \    1.856uA
+    I(X_U2.X_Osc_H5.VH_Osc_H5) =    3.676uA  \    1.856uA
+    I(X_U2.X_Osc_H3.VH_Osc_H3) =    3.676uA  \    1.856uA
+    I(X_U2.X_LGC_U685.v2)     =   -4.595pA  \    -1.799A
+    I(X_U2.X_EA_H1.H_EA_H1)   =   -4.407pA  \ -3.669e-18A
+
+  These devices failed to converge:
+    X_U2.X_Drv_U2.d_d10 X_U2.X_Drv_U843.d_d11 X_U2.X_SS_U834.d_d11 
+    X_U2.X_GmIp_U841.D_D11 X_U2.X_Osc_U859.d1 X_U2.X_Osc_U857.d1 
+    X_U2.X_LGC_U685.d_d11 X_U2.E_GmIp_ABM4 X_U2.X_Osc_U836.E_ABM 
+    X_U2.X_Osc_U835.E_ABM 
+
+**** Interrupt ****
+
+          JOB ABORTED
+
+**** 05/13/26 15:50:58 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Simulation"  [ c:\users\dylan\documents\github\black_body\simulation\pspice_buck-pspicefiles\schematic1\simu
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =       57.58
+
