@@ -4,7 +4,7 @@
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
     (Folder "Library")
-    ("Allegro Netlist Directory" "allegro")
+    (Allegro Netlist Directory "allegro")
     (DOCKED "TRUE")
     (DOCKING_POSITION "59420")
     (NoModify)
@@ -24,12 +24,9 @@
          ".\black body sim-pspicefiles\schematic1\sim.sim"
         (DisplayName "SCHEMATIC1-Sim")
         (Type "PSpice Profile")))
-    (Folder "Model Libraries"
-      (Sort User))
-    (Folder "Stimulus Files"
-      (Sort User))
-    (Folder "Include Files"
-      (Sort User)))
+    (Folder "Model Libraries")
+    (Folder "Stimulus Files")
+    (Folder "Include Files"))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (Folder "Logs")
   (PartMRUSelector

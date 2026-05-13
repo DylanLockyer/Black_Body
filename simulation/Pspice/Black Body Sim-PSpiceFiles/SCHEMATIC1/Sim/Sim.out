@@ -1,7 +1,7 @@
 
-**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/13/26 14:03:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Pspice\black body sim-pspicefiles\schematic1\s
 
 
  ****     CIRCUIT DESCRIPTION
@@ -23,7 +23,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 10m 0 
+.TRAN  0 100m 0 
 .OPTIONS ADVCONV
 .OPTIONS FILEMODELSEARCH
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
@@ -46,9 +46,9 @@ X_X1         N00322 N03570 0 CSD17527Q5A
 
 INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
 
-**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/13/26 14:03:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Pspice\black body sim-pspicefiles\schematic1\s
 
 
  ****     Diode MODEL PARAMETERS
@@ -74,9 +74,9 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
         TRS1    4.200000E-03                                 
 
 
-**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/13/26 14:03:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Pspice\black body sim-pspicefiles\schematic1\s
 
 
  ****     MOSFET MODEL PARAMETERS
@@ -173,9 +173,9 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
         WWLC    0                            
 
 
-**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/13/26 14:03:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Pspice\black body sim-pspicefiles\schematic1\s
 
 
  ****     Resistor MODEL PARAMETERS
@@ -270,9 +270,9 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
            R    1            
 
 
-**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/13/26 14:03:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Pspice\black body sim-pspicefiles\schematic1\s
 
 
  ****     Voltage Controlled Switch MODEL PARAMETERS
@@ -290,9 +290,9 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
         VOFF   28            
 
 
-**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/13/26 14:03:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Pspice\black body sim-pspicefiles\schematic1\s
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -411,9 +411,9 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
 
           JOB CONCLUDED
 
-**** 05/11/26 14:39:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 05/13/26 14:03:55 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Sim\black body sim-pspicefiles\schematic1\sim.
+ ** Profile: "SCHEMATIC1-Sim"  [ C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Pspice\black body sim-pspicefiles\schematic1\s
 
 
  ****     JOB STATISTICS SUMMARY
@@ -423,5 +423,5 @@ INFO(ORPSIM-15453): Model X_X1.NMOS: Using BSIM VERSION 3.2
 
 
 
-  Total job time (using Solver 1)   =         .24
+  Total job time (using Solver 1)   =         .66
 
