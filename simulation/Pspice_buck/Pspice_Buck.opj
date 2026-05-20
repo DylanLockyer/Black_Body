@@ -89,7 +89,15 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Outputs"))
+      (Path "Design Resources"
+         "C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Pspice_buck\pspice_buck.dsn")
+      (Path "Design Resources"
+         "C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Pspice_buck\pspice_buck.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\dylan\Documents\GitHub\Black_Body\simulation\Pspice_buck\pspice_buck.dsn"
+         "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -99,11 +107,11 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 24 5 788 24 659")
-        (Scroll "34 -6")
-        (Zoom "82")
+        (Placement "44 0 1 -1 -1 -1 -1 5 788 24 659")
+        (Scroll "0 0")
+        (Zoom "100")
         (Occurrence "/"))
       (Path
-         "C:\USERS\DYLAN\DOCUMENTS\GITHUB\BLACK_BODY\SIMULATION\PSPICE_BUCK.DSN")
+         "C:\USERS\DYLAN\DOCUMENTS\GITHUB\BLACK_BODY\SIMULATION\PSPICE_BUCK\PSPICE_BUCK.DSN")
       (Schematic "SCHEMATIC1")
       (Page "PAGE1"))))
