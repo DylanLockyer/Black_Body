@@ -2395,16 +2395,6 @@
 		)
 		(uuid "1c7a7601-059f-424d-bf05-93b59dbe943b")
 	)
-	(label "\"sel_t\"{1mA 100uA 10uA 1uA}"
-		(at 215.9 119.38 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "402f7cdc-4bcf-4d29-96d6-1d8b00c4fab9")
-	)
 	(label "1uA_V"
 		(at 214.63 31.75 0)
 		(effects
@@ -2564,16 +2554,6 @@
 			(justify left bottom)
 		)
 		(uuid "9b0e102f-1f90-45d3-a2a6-e94dd52517c5")
-	)
-	(label "\"sel_v\"{1mA 100uA 10uA 1uA}"
-		(at 175.26 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a2fca5c3-6a57-4e29-9737-867086f865b2")
 	)
 	(label "100uA_T"
 		(at 210.82 113.03 180)

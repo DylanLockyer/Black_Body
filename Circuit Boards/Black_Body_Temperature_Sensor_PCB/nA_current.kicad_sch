@@ -2340,16 +2340,6 @@
 		)
 		(uuid "70db4402-b0f9-43a1-9a0b-588bd22e6ccc")
 	)
-	(label "\"sel\"{100na_neg 100na_pos 10na_neg 10na_pos}"
-		(at 162.56 120.65 90)
-		(effects
-			(font
-				(size 0.2 0.2)
-			)
-			(justify left bottom)
-		)
-		(uuid "961ae13b-5c96-40a7-a4ea-af21c532dfb3")
-	)
 	(label "sel.10na_pos"
 		(at 147.32 114.3 0)
 		(effects

@@ -5,6 +5,36 @@
 	(uuid "e46fba8d-0294-4f4f-927d-8614bb9d51d3")
 	(paper "A4")
 	(lib_symbols)
+	(bus
+		(pts
+			(xy 39.37 111.76) (xy 39.37 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13643e0c-6284-4743-9a25-b1a7cfed7757")
+	)
+	(bus
+		(pts
+			(xy 162.56 80.01) (xy 162.56 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25f96ac8-96e1-4b3e-bf81-c443a19f7493")
+	)
+	(bus
+		(pts
+			(xy 54.61 111.76) (xy 39.37 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28e9cd7e-77a2-4590-ab70-4ac1f79051cd")
+	)
 	(wire
 		(pts
 			(xy 114.3 48.26) (xy 128.27 48.26)
@@ -15,6 +45,26 @@
 		)
 		(uuid "34dfc363-8860-45e1-9669-c4bd695ece00")
 	)
+	(bus
+		(pts
+			(xy 54.61 73.66) (xy 48.26 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f3b65d3-73f3-4d1e-9d37-8a3c6877ad9f")
+	)
+	(bus
+		(pts
+			(xy 54.61 44.45) (xy 31.75 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fe7bbed-6204-406e-afee-9e967ba8434e")
+	)
 	(wire
 		(pts
 			(xy 114.3 72.39) (xy 128.27 72.39)
@@ -24,6 +74,66 @@
 			(type default)
 		)
 		(uuid "b4873cd3-7104-4a50-a6bc-cddf32e0f7b2")
+	)
+	(bus
+		(pts
+			(xy 39.37 69.85) (xy 54.61 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c76044af-5a37-492c-a899-02fb1bf47894")
+	)
+	(bus
+		(pts
+			(xy 158.75 80.01) (xy 158.75 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc955fc3-3142-4c79-8f92-41ed1fbf9e86")
+	)
+	(bus
+		(pts
+			(xy 31.75 118.11) (xy 54.61 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd6b97c6-26c7-4fef-af06-05c291eb9d92")
+	)
+	(bus
+		(pts
+			(xy 48.26 105.41) (xy 54.61 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6be094d-2922-428e-b8df-dd4e55692980")
+	)
+	(bus
+		(pts
+			(xy 31.75 44.45) (xy 31.75 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f478d0e2-6c3d-44fb-82b3-6c7083e00028")
+	)
+	(bus
+		(pts
+			(xy 48.26 73.66) (xy 48.26 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa617bca-0e87-4ce7-ab80-b3f08e350219")
 	)
 	(sheet
 		(at 54.61 100.33)
@@ -61,6 +171,56 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "\"sel\"{100na_neg 100na_pos 10na_neg 10na_pos}" input
+			(at 54.61 118.11 180)
+			(uuid "c2614587-fcc8-4385-b287-caebdd86ab54")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "hbridge_sel[1..4]" input
+			(at 158.75 100.33 90)
+			(uuid "de519fcc-1cd7-447e-a5c1-e5aa2e87338a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "i_source_sel[1..4]" input
+			(at 162.56 100.33 90)
+			(uuid "9e5a9d15-b546-41a1-86af-f2e38bbbd368")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "\"sel_t\"{1mA 100uA 10uA 1uA}" input
+			(at 54.61 105.41 180)
+			(uuid "a32a29d3-d759-422e-a79a-fd83601c0f01")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "\"sel_v\"{1mA 100uA 10uA 1uA}" input
+			(at 54.61 111.76 180)
+			(uuid "89dadb0b-85df-4ede-9d64-da37b2cfa657")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -213,7 +373,7 @@
 		)
 	)
 	(sheet
-		(at 242.57 90.17)
+		(at 241.3 68.58)
 		(size 25.4 24.13)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -229,7 +389,7 @@
 		)
 		(uuid "a616c994-4008-4ca8-bd18-d404fadeeba3")
 		(property "Sheetname" "power_supply"
-			(at 242.57 89.4584 0)
+			(at 241.3 67.8684 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -240,7 +400,7 @@
 			)
 		)
 		(property "Sheetfile" "power_supply.kicad_sch"
-			(at 242.57 114.8846 0)
+			(at 241.3 93.2946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

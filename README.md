@@ -46,26 +46,24 @@ Silicon Diode temperature sensor which reads from 1.4K to 420K. It requires a co
 Germanium temperature sensor which reads from 0.3K to 100K. Over that range the resistance varies from 35180Ω at 0.3K to 2.716Ω at 100K. This resistance changes in a logrithmic fashion with temperature. For temperatures less than 1K it recomends an excitation of 63uV to limit self heating interfering with measurement as thermal mass become very small at low temperatures, but the model 224 reader only does 3600uV at 0.3k to 900uV at 1K. For temperatures greater than 1K the excitation should be less than 10mV. The model 224 reader sends it between 100nA to 1mA to ensure the voltage range stays under 10mV.
 
 ## My plan
-- Current excitation from 100nA to 1mA, DC, switchable direction.
+- Current excitation from 10nA to 1mA, DC, switchable direction.
 - Current measurement of I+/I- sensor leads with high precision
-- Voltage measurement with high precision in range of 1mV to 10mV as below 1K we cannot go lower than 0.9mV (100nA) and above 1K self heating matters less
+- Voltage measurement with high precision in range of 1mV to 10mV as below 1K we cannot go lower than 0.9mV (10nA) and above 1K self heating matters less
 - 24-bit adc to measure both current and voltage, add isolate to prevent gnd return paths
 - Low noise, high common mode rejection for amplifiers to bring small signals to reasonable voltage levels 
 
-**Summary:** 100nA to 1mA input, 1mV to 10mV voltage measurement.
+**Summary:** 10nA to 1mA input, 1mV to 10mV voltage measurement.
 
 
-## Current supply (I+/I-)
-Supplying 10uA to 1mA of current which can be positive or negative (direction can change).
-
-```
-5V in -> low-noise LDO -> current source (100nA to 1mA) -> h-bridge (using reed relays) -> current measurment -> sensor
-```
 
 ### Clean voltage supply
+Was unable to simulate LTC3260 which seems to be a common issue with it's spice model based on forums.
 ### Current source
+Using application note from analog devices, confirmed using spice (for sub uA supply).
 ### Switching current direction
+Switches with noise injection of 3pA.
 ### Current measurement
+
 
 <br>
 

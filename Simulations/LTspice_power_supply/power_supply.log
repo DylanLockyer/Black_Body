@@ -1,0 +1,176 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\Users\dylan\Documents\GitHub\Black_Body\Simulations\LTspice_power_supply\power_supply.net
+Start Time: Thu May 28 11:41:07 2026
+solver = Normal
+Maximum thread count: 22
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Increasing initial diagonal Gmin to 100
+Gmin = 100
+Gmin = 10.7374
+Gmin = 1.15292
+Gmin = 0.123794
+vernier = 0.5
+vernier = 0.25
+Gmin = 0.0324519
+vernier = 0.125
+vernier = 0.166667
+Gmin = 0.0246169
+vernier = 0.222222
+vernier = 0.296296
+Gmin = 0.0146597
+vernier = 0.395061
+Gmin = 0.00640369
+vernier = 0.526748
+vernier = 0.702331
+Gmin = 0.00170769
+vernier = 0.936441
+vernier = 1
+Gmin = 0.000238021
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+Gmin = 0.000192917
+vernier = 0.166667
+vernier = 0.222222
+Gmin = 0.000127441
+vernier = 0.296296
+Gmin = 6.68618e-05
+vernier = 0.395061
+vernier = 0.526748
+Gmin = 2.31656e-05
+vernier = 0.702331
+vernier = 0.351165
+vernier = 0.175583
+vernier = 0.0877914
+Gmin = 1.41446e-05
+vernier = 0.0438957
+vernier = 0.0585276
+Gmin = 1.27305e-05
+vernier = 0.0780367
+Gmin = 1.06971e-05
+vernier = 0.104049
+vernier = 0.138732
+Gmin = 8.00056e-06
+vernier = 0.184976
+vernier = 0.246634
+Gmin = 5.0552e-06
+vernier = 0.328846
+Gmin = 2.477e-06
+vernier = 0.438461
+vernier = 0.584614
+vernier = 0.292307
+Gmin = 1.0102e-06
+vernier = 0.146154
+vernier = 0.0730768
+vernier = 0.0365384
+vernier = 0.0182692
+vernier = 0.0091346
+vernier = 0.0045673
+vernier = 0.00228365
+vernier = 0.00114182
+vernier = 0.000570912
+vernier = 0.000428184
+Gmin = 1.0102e-06
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Could not converge to DC with sources off!
+Starting source stepping with srcstepmethod=1
+Could not converge to DC with sources off!
+Pseudo Transient failed in finding the operating point at 337.441 ms.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+vernier = 0.5
+vernier = 0.25
+Gmin = 0.0335813
+vernier = 0.125
+vernier = 0.0625
+Gmin = 0.0292483
+vernier = 0.0833333
+vernier = 0.111111
+Gmin = 0.023162
+vernier = 0.148148
+vernier = 0.197531
+Gmin = 0.0160082
+vernier = 0.263374
+Gmin = 0.00900425
+vernier = 0.351165
+vernier = 0.46822
+Gmin = 0.0034904
+vernier = 0.624294
+vernier = 0.832392
+Gmin = 0.000802804
+vernier = 1
+vernier = 0.5
+Gmin = 0.000190579
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+Gmin = 0.000203119
+vernier = 0.0416667
+Gmin = 0.000185024
+vernier = 0.0555555
+vernier = 0.074074
+Gmin = 0.000158275
+vernier = 0.0987653
+vernier = 0.131687
+Gmin = 0.000123532
+vernier = 0.175583
+Gmin = 8.38625e-05
+vernier = 0.23411
+vernier = 0.312147
+Gmin = 4.41388e-05
+vernier = 0.416196
+vernier = 0.554928
+Gmin = 1.61726e-05
+vernier = 0.277464
+vernier = 0.138732
+Gmin = 1.19763e-05
+vernier = 0.184976
+vernier = 0.246634
+Gmin = 7.18762e-06
+vernier = 0.328846
+vernier = 0.438461
+Gmin = 3.22402e-06
+vernier = 0.584614
+Gmin = 9.38105e-07
+vernier = 0.779486
+vernier = 0.389743
+vernier = 0.194871
+vernier = 0.0974357
+vernier = 0.0487178
+vernier = 0.0243589
+vernier = 0.0121795
+vernier = 0.00608973
+vernier = 0.00304487
+vernier = 0.00152243
+Gmin = 9.38105e-07
+vernier = 0.000761216
+vernier = 0.000570912
+vernier = 0.000428184
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Could not converge to DC with sources off!
+Starting source stepping with srcstepmethod=1
+Could not converge to DC with sources off!
+Pseudo Transient failed in finding the operating point at 252.524 µs.
+.step 
+Total elapsed time: 323.468 seconds.
+
+Files loaded:
+C:\Users\dylan\Documents\GitHub\Black_Body\Simulations\LTspice_power_supply\power_supply.net
+C:\Users\dylan\AppData\Local\LTspice\lib\sub\LT3042.sub
+C:\Users\dylan\AppData\Local\LTspice\lib\sub\LT3094.sub
+C:\Users\dylan\AppData\Local\LTspice\lib\sub\LTC3260.sub
+
