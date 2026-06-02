@@ -416,7 +416,7 @@
         "uuid": "e46fba8d-0294-4f4f-927d-8614bb9d51d3"
       }
     ],
-    "used_designators": "C4-5,#PWR34-38,J3",
+    "used_designators": "#PWR8,#PWR68-94,D3,U12-21,R39-46",
     "variants": []
   },
   "sheets": [
@@ -433,20 +433,20 @@
       "nA_current"
     ],
     [
-      "497ae29c-3205-4255-92aa-23b986f138da",
-      "V&I_sense"
-    ],
-    [
-      "1b75f3a9-4fb7-402a-8d2e-33bfa6f5411b",
-      "micrcontroller"
-    ],
-    [
       "4094c958-ded6-41d9-bb08-a88dca4a947b",
       "sensor_interface"
     ],
     [
+      "497ae29c-3205-4255-92aa-23b986f138da",
+      "V&I_sense"
+    ],
+    [
       "a616c994-4008-4ca8-bd18-d404fadeeba3",
       "power_supply"
+    ],
+    [
+      "1b75f3a9-4fb7-402a-8d2e-33bfa6f5411b",
+      "micrcontroller"
     ]
   ],
   "text_variables": {},

@@ -2012,7 +2012,7 @@
 	)
 	(bus
 		(pts
-			(xy 162.56 109.22) (xy 162.56 120.65)
+			(xy 162.56 109.22) (xy 162.56 118.11)
 		)
 		(stroke
 			(width 0)
@@ -2042,7 +2042,7 @@
 	)
 	(bus
 		(pts
-			(xy 162.56 120.65) (xy 165.1 120.65)
+			(xy 162.56 118.11) (xy 165.1 118.11)
 		)
 		(stroke
 			(width 0)
@@ -2392,7 +2392,7 @@
 	)
 	(hierarchical_label "\"sel\"{100na_neg 100na_pos 10na_neg 10na_pos}"
 		(shape input)
-		(at 165.1 120.65 0)
+		(at 165.1 118.11 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3066,84 +3066,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+4V")
-		(at 152.4 69.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "62686cde-daa8-45ef-a318-118f799573bc")
-		(property "Reference" "#PWR08"
-			(at 152.4 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+4V"
-			(at 152.4 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 152.4 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 152.4 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+4V\""
-			(at 152.4 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3185de56-dde8-44d2-ac35-bb0b91c152d1")
-		)
-		(instances
-			(project "Black_Body_Temperature_Sensor_PCB"
-				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Reference_Current:LM334M")
 		(at 152.4 74.93 0)
 		(unit 1)
@@ -3334,7 +3256,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "71edabe6-afe2-479e-b2f4-a4c2f6d6c22a")
 		(property "Reference" "#PWR07"
 			(at 175.26 100.33 0)
@@ -3347,14 +3268,15 @@
 				)
 			)
 		)
-		(property "Value" "-4V"
-			(at 175.26 109.22 0)
+		(property "Value" "-3V3A"
+			(at 172.72 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
@@ -3506,7 +3428,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "897ca115-5db3-4dae-9761-2a1bec3233af")
 		(property "Reference" "#PWR06"
 			(at 170.18 95.25 0)
@@ -3519,14 +3440,15 @@
 				)
 			)
 		)
-		(property "Value" "+4V"
-			(at 170.18 86.36 0)
+		(property "Value" "+3V3A"
+			(at 167.64 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -3569,6 +3491,84 @@
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+4V")
+		(at 152.4 69.85 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b24f3fcc-1dbe-4658-bf7f-1add982beb4e")
+		(property "Reference" "#PWR08"
+			(at 152.4 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3A"
+			(at 152.4 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+4V\""
+			(at 152.4 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "df410325-fc40-4377-821b-c5f9ae5f737d")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)

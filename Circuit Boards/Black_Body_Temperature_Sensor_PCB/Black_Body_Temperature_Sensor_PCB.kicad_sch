@@ -17,7 +17,17 @@
 	)
 	(bus
 		(pts
-			(xy 162.56 80.01) (xy 162.56 100.33)
+			(xy 167.64 50.8) (xy 180.34 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20e716eb-d545-4a5d-85e7-14a1592b39bc")
+	)
+	(bus
+		(pts
+			(xy 161.29 80.01) (xy 161.29 100.33)
 		)
 		(stroke
 			(width 0)
@@ -37,7 +47,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 48.26) (xy 128.27 48.26)
+			(xy 114.3 48.26) (xy 127 48.26)
 		)
 		(stroke
 			(width 0)
@@ -65,9 +75,29 @@
 		)
 		(uuid "3fe7bbed-6204-406e-afee-9e967ba8434e")
 	)
+	(bus
+		(pts
+			(xy 167.64 45.72) (xy 180.34 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7098c9a5-2597-43a5-bdd1-a73f496e36ea")
+	)
+	(bus
+		(pts
+			(xy 165.1 80.01) (xy 165.1 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1f73a1d-412e-4202-bc07-1170888bec81")
+	)
 	(wire
 		(pts
-			(xy 114.3 72.39) (xy 128.27 72.39)
+			(xy 114.3 72.39) (xy 127 72.39)
 		)
 		(stroke
 			(width 0)
@@ -87,7 +117,7 @@
 	)
 	(bus
 		(pts
-			(xy 158.75 80.01) (xy 158.75 100.33)
+			(xy 157.48 80.01) (xy 157.48 100.33)
 		)
 		(stroke
 			(width 0)
@@ -184,7 +214,7 @@
 			)
 		)
 		(pin "hbridge_sel[1..4]" input
-			(at 158.75 100.33 90)
+			(at 157.48 100.33 90)
 			(uuid "de519fcc-1cd7-447e-a5c1-e5aa2e87338a")
 			(effects
 				(font
@@ -194,7 +224,7 @@
 			)
 		)
 		(pin "i_source_sel[1..4]" input
-			(at 162.56 100.33 90)
+			(at 161.29 100.33 90)
 			(uuid "9e5a9d15-b546-41a1-86af-f2e38bbbd368")
 			(effects
 				(font
@@ -223,16 +253,26 @@
 				(justify left)
 			)
 		)
+		(pin "i_sense_sel[1..4]" input
+			(at 165.1 100.33 90)
+			(uuid "da9043a0-b1ae-4ff7-8774-ff5f1e7251b5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3"
-					(page "5")
+					(page "7")
 				)
 			)
 		)
 	)
 	(sheet
-		(at 128.27 38.1)
+		(at 127 38.1)
 		(size 40.64 41.91)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -247,7 +287,7 @@
 		)
 		(uuid "4094c958-ded6-41d9-bb08-a88dca4a947b")
 		(property "Sheetname" "sensor_interface"
-			(at 128.27 37.3884 0)
+			(at 127 37.3884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -258,7 +298,7 @@
 			)
 		)
 		(property "Sheetfile" "sensor_interface.kicad_sch"
-			(at 125.73 81.28 0)
+			(at 124.46 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -269,7 +309,7 @@
 			)
 		)
 		(pin "v_sense{V+ V-}" input
-			(at 168.91 48.26 0)
+			(at 167.64 45.72 0)
 			(uuid "e96192e8-c9bc-4a86-a60d-f53df080840e")
 			(effects
 				(font
@@ -279,7 +319,7 @@
 			)
 		)
 		(pin "uA_I_Source" input
-			(at 128.27 72.39 180)
+			(at 127 72.39 180)
 			(uuid "f1bae8b6-f644-4a09-bb8c-1664be659532")
 			(effects
 				(font
@@ -289,7 +329,7 @@
 			)
 		)
 		(pin "nA_I_Source" input
-			(at 128.27 48.26 180)
+			(at 127 48.26 180)
 			(uuid "6f44e424-a7c8-4333-8e54-99d7d073e1c8")
 			(effects
 				(font
@@ -299,7 +339,7 @@
 			)
 		)
 		(pin "i_source_sel[1..4]" input
-			(at 162.56 80.01 270)
+			(at 161.29 80.01 270)
 			(uuid "9dd83b6b-aaa2-4344-8944-d1994aae4da4")
 			(effects
 				(font
@@ -309,8 +349,28 @@
 			)
 		)
 		(pin "hbridge_sel[1..4]" input
-			(at 158.75 80.01 270)
+			(at 157.48 80.01 270)
 			(uuid "402c049e-70ef-47e4-a374-c54cb9c83f13")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "i_sense{I+ I-}" input
+			(at 167.64 50.8 0)
+			(uuid "f1c2250b-b835-4982-846a-9dce1682b68a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "i_sense_sel[1..4]" input
+			(at 165.1 80.01 270)
+			(uuid "3e347dda-a728-40f4-924c-1a4443eccf2c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -321,7 +381,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3"
-					(page "6")
+					(page "4")
 				)
 			)
 		)
@@ -364,17 +424,37 @@
 				(justify left top)
 			)
 		)
+		(pin "v_sense{V+ V-}" input
+			(at 180.34 45.72 180)
+			(uuid "276f7cf7-c31a-4396-a6d8-6d65de68af7a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "i_sense{I+ I-}" input
+			(at 180.34 50.8 180)
+			(uuid "7d1f6298-3df9-4a06-a5be-c3f3e4c7c944")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3"
-					(page "4")
+					(page "5")
 				)
 			)
 		)
 	)
 	(sheet
-		(at 241.3 68.58)
-		(size 25.4 24.13)
+		(at 231.14 38.1)
+		(size 41.91 41.91)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -389,7 +469,7 @@
 		)
 		(uuid "a616c994-4008-4ca8-bd18-d404fadeeba3")
 		(property "Sheetname" "power_supply"
-			(at 241.3 67.8684 0)
+			(at 231.14 37.3884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -400,7 +480,7 @@
 			)
 		)
 		(property "Sheetfile" "power_supply.kicad_sch"
-			(at 241.3 93.2946 0)
+			(at 231.14 80.5946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -413,7 +493,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3"
-					(page "7")
+					(page "6")
 				)
 			)
 		)

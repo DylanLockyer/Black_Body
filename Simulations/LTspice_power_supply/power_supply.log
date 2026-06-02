@@ -1,6 +1,6 @@
 LTspice 24.1.10 for Windows
-Circuit: C:\Users\dylan\Documents\GitHub\Black_Body\Simulations\LTspice_power_supply\power_supply.net
-Start Time: Thu May 28 11:41:07 2026
+Circuit: C:\Users\dylan\Downloads\power_supply.net
+Start Time: Fri May 29 11:02:22 2026
 solver = Normal
 Maximum thread count: 22
 tnom = 27
@@ -8,169 +8,149 @@ temp = 27
 method = trap
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
-Increasing initial diagonal Gmin to 100
-Gmin = 100
-Gmin = 10.7374
-Gmin = 1.15292
-Gmin = 0.123794
-vernier = 0.5
-vernier = 0.25
-Gmin = 0.0324519
-vernier = 0.125
-vernier = 0.166667
-Gmin = 0.0246169
-vernier = 0.222222
-vernier = 0.296296
-Gmin = 0.0146597
-vernier = 0.395061
-Gmin = 0.00640369
-vernier = 0.526748
-vernier = 0.702331
-Gmin = 0.00170769
-vernier = 0.936441
-vernier = 1
-Gmin = 0.000238021
-vernier = 0.5
-vernier = 0.25
-vernier = 0.125
-Gmin = 0.000192917
-vernier = 0.166667
-vernier = 0.222222
-Gmin = 0.000127441
-vernier = 0.296296
-Gmin = 6.68618e-05
-vernier = 0.395061
-vernier = 0.526748
-Gmin = 2.31656e-05
-vernier = 0.702331
-vernier = 0.351165
-vernier = 0.175583
-vernier = 0.0877914
-Gmin = 1.41446e-05
-vernier = 0.0438957
-vernier = 0.0585276
-Gmin = 1.27305e-05
-vernier = 0.0780367
-Gmin = 1.06971e-05
-vernier = 0.104049
-vernier = 0.138732
-Gmin = 8.00056e-06
-vernier = 0.184976
-vernier = 0.246634
-Gmin = 5.0552e-06
-vernier = 0.328846
-Gmin = 2.477e-06
-vernier = 0.438461
-vernier = 0.584614
-vernier = 0.292307
-Gmin = 1.0102e-06
-vernier = 0.146154
-vernier = 0.0730768
-vernier = 0.0365384
-vernier = 0.0182692
-vernier = 0.0091346
-vernier = 0.0045673
-vernier = 0.00228365
-vernier = 0.00114182
-vernier = 0.000570912
-vernier = 0.000428184
-Gmin = 1.0102e-06
-Gmin = 0
-Gmin stepping failed
-
-Starting source stepping with srcstepmethod=0
-Could not converge to DC with sources off!
-Starting source stepping with srcstepmethod=1
-Could not converge to DC with sources off!
-Pseudo Transient failed in finding the operating point at 337.441 ms.
-Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
-Starting Gmin stepping
 Gmin = 10
 Gmin = 1.07374
-Gmin = 0.115292
 vernier = 0.5
-vernier = 0.25
-Gmin = 0.0335813
-vernier = 0.125
-vernier = 0.0625
-Gmin = 0.0292483
-vernier = 0.0833333
-vernier = 0.111111
-Gmin = 0.023162
-vernier = 0.148148
-vernier = 0.197531
-Gmin = 0.0160082
-vernier = 0.263374
-Gmin = 0.00900425
-vernier = 0.351165
-vernier = 0.46822
-Gmin = 0.0034904
-vernier = 0.624294
-vernier = 0.832392
-Gmin = 0.000802804
-vernier = 1
-vernier = 0.5
-Gmin = 0.000190579
 vernier = 0.25
 vernier = 0.125
 vernier = 0.0625
+Gmin = 1.08884
 vernier = 0.03125
-Gmin = 0.000203119
-vernier = 0.0416667
-Gmin = 0.000185024
-vernier = 0.0555555
-vernier = 0.074074
-Gmin = 0.000158275
-vernier = 0.0987653
-vernier = 0.131687
-Gmin = 0.000123532
-vernier = 0.175583
-Gmin = 8.38625e-05
-vernier = 0.23411
-vernier = 0.312147
-Gmin = 4.41388e-05
-vernier = 0.416196
-vernier = 0.554928
-Gmin = 1.61726e-05
-vernier = 0.277464
-vernier = 0.138732
-Gmin = 1.19763e-05
-vernier = 0.184976
-vernier = 0.246634
-Gmin = 7.18762e-06
-vernier = 0.328846
-vernier = 0.438461
-Gmin = 3.22402e-06
-vernier = 0.584614
-Gmin = 9.38105e-07
-vernier = 0.779486
-vernier = 0.389743
-vernier = 0.194871
-vernier = 0.0974357
-vernier = 0.0487178
-vernier = 0.0243589
-vernier = 0.0121795
-vernier = 0.00608973
-vernier = 0.00304487
-vernier = 0.00152243
-Gmin = 9.38105e-07
-vernier = 0.000761216
-vernier = 0.000570912
-vernier = 0.000428184
+vernier = 0.015625
+Gmin = 1.03122
+vernier = 0.0078125
+vernier = 0.00390625
+Gmin = 1.01823
+vernier = 0.00520833
+vernier = 0.00260417
+Gmin = 1.01162
+vernier = 0.00347222
+vernier = 0.00173611
+vernier = 0.00231481
+vernier = 0.00115741
+Gmin = 1.00877
+vernier = 0.00154321
+vernier = 0.000771604
+Gmin = 1.00673
+vernier = 0.00102881
+vernier = 0.000514403
+vernier = 0.00068587
+Gmin = 1.00553
+vernier = 0.000514403
+vernier = 0.00068587
+vernier = 0.000514402
+Gmin = 1.00475
 Gmin = 0
 Gmin stepping failed
 
 Starting source stepping with srcstepmethod=0
-Could not converge to DC with sources off!
+Source Step = 3.0303%
+vernier = 0.25
+Source Step = 1.70455%
+Source Step = 3.59848%
+Source Step = 5.49242%
+Source Step = 7.38636%
+Source Step = 9.2803%
+vernier = 0.09375
+Source Step = 11.9318%
+Source Step = 14.7727%
+Source Step = 17.6136%
+Source Step = 20.4545%
+Source Step = 23.2955%
+vernier = 0.140625
+Source Step = 27.1307%
+Source Step = 30.6463%
+Source Step = 30.8394%
+Source Step = 30.906%
+Source Step = 30.9726%
+Source Step = 31.0392%
+Source Step = 31.1057%
+vernier = 0.0032959
+Source Step = 31.1856%
+Source Step = 31.2855%
+Source Step = 31.3854%
+Source Step = 31.4853%
+Source Step = 31.5851%
+vernier = 0.00494385
+Source Step = 31.7%
+Source Step = 31.8498%
+Source Step = 31.9996%
+Source Step = 32.1494%
+Source Step = 32.2992%
+vernier = 0.00741577
+Source Step = 32.464%
+Source Step = 32.6888%
+Source Step = 32.9135%
+Source Step = 33.1382%
+Source Step = 33.3629%
+vernier = 0.0111237
+Source Step = 33.5989%
+Source Step = 33.936%
+Source Step = 34.273%
+Source Step = 34.6101%
+Source Step = 34.9472%
+Source Step = 35.2843%
+vernier = 0.0166855
+Source Step = 35.7899%
+Source Step = 36.2955%
+Source Step = 36.8011%
+Source Step = 37.3068%
+Source Step = 37.8124%
+vernier = 0.0250282
+Source Step = 38.5455%
+Source Step = 39.304%
+Source Step = 40.0624%
+Source Step = 40.8208%
+Source Step = 41.5793%
+vernier = 0.0375423
+Source Step = 42.6411%
+Source Step = 43.7787%
+Source Step = 44.9164%
+Source Step = 46.054%
+Source Step = 47.1917%
+vernier = 0.0563135
+Source Step = 48.7275%
+Source Step = 50.1353%
+vernier = 0.00351959
 Starting source stepping with srcstepmethod=1
-Could not converge to DC with sources off!
-Pseudo Transient failed in finding the operating point at 252.524 µs.
-.step 
-Total elapsed time: 323.468 seconds.
+Source Step = 3.0303%
+vernier = 0.25
+Source Step = 7.57576%
+Source Step = 15.1515%
+Source Step = 22.7273%
+Source Step = 30.303%
+Source Step = 37.8788%
+vernier = 0.375
+Source Step = 48.8636%
+Source Step = 60.2273%
+Source Step = 71.5909%
+Source Step = 82.9545%
+Source Step = 94.3182%
+vernier = 0.5625
+Source Step = 99.1065%
+vernier = 0.00878906
+Source Step = 99.0599%
+Source Step = 99.1265%
+Source Step = 99.1931%
+Source Step = 99.2597%
+Source Step = 99.3263%
+Source Step = 99.3928%
+Source Step = 99.4594%
+Source Step = 99.526%
+Source Step = 99.5926%
+Source Step = 99.6592%
+Source Step = 99.7258%
+Source Step = 99.7923%
+Source Step = 99.8589%
+Source Step = 99.9255%
+Source Step = 99.9921%
+Source stepping failed
+
+Pseudo Transient succeeded in finding the operating point at 5.65199 s.
+Total elapsed time: 6.314 seconds.
 
 Files loaded:
-C:\Users\dylan\Documents\GitHub\Black_Body\Simulations\LTspice_power_supply\power_supply.net
+C:\Users\dylan\Downloads\power_supply.net
 C:\Users\dylan\AppData\Local\LTspice\lib\sub\LT3042.sub
 C:\Users\dylan\AppData\Local\LTspice\lib\sub\LT3094.sub
-C:\Users\dylan\AppData\Local\LTspice\lib\sub\LTC3260.sub
 
