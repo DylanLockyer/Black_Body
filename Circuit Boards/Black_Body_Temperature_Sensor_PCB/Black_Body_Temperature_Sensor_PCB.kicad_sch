@@ -5,6 +5,16 @@
 	(uuid "e46fba8d-0294-4f4f-927d-8614bb9d51d3")
 	(paper "A4")
 	(lib_symbols)
+	(wire
+		(pts
+			(xy 229.87 72.39) (xy 229.87 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0448e263-1c07-43a7-a134-5a3a8753f1cc")
+	)
 	(bus
 		(pts
 			(xy 39.37 111.76) (xy 39.37 69.85)
@@ -37,6 +47,16 @@
 	)
 	(bus
 		(pts
+			(xy 226.06 104.14) (xy 222.25 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "284e2587-b03a-4d25-93fb-1e215a1475ac")
+	)
+	(bus
+		(pts
 			(xy 54.61 111.76) (xy 39.37 111.76)
 		)
 		(stroke
@@ -54,6 +74,16 @@
 			(type default)
 		)
 		(uuid "34dfc363-8860-45e1-9669-c4bd695ece00")
+	)
+	(wire
+		(pts
+			(xy 222.25 68.58) (xy 234.95 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "372ea6a7-7273-482c-a3e8-09a623e6cb67")
 	)
 	(bus
 		(pts
@@ -77,6 +107,36 @@
 	)
 	(bus
 		(pts
+			(xy 222.25 76.2) (xy 226.06 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "404494b0-ac60-44e4-bf7a-0d4cdb04da58")
+	)
+	(wire
+		(pts
+			(xy 222.25 72.39) (xy 229.87 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47f80737-bc32-4a40-b947-7e9505260aad")
+	)
+	(wire
+		(pts
+			(xy 229.87 107.95) (xy 222.25 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c1f3ac5-2216-4a14-87cf-555fc73fa177")
+	)
+	(bus
+		(pts
 			(xy 167.64 45.72) (xy 180.34 45.72)
 		)
 		(stroke
@@ -84,6 +144,26 @@
 			(type default)
 		)
 		(uuid "7098c9a5-2597-43a5-bdd1-a73f496e36ea")
+	)
+	(bus
+		(pts
+			(xy 226.06 76.2) (xy 226.06 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88b0b9e3-39f2-4337-92a2-ec9092b1646f")
+	)
+	(wire
+		(pts
+			(xy 234.95 68.58) (xy 234.95 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "938d51ac-643a-4b16-89cd-935cf62409ff")
 	)
 	(bus
 		(pts
@@ -104,6 +184,16 @@
 			(type default)
 		)
 		(uuid "b4873cd3-7104-4a50-a6bc-cddf32e0f7b2")
+	)
+	(wire
+		(pts
+			(xy 234.95 111.76) (xy 222.25 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c38969c9-b68b-44ad-b092-04532de02dce")
 	)
 	(bus
 		(pts
@@ -256,6 +346,36 @@
 		(pin "i_sense_sel[1..4]" input
 			(at 165.1 100.33 90)
 			(uuid "da9043a0-b1ae-4ff7-8774-ff5f1e7251b5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SPI{SCLK, MOSI, MISO, CS}" input
+			(at 222.25 104.14 0)
+			(uuid "70043639-96fe-4a20-84be-23adc6437218")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "ADC_DRDY" input
+			(at 222.25 107.95 0)
+			(uuid "e3456a6a-b02a-42ef-945f-c9b08b89859e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CLK_MCO" input
+			(at 222.25 111.76 0)
+			(uuid "02b6d7ac-8b54-47ef-a6a9-472ef89c7da3")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -444,6 +564,36 @@
 				(justify left)
 			)
 		)
+		(pin "SPI{SCLK, MOSI, MISO, CS}" input
+			(at 222.25 76.2 0)
+			(uuid "b1c1f889-b267-4493-99f9-0e16cfb197c4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "ADC_DRDY" input
+			(at 222.25 72.39 0)
+			(uuid "fb712d75-f59a-4942-8361-9bb448b7859f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CLK_MCO" input
+			(at 222.25 68.58 0)
+			(uuid "36488a38-3ba9-4522-b395-4bacd0520e67")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3"
@@ -453,8 +603,8 @@
 		)
 	)
 	(sheet
-		(at 231.14 38.1)
-		(size 41.91 41.91)
+		(at 241.3 38.1)
+		(size 38.1 38.1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -469,7 +619,7 @@
 		)
 		(uuid "a616c994-4008-4ca8-bd18-d404fadeeba3")
 		(property "Sheetname" "power_supply"
-			(at 231.14 37.3884 0)
+			(at 241.3 37.3884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -480,7 +630,7 @@
 			)
 		)
 		(property "Sheetfile" "power_supply.kicad_sch"
-			(at 231.14 80.5946 0)
+			(at 241.3 76.7846 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
