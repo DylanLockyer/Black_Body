@@ -91,6 +91,7 @@
 		)
 		(capping no)
 		(filling no)
+		(zone_defaults)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -5116,12 +5117,6 @@
 		(path "/81e90e05-0519-429e-85ab-ffede3727917/c44ef25c-0475-4d50-a997-643f9c4b93bb")
 		(sheetname "/ESP32/")
 		(sheetfile "ESP32.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4" "5" "6" "7" "8")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5173,28 +5168,6 @@
 			)
 			(layer "F.SilkS")
 			(uuid "a1b6ad2b-62ad-4479-8508-2d6e55ae1edd")
-		)
-		(fp_circle
-			(center 9.518701 3.042001)
-			(end 9.899701 3.042001)
-			(stroke
-				(width 0.508)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.SilkS")
-			(uuid "b7e56937-81c0-45d4-b055-39e85a68e49b")
-		)
-		(fp_circle
-			(center 9.518701 3.042001)
-			(end 9.899701 3.042001)
-			(stroke
-				(width 0.508)
-				(type solid)
-			)
-			(fill no)
-			(layer "B.SilkS")
-			(uuid "b5a0b8d3-d93f-4668-81aa-e083f83969d3")
 		)
 		(fp_line
 			(start -8.756701 3.816701)
@@ -9119,6 +9092,178 @@
 		(fill no)
 		(layer "Edge.Cuts")
 		(uuid "769562ee-1b2b-4eb9-b578-d1dc289623b3")
+	)
+	(gr_text "UART"
+		(at 86.5 88.5 0)
+		(layer "F.SilkS")
+		(uuid "c34e87ba-40ca-4b1f-b2e5-3237641d38e1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "HEATER"
+		(at 87.5 105 0)
+		(layer "F.SilkS")
+		(uuid "9ef77556-00d6-47ca-ae5e-8784b42e38ab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "PROGRAMMER"
+		(at 88 102.5 0)
+		(layer "F.SilkS")
+		(uuid "3f8730f3-cf8c-4b36-ace8-d62813aa0e5d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "RESET"
+		(at 93 92 0)
+		(layer "F.SilkS")
+		(uuid "2cdad2ab-fff4-41c4-8a64-a5c7ceff1723")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "BOOT"
+		(at 126.5 92 0)
+		(layer "F.SilkS")
+		(uuid "f2000a40-b5bc-49e9-91ed-f47143f34d5d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "12v - 24v\nVCC input"
+		(at 130 112 90)
+		(layer "F.SilkS")
+		(uuid "9dc19c04-facd-4b46-8aa4-864f694d5246")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "TEMP SENSORS"
+		(at 131.5 95 90)
+		(layer "F.SilkS")
+		(uuid "6810d02e-5d4d-43d0-8e15-88cfed3e8938")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "M2"
+		(at 88 116 0)
+		(layer "B.SilkS")
+		(uuid "d60c78dc-6fc6-4f8c-8c9a-a5602f399eff")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "M2"
+		(at 92 84.5 0)
+		(layer "B.SilkS")
+		(uuid "bf4be8ee-cd2d-45db-924a-c9e95015f4cb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "M2"
+		(at 133 84.5 0)
+		(layer "B.SilkS")
+		(uuid "da22f680-cd47-4715-8e61-726df359cfd3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "M2"
+		(at 137 116 0)
+		(layer "B.SilkS")
+		(uuid "221f5642-6ba8-40c5-9fb0-a91294cd3a57")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "Black Body Heater Controler REV. 0"
+		(at 132.5 120 0)
+		(layer "B.SilkS")
+		(uuid "52fe009c-3a5a-4c59-a105-1903545e548a")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(bold yes)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text_box "Programming Mode:\n1. Hold BOOT\n2. Press RESET\n3. Release RESET\n3. Release BOOT"
+		(start 127.429362 88.5)
+		(end 137.570638 105.5)
+		(margins 1.0025 1.0025 1.0025 1.0025)
+		(angle 90)
+		(layer "B.SilkS")
+		(uuid "0e1bc2b8-9693-45a7-8231-8f5b678409c5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left top mirror)
+		)
+		(border yes)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(knockout no)
 	)
 	(via
 		(at 136 84)
