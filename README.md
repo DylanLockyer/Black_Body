@@ -29,10 +29,12 @@ Using 4x 10ohms resistors in series gives a resistance of 40ohms total. To have 
 The green pulse is the voltage the heater sees and the red is the output of the shunt resistor amplifier (current measurement).
 ![Alt text](Images/Pspice_Heater_Results.png)
 
+### Shunt Current Measurement
+The shunt resistor will be 100mOhm and the aplifier gain will be 50V/V giving an output voltage of 2.5v at 0.5A and 0.25V at 0.05A. To ensure the current measurement is clean in spite of the ~10khz pwm pulse to the resistor from the n-channel mosfet a low pass filter is used. A simulated example of the filtering can be seen below of a 10% duty cycle of 10khz pwm on 20V.
+![Alt text](Images/Current%20Sense%20Simulation.png)
+
 ### Power Source
 The device will recieve 20V power from a power supply (either a lab adjustable power source or dedicated AC/DC power source). The ESP32 board has a buck converted to step it down to 5V at 2A. There will then be a simple LDO to convert to 3.3V to provide an even cleaner supply for the microcontroller for improved ADC accuracy.
-
-
 
 
 ## Temperature Sensor Design Choices
