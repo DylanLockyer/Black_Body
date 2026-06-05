@@ -15,9 +15,49 @@
 		)
 		(uuid "cb04da03-5a15-44bd-ba56-c6749df9c547")
 	)
+	(text_box "- ESP32-S3 chip & USB programming\n- 3.3v ldo\n- SPI master interface for temperature probe"
+		(exclude_from_sim no)
+		(at 182.88 109.22 0)
+		(size 48.26 13.97)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width -0.0001)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "38524ad2-80bd-4196-9f34-f77a4f7d8882")
+	)
+	(text_box "- 20V power input\n- 20 to 5v buck\n- resistive heater pwm control\n- Current/voltage measurment for heater"
+		(exclude_from_sim no)
+		(at 82.55 105.41 0)
+		(size 43.18 13.97)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width -0.0001)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "ba52374a-acf7-47f9-bc80-929d2505fc3f")
+	)
 	(wire
 		(pts
-			(xy 127 96.52) (xy 76.2 96.52)
+			(xy 180.34 95.25) (xy 129.54 95.25)
 		)
 		(stroke
 			(width 0)
@@ -27,7 +67,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 105.41) (xy 76.2 105.41)
+			(xy 180.34 104.14) (xy 129.54 104.14)
 		)
 		(stroke
 			(width 0)
@@ -37,7 +77,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 101.6) (xy 76.2 101.6)
+			(xy 180.34 100.33) (xy 129.54 100.33)
 		)
 		(stroke
 			(width 0)
@@ -46,7 +86,7 @@
 		(uuid "86177459-2fe8-46a6-8b4f-abd2af6e41f8")
 	)
 	(sheet
-		(at 25.4 76.2)
+		(at 78.74 74.93)
 		(size 50.8 50.8)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -62,7 +102,7 @@
 		)
 		(uuid "1986740f-e0a2-4083-b861-6e4dc96daf6f")
 		(property "Sheetname" "Power_periferals"
-			(at 25.4 75.4884 0)
+			(at 78.74 74.2184 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -73,7 +113,7 @@
 			)
 		)
 		(property "Sheetfile" "power_periferals.kicad_sch"
-			(at 25.4 127.5846 0)
+			(at 78.74 126.3146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -84,7 +124,7 @@
 			)
 		)
 		(pin "FET" input
-			(at 76.2 105.41 0)
+			(at 129.54 104.14 0)
 			(uuid "67b63ef6-3e02-4a32-b6ed-b2e052270331")
 			(effects
 				(font
@@ -94,7 +134,7 @@
 			)
 		)
 		(pin "V_SENSE" input
-			(at 76.2 101.6 0)
+			(at 129.54 100.33 0)
 			(uuid "1376d234-c4ea-406e-a3f6-dc64d288add8")
 			(effects
 				(font
@@ -104,7 +144,7 @@
 			)
 		)
 		(pin "I_SENSE" input
-			(at 76.2 96.52 0)
+			(at 129.54 95.25 0)
 			(uuid "27458410-4eb5-480c-a8a4-a0f74f244501")
 			(effects
 				(font
@@ -122,7 +162,7 @@
 		)
 	)
 	(sheet
-		(at 127 76.2)
+		(at 180.34 74.93)
 		(size 50.8 50.8)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -138,7 +178,7 @@
 		)
 		(uuid "81e90e05-0519-429e-85ab-ffede3727917")
 		(property "Sheetname" "ESP32"
-			(at 127 75.4884 0)
+			(at 180.34 74.2184 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -149,7 +189,7 @@
 			)
 		)
 		(property "Sheetfile" "ESP32.kicad_sch"
-			(at 127 127.5846 0)
+			(at 180.34 126.3146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -160,7 +200,7 @@
 			)
 		)
 		(pin "I_SENSE" input
-			(at 127 96.52 180)
+			(at 180.34 95.25 180)
 			(uuid "e1182099-43d8-4f95-a495-461c5b93befa")
 			(effects
 				(font
@@ -170,7 +210,7 @@
 			)
 		)
 		(pin "FET" input
-			(at 127 105.41 180)
+			(at 180.34 104.14 180)
 			(uuid "2e0ede00-eca7-4432-ab92-38152843bba1")
 			(effects
 				(font
@@ -180,7 +220,7 @@
 			)
 		)
 		(pin "V_SENSE" input
-			(at 127 101.6 180)
+			(at 180.34 100.33 180)
 			(uuid "c8e167db-9cd7-4e1e-aaad-0afb2a8b680c")
 			(effects
 				(font

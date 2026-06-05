@@ -4,4 +4,6 @@
 	(lib (name "-switch") (type "KiCad") (uri "${KIPRJMOD}/-switch.pretty") (options "") (descr ""))
 	(lib (name "-switch") (type "KiCad") (uri "C:/Users/dylan/Documents/GitHub/Kicad_Library/Footprint/-switch.pretty") (options "") (descr ""))
 	(lib (name "-connector") (type "KiCad") (uri "C:/Users/dylan/Documents/GitHub/Kicad_Library/Footprint/-connector.pretty") (options "") (descr ""))
+	(lib (name "-inductors") (type "KiCad") (uri "C:/Users/dylan/Documents/GitHub/Kicad_Library/Footprint/-inductors.pretty") (options "") (descr ""))
+	(lib (name "-mcu") (type "KiCad") (uri "C:/Users/dylan/Documents/GitHub/Kicad_Library/Footprint/-mcu.pretty") (options "") (descr ""))
 )
