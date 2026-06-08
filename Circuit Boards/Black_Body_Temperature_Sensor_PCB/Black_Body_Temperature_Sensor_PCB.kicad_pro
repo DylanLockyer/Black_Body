@@ -301,7 +301,7 @@
   "schematic": {
     "annotate_start_num": 0,
     "annotation": {
-      "method": 0,
+      "method": 1,
       "sort_order": 0
     },
     "bom_export_filename": "${PROJECTNAME}.csv",
@@ -416,7 +416,7 @@
         "uuid": "e46fba8d-0294-4f4f-927d-8614bb9d51d3"
       }
     ],
-    "used_designators": "",
+    "used_designators": "U706,#PWR702,#PWR730-731,J201,J401-402,J701,J703",
     "variants": []
   },
   "sheets": [

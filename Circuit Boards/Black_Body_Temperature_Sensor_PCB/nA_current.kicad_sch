@@ -1732,6 +1732,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "nA Current (PAGE 3)"
+		(exclude_from_sim no)
+		(at 69.85 24.13 0)
+		(effects
+			(font
+				(size 7 7)
+			)
+		)
+		(uuid "713b15b6-64fe-4556-b01c-93e48029fc1e")
+	)
 	(junction
 		(at 83.82 82.55)
 		(diameter 0)
@@ -2424,7 +2434,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0d07ba89-c975-4d9e-8ce3-b6746aa44ef3")
-		(property "Reference" "R9"
+		(property "Reference" "R305"
 			(at 105.41 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2446,7 +2456,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 101.092 77.47 90)
 			(hide yes)
 			(show_name no)
@@ -2488,7 +2498,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "R9")
+					(reference "R305")
 					(unit 1)
 				)
 			)
@@ -2506,7 +2516,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1cc35836-59d2-4d26-9187-3beaa7140653")
-		(property "Reference" "R12"
+		(property "Reference" "R301"
 			(at 78.74 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2528,7 +2538,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 74.422 87.63 90)
 			(hide yes)
 			(show_name no)
@@ -2570,7 +2580,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "R12")
+					(reference "R301")
 					(unit 1)
 				)
 			)
@@ -2588,7 +2598,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "219755dd-a6cf-466b-bca4-dbef17af3a09")
-		(property "Reference" "R13"
+		(property "Reference" "R302"
 			(at 86.36 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2610,7 +2620,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 82.042 77.47 90)
 			(hide yes)
 			(show_name no)
@@ -2652,7 +2662,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "R13")
+					(reference "R302")
 					(unit 1)
 				)
 			)
@@ -2669,8 +2679,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "31543fa2-88fc-4f48-92ef-04645ec70b86")
-		(property "Reference" "C1"
-			(at 167.64 105.41 90)
+		(property "Reference" "C301"
+			(at 168.91 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2680,7 +2690,7 @@
 			)
 		)
 		(property "Value" "200pf"
-			(at 167.64 107.95 90)
+			(at 168.91 110.49 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2689,7 +2699,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 173.99 103.1748 0)
 			(hide yes)
 			(show_name no)
@@ -2731,7 +2741,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "C1")
+					(reference "C301")
 					(unit 1)
 				)
 			)
@@ -2749,7 +2759,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "33e98d5e-868a-4939-8ab0-cd6b770ba9ea")
-		(property "Reference" "R14"
+		(property "Reference" "R303"
 			(at 86.36 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2771,7 +2781,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 82.042 87.63 90)
 			(hide yes)
 			(show_name no)
@@ -2813,7 +2823,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "R14")
+					(reference "R303")
 					(unit 1)
 				)
 			)
@@ -2831,7 +2841,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3bf7c7c9-45c8-44c6-a0d3-1f27d68ab1b3")
-		(property "Reference" "R15"
+		(property "Reference" "R307"
 			(at 163.83 77.4699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2853,7 +2863,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 159.512 78.74 90)
 			(hide yes)
 			(show_name no)
@@ -2895,7 +2905,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "R15")
+					(reference "R307")
 					(unit 1)
 				)
 			)
@@ -2913,7 +2923,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3cd0cbc9-8111-4167-9f41-f6149f39eb72")
-		(property "Reference" "R10"
+		(property "Reference" "R306"
 			(at 105.41 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2935,7 +2945,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 101.092 87.63 90)
 			(hide yes)
 			(show_name no)
@@ -2977,7 +2987,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "R10")
+					(reference "R306")
 					(unit 1)
 				)
 			)
@@ -2995,7 +3005,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "594eee79-a8b9-4814-9b71-3a0f145b8f96")
-		(property "Reference" "R11"
+		(property "Reference" "R304"
 			(at 96.52 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3017,7 +3027,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 92.202 87.63 90)
 			(hide yes)
 			(show_name no)
@@ -3059,7 +3069,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "R11")
+					(reference "R304")
 					(unit 1)
 				)
 			)
@@ -3077,7 +3087,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "65fece46-a27a-4437-84ce-0bbc28d9dcdc")
-		(property "Reference" "U2"
+		(property "Reference" "U301"
 			(at 148.59 73.3424 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3156,7 +3166,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "U2")
+					(reference "U301")
 					(unit 1)
 				)
 			)
@@ -3173,7 +3183,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6e6a311f-4ae5-4888-95d1-7808b0829686")
-		(property "Reference" "D1"
+		(property "Reference" "D301"
 			(at 152.4 86.36 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3240,7 +3250,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "D1")
+					(reference "D301")
 					(unit 1)
 				)
 			)
@@ -3257,7 +3267,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "71edabe6-afe2-479e-b2f4-a4c2f6d6c22a")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR0305"
 			(at 175.26 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -3318,7 +3328,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "#PWR07")
+					(reference "#PWR0305")
 					(unit 1)
 				)
 			)
@@ -3335,7 +3345,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "88946fca-8b3a-424c-ba1f-e2a5e34cea1a")
-		(property "Reference" "U3"
+		(property "Reference" "U302"
 			(at 175.26 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3412,7 +3422,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "U3")
+					(reference "U302")
 					(unit 1)
 				)
 			)
@@ -3429,7 +3439,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "897ca115-5db3-4dae-9761-2a1bec3233af")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR0304"
 			(at 170.18 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -3490,7 +3500,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "#PWR06")
+					(reference "#PWR0304")
 					(unit 1)
 				)
 			)
@@ -3508,7 +3518,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b24f3fcc-1dbe-4658-bf7f-1add982beb4e")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR0303"
 			(at 152.4 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -3568,7 +3578,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "#PWR08")
+					(reference "#PWR0303")
 					(unit 1)
 				)
 			)
@@ -3586,7 +3596,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c24451f1-60cf-4a16-8d0f-c484f5e2543e")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR0301"
 			(at 137.16 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -3646,7 +3656,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "#PWR09")
+					(reference "#PWR0301")
 					(unit 1)
 				)
 			)
@@ -3663,7 +3673,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c4d88c7e-87ce-4b9a-b0bf-61a39ce95628")
-		(property "Reference" "Q7"
+		(property "Reference" "Q301"
 			(at 120.65 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3769,7 +3779,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "Q7")
+					(reference "Q301")
 					(unit 1)
 				)
 			)
@@ -3787,7 +3797,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f0181c96-4c5c-43ad-8ec2-e7fad54d3cd1")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR0302"
 			(at 137.16 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -3847,7 +3857,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/c0a0512b-fc86-46bb-aa4c-7d38a9ff5302"
-					(reference "#PWR010")
+					(reference "#PWR0302")
 					(unit 1)
 				)
 			)

@@ -9760,7 +9760,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "RED"
 			(at 90.17 123.5074 90)
 			(show_name no)
 			(do_not_autoplace no)

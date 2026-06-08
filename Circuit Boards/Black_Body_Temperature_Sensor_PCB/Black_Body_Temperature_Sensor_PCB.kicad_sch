@@ -5,6 +5,16 @@
 	(uuid "e46fba8d-0294-4f4f-927d-8614bb9d51d3")
 	(paper "A4")
 	(lib_symbols)
+	(text "OVERVIEW (PAGE 1)"
+		(exclude_from_sim no)
+		(at 69.85 24.13 0)
+		(effects
+			(font
+				(size 7 7)
+			)
+		)
+		(uuid "a56e8a8b-43d0-4b01-88b8-f9696b98f6c4")
+	)
 	(wire
 		(pts
 			(xy 229.87 72.39) (xy 229.87 107.95)
