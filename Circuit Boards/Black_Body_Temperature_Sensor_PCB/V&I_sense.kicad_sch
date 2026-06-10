@@ -2077,12 +2077,6 @@
 		(uuid "4da5fd12-8e43-4667-adb4-1aef98489223")
 	)
 	(junction
-		(at 181.61 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5302fcc0-c717-467d-8453-144de9718cb5")
-	)
-	(junction
 		(at 85.09 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2105,12 +2099,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "75ae6eaf-4894-4de0-a957-5157b8aa0268")
-	)
-	(junction
-		(at 182.88 137.16)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "886fe131-a757-450f-9e2a-6a77d9df077f")
 	)
 	(junction
 		(at 158.75 72.39)
@@ -2142,12 +2130,6 @@
 		(color 0 0 0 0)
 		(uuid "f6026520-a4be-45b3-b895-575645a26448")
 	)
-	(junction
-		(at 194.31 137.16)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fc5bc6c5-1118-4df2-9a31-3d0822584789")
-	)
 	(no_connect
 		(at 146.05 62.23)
 		(uuid "3241df79-5375-4492-a4c7-f70b4a859302")
@@ -2164,15 +2146,6 @@
 			(type default)
 		)
 		(uuid "1ecb449c-cd19-4855-9cf2-6cc403eb4c4f")
-	)
-	(bus_entry
-		(at 147.32 132.08)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "406d79f2-04c0-4386-9b69-6cba4c9e758a")
 	)
 	(bus_entry
 		(at 43.18 48.26)
@@ -2209,15 +2182,6 @@
 			(type default)
 		)
 		(uuid "826a4a93-d87e-4886-b7db-1b223bfbd992")
-	)
-	(bus_entry
-		(at 147.32 99.06)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ba9e5e94-a889-45c2-b83a-b6798e5c3a8d")
 	)
 	(bus_entry
 		(at 41.91 121.92)
@@ -2308,16 +2272,6 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 139.7) (xy 163.83 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d8102c7-72e8-4cc3-8b3f-3c294e857b51")
-	)
-	(wire
-		(pts
 			(xy 88.9 127) (xy 88.9 142.24)
 		)
 		(stroke
@@ -2358,16 +2312,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 139.7) (xy 163.83 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13c7df0c-952d-411e-ab86-7f41eebcdcf3")
-	)
-	(wire
-		(pts
 			(xy 85.09 91.44) (xy 85.09 78.74)
 		)
 		(stroke
@@ -2385,16 +2329,6 @@
 			(type default)
 		)
 		(uuid "14da27f3-1838-4bf3-9e08-afd15e0790ca")
-	)
-	(wire
-		(pts
-			(xy 194.31 138.43) (xy 194.31 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15a806b2-f804-4574-ae1c-47fe69d92d6f")
 	)
 	(wire
 		(pts
@@ -2488,16 +2422,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 106.68) (xy 162.56 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f51a080-f16f-4094-b33a-0559773acddb")
-	)
-	(wire
-		(pts
 			(xy 93.98 83.82) (xy 96.52 83.82)
 		)
 		(stroke
@@ -2558,16 +2482,6 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 144.78) (xy 170.18 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36ad94c5-7920-43fe-b082-8c3accdb6a7d")
-	)
-	(wire
-		(pts
 			(xy 90.17 125.73) (xy 90.17 127)
 		)
 		(stroke
@@ -2595,16 +2509,6 @@
 			(type default)
 		)
 		(uuid "39999b22-6cc2-4fee-a9fe-7c5ea1d636c8")
-	)
-	(wire
-		(pts
-			(xy 181.61 104.14) (xy 189.23 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b028bc6-c415-40fa-8754-642556671f3b")
 	)
 	(wire
 		(pts
@@ -2678,16 +2582,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 137.16) (xy 180.34 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44d9525a-3634-49e8-a33e-427b493117fb")
-	)
-	(wire
-		(pts
 			(xy 62.23 144.78) (xy 62.23 129.54)
 		)
 		(stroke
@@ -2715,16 +2609,6 @@
 			(type default)
 		)
 		(uuid "4b4b4ceb-9535-46a3-be45-51e9f043b52c")
-	)
-	(wire
-		(pts
-			(xy 170.18 111.76) (xy 170.18 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c292d39-aab2-4bd8-b511-5c2b70d5ca3a")
 	)
 	(wire
 		(pts
@@ -2798,16 +2682,6 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 106.68) (xy 162.56 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a209626-e11f-4ff4-802f-7b13e5a48469")
-	)
-	(wire
-		(pts
 			(xy 58.42 71.12) (xy 58.42 55.88)
 		)
 		(stroke
@@ -2825,16 +2699,6 @@
 			(type default)
 		)
 		(uuid "5b8aca67-b3b4-4551-866c-b93f121d0924")
-	)
-	(wire
-		(pts
-			(xy 181.61 104.14) (xy 180.34 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e40d9e8-8c23-489a-b225-8daaf23b1c81")
 	)
 	(wire
 		(pts
@@ -2926,16 +2790,6 @@
 		)
 		(uuid "710d6ae1-a587-4330-b95a-6539d364bb92")
 	)
-	(bus
-		(pts
-			(xy 143.51 97.79) (xy 147.32 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7115539e-0ad9-46a9-8d60-58cb3fdb9836")
-	)
 	(wire
 		(pts
 			(xy 214.63 68.58) (xy 214.63 67.31)
@@ -2955,16 +2809,6 @@
 			(type default)
 		)
 		(uuid "758d2f1b-a7c9-4a47-bd29-2d2da44d028b")
-	)
-	(bus
-		(pts
-			(xy 147.32 97.79) (xy 147.32 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "76c22325-a4e9-43f5-b732-bcf165ffc02a")
 	)
 	(wire
 		(pts
@@ -3038,16 +2882,6 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 119.38) (xy 181.61 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "86790a49-9101-45c9-94d6-978d68e4f2c9")
-	)
-	(wire
-		(pts
 			(xy 69.85 134.62) (xy 69.85 137.16)
 		)
 		(stroke
@@ -3055,16 +2889,6 @@
 			(type default)
 		)
 		(uuid "874b9c7b-5a73-4b67-bfaa-6df26646d91e")
-	)
-	(wire
-		(pts
-			(xy 181.61 119.38) (xy 181.61 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89dc70e3-af38-4694-89ba-40d130d163eb")
 	)
 	(wire
 		(pts
@@ -3188,16 +3012,6 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 152.4) (xy 182.88 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9c57cdd7-b1d2-48b3-a9ea-61670dd4c237")
-	)
-	(wire
-		(pts
 			(xy 87.63 71.12) (xy 88.9 71.12)
 		)
 		(stroke
@@ -3235,6 +3049,16 @@
 			(type default)
 		)
 		(uuid "a52d299b-8775-4e66-af3f-5c5f9c94b8c6")
+	)
+	(wire
+		(pts
+			(xy 173.99 104.14) (xy 189.23 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8d01e0d-4e0e-4bf9-a53c-eabb7947eae0")
 	)
 	(wire
 		(pts
@@ -3416,26 +3240,6 @@
 		)
 		(uuid "d13b78b3-61ae-4687-a991-d3cdd833b684")
 	)
-	(wire
-		(pts
-			(xy 149.86 134.62) (xy 165.1 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d2b4774f-d1f6-4c62-9e7c-b76be2897123")
-	)
-	(wire
-		(pts
-			(xy 194.31 147.32) (xy 194.31 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d3b137d9-75de-4ec4-ac2d-3d1e26453368")
-	)
 	(bus
 		(pts
 			(xy 247.65 43.18) (xy 245.11 43.18)
@@ -3485,26 +3289,6 @@
 			(type default)
 		)
 		(uuid "d9e6e58d-24a1-4a13-aa88-dd07fb40f76e")
-	)
-	(wire
-		(pts
-			(xy 149.86 101.6) (xy 165.1 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dad89129-994c-4770-a204-d63ce9c1050d")
-	)
-	(wire
-		(pts
-			(xy 182.88 152.4) (xy 182.88 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd879d6c-b410-4cde-9100-eedce138bca4")
 	)
 	(wire
 		(pts
@@ -3688,7 +3472,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 137.16) (xy 218.44 137.16)
+			(xy 177.8 137.16) (xy 218.44 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3706,15 +3490,15 @@
 		)
 		(uuid "feecadd8-530a-4723-a785-b58565d2b091")
 	)
-	(wire
-		(pts
-			(xy 182.88 137.16) (xy 194.31 137.16)
+	(label "sense_iso_V-"
+		(at 85.09 54.61 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ffb53bb2-28c6-4c0d-9e9e-4bf98918cc71")
+		(uuid "11d7dfd0-3abf-4bf4-a9b1-cadc1555cfd6")
 	)
 	(label "v_sense.V+"
 		(at 45.72 88.9 0)
@@ -3755,6 +3539,26 @@
 			(justify left bottom)
 		)
 		(uuid "21396d19-3b6c-47a3-8f7b-a2edd464edd7")
+	)
+	(label "sense_iso_V+"
+		(at 173.99 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2356ae5f-7f22-4bcb-93aa-888a6e68703e")
+	)
+	(label "sense_iso_V-"
+		(at 177.8 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2d2d9914-b958-46d2-863d-8c973431dd80")
 	)
 	(label "SPI.MOSI"
 		(at 222.25 49.53 0)
@@ -3836,26 +3640,6 @@
 		)
 		(uuid "7ba6677e-ae25-4732-8aa2-49178b85b5a3")
 	)
-	(label "v_sense.V+"
-		(at 161.29 101.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "803da47a-7757-4bcd-9dca-1ea81cc412b1")
-	)
-	(label "v_sense.V-"
-		(at 161.29 134.62 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "8a141382-bd70-4f4c-bfbb-ee5d3e51915a")
-	)
 	(label "i_sense.I-"
 		(at 44.45 124.46 0)
 		(effects
@@ -3865,6 +3649,16 @@
 			(justify left bottom)
 		)
 		(uuid "9b4a4bda-74bd-41a9-8017-85f769fa4c1e")
+	)
+	(label "sense_iso_V+"
+		(at 85.09 78.74 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9cb0c07c-a37c-4b23-84ff-2c4518ceaeea")
 	)
 	(label "AIN0P"
 		(at 138.43 39.37 0)
@@ -3968,17 +3762,6 @@
 			(justify right)
 		)
 		(uuid "6e66fcb0-ed9e-4416-833d-70aee279d56a")
-	)
-	(hierarchical_label "v_sense{V+ V-}"
-		(shape input)
-		(at 143.51 97.79 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7590e164-c53e-45cc-9b86-82987aa8d44b")
 	)
 	(hierarchical_label "SPI{SCLK, MOSI, MISO, CS}"
 		(shape input)
@@ -4094,165 +3877,6 @@
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/497ae29c-3205-4255-92aa-23b986f138da"
 					(reference "U505")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 194.31 142.24 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "025a7719-df85-487e-9467-6206850e34af")
-		(property "Reference" "R507"
-			(at 195.58 140.97 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10M"
-			(at 195.58 143.51 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 192.532 142.24 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 194.31 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 194.31 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a74323ce-9d97-4f44-a757-31250512704b")
-		)
-		(pin "2"
-			(uuid "49cee368-5691-41f7-9219-844218049272")
-		)
-		(instances
-			(project "Black_Body_Temperature_Sensor_PCB"
-				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/497ae29c-3205-4255-92aa-23b986f138da"
-					(reference "R507")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 194.31 147.32 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0317375a-67e4-4fff-bf23-2bd8ae41ca73")
-		(property "Reference" "#PWR0524"
-			(at 194.31 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 194.31 152.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 194.31 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 194.31 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 194.31 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9689e82f-edaa-432b-ac2f-c3afdbe01ac6")
-		)
-		(instances
-			(project "Black_Body_Temperature_Sensor_PCB"
-				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/497ae29c-3205-4255-92aa-23b986f138da"
-					(reference "#PWR0524")
 					(unit 1)
 				)
 			)
@@ -4672,95 +4296,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:OPA376xxDBV")
-		(at 172.72 104.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "23bf79a2-3abd-4df4-8130-cc6b40f45e28")
-		(property "Reference" "U508"
-			(at 176.53 107.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "OPA376xxDBV"
-			(at 177.8 99.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 170.18 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa376.pdf"
-			(at 172.72 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Single Low-Noise, Low Quiescent Current, Precision Operational Amplifier e-trim Series, SOT-23-5"
-			(at 172.72 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "972e4ae3-7718-4f7c-9062-e9499acacb10")
-		)
-		(pin "4"
-			(uuid "62a7e6c7-7b6c-4b4f-b046-e8ff08508c52")
-		)
-		(pin "5"
-			(uuid "144557a1-648d-4ee5-a3bb-69a05bc9840d")
-		)
-		(pin "2"
-			(uuid "b8476d04-d910-4bb9-bdb7-9fdd7458992d")
-		)
-		(pin "1"
-			(uuid "0b1f6ae8-c6cf-47b4-8ceb-bb3c376dd839")
-		)
-		(instances
-			(project "Black_Body_Temperature_Sensor_PCB"
-				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/497ae29c-3205-4255-92aa-23b986f138da"
-					(reference "U508")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GNDPWR")
 		(at 214.63 68.58 0)
 		(unit 1)
@@ -5170,95 +4705,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:OPA376xxDBV")
-		(at 172.72 137.16 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "475c5a8c-7dd0-4c9f-aec0-f642b47fe404")
-		(property "Reference" "U509"
-			(at 176.53 140.97 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "OPA376xxDBV"
-			(at 177.8 132.08 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 170.18 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa376.pdf"
-			(at 172.72 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Single Low-Noise, Low Quiescent Current, Precision Operational Amplifier e-trim Series, SOT-23-5"
-			(at 172.72 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "7c7a0b46-7540-44e4-b1c4-e60e2eca6ed3")
-		)
-		(pin "4"
-			(uuid "1d572201-6b22-4f48-abf4-0d682cc4f543")
-		)
-		(pin "5"
-			(uuid "4b87079b-4222-4677-b193-aab745f63944")
-		)
-		(pin "2"
-			(uuid "7111896c-8850-4a76-ad50-6fe094c1cb5d")
-		)
-		(pin "1"
-			(uuid "d983d565-5027-4f4d-8a18-a5803e5a3938")
-		)
-		(instances
-			(project "Black_Body_Temperature_Sensor_PCB"
-				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/497ae29c-3205-4255-92aa-23b986f138da"
-					(reference "U509")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+4V")
 		(at 204.47 33.02 0)
 		(unit 1)
@@ -5637,84 +5083,6 @@
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/497ae29c-3205-4255-92aa-23b986f138da"
 					(reference "U507")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+4V")
-		(at 170.18 146.05 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "60d183a3-d6bf-4a89-a99f-413c2eef9981")
-		(property "Reference" "#PWR0522"
-			(at 170.18 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "-3V3A"
-			(at 170.18 151.13 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+4V\""
-			(at 170.18 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ab886d8b-fa81-44b4-88a6-df66524b16fc")
-		)
-		(instances
-			(project "Black_Body_Temperature_Sensor_PCB"
-				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/497ae29c-3205-4255-92aa-23b986f138da"
-					(reference "#PWR0522")
 					(unit 1)
 				)
 			)
@@ -6115,84 +5483,6 @@
 	)
 	(symbol
 		(lib_id "power:+4V")
-		(at 170.18 113.03 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "778ccbc4-fcaa-4bb6-9999-62f9c4139af4")
-		(property "Reference" "#PWR0520"
-			(at 170.18 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "-3V3A"
-			(at 170.18 118.11 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+4V\""
-			(at 170.18 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bfb79828-4237-42b0-924e-78564fe4bd77")
-		)
-		(instances
-			(project "Black_Body_Temperature_Sensor_PCB"
-				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/497ae29c-3205-4255-92aa-23b986f138da"
-					(reference "#PWR0520")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+4V")
 		(at 66.04 100.33 180)
 		(unit 1)
 		(body_style 1)
@@ -6264,84 +5554,6 @@
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/497ae29c-3205-4255-92aa-23b986f138da"
 					(reference "#PWR0504")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+4V")
-		(at 170.18 129.54 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "943e1188-b7c6-4c56-8483-0e7dbff303e0")
-		(property "Reference" "#PWR0521"
-			(at 170.18 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3A"
-			(at 170.18 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+4V\""
-			(at 170.18 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2fb99c74-52bd-49fa-bb1b-c3264ff6bd6a")
-		)
-		(instances
-			(project "Black_Body_Temperature_Sensor_PCB"
-				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/497ae29c-3205-4255-92aa-23b986f138da"
-					(reference "#PWR0521")
 					(unit 1)
 				)
 			)
@@ -7057,84 +6269,6 @@
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/497ae29c-3205-4255-92aa-23b986f138da"
 					(reference "#PWR0501")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+4V")
-		(at 170.18 96.52 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ca466b77-0fa9-489e-a41a-bd27267fa3de")
-		(property "Reference" "#PWR0519"
-			(at 170.18 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3A"
-			(at 170.18 91.44 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+4V\""
-			(at 170.18 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "34023299-aeec-4dcd-9cf3-c73f0018e89b")
-		)
-		(instances
-			(project "Black_Body_Temperature_Sensor_PCB"
-				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/497ae29c-3205-4255-92aa-23b986f138da"
-					(reference "#PWR0519")
 					(unit 1)
 				)
 			)

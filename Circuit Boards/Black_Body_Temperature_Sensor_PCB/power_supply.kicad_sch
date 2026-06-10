@@ -1920,6 +1920,26 @@
 		)
 		(uuid "da7ba1b6-545d-4ea1-b56e-769a2f0d3ed3")
 	)
+	(text_box "Add diode and pi filter"
+		(exclude_from_sim no)
+		(at 57.15 91.44 0)
+		(size 17.78 8.89)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "399dd746-71b8-4985-a86a-f86af962dab1")
+	)
 	(junction
 		(at 205.74 129.54)
 		(diameter 0)

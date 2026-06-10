@@ -1761,16 +1761,16 @@
 		(uuid "3a4e8b55-8a93-4144-a71f-7f13cef64f0a")
 	)
 	(junction
-		(at 152.4 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "546ed2fa-162d-48ec-a54f-ed80ea8cc07e")
-	)
-	(junction
 		(at 175.26 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "696f432b-e3c5-4f82-8781-77325f343a7b")
+	)
+	(junction
+		(at 148.59 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7f78783b-e7d8-43eb-95ce-6a81e5aabeb7")
 	)
 	(junction
 		(at 157.48 93.98)
@@ -1852,6 +1852,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.59 93.98) (xy 157.48 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f0b94ab-b257-47e5-b2ea-75933477ee75")
+	)
+	(wire
+		(pts
 			(xy 93.98 101.6) (xy 127 101.6)
 		)
 		(stroke
@@ -1869,16 +1879,6 @@
 			(type default)
 		)
 		(uuid "1b27968a-7be8-45eb-bfc4-4f745405f936")
-	)
-	(wire
-		(pts
-			(xy 152.4 93.98) (xy 157.48 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "21845b09-f21e-4731-9929-00e3b6e4f467")
 	)
 	(wire
 		(pts
@@ -1912,7 +1912,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 93.98) (xy 152.4 93.98)
+			(xy 147.32 93.98) (xy 148.59 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1982,16 +1982,6 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 93.98) (xy 127 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54504670-0c60-45d6-8708-44ba8ecc755e")
-	)
-	(wire
-		(pts
 			(xy 157.48 92.71) (xy 157.48 93.98)
 		)
 		(stroke
@@ -2032,7 +2022,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 96.52) (xy 152.4 93.98)
+			(xy 148.59 96.52) (xy 148.59 93.98)
 		)
 		(stroke
 			(width 0)
@@ -2082,7 +2072,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 91.44) (xy 102.87 96.52)
+			(xy 102.87 91.44) (xy 102.87 93.98)
 		)
 		(stroke
 			(width 0)
@@ -2099,6 +2089,16 @@
 			(type default)
 		)
 		(uuid "9ee95d11-d681-4de6-9183-4346e850cd80")
+	)
+	(wire
+		(pts
+			(xy 102.87 93.98) (xy 127 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a681867d-3d28-4e7d-a217-395f40ce78f6")
 	)
 	(wire
 		(pts
@@ -2122,7 +2122,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 91.44) (xy 83.82 93.98)
+			(xy 83.82 91.44) (xy 83.82 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2149,16 +2149,6 @@
 			(type default)
 		)
 		(uuid "baad55c9-7ad5-44d5-a449-e91c19c84fd1")
-	)
-	(wire
-		(pts
-			(xy 102.87 96.52) (xy 127 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be68823e-d804-4a35-8083-92bba712b917")
 	)
 	(wire
 		(pts
@@ -2202,6 +2192,16 @@
 	)
 	(wire
 		(pts
+			(xy 83.82 96.52) (xy 127 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3830f0b-8f2c-4644-96ec-7801617d6382")
+	)
+	(wire
+		(pts
 			(xy 160.02 111.76) (xy 147.32 111.76)
 		)
 		(stroke
@@ -2212,7 +2212,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 96.52) (xy 152.4 96.52)
+			(xy 147.32 96.52) (xy 148.59 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2300,7 +2300,17 @@
 		)
 		(uuid "fc2ade90-d6ab-49cb-9b9d-2a55828518af")
 	)
-	(label "100na_neg"
+	(label "fb"
+		(at 157.48 74.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "09475412-7d08-4991-bc0f-e350d450a672")
+	)
+	(label "10na_neg"
 		(at 115.57 93.98 0)
 		(effects
 			(font
@@ -2308,7 +2318,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "02c54308-d48e-48b4-9363-6f868309165f")
+		(uuid "0c48ab67-0554-4d55-a543-e383d9f54607")
 	)
 	(label "100na_pos"
 		(at 115.57 99.06 0)
@@ -2340,7 +2350,7 @@
 		)
 		(uuid "440f016f-d6db-477d-af44-98fe16c10c39")
 	)
-	(label "10na_neg"
+	(label "100na_neg"
 		(at 115.57 96.52 0)
 		(effects
 			(font
@@ -2348,7 +2358,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "70db4402-b0f9-43a1-9a0b-588bd22e6ccc")
+		(uuid "a6d48fc8-b84e-451b-9d70-7029229790c7")
 	)
 	(label "sel.10na_pos"
 		(at 147.32 114.3 0)
@@ -2359,6 +2369,16 @@
 			(justify left bottom)
 		)
 		(uuid "b54a03ab-10e2-41d3-bd57-dc04ec81361c")
+	)
+	(label "100na"
+		(at 76.2 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bc7979f5-c678-4042-b951-e6805af6ade1")
 	)
 	(label "10na_pos"
 		(at 115.57 101.6 0)
@@ -2389,6 +2409,26 @@
 			(justify right bottom)
 		)
 		(uuid "ed0806ce-bc49-4001-9c60-bd4e25188f11")
+	)
+	(label "10na"
+		(at 95.25 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ed35cdda-f1d3-44c5-93fc-85b440f6d592")
+	)
+	(label "feedback"
+		(at 148.59 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f35ef927-e8ee-49ba-acd8-962e246cc112")
 	)
 	(label "sel.10na_neg"
 		(at 147.32 109.22 0)
