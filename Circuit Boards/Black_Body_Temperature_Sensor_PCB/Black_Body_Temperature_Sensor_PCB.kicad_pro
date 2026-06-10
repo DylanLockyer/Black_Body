@@ -677,7 +677,7 @@
         "uuid": "e46fba8d-0294-4f4f-927d-8614bb9d51d3"
       }
     ],
-    "used_designators": "J402,J701-702,#PWR709,#PWR727,#PWR730",
+    "used_designators": "C501,J402,J601,J704,#PWR622-623",
     "variants": []
   },
   "sheets": [
