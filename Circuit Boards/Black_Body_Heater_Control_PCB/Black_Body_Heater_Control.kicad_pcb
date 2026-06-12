@@ -91,7 +91,6 @@
 		)
 		(capping no)
 		(filling no)
-		(zone_defaults)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -9182,54 +9181,6 @@
 				(bold yes)
 			)
 			(justify bottom)
-		)
-	)
-	(gr_text "M2"
-		(at 88 116 0)
-		(layer "B.SilkS")
-		(uuid "d60c78dc-6fc6-4f8c-8c9a-a5602f399eff")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left bottom mirror)
-		)
-	)
-	(gr_text "M2"
-		(at 92 84.5 0)
-		(layer "B.SilkS")
-		(uuid "bf4be8ee-cd2d-45db-924a-c9e95015f4cb")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left bottom mirror)
-		)
-	)
-	(gr_text "M2"
-		(at 133 84.5 0)
-		(layer "B.SilkS")
-		(uuid "da22f680-cd47-4715-8e61-726df359cfd3")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left bottom mirror)
-		)
-	)
-	(gr_text "M2"
-		(at 137 116 0)
-		(layer "B.SilkS")
-		(uuid "221f5642-6ba8-40c5-9fb0-a91294cd3a57")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left bottom mirror)
 		)
 	)
 	(gr_text "Black Body Heater Controler REV. 0"

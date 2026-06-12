@@ -1,6 +1,6 @@
 LTspice 24.1.10 for Windows
 Circuit: C:\Users\dylan\Documents\GitHub\Black_Body\Simulations\LTspice_Current_source_complex\Current_source_precise.net
-Start Time: Wed May 27 14:18:04 2026
+Start Time: Thu Jun 11 11:09:34 2026
 solver = Normal
 Maximum thread count: 22
 tnom = 27
@@ -26,7 +26,7 @@ Gmin = 2.70769e-13
 Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
-Total elapsed time: 3.183 seconds.
+Total elapsed time: 5.798 seconds.
 
 Files loaded:
 C:\Users\dylan\Documents\GitHub\Black_Body\Simulations\LTspice_Current_source_complex\Current_source_precise.net

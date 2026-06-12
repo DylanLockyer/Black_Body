@@ -593,6 +593,284 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -1185,6 +1463,180 @@
 		)
 		(uuid "3c23c836-cd80-4905-9f93-e377d885d886")
 	)
+	(text_box "Low pass pi filter to reduce noise and edge rate, 14hz cutoff, 50ms ramp"
+		(exclude_from_sim no)
+		(at 81.28 148.8839 0)
+		(size 13.97 16.2161)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "32ad205c-9ede-4eef-98a1-f9b8b4cabd71")
+	)
+	(text_box "Acts like an h-bridge to allow current reversal to calculate emf voltages in the sensor"
+		(exclude_from_sim no)
+		(at 165.1 85.09 0)
+		(size 24.13 13.97)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "6700d01a-d416-4cdf-af9b-02fce8b729b8")
+	)
+	(text_box "Selects different shunt resistors to get a voltage drop of ~1mV regardless of current"
+		(exclude_from_sim no)
+		(at 139.7 58.42 0)
+		(size 24.13 13.97)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "8e68c9f5-8637-4358-aff3-6707a680a506")
+	)
+	(text_box "Screw terminals to connect sensor for low resistance and easy connection"
+		(exclude_from_sim no)
+		(at 40.64 83.82 0)
+		(size 17.78 12.1268)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "ac19451c-5c0c-4ea2-89c7-893f2ec16cc5")
+	)
+	(text_box "Low pass pi filter to reduce noise and edge rate, 14hz cutoff, 50ms ramp"
+		(exclude_from_sim no)
+		(at 241.3 29.21 0)
+		(size 13.97 16.2161)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "dfbc3b19-86d5-4d31-8d0a-ccd46e8b6424")
+	)
+	(text_box "Selects between the precision 10-100nA current source and the regular 1-1000uA current source"
+		(exclude_from_sim no)
+		(at 215.9 83.82 0)
+		(size 24.13 13.97)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "ece68eab-ac90-486d-83b7-e5c560d74fd3")
+	)
+	(junction
+		(at 115.57 182.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "01e9f82e-ce63-42af-9cc7-eeb660aab8a7")
+	)
+	(junction
+		(at 115.57 154.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "021770b6-a504-42ba-bf43-30fd25b2c2a0")
+	)
+	(junction
+		(at 223.52 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0ca0c1a8-0fcf-45b3-83d2-67c242bb7a16")
+	)
+	(junction
+		(at 213.36 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0fd0b585-47be-4f99-8b92-4d9049cb9f5d")
+	)
+	(junction
+		(at 45.72 171.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "15b00bab-d7df-4eec-abfe-f14cfdf789ae")
+	)
+	(junction
+		(at 220.98 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "15ddbe80-acbd-4df9-89f2-51fed79e0657")
+	)
+	(junction
+		(at 201.93 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1a86e808-1da2-427b-8b70-1053d4b126d3")
+	)
+	(junction
+		(at 45.72 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "24931ef2-650c-4f7e-8237-609b889cb3ef")
+	)
+	(junction
+		(at 220.98 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "26a262cd-47aa-44fc-9192-77db8c05de1f")
+	)
 	(junction
 		(at 172.72 106.68)
 		(diameter 0)
@@ -1192,10 +1644,82 @@
 		(uuid "270a24c9-70d5-4f1b-9b20-58fee000b3bf")
 	)
 	(junction
+		(at 45.72 173.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "28df7a45-9116-4c59-90fb-7b5a4cf87634")
+	)
+	(junction
+		(at 213.36 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33fc6a33-dd58-4c04-93d9-b2ec0e37fa6c")
+	)
+	(junction
+		(at 45.72 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "367544fe-29ff-49f0-9214-19862524b5a6")
+	)
+	(junction
+		(at 213.36 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "39ad4994-641e-4076-a08b-7af860da4606")
+	)
+	(junction
+		(at 123.19 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3aaddbda-603e-421f-b285-4f0d909ab8f0")
+	)
+	(junction
+		(at 223.52 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3ea25992-67b6-462a-95e6-e02d5b2bcef2")
+	)
+	(junction
 		(at 146.05 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "421fa420-b6c6-448b-8fd7-204bedd37b02")
+	)
+	(junction
+		(at 115.57 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "44a36c5b-9b89-4e23-99ba-2733c129cfaa")
+	)
+	(junction
+		(at 53.34 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e1a8940-0343-446b-bb85-17a5757c9c04")
+	)
+	(junction
+		(at 220.98 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e1f04b9-01dd-4d1d-84eb-923b6a5246b1")
+	)
+	(junction
+		(at 34.29 171.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5225e402-ac88-4677-848d-4c84f83df1ac")
+	)
+	(junction
+		(at 115.57 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "585c76cc-9a89-4f31-a9de-6e4ee6f0e239")
+	)
+	(junction
+		(at 45.72 153.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "627e344f-9ef4-49db-8e5d-fdabcbe2c4d3")
 	)
 	(junction
 		(at 135.89 80.01)
@@ -1216,10 +1740,58 @@
 		(uuid "6e0ee1a5-690f-4672-960d-1cbbe2a466c2")
 	)
 	(junction
+		(at 34.29 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6ed2a3e6-51b4-4072-af6b-7113febd69cc")
+	)
+	(junction
 		(at 220.98 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "75f05f5e-19ed-42aa-a14a-423290d07ea3")
+	)
+	(junction
+		(at 123.19 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "77251f6a-28a8-4787-a49d-b364186c79f6")
+	)
+	(junction
+		(at 213.36 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7b1225eb-1972-45d7-a2a6-fc394221f0a2")
+	)
+	(junction
+		(at 53.34 173.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7fdfb4b3-dde1-43a7-b2e1-78b20384d191")
+	)
+	(junction
+		(at 53.34 163.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "816be37d-30c2-48a8-a474-d0bb33e6e73d")
+	)
+	(junction
+		(at 184.15 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "86072bc8-44b4-4b46-802a-1d844739f568")
+	)
+	(junction
+		(at 104.14 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8c528433-2019-4794-8693-527cfc1e1645")
+	)
+	(junction
+		(at 213.36 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "919222eb-fbc7-4bc1-a1ef-49ac99fb24bf")
 	)
 	(junction
 		(at 137.16 74.93)
@@ -1228,10 +1800,40 @@
 		(uuid "939ccaea-14c0-4eb2-9357-d98bd777fd9b")
 	)
 	(junction
+		(at 115.57 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "93fc9525-062d-4ef7-b86e-f63bcf4a8e82")
+	)
+	(junction
 		(at 96.52 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9600043e-1c55-4a10-aae6-e72a89311cc1")
+	)
+	(junction
+		(at 45.72 181.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "96173539-a74d-435b-b3fc-974a8b846d58")
+	)
+	(junction
+		(at 123.19 175.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9d13097f-015c-4dd5-ab08-10c2022dcc6e")
+	)
+	(junction
+		(at 115.57 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9f216799-1b87-465b-88dc-2044ac6c6ac7")
+	)
+	(junction
+		(at 48.26 181.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a9274dd4-3f48-4017-b2e7-9a85cb73d4f1")
 	)
 	(junction
 		(at 220.98 109.22)
@@ -1246,10 +1848,34 @@
 		(uuid "b54019bb-71e3-4d84-8f0c-71862a14f5d7")
 	)
 	(junction
+		(at 213.36 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "be860cb3-8759-458c-95bf-b95fa6cb7533")
+	)
+	(junction
+		(at 118.11 182.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c10c817b-21c4-4a11-8b66-3373145a8fca")
+	)
+	(junction
+		(at 123.19 154.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c212c430-e9e0-4860-9b33-704e10100399")
+	)
+	(junction
 		(at 96.52 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ca0af06a-1d0a-4ee5-bcc3-9d924aa157f3")
+	)
+	(junction
+		(at 201.93 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb987cb9-95b6-4d3b-a544-0ef4186e2e05")
 	)
 	(junction
 		(at 148.59 109.22)
@@ -1264,10 +1890,46 @@
 		(uuid "d26fc444-f90a-40bf-aceb-e2402569f320")
 	)
 	(junction
+		(at 115.57 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d35019d2-1990-472f-a05c-7f781314f4fe")
+	)
+	(junction
+		(at 104.14 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d5003b8d-c250-47c3-82be-37b2cdfa71fc")
+	)
+	(junction
+		(at 220.98 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dbe49aba-0882-47a0-be54-634f5f6cb60d")
+	)
+	(junction
+		(at 215.9 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e5ba06c8-71d9-488e-b5a9-8de703b8d1ad")
+	)
+	(junction
+		(at 45.72 163.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e9952512-9fba-4a7f-9b5a-bf1322715888")
+	)
+	(junction
 		(at 135.89 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "efd41bfa-d4ef-4756-abf2-3e16c04111e7")
+	)
+	(junction
+		(at 213.36 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f080847e-2082-4e73-8e27-11c2e1130337")
 	)
 	(junction
 		(at 96.52 77.47)
@@ -1281,14 +1943,128 @@
 		(color 0 0 0 0)
 		(uuid "f1c688f6-33f4-4df3-957a-c681f2f1238f")
 	)
+	(junction
+		(at 45.72 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f2e16320-5bd9-4304-b495-e31538e1a5a8")
+	)
+	(junction
+		(at 53.34 153.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd5113c1-de7b-4844-b716-ee7aa63593dc")
+	)
+	(junction
+		(at 213.36 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fdf46702-6931-4c67-ac22-c8d5fedfcf46")
+	)
+	(junction
+		(at 115.57 175.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fe2bb834-154a-4b4a-9314-aea5969098fc")
+	)
 	(bus_entry
-		(at 100.33 92.71)
-		(size 2.54 -2.54)
+		(at 238.76 43.18)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "126ac11b-a679-4922-8d24-7c2d83093f81")
+		(uuid "01912b66-5961-4709-9090-2bfd1e2cad64")
+	)
+	(bus_entry
+		(at 71.12 161.29)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03715c41-a92d-4231-b1d5-45196def37e0")
+	)
+	(bus_entry
+		(at 71.12 140.97)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "039fa13a-6e0b-4dc7-bd80-212d2a4b02ca")
+	)
+	(bus_entry
+		(at 140.97 152.4)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fbbed82-c1de-49b6-aef5-5f3a247d7b93")
+	)
+	(bus_entry
+		(at 140.97 162.56)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12266974-db4f-4765-9d8d-6f4a4ebd28fd")
+	)
+	(bus_entry
+		(at 238.76 53.34)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13388f37-9f87-4e40-837e-29a431b67848")
+	)
+	(bus_entry
+		(at 140.97 152.4)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2082cf3d-15d3-4797-8ea1-63c2de9b66d1")
+	)
+	(bus_entry
+		(at 71.12 171.45)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2334dad7-9401-4101-b416-eaff498eaa51")
+	)
+	(bus_entry
+		(at 140.97 152.4)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "258ccc9e-075a-4494-bc3e-e4122b1c53d2")
+	)
+	(bus_entry
+		(at 140.97 172.72)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35dca465-9a53-465b-890a-562cdb5761ea")
+	)
+	(bus_entry
+		(at 140.97 162.56)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "395ac5d2-0e48-46d7-b75a-8312d47927d4")
 	)
 	(bus_entry
 		(at 134.62 57.15)
@@ -1300,40 +2076,85 @@
 		(uuid "3b01c533-ffc6-498e-be36-11ff1bc1b715")
 	)
 	(bus_entry
-		(at 234.95 127)
-		(size -2.54 -2.54)
+		(at 238.76 22.86)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "43f83e14-aad7-4f6d-947d-0f5704323487")
+		(uuid "420c0bb7-b1eb-4d1b-b2b9-370bfb38bb88")
 	)
 	(bus_entry
-		(at 234.95 124.46)
-		(size -2.54 -2.54)
+		(at 71.12 140.97)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "718c71ab-8477-446d-9db0-210172e1ca4c")
+		(uuid "4844c405-8b7d-4a26-acf1-8a0d90750e6a")
 	)
 	(bus_entry
-		(at 100.33 97.79)
-		(size 2.54 -2.54)
+		(at 140.97 162.56)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "83117802-5f06-414a-b4f7-8eeec3740cb5")
+		(uuid "5144ea64-d8d7-4f1f-974f-909741f8f0c4")
 	)
 	(bus_entry
-		(at 234.95 121.92)
-		(size -2.54 -2.54)
+		(at 238.76 43.18)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a000b4b4-d836-42d0-ba4c-3fa6bbee40e4")
+		(uuid "64a92c21-40f4-49ba-829c-7cd958405ff9")
+	)
+	(bus_entry
+		(at 238.76 33.02)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93035b3a-9506-40d0-a441-7e83aa4eafd4")
+	)
+	(bus_entry
+		(at 71.12 151.13)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9750f73d-f1f6-4526-9575-f88ae88a202d")
+	)
+	(bus_entry
+		(at 140.97 172.72)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a960e33f-ce37-46dc-bccf-69ec81370fc8")
+	)
+	(bus_entry
+		(at 140.97 172.72)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af01d2b3-2832-4603-86bb-59911f21769c")
+	)
+	(bus_entry
+		(at 71.12 151.13)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0c05906-2291-4488-bc3f-38c1e8b123b3")
 	)
 	(bus_entry
 		(at 99.06 57.15)
@@ -1345,31 +2166,40 @@
 		(uuid "b14cc91c-9be7-4046-96d1-0dbabafe4ea1")
 	)
 	(bus_entry
-		(at 133.35 119.38)
-		(size 2.54 -2.54)
+		(at 71.12 161.29)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b4bb1f68-a3df-4d70-afa2-79d08e8401a6")
+		(uuid "b2c67419-7130-4a6c-b86f-eaf3c1c771ee")
 	)
 	(bus_entry
-		(at 133.35 124.46)
-		(size 2.54 -2.54)
+		(at 71.12 171.45)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bd62c2d8-8edb-4e0b-8646-25dc2b079dab")
+		(uuid "ba39caa3-f0c4-4adc-a995-e94b78855bd7")
 	)
 	(bus_entry
-		(at 234.95 119.38)
-		(size -2.54 -2.54)
+		(at 238.76 53.34)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c8bae44d-e241-43b2-a11b-39001d952235")
+		(uuid "c64c2459-b0af-4b3b-b3d1-35fe2b7fbefb")
+	)
+	(bus_entry
+		(at 140.97 142.24)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c98cbfc5-3e38-4114-8cd4-fb3d3e6809c0")
 	)
 	(bus_entry
 		(at 69.85 101.6)
@@ -1381,31 +2211,40 @@
 		(uuid "ccb049d9-858b-4c41-8ba3-2b7b506c57f6")
 	)
 	(bus_entry
-		(at 133.35 127)
-		(size 2.54 -2.54)
+		(at 71.12 151.13)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "def5e1ca-9932-452d-a778-dc4a9965cdba")
+		(uuid "cfb74ac3-493c-4e56-b86c-32d849458edb")
 	)
 	(bus_entry
-		(at 133.35 121.92)
-		(size 2.54 -2.54)
+		(at 71.12 140.97)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e14a4a67-6c46-492c-ab12-45892d765d28")
+		(uuid "d78a2ca3-2984-47db-8f9e-dc91d5779754")
 	)
 	(bus_entry
-		(at 100.33 90.17)
-		(size 2.54 -2.54)
+		(at 238.76 22.86)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e4d89ac1-3d38-4351-bf31-d7bb20841f1b")
+		(uuid "df4f58ea-b570-4eac-987f-8d6d6f6b5ff0")
+	)
+	(bus_entry
+		(at 140.97 142.24)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfb9a420-57c4-4ea3-bfb2-cb0e3c873c49")
 	)
 	(bus_entry
 		(at 69.85 99.06)
@@ -1417,13 +2256,40 @@
 		(uuid "e70938a6-257c-42f6-8e3d-9c8fa8c7538c")
 	)
 	(bus_entry
-		(at 100.33 95.25)
-		(size 2.54 -2.54)
+		(at 238.76 33.02)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ef165bb3-9af5-491e-90f3-50b6847c6fd1")
+		(uuid "e9415f03-cbc8-4ebf-b8dc-6d6842328fe9")
+	)
+	(bus_entry
+		(at 71.12 161.29)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea383971-2123-41f2-96e8-9fefd9c8be4c")
+	)
+	(bus_entry
+		(at 140.97 142.24)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f34bedac-f793-4411-99ea-1bc3c616c657")
+	)
+	(bus_entry
+		(at 71.12 171.45)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7459bc9-4d26-4368-8c35-03e8275923b5")
 	)
 	(wire
 		(pts
@@ -1434,6 +2300,26 @@
 			(type default)
 		)
 		(uuid "02d63e00-8a94-4819-aba9-847cc4c81e05")
+	)
+	(wire
+		(pts
+			(xy 213.36 53.34) (xy 220.98 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0420d2d8-2b2c-4523-b580-5390d231e8da")
+	)
+	(wire
+		(pts
+			(xy 201.93 53.34) (xy 201.93 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0799d1ad-0f2b-4b1e-8456-a15fcb708ffe")
 	)
 	(wire
 		(pts
@@ -1457,6 +2343,56 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 63.5) (xy 215.9 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ac448bc-528a-49da-9825-a25423b57f72")
+	)
+	(wire
+		(pts
+			(xy 53.34 153.67) (xy 68.58 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b03c100-5a61-48a3-a4f4-49d44d7be463")
+	)
+	(wire
+		(pts
+			(xy 53.34 181.61) (xy 48.26 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b199669-2bf1-40e8-940b-baa15fdbfdfb")
+	)
+	(wire
+		(pts
+			(xy 123.19 152.4) (xy 115.57 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d7f884b-fb35-4e35-811d-e4389d31d23e")
+	)
+	(wire
+		(pts
+			(xy 144.78 116.84) (xy 151.13 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0db900ee-e305-4070-bcb8-e297ff0c5c2e")
+	)
+	(wire
+		(pts
 			(xy 185.42 104.14) (xy 185.42 111.76)
 		)
 		(stroke
@@ -1464,16 +2400,6 @@
 			(type default)
 		)
 		(uuid "0e2abdea-0652-4530-b8e0-3dc735795b2c")
-	)
-	(bus
-		(pts
-			(xy 133.35 119.38) (xy 133.35 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1303b07e-dd06-4ba6-b2db-b1c70f3492c3")
 	)
 	(wire
 		(pts
@@ -1487,6 +2413,66 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 92.71) (xy 115.57 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14e80366-f052-48df-8779-67f9420eea57")
+	)
+	(wire
+		(pts
+			(xy 123.19 144.78) (xy 138.43 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15a14abf-41e9-4f0c-965e-4260c416adeb")
+	)
+	(wire
+		(pts
+			(xy 218.44 124.46) (xy 226.06 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17c06c0c-dcda-4da8-9d46-9bb23e5ee81a")
+	)
+	(wire
+		(pts
+			(xy 104.14 162.56) (xy 115.57 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "194cbdb2-d521-45cc-b2b3-d1f03c7e2586")
+	)
+	(wire
+		(pts
+			(xy 45.72 153.67) (xy 39.37 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19ec2489-d6b1-4fa0-a7f3-5ed4d428cea7")
+	)
+	(wire
+		(pts
+			(xy 220.98 55.88) (xy 236.22 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a94e3f5-7193-43c9-a633-89bfcf609464")
+	)
+	(wire
+		(pts
 			(xy 107.95 77.47) (xy 115.57 77.47)
 		)
 		(stroke
@@ -1494,16 +2480,6 @@
 			(type default)
 		)
 		(uuid "1bf38bbf-4bde-442f-8769-dfd5c4665339")
-	)
-	(wire
-		(pts
-			(xy 135.89 121.92) (xy 151.13 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d560d5c-f547-4742-80a1-ea87b613cec1")
 	)
 	(bus
 		(pts
@@ -1517,7 +2493,57 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 106.68) (xy 194.31 106.68)
+			(xy 34.29 161.29) (xy 34.29 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "219cd292-b065-487f-bcbd-f0fe9992b197")
+	)
+	(wire
+		(pts
+			(xy 213.36 35.56) (xy 207.01 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22d3814a-cc37-4973-b66a-6751fef64dcd")
+	)
+	(bus
+		(pts
+			(xy 247.65 21.59) (xy 238.76 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23ed3299-2c28-4c18-83e6-c62f1c64c6e3")
+	)
+	(wire
+		(pts
+			(xy 115.57 175.26) (xy 109.22 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29c7f4dc-e546-4afc-985c-9dd80fdf2d25")
+	)
+	(wire
+		(pts
+			(xy 213.36 55.88) (xy 207.01 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b0d3107-cdbe-413c-8a14-590f93a9f5f7")
+	)
+	(wire
+		(pts
+			(xy 172.72 106.68) (xy 184.15 106.68)
 		)
 		(stroke
 			(width 0)
@@ -1535,16 +2561,6 @@
 		)
 		(uuid "2ca331de-4cb5-40eb-9dee-6932d014c8c9")
 	)
-	(wire
-		(pts
-			(xy 102.87 90.17) (xy 115.57 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2cc59c2c-470d-491b-b10f-fab0553cf70f")
-	)
 	(bus
 		(pts
 			(xy 71.12 93.98) (xy 69.85 93.98)
@@ -1554,6 +2570,16 @@
 			(type default)
 		)
 		(uuid "2eb4eee7-585d-49d9-9128-4e1be2a563ed")
+	)
+	(wire
+		(pts
+			(xy 53.34 151.13) (xy 45.72 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ef0f36b-c871-4da4-a292-0c7476f88696")
 	)
 	(wire
 		(pts
@@ -1567,13 +2593,33 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 109.22) (xy 226.06 109.22)
+			(xy 220.98 33.02) (xy 213.36 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31280d39-f2c5-48c2-a341-60793e80f3e8")
+	)
+	(wire
+		(pts
+			(xy 220.98 109.22) (xy 223.52 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "34e7a34b-6105-4135-8a95-648dc1232aed")
+	)
+	(wire
+		(pts
+			(xy 107.95 87.63) (xy 115.57 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35da9730-886f-4f38-b466-0f638ab4e9e7")
 	)
 	(wire
 		(pts
@@ -1585,15 +2631,15 @@
 		)
 		(uuid "35edbd8f-8a8d-43eb-91a5-f1c062ee7967")
 	)
-	(bus
+	(wire
 		(pts
-			(xy 234.95 119.38) (xy 234.95 127)
+			(xy 201.93 43.18) (xy 213.36 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "36829b69-6f2d-4721-a907-df0c0aa0a659")
+		(uuid "36edb1c2-842e-4639-87ab-cc2c4abc6010")
 	)
 	(wire
 		(pts
@@ -1614,26 +2660,6 @@
 			(type default)
 		)
 		(uuid "3a1230dc-7e1b-4e1c-abc5-8b55ebabbe04")
-	)
-	(wire
-		(pts
-			(xy 218.44 116.84) (xy 232.41 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c8fe2cd-8873-4d1d-a2e8-b649a6aeaee4")
-	)
-	(bus
-		(pts
-			(xy 124.46 127) (xy 133.35 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c98e52a-f4cb-4d0b-b546-f433b115d541")
 	)
 	(wire
 		(pts
@@ -1667,6 +2693,36 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 104.14) (xy 226.06 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "455be17f-3e91-4f60-ab43-c08a4aa60e42")
+	)
+	(wire
+		(pts
+			(xy 34.29 171.45) (xy 45.72 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46befa4c-1acc-405f-bfc1-ab8460e7db4d")
+	)
+	(wire
+		(pts
+			(xy 104.14 182.88) (xy 115.57 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48a87c31-4709-43a5-a88e-3f9960a935f6")
+	)
+	(wire
+		(pts
 			(xy 218.44 111.76) (xy 220.98 111.76)
 		)
 		(stroke
@@ -1687,13 +2743,23 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 87.63) (xy 115.57 87.63)
+			(xy 104.14 172.72) (xy 104.14 182.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4b712e1b-5377-46f8-a8a4-28bf06ff7d8b")
+		(uuid "490ebccd-b6d5-4835-903a-3a244b2c256d")
+	)
+	(bus
+		(pts
+			(xy 238.76 21.59) (xy 238.76 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b05b2a8-4656-4619-891b-ff5bebbf041a")
 	)
 	(wire
 		(pts
@@ -1714,6 +2780,16 @@
 			(type default)
 		)
 		(uuid "4f19feab-788f-4e89-a168-e38e128f7065")
+	)
+	(wire
+		(pts
+			(xy 104.14 172.72) (xy 115.57 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51cb18e2-b597-4d10-a212-b89615331e66")
 	)
 	(wire
 		(pts
@@ -1757,13 +2833,53 @@
 	)
 	(bus
 		(pts
-			(xy 101.6 101.6) (xy 100.33 101.6)
+			(xy 144.78 140.97) (xy 140.97 140.97)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "58a414e8-41d3-41a6-8a28-43037868c37b")
+		(uuid "5a2b4733-e0f1-4654-9253-3e7454531cf8")
+	)
+	(wire
+		(pts
+			(xy 123.19 182.88) (xy 118.11 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ad8f525-b2f3-4e51-8283-7cf4a615f71d")
+	)
+	(wire
+		(pts
+			(xy 34.29 151.13) (xy 34.29 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b106ce1-eee0-4ae6-b056-e6bda90a8885")
+	)
+	(wire
+		(pts
+			(xy 123.19 154.94) (xy 138.43 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60032c59-3171-49b9-8f03-512ba3d463e4")
+	)
+	(wire
+		(pts
+			(xy 48.26 181.61) (xy 45.72 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6054d227-5588-4076-ba7f-1d4027ae136d")
 	)
 	(wire
 		(pts
@@ -1787,13 +2903,43 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 119.38) (xy 232.41 119.38)
+			(xy 215.9 63.5) (xy 213.36 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6bbbdc23-d3a4-4dce-bbb8-188b0b118ab3")
+		(uuid "6a581d15-9b03-4944-a652-a8da83bc5949")
+	)
+	(wire
+		(pts
+			(xy 123.19 165.1) (xy 138.43 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b227a50-a84d-4999-9b7e-62c733a09dd6")
+	)
+	(wire
+		(pts
+			(xy 115.57 172.72) (xy 123.19 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b339cc1-4d96-4501-83de-77854c85a1a4")
+	)
+	(wire
+		(pts
+			(xy 53.34 161.29) (xy 45.72 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d3c8c00-9929-4961-8d38-d5484d14ee06")
 	)
 	(wire
 		(pts
@@ -1817,6 +2963,26 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 173.99) (xy 39.37 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "717df336-b051-4af7-b66e-de412dd91410")
+	)
+	(wire
+		(pts
+			(xy 45.72 163.83) (xy 39.37 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72411552-f6fd-4249-8d27-e8df62b4b90e")
+	)
+	(wire
+		(pts
 			(xy 96.52 77.47) (xy 96.52 80.01)
 		)
 		(stroke
@@ -1837,6 +3003,46 @@
 	)
 	(wire
 		(pts
+			(xy 218.44 121.92) (xy 226.06 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7794459f-7750-425f-996d-a8890e52870e")
+	)
+	(wire
+		(pts
+			(xy 220.98 35.56) (xy 236.22 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77d1fdf0-0a98-4535-8613-0b70081b3355")
+	)
+	(wire
+		(pts
+			(xy 107.95 95.25) (xy 115.57 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77f99da8-8290-4281-a0d9-5c263d3c9db2")
+	)
+	(wire
+		(pts
+			(xy 218.44 119.38) (xy 226.06 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78e22b6f-1fd7-432c-8292-ed46f179b724")
+	)
+	(wire
+		(pts
 			(xy 148.59 109.22) (xy 148.59 111.76)
 		)
 		(stroke
@@ -1844,6 +3050,26 @@
 			(type default)
 		)
 		(uuid "7a330cf0-57ab-40a7-b517-55e11489908d")
+	)
+	(wire
+		(pts
+			(xy 144.78 124.46) (xy 151.13 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b9bf608-26f8-42aa-9efd-6ff8a715740a")
+	)
+	(wire
+		(pts
+			(xy 218.44 116.84) (xy 226.06 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dbe83bd-4aa0-4b1e-b635-f4ec3f96371d")
 	)
 	(wire
 		(pts
@@ -1865,16 +3091,6 @@
 		)
 		(uuid "81bddff9-1779-432f-9f85-d12a84f9c5d8")
 	)
-	(bus
-		(pts
-			(xy 100.33 90.17) (xy 100.33 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "822b90d8-028d-4601-8f33-0059cb3302b9")
-	)
 	(wire
 		(pts
 			(xy 96.52 106.68) (xy 55.88 106.68)
@@ -1884,6 +3100,16 @@
 			(type default)
 		)
 		(uuid "8270993f-3324-4e60-a910-bfc623902ad8")
+	)
+	(wire
+		(pts
+			(xy 45.72 143.51) (xy 39.37 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8290a53b-b03f-4389-a9d4-0e5f1340e546")
 	)
 	(wire
 		(pts
@@ -1917,6 +3143,16 @@
 	)
 	(wire
 		(pts
+			(xy 201.93 63.5) (xy 213.36 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8dfcec13-f384-4394-981c-2cee0041cd0c")
+	)
+	(wire
+		(pts
 			(xy 146.05 106.68) (xy 146.05 104.14)
 		)
 		(stroke
@@ -1934,6 +3170,26 @@
 			(type default)
 		)
 		(uuid "8eac43ed-be50-486d-b9c1-d90d108bcac2")
+	)
+	(wire
+		(pts
+			(xy 144.78 121.92) (xy 151.13 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9205d6c4-6464-4c1b-b2e6-caeef4a82129")
+	)
+	(wire
+		(pts
+			(xy 201.93 43.18) (xy 201.93 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "920f2b69-5df0-4303-8b15-c75fe03c5814")
 	)
 	(wire
 		(pts
@@ -1957,6 +3213,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.34 163.83) (xy 68.58 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93e9e963-9a7e-4acf-b346-103369da7d69")
+	)
+	(wire
+		(pts
 			(xy 55.88 109.22) (xy 146.05 109.22)
 		)
 		(stroke
@@ -1967,33 +3233,73 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 121.92) (xy 232.41 121.92)
+			(xy 213.36 25.4) (xy 207.01 25.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "99c98cd4-7c44-4080-960d-1b844df61a42")
+		(uuid "95b7c470-04b1-4139-ac54-b5f47f32babe")
 	)
 	(wire
 		(pts
-			(xy 102.87 92.71) (xy 115.57 92.71)
+			(xy 34.29 181.61) (xy 45.72 181.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9b7e84e1-187e-4130-9f16-4850db8fa226")
+		(uuid "9a141a66-2cf6-4210-9fe4-c15d3791bf9d")
 	)
 	(wire
 		(pts
-			(xy 135.89 119.38) (xy 151.13 119.38)
+			(xy 53.34 173.99) (xy 68.58 173.99)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a148aa70-15ed-44b7-bf65-42af80cfa6db")
+		(uuid "9a88f045-5284-4d26-a050-194b0deb1975")
+	)
+	(wire
+		(pts
+			(xy 53.34 143.51) (xy 68.58 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a90c98a-2c6c-4624-a6ca-43448c3abf7a")
+	)
+	(wire
+		(pts
+			(xy 201.93 33.02) (xy 213.36 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f079260-003c-45bc-a864-21a43433f020")
+	)
+	(wire
+		(pts
+			(xy 107.95 90.17) (xy 115.57 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0194b76-41e7-4cf0-9c9f-689e5dcc5877")
+	)
+	(wire
+		(pts
+			(xy 220.98 25.4) (xy 236.22 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a473dc5b-e5cd-48c0-aafb-3fdd81f9c62b")
 	)
 	(wire
 		(pts
@@ -2007,23 +3313,43 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 124.46) (xy 232.41 124.46)
+			(xy 104.14 162.56) (xy 104.14 172.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ae0187b9-9263-4d6f-b245-8827531df9c0")
+		(uuid "a7db22b8-d9d1-46f2-8fa7-ac183911c1ea")
 	)
-	(bus
+	(wire
 		(pts
-			(xy 234.95 127) (xy 245.11 127)
+			(xy 123.19 162.56) (xy 115.57 162.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b3fca449-2465-4fa5-9fe8-496ae01f7e45")
+		(uuid "aa62712e-0e7f-4465-9d12-f27ca285f866")
+	)
+	(wire
+		(pts
+			(xy 220.98 45.72) (xy 236.22 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4d0a02f-077a-4b2c-a0dd-527f644a8d38")
+	)
+	(wire
+		(pts
+			(xy 104.14 152.4) (xy 104.14 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b591a8ca-7e31-402c-b0a1-bab758a5a39c")
 	)
 	(wire
 		(pts
@@ -2037,7 +3363,57 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 104.14) (xy 226.06 104.14)
+			(xy 104.14 152.4) (xy 115.57 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9ba4172-bab6-4da8-85a1-7cf916ea48b9")
+	)
+	(wire
+		(pts
+			(xy 34.29 161.29) (xy 45.72 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "baac32c2-8a5f-4898-99d4-c9f7c3f3695c")
+	)
+	(bus
+		(pts
+			(xy 74.93 139.7) (xy 71.12 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc5adf40-1cf6-4459-abde-3a7d1d4f8562")
+	)
+	(wire
+		(pts
+			(xy 144.78 119.38) (xy 151.13 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bdd219b5-a43b-4da0-98be-65140776212c")
+	)
+	(wire
+		(pts
+			(xy 184.15 106.68) (xy 194.31 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c181b10c-9808-4295-b65c-eda2fed83d65")
+	)
+	(wire
+		(pts
+			(xy 220.98 104.14) (xy 223.52 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2055,6 +3431,26 @@
 		)
 		(uuid "c345cf0b-e47a-42ed-a3f5-cd9931fbd00f")
 	)
+	(bus
+		(pts
+			(xy 71.12 139.7) (xy 71.12 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3615027-9776-4bfa-8ea4-b3e2a069d409")
+	)
+	(wire
+		(pts
+			(xy 115.57 144.78) (xy 109.22 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3f232cb-90de-4c30-bdc6-804612d6f657")
+	)
 	(wire
 		(pts
 			(xy 171.45 111.76) (xy 173.99 111.76)
@@ -2067,16 +3463,6 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 116.84) (xy 151.13 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "caca1941-8268-41da-8b48-3bf8969ac5b6")
-	)
-	(wire
-		(pts
 			(xy 137.16 59.69) (xy 137.16 74.93)
 		)
 		(stroke
@@ -2084,6 +3470,16 @@
 			(type default)
 		)
 		(uuid "cbc9d28a-73e6-4f28-8e5a-42d38d9fff41")
+	)
+	(bus
+		(pts
+			(xy 140.97 140.97) (xy 140.97 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc87aec5-7374-42aa-9daf-b310159b4c95")
 	)
 	(wire
 		(pts
@@ -2107,6 +3503,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 151.13) (xy 45.72 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce155bd8-713e-430a-b227-3058aee09e1a")
+	)
+	(wire
+		(pts
 			(xy 146.05 109.22) (xy 146.05 106.68)
 		)
 		(stroke
@@ -2117,6 +3523,16 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 182.88) (xy 115.57 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfeddb29-9926-4660-90b8-8258787e7f13")
+	)
+	(wire
+		(pts
 			(xy 67.31 101.6) (xy 55.88 101.6)
 		)
 		(stroke
@@ -2124,6 +3540,16 @@
 			(type default)
 		)
 		(uuid "d19775c5-344f-4d21-bcb9-59d8ca394513")
+	)
+	(wire
+		(pts
+			(xy 115.57 165.1) (xy 109.22 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5f269ca-7d94-4342-9f39-800038f24a30")
 	)
 	(wire
 		(pts
@@ -2157,6 +3583,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 171.45) (xy 53.34 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da20ba33-db15-45b1-a11b-d1220273d0ad")
+	)
+	(wire
+		(pts
 			(xy 218.44 109.22) (xy 220.98 109.22)
 		)
 		(stroke
@@ -2167,6 +3603,16 @@
 	)
 	(wire
 		(pts
+			(xy 201.93 33.02) (xy 201.93 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db45ea47-584e-4628-a38b-18b656bdfe54")
+	)
+	(wire
+		(pts
 			(xy 194.31 106.68) (xy 198.12 106.68)
 		)
 		(stroke
@@ -2174,16 +3620,6 @@
 			(type default)
 		)
 		(uuid "db6c1e20-28f0-4598-81de-a6d0b413b1ee")
-	)
-	(wire
-		(pts
-			(xy 135.89 124.46) (xy 151.13 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dc8fe413-7521-408d-97e0-f65c785d2cb8")
 	)
 	(wire
 		(pts
@@ -2217,13 +3653,13 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 95.25) (xy 115.57 95.25)
+			(xy 220.98 43.18) (xy 213.36 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e84e6cdc-0269-4b9a-ab3b-aaba74756404")
+		(uuid "e7390cf9-ffc5-4d6b-9fee-99055070dca7")
 	)
 	(wire
 		(pts
@@ -2247,6 +3683,36 @@
 	)
 	(wire
 		(pts
+			(xy 201.93 53.34) (xy 213.36 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee1e0c3a-fc21-42fe-8260-41ed418c9ad3")
+	)
+	(wire
+		(pts
+			(xy 123.19 175.26) (xy 138.43 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef33546c-633b-41d0-9a6b-b15c5499688f")
+	)
+	(wire
+		(pts
+			(xy 213.36 45.72) (xy 207.01 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5591721-5c13-4593-a1c9-5da6b3f34eaa")
+	)
+	(wire
+		(pts
 			(xy 148.59 74.93) (xy 148.59 109.22)
 		)
 		(stroke
@@ -2254,6 +3720,46 @@
 			(type default)
 		)
 		(uuid "f5890cae-3dab-4285-85ea-f1d33bf6acf5")
+	)
+	(wire
+		(pts
+			(xy 223.52 109.22) (xy 226.06 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5c34c77-2105-4150-9519-c31f192dd6e0")
+	)
+	(wire
+		(pts
+			(xy 34.29 171.45) (xy 34.29 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd45a8d3-6f39-4d2d-94cb-289d866eb862")
+	)
+	(wire
+		(pts
+			(xy 115.57 154.94) (xy 109.22 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd91a687-7218-42c2-9051-94094d605ed6")
+	)
+	(label "hbridge_sel1"
+		(at 123.19 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0168cebf-25e0-45c9-8aa2-357638de04b2")
 	)
 	(label "i-"
 		(at 60.96 109.22 0)
@@ -2264,6 +3770,26 @@
 			(justify left bottom)
 		)
 		(uuid "01739455-2a9f-484f-82a4-3151603ce7b7")
+	)
+	(label "selh2"
+		(at 109.22 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0ed573fa-3e09-4ed9-9502-1fe4e250c658")
+	)
+	(label "selh1"
+		(at 109.22 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "143415e1-8439-4218-985f-a4fd4cf475dd")
 	)
 	(label "v_sense.V-"
 		(at 67.31 104.14 180)
@@ -2276,7 +3802,7 @@
 		(uuid "1fb7b388-ade9-4ac8-8c57-444e54328edd")
 	)
 	(label "I_Source"
-		(at 176.53 106.68 0)
+		(at 175.26 106.68 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2285,75 +3811,205 @@
 		)
 		(uuid "22b56d6a-96d3-4974-869c-dde3396eb384")
 	)
-	(label "i_source_sel1"
-		(at 218.44 116.84 0)
+	(label "hbridge_sel4"
+		(at 123.19 175.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "2a51f9d4-e651-41ef-a75c-c54a5c645d2a")
+		(uuid "357c3003-4d3f-4711-a3ad-ed517233ffbd")
 	)
-	(label "i_sense_sel1"
-		(at 115.57 87.63 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2ba2cd97-2a8e-47a7-a33a-7a4a060bf4f9")
-	)
-	(label "i_sense_sel2"
-		(at 115.57 90.17 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2bfdea70-931c-44a5-8dac-06746938879c")
-	)
-	(label "i_source_sel3"
-		(at 218.44 121.92 0)
+	(label "hbridge_sel3"
+		(at 123.19 165.1 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "2c9fa563-26aa-4028-a2e3-7573a4d7f70f")
+		(uuid "366c73ba-ebc0-48e0-8df8-e52fd1e5b9c4")
+	)
+	(label "seli3"
+		(at 39.37 163.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "38b818b1-06d0-483a-b242-afb2a4566ecb")
+	)
+	(label "seli4"
+		(at 107.95 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "465c5689-460b-4fc9-b511-2ca8aa90baea")
+	)
+	(label "seli1"
+		(at 39.37 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4747c77a-c639-4716-ac51-fc4503c792b6")
+	)
+	(label "seli2"
+		(at 107.95 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "48630918-61e5-4b28-a47e-0bfff3708035")
+	)
+	(label "sels3"
+		(at 226.06 121.92 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "499d2ad8-aa32-44a5-bde8-e3082c33b03b")
+	)
+	(label "selh3"
+		(at 109.22 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4a371283-dde5-4cd1-b16c-e6c615c008b2")
+	)
+	(label "sels1"
+		(at 226.06 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4d98f98a-3801-46a7-8cd0-60405e30b937")
+	)
+	(label "sels1"
+		(at 207.01 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b3c0919-1f84-4654-8406-76ec973e27ea")
 	)
 	(label "i_source_sel2"
-		(at 218.44 119.38 0)
+		(at 220.98 35.56 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "69de7133-c1d1-4c8a-b65b-a59cc38c28ab")
+		(uuid "60b2bc3a-80d4-49ca-9376-a04ef823d790")
 	)
-	(label "i_source_sel4"
-		(at 218.44 124.46 0)
+	(label "i_sense_sel2"
+		(at 53.34 153.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "8122698d-8653-414c-864a-15a7bb5884cf")
+		(uuid "6109b70a-be06-4291-bd33-6540a2cb4f94")
 	)
 	(label "i_sense_sel3"
-		(at 115.57 92.71 180)
+		(at 53.34 163.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "668a2278-800a-4ecb-a249-61a0a8aa09be")
+	)
+	(label "seli1"
+		(at 107.95 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "69097f68-e62d-4ca0-8614-9ecd04c6dcfa")
+	)
+	(label "sels2"
+		(at 226.06 119.38 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "90303c59-613c-4229-8ea7-f1f8c87d20cf")
+		(uuid "6d790811-74e6-42b5-93ac-34b6dc17d319")
+	)
+	(label "seli2"
+		(at 39.37 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7422ad22-e979-4c9c-8d48-a09275d74b94")
+	)
+	(label "hbridge_sel2"
+		(at 123.19 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "796e724a-64cb-4666-892b-5937b6bcfcc2")
+	)
+	(label "i_sense_sel1"
+		(at 53.34 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7eb05f7e-f03b-48b3-973a-50b6fbf8d6e9")
+	)
+	(label "sels4"
+		(at 207.01 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "83362d79-6f7f-42ff-b18c-89eeb88759ba")
+	)
+	(label "selh1"
+		(at 144.78 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8e9d99e4-f67d-48f1-a595-dd7ba6ade5c4")
 	)
 	(label "i+"
 		(at 60.96 106.68 0)
@@ -2365,35 +4021,95 @@
 		)
 		(uuid "9711a39d-373c-45bd-bc22-c85ee871b9aa")
 	)
-	(label "i_sense_sel4"
-		(at 115.57 95.25 180)
+	(label "seli3"
+		(at 107.95 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9a87b20f-3404-44b5-819c-8296d5636251")
+	)
+	(label "sels2"
+		(at 207.01 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9eaffb83-08e4-4e96-be66-192d4f76039b")
+	)
+	(label "selh2"
+		(at 144.78 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a172af51-de7f-4eec-8b0e-98f70bef32db")
+	)
+	(label "sels4"
+		(at 226.06 124.46 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "baeca548-2344-44df-b48e-a2cf28a1c2cf")
+		(uuid "a3754625-672e-4a89-8622-e9583424c62b")
 	)
-	(label "hbridge_sel2"
-		(at 135.89 119.38 0)
+	(label "i_source_sel1"
+		(at 220.98 25.4 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "cde3a3b7-bc05-4960-b9a6-915062ce96e7")
+		(uuid "cda8ecac-d5ee-440a-9676-f2417a325786")
 	)
-	(label "hbridge_sel3"
-		(at 135.89 121.92 0)
+	(label "i_sense_sel4"
+		(at 53.34 173.99 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "de2c2576-ef9c-4910-a198-425c1a4452cd")
+		(uuid "cffcae75-b2df-40b2-b71d-21f22138bc11")
+	)
+	(label "i_source_sel4"
+		(at 220.98 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d61ad733-e82f-48ea-98f9-a6bc18506a16")
+	)
+	(label "selh4"
+		(at 144.78 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7f24012-41db-43c4-ac42-838b8dffa543")
+	)
+	(label "i_source_sel3"
+		(at 220.98 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dee7b248-5d71-444c-a6e3-83ce5e420105")
 	)
 	(label "i_sense.I-"
 		(at 97.79 74.93 0)
@@ -2405,15 +4121,45 @@
 		)
 		(uuid "e1edfae4-2399-4c08-83bf-2cae7858fda1")
 	)
-	(label "hbridge_sel1"
-		(at 135.89 116.84 0)
+	(label "selh4"
+		(at 109.22 175.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "e9f0e209-2937-45cc-a29f-c9ccb7700492")
+		(uuid "e29cfe79-7ad7-4ed5-834a-c3ad029bf56a")
+	)
+	(label "selh3"
+		(at 144.78 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e9271bff-c647-419b-b0f9-4b78f92c0374")
+	)
+	(label "seli4"
+		(at 39.37 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eab5634e-85d3-4d5f-a2c4-14533c28e5df")
+	)
+	(label "sels3"
+		(at 207.01 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ee54ad60-4ebf-43cb-9fc2-2c3ab41b0e46")
 	)
 	(label "v_sense.V+"
 		(at 67.31 101.6 180)
@@ -2434,16 +4180,6 @@
 			(justify left bottom)
 		)
 		(uuid "f5c485b4-d217-4bc1-b104-f43f9ff2f1e6")
-	)
-	(label "hbridge_sel4"
-		(at 135.89 124.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f8e5ae7c-bedf-48cc-a58b-9fd942d7cc71")
 	)
 	(hierarchical_label "i_sense{I+ I-}"
 		(shape input)
@@ -2469,25 +4205,14 @@
 	)
 	(hierarchical_label "i_source_sel[1..4]"
 		(shape input)
-		(at 245.11 127 0)
+		(at 247.65 21.59 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "9c638a7d-6775-4041-9bc8-ae2854fbf6eb")
-	)
-	(hierarchical_label "hbridge_sel[1..4]"
-		(shape input)
-		(at 124.46 127 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9f50a87f-92e0-4c3d-89fc-f7be68b7e310")
+		(uuid "6c0e131d-9f7e-49c0-aa80-7e696ff157e3")
 	)
 	(hierarchical_label "v_sense{V+ V-}"
 		(shape input)
@@ -2499,6 +4224,17 @@
 			(justify left)
 		)
 		(uuid "a1b1fddf-c37f-419b-b0b7-cd0e33b41881")
+	)
+	(hierarchical_label "hbridge_sel[1..4]"
+		(shape input)
+		(at 144.78 140.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a5a75b81-78ca-4401-b418-01db4199bdce")
 	)
 	(hierarchical_label "nA_I_Source"
 		(shape input)
@@ -2513,14 +4249,14 @@
 	)
 	(hierarchical_label "i_sense_sel[1..4]"
 		(shape input)
-		(at 101.6 101.6 0)
+		(at 74.93 139.7 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "ee7e6e1a-b6bb-4d6d-bb59-f2e2fd1ea970")
+		(uuid "c0a7111d-692c-4583-abe0-4d13bae7335b")
 	)
 	(symbol
 		(lib_id "power:+4V")
@@ -2534,7 +4270,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0092a3e8-4257-459b-9bbe-d6a6b6a0cd8a")
-		(property "Reference" "#PWR0403"
+		(property "Reference" "#PWR0405"
 			(at 161.29 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2594,7 +4330,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "#PWR0403")
+					(reference "#PWR0405")
 					(unit 1)
 				)
 			)
@@ -2612,7 +4348,7 @@
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "022aaf4a-4d36-4a32-bf2a-33b86f32cbc4")
-		(property "Reference" "R404"
+		(property "Reference" "R412"
 			(at 187.96 114.2999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2676,7 +4412,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "R404")
+					(reference "R412")
 					(unit 1)
 				)
 			)
@@ -2765,6 +4501,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 123.19 148.59 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "100d8b39-5ec8-4238-8236-860b7ee179cf")
+		(property "Reference" "C413"
+			(at 123.19 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 123.19 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 124.1552 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 123.19 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "03859004-53f0-4497-a637-dfc4d7b63e12")
+		)
+		(pin "1"
+			(uuid "8133e163-8329-4864-859f-3fd83fedac09")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C413")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 193.04 115.57 0)
 		(unit 1)
@@ -2776,7 +4593,7 @@
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "11a4589b-e108-40e2-8b7e-e9e73b57e477")
-		(property "Reference" "R405"
+		(property "Reference" "R413"
 			(at 195.58 114.2999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2840,7 +4657,7 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "R405")
+					(reference "R413")
 					(unit 1)
 				)
 			)
@@ -2857,7 +4674,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1731a673-769f-4f16-8622-eef14c51f373")
-		(property "Reference" "R401"
+		(property "Reference" "R405"
 			(at 93.98 77.47 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2919,7 +4736,331 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "R401")
+					(reference "R405")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 220.98 29.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "18cc5b2e-af57-41bd-bec5-e73b7f3d53f0")
+		(property "Reference" "C421"
+			(at 220.98 26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 220.98 31.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 221.9452 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.98 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 220.98 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "206da002-2bdc-4fc3-a1b4-493af3767a0e")
+		)
+		(pin "1"
+			(uuid "744bbd49-6241-4804-880b-45ad9d99437b")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C421")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 45.72 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "215f5ada-7d68-4812-a52e-dc2afb7d05bc")
+		(property "Reference" "C402"
+			(at 40.64 154.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 41.91 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 46.6852 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 45.72 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "bab6a932-84d1-4793-a69b-efda36f76bdd")
+		)
+		(pin "1"
+			(uuid "397c9b8d-08d4-4ba2-8daa-64c0caa9c880")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 220.98 59.69 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "231b2e26-5596-4cd1-9792-5cb6daecf1f8")
+		(property "Reference" "C424"
+			(at 220.98 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 220.98 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 221.9452 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.98 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 220.98 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "754f5cd9-6985-4909-97a4-aed72f50e6e1")
+		)
+		(pin "1"
+			(uuid "d2073a00-27cb-4872-8cdb-2272c5a63819")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C424")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 220.98 49.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2780917c-d805-4871-b325-483aa7598922")
+		(property "Reference" "C423"
+			(at 220.98 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 220.98 52.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 221.9452 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.98 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 220.98 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "eac26fe2-1d7b-4428-b25a-0e2ad883b805")
+		)
+		(pin "1"
+			(uuid "0b7228d2-9d91-4da4-974c-1f2e05ec7c8d")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C423")
 					(unit 1)
 				)
 			)
@@ -3049,6 +5190,329 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 213.36 49.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2d37d349-0c96-4c17-a883-405c8d5fdfd2")
+		(property "Reference" "C419"
+			(at 208.28 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 209.55 52.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 214.3252 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 213.36 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "30855045-82f2-42f5-b0ca-74bc846b3eb1")
+		)
+		(pin "1"
+			(uuid "93e6ed44-a624-42b4-be62-9141742cd5d2")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C419")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 115.57 179.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "330cc77d-50d4-4787-a95c-baf35cbd5be0")
+		(property "Reference" "C412"
+			(at 110.49 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 111.76 181.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 116.5352 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 115.57 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7716ce70-51c3-4fe0-948f-a31cc11da110")
+		)
+		(pin "1"
+			(uuid "4b8ec3a5-9290-4b5e-9d66-5c54dcc3ae3f")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C412")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 220.98 39.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3342f359-2aae-4f1c-ac52-d46f1e645b4a")
+		(property "Reference" "C422"
+			(at 220.98 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 220.98 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 221.9452 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.98 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 220.98 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "4f629828-2ee7-414a-a808-c5159d6a0779")
+		)
+		(pin "1"
+			(uuid "5584b2bb-dd90-4afb-9fc9-3fecb204e1f4")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C422")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 49.53 143.51 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "36732571-7403-45df-b382-a5f771eaecb2")
+		(property "Reference" "R401"
+			(at 49.53 146.05 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 49.53 143.51 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 49.53 141.732 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 49.53 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cd552f13-a4a0-4d2e-ae7c-e95d5a653f6b")
+		)
+		(pin "2"
+			(uuid "f3d590d6-1235-4d3c-8232-252ba0e503fd")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "R401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GNDPWR")
 		(at 125.73 101.6 0)
 		(unit 1)
@@ -3060,7 +5524,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "39aa2d2a-3b2c-4ed5-834c-e8e414e6a931")
-		(property "Reference" "#PWR0402"
+		(property "Reference" "#PWR0404"
 			(at 125.73 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -3120,7 +5584,169 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "#PWR0402")
+					(reference "#PWR0404")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 53.34 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "39c12d20-f224-4398-8ded-482ef50b1d1c")
+		(property "Reference" "C408"
+			(at 53.34 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 53.34 180.34 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 54.3052 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 53.34 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6019fa4c-6f4c-495c-a84a-82998c97b351")
+		)
+		(pin "1"
+			(uuid "c0b88caf-fc22-4f5c-a027-dc2b2882a724")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C408")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 123.19 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3a87fef8-13bc-4899-9728-1e33fe65c7ab")
+		(property "Reference" "C414"
+			(at 123.19 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 123.19 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 124.1552 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 123.19 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "545093ea-efb7-4beb-bcb1-589583d61838")
+		)
+		(pin "1"
+			(uuid "72ee5b93-dcf1-49d3-9eba-1c5b000135cc")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C414")
 					(unit 1)
 				)
 			)
@@ -3138,7 +5764,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3be2b3ff-5910-417c-9a71-cfea4ca26583")
-		(property "Reference" "#PWR0407"
+		(property "Reference" "#PWR0409"
 			(at 208.28 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -3198,7 +5824,490 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "#PWR0407")
+					(reference "#PWR0409")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 217.17 35.56 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "42a75b3b-1184-4c06-a8f9-0612ddc97d22")
+		(property "Reference" "R415"
+			(at 217.17 38.1 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 217.17 35.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 217.17 33.782 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 217.17 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5f9aaa3c-3ffa-4cbb-aaad-084b9549b261")
+		)
+		(pin "2"
+			(uuid "3f6881ae-9130-4a0f-9c20-59e5b690c91f")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "R415")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 213.36 29.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "46d53511-2361-455c-b074-b38ab03e749e")
+		(property "Reference" "C417"
+			(at 208.28 26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 209.55 31.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 214.3252 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 213.36 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "8f03756f-4e83-4c8c-b865-d1f7eb8d0065")
+		)
+		(pin "1"
+			(uuid "3035df59-d86b-4c8e-b980-82115a0d7f1b")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C417")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 45.72 167.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4818635b-c07d-4719-83df-209f4e107156")
+		(property "Reference" "C403"
+			(at 40.64 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 41.91 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 46.6852 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 45.72 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "fdc808c9-6fea-4e23-b349-a19df53fdc6d")
+		)
+		(pin "1"
+			(uuid "cb7744f4-d5f3-4234-90f5-8bbfdc7588fd")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C403")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 115.57 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4988c760-73ec-4335-844d-4a98d37f20fb")
+		(property "Reference" "C410"
+			(at 110.49 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 111.76 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 116.5352 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 115.57 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "aa2a5438-758d-4f35-a5b3-6a6ea6ade69e")
+		)
+		(pin "1"
+			(uuid "ba636a91-a19d-402e-97ed-e35f69315e81")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C410")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 119.38 175.26 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "49b70f1d-f060-46bb-b165-fea1f6d06942")
+		(property "Reference" "R411"
+			(at 119.38 177.8 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 119.38 175.26 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 119.38 173.482 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 119.38 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "14f9ff74-f44d-47ae-a40c-9361e674a71b")
+		)
+		(pin "2"
+			(uuid "52bdfb57-c917-4b13-96c6-4038a0343fbb")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "R411")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 119.38 165.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "52586b2a-b0cd-4b2f-85e3-30a09ead5686")
+		(property "Reference" "R410"
+			(at 119.38 167.64 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 119.38 165.1 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 119.38 163.322 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 119.38 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "804fdf33-eaaf-4649-b385-a6994dde2cce")
+		)
+		(pin "2"
+			(uuid "abc0d375-633e-4e2c-8fb0-356c488e33ad")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "R410")
 					(unit 1)
 				)
 			)
@@ -3288,6 +6397,86 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 217.17 45.72 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "62fb4bb8-a17a-4f2f-b18b-591fd4f8d6ca")
+		(property "Reference" "R416"
+			(at 217.17 48.26 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 217.17 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 217.17 43.942 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 217.17 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9ce372cc-a951-4ea1-898b-f603608ea4d0")
+		)
+		(pin "2"
+			(uuid "f9409a72-5dec-4322-9505-bc5dd3986f0a")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "R416")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 104.14 82.55 90)
 		(unit 1)
 		(body_style 1)
@@ -3297,7 +6486,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "633fba82-e84e-4ff4-a982-4d592ddd3fea")
-		(property "Reference" "R403"
+		(property "Reference" "R407"
 			(at 93.98 82.55 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3359,7 +6548,327 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "R403")
+					(reference "R407")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 119.38 154.94 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6b1a42b9-9f8d-493d-8db1-cf74bcf6ebba")
+		(property "Reference" "R409"
+			(at 119.38 157.48 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 119.38 154.94 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 119.38 153.162 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 119.38 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f30d4b62-88a8-479b-b763-10bd5a4e7120")
+		)
+		(pin "2"
+			(uuid "0f17c281-deeb-4867-858e-169162fa6ead")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "R409")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 49.53 173.99 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6f41a447-d6f6-47a4-894d-a7d502a87f2f")
+		(property "Reference" "R404"
+			(at 49.53 176.53 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 49.53 173.99 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 49.53 172.212 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 49.53 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8e9155b5-f0e6-4794-9b1c-f30048080c36")
+		)
+		(pin "2"
+			(uuid "c6f734a4-2acf-4310-a7c0-8d5e3d2e9110")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "R404")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 223.52 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "70ec8b77-be2d-4d3c-98b1-ce71dc04f534")
+		(property "Reference" "TP402"
+			(at 226.06 99.5679 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 226.06 102.1079 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
+			(at 228.6 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 228.6 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 223.52 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ed93ca1a-35a9-42d4-9d9e-b7e7685f3496")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "TP402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 123.19 179.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "716d4f3a-2c46-4aee-bbd7-1ea6ae712695")
+		(property "Reference" "C416"
+			(at 123.19 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 123.19 181.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 124.1552 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 123.19 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "db382efe-56c4-4dbf-b401-126ae88d0358")
+		)
+		(pin "1"
+			(uuid "03512187-7bf1-4b84-ada5-b36a4bdf5dbf")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C416")
 					(unit 1)
 				)
 			)
@@ -3377,7 +6886,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "73a5de78-0a06-4c6c-b7d3-dbd9857c086b")
-		(property "Reference" "#PWR0405"
+		(property "Reference" "#PWR0407"
 			(at 173.99 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -3437,7 +6946,327 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "#PWR0405")
+					(reference "#PWR0407")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 115.57 168.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "767c4acc-e150-4ba3-962d-cdc134836e9d")
+		(property "Reference" "C411"
+			(at 110.49 166.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 111.76 171.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 116.5352 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 115.57 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "2045599f-1fec-4966-a8ba-0c671b7b78b9")
+		)
+		(pin "1"
+			(uuid "e29ab48c-522a-4e01-bf8e-0e936b6ef47f")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C411")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 217.17 25.4 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7ad0d15a-b660-43c3-80d9-eaad11e773e7")
+		(property "Reference" "R414"
+			(at 217.17 27.94 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 217.17 25.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 217.17 23.622 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 217.17 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "70c977c3-20bd-4f06-90d0-bffc033c335e")
+		)
+		(pin "2"
+			(uuid "5d2db940-b8b0-419b-ad25-a962a04cfd7e")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "R414")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 223.52 109.22 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7b158580-475c-4914-977e-8f7e788b0d42")
+		(property "Reference" "TP403"
+			(at 226.06 111.2519 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 226.06 113.7919 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
+			(at 218.44 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 223.52 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7a672775-ccf3-45c3-bc78-4aeb982baadd")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "TP403")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 217.17 55.88 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "81719eac-9053-4051-9a72-87a7f2cddcff")
+		(property "Reference" "R417"
+			(at 217.17 58.42 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 217.17 55.88 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 217.17 54.102 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 217.17 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "18bb4897-22c9-43a0-b2ce-3bcb95f6af76")
+		)
+		(pin "2"
+			(uuid "86487b2e-6047-4568-8a44-c961431080ac")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "R417")
 					(unit 1)
 				)
 			)
@@ -3454,7 +7283,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "83008498-522a-4e21-b872-71213ec3b789")
-		(property "Reference" "R402"
+		(property "Reference" "R406"
 			(at 93.98 80.01 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3516,7 +7345,407 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "R402")
+					(reference "R406")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 118.11 182.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e3b6a1c-fac6-42f9-8bfa-3420c3288fe2")
+		(property "Reference" "#PWR0402"
+			(at 118.11 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 117.983 186.69 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 118.11 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "18417785-b7ae-44ed-9e3d-ab269732f493")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "#PWR0402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 123.19 168.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9a470a0e-9f6b-4b58-8fce-15ce7678f57f")
+		(property "Reference" "C415"
+			(at 123.19 166.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 123.19 171.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 124.1552 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 123.19 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "457719ea-9dac-4a6a-9122-4f8d55c704c5")
+		)
+		(pin "1"
+			(uuid "ae0c4234-54af-41ad-92a8-c1e1f652cd9c")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C415")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 49.53 163.83 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a1707dc1-c696-494c-8fb0-c16716e3bf2c")
+		(property "Reference" "R403"
+			(at 49.53 166.37 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 49.53 163.83 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 49.53 162.052 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 49.53 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ad3bb2e5-a9f4-4c4a-a6b1-d532e2639bac")
+		)
+		(pin "2"
+			(uuid "af9ad31d-02bb-4425-895b-37d1348341bc")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "R403")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 119.38 144.78 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a38ac04a-43fc-40b4-b46b-95c8cc6cdb1e")
+		(property "Reference" "R408"
+			(at 119.38 147.32 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 119.38 144.78 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 119.38 143.002 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 119.38 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d7fefc68-9533-4690-bea3-2165a9f3def1")
+		)
+		(pin "2"
+			(uuid "071efb80-0b10-497b-8055-bfcd52af0125")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "R408")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 53.34 167.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "aa5983a3-5edf-4de0-b1cb-2029f0785675")
+		(property "Reference" "C407"
+			(at 53.34 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 53.34 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 54.3052 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 53.34 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "35feec3e-982f-438a-a0dc-62b7b005ac0e")
+		)
+		(pin "1"
+			(uuid "d64c8aaf-78c7-4f79-9ef8-e440e694103d")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C407")
 					(unit 1)
 				)
 			)
@@ -3534,7 +7763,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ac09c623-f5ee-460e-9d2d-389c3db4ce36")
-		(property "Reference" "#PWR0404"
+		(property "Reference" "#PWR0406"
 			(at 161.29 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -3594,7 +7823,169 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "#PWR0404")
+					(reference "#PWR0406")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 45.72 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b36ab76b-02e0-40b4-a3f9-6dd1e9b8c664")
+		(property "Reference" "C404"
+			(at 40.64 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 41.91 180.34 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 46.6852 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 45.72 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "492816cf-845b-43ae-a571-36d4cee73bb6")
+		)
+		(pin "1"
+			(uuid "a4886b10-1787-4723-897c-5d89f13a479e")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C404")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 115.57 148.59 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b8255652-edb8-4a4b-b0ff-6b89e06652c4")
+		(property "Reference" "C409"
+			(at 110.49 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 111.76 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 116.5352 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 115.57 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "54bb2362-02dd-49b3-9af4-11103aa3729e")
+		)
+		(pin "1"
+			(uuid "6ad08b19-89b0-4b7a-81df-787fe1bd5024")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C409")
 					(unit 1)
 				)
 			)
@@ -3612,7 +8003,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bd996ec5-8719-4f54-8a05-d56f90d6223f")
-		(property "Reference" "#PWR0401"
+		(property "Reference" "#PWR0403"
 			(at 125.73 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -3672,7 +8063,167 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "#PWR0401")
+					(reference "#PWR0403")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 184.15 106.68 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "c21d56ad-e759-4d1c-bf10-d3085a73d9ec")
+		(property "Reference" "TP401"
+			(at 186.69 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 185.42 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
+			(at 179.07 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 179.07 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 184.15 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1b907b3e-fc75-444c-ba15-b7918e699847")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "TP401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 53.34 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c88372f6-b3bd-43a2-bc9b-3f4cb5454a6d")
+		(property "Reference" "C406"
+			(at 53.34 154.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 53.34 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 54.3052 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 53.34 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "dcf71637-6662-4d9d-8ef8-7ff51bfb1837")
+		)
+		(pin "1"
+			(uuid "7799bcfc-30d9-4a9d-a105-11cf7a03c2a5")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C406")
 					(unit 1)
 				)
 			)
@@ -3927,6 +8478,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 213.36 39.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d5e55109-3d42-49cc-87b0-0bd5990f2b9b")
+		(property "Reference" "C418"
+			(at 208.28 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 209.55 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 214.3252 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 213.36 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "baba45d8-c403-46e7-8942-adfee74e12b7")
+		)
+		(pin "1"
+			(uuid "123bb1a1-128f-4ea9-9f9f-e58f6c629c7f")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C418")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 189.23 121.92 0)
 		(unit 1)
@@ -3938,7 +8570,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d7bca64e-31b1-405e-9717-71e523fcc1f2")
-		(property "Reference" "#PWR0406"
+		(property "Reference" "#PWR0408"
 			(at 189.23 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -3998,7 +8630,324 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "#PWR0406")
+					(reference "#PWR0408")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 213.36 59.69 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ecb2ccbb-f083-45ad-a48e-9693edb7b6dd")
+		(property "Reference" "C420"
+			(at 208.28 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 209.55 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 214.3252 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 213.36 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c672a72b-1c14-41a5-bbce-16a28cd4f0d2")
+		)
+		(pin "1"
+			(uuid "76a7470b-9db2-4612-b5c8-344e178ec7bc")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C420")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 48.26 181.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ee002807-2170-448a-99a8-46b4e61de915")
+		(property "Reference" "#PWR0401"
+			(at 48.26 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 48.133 185.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 48.26 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6c6b36a0-5bce-49c7-93c1-39dfcdb89629")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "#PWR0401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 49.53 153.67 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ee739db6-d125-4021-b396-c032c61670b4")
+		(property "Reference" "R402"
+			(at 49.53 156.21 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 49.53 153.67 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 49.53 151.892 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 49.53 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "35ad5855-9566-4725-a26b-dcc60d83cdf0")
+		)
+		(pin "2"
+			(uuid "265bfe64-54e6-46a2-a25c-7cbd3182b9dd")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "R402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 215.9 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ee8c2bc4-25e9-4cfc-bbe0-caafb8c16e11")
+		(property "Reference" "#PWR0411"
+			(at 215.9 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 215.773 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215.9 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 215.9 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c26a8b51-0fc3-4bbd-a0ed-631fba71f356")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "#PWR0411")
 					(unit 1)
 				)
 			)
@@ -4016,7 +8965,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f7e3bfba-6a63-48d7-9e6e-cba6677f2551")
-		(property "Reference" "#PWR0408"
+		(property "Reference" "#PWR0410"
 			(at 208.28 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -4076,7 +9025,169 @@
 		(instances
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
-					(reference "#PWR0408")
+					(reference "#PWR0410")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 53.34 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fa043834-4a04-48ec-8b26-943dbc5c12e7")
+		(property "Reference" "C405"
+			(at 53.34 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 53.34 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 54.3052 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 53.34 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "17dd8d03-6b90-4916-9487-caf2dfd90026")
+		)
+		(pin "1"
+			(uuid "23fbb1db-0d56-443d-a613-5810cba574f9")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C405")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 45.72 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fef96287-8aed-4299-ba84-43b86a1023be")
+		(property "Reference" "C401"
+			(at 40.64 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2u2"
+			(at 41.91 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 46.6852 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 45.72 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a50f797d-ca2b-4907-9b90-066622615729")
+		)
+		(pin "1"
+			(uuid "153630c0-e20d-4d55-9317-912037c12413")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "C401")
 					(unit 1)
 				)
 			)
