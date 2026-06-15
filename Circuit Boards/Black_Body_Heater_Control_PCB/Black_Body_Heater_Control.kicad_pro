@@ -561,7 +561,7 @@
   "schematic": {
     "annotate_start_num": 0,
     "annotation": {
-      "method": 0,
+      "method": 1,
       "sort_order": 0
     },
     "bom_export_filename": "${PROJECTNAME}.csv",
@@ -676,6 +676,14 @@
     "meta": {
       "version": 1
     },
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -688,7 +696,7 @@
         "uuid": "f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0"
       }
     ],
-    "used_designators": "",
+    "used_designators": "L301,D201-202,#PWR38,#PWR201-223,#PWR301-315,J201-203,R16-18,R201-207,R301-310,C201-207,C301-309,P301-302,Q301-302,SW201-202,U201-203,U301-304",
     "variants": []
   },
   "sheets": [

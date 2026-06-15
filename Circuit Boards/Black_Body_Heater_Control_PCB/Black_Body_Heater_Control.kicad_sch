@@ -35,7 +35,7 @@
 		)
 		(uuid "38524ad2-80bd-4196-9f34-f77a4f7d8882")
 	)
-	(text_box "- 20V power input\n- 20 to 5v buck\n- resistive heater pwm control\n- Current/voltage measurment for heater"
+	(text_box "- 20V power input\n- 20 to 5v buck\n- resistive heater current source\n- Current/voltage measurment for heater"
 		(exclude_from_sim no)
 		(at 82.55 105.41 0)
 		(size 43.18 13.97)
@@ -65,15 +65,15 @@
 		)
 		(uuid "5068d689-5aa0-4030-b44f-b2c1422a7f03")
 	)
-	(wire
+	(bus
 		(pts
-			(xy 180.34 104.14) (xy 129.54 104.14)
+			(xy 129.54 104.14) (xy 180.34 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "73b2740b-2764-49a4-904d-967234685eba")
+		(uuid "72cf79ff-da18-4a9d-b572-d0d5650da92d")
 	)
 	(wire
 		(pts
@@ -123,16 +123,6 @@
 				(justify left top)
 			)
 		)
-		(pin "FET" input
-			(at 129.54 104.14 0)
-			(uuid "67b63ef6-3e02-4a32-b6ed-b2e052270331")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "V_SENSE" input
 			(at 129.54 100.33 0)
 			(uuid "1376d234-c4ea-406e-a3f6-dc64d288add8")
@@ -146,6 +136,16 @@
 		(pin "I_SENSE" input
 			(at 129.54 95.25 0)
 			(uuid "27458410-4eb5-480c-a8a4-a0f74f244501")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "i2c{sda scl}" input
+			(at 129.54 104.14 0)
+			(uuid "67275d9f-072f-4b8e-90c5-cbdebe68d287")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -209,9 +209,9 @@
 				(justify left)
 			)
 		)
-		(pin "FET" input
-			(at 180.34 104.14 180)
-			(uuid "2e0ede00-eca7-4432-ab92-38152843bba1")
+		(pin "V_SENSE" input
+			(at 180.34 100.33 180)
+			(uuid "c8e167db-9cd7-4e1e-aaad-0afb2a8b680c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -219,9 +219,9 @@
 				(justify left)
 			)
 		)
-		(pin "V_SENSE" input
-			(at 180.34 100.33 180)
-			(uuid "c8e167db-9cd7-4e1e-aaad-0afb2a8b680c")
+		(pin "i2c{sda scl}" input
+			(at 180.34 104.14 180)
+			(uuid "ba0553f5-18ec-414c-9483-7f0dbf70a124")
 			(effects
 				(font
 					(size 1.27 1.27)

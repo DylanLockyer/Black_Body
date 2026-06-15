@@ -1781,6 +1781,269 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:Conn_01x04_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x04_Pin"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x04_Pin_1_1"
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 0.8636 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -5.08) (xy 0.8636 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:Conn_01x06_Pin"
 			(pin_names
 				(offset 1.016)
@@ -6478,6 +6741,16 @@
 		)
 		(uuid "48908ded-1d0f-4c80-b66e-2902df910e61")
 	)
+	(text "IO expander port"
+		(exclude_from_sim no)
+		(at 30.48 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "9b9dbdbb-9bb9-4b93-82c7-7b82c39031ef")
+	)
 	(text "USB PROGRAM\nBUTTON"
 		(exclude_from_sim no)
 		(at 254 74.93 0)
@@ -6867,6 +7140,10 @@
 		(uuid "3e981c15-5639-443f-adf3-357c82acf635")
 	)
 	(no_connect
+		(at 133.35 113.03)
+		(uuid "6c24aacf-ac5a-4257-9113-bc2b7c44dd91")
+	)
+	(no_connect
 		(at 262.89 38.1)
 		(uuid "79ed7ad9-047d-4150-b642-c1b822e2b511")
 	)
@@ -6883,10 +7160,6 @@
 		(uuid "86945e85-de70-44cb-b93b-9cad84a3d94c")
 	)
 	(no_connect
-		(at 133.35 115.57)
-		(uuid "99fd1e7f-5d69-4510-9bad-1fd9e02e2aab")
-	)
-	(no_connect
 		(at 168.91 130.81)
 		(uuid "af57d4cd-b67a-4c43-a061-f67fcb9ce25b")
 	)
@@ -6901,10 +7174,6 @@
 	(no_connect
 		(at 168.91 123.19)
 		(uuid "e8d63967-6c0c-42e9-8a8b-8300391a6288")
-	)
-	(no_connect
-		(at 133.35 118.11)
-		(uuid "e98b8992-8980-4462-b34c-dbcdf5fcbb22")
 	)
 	(no_connect
 		(at 168.91 95.25)
@@ -7330,6 +7599,16 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 172.72) (xy 27.94 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "129d13b2-3b5b-456f-a349-18de71aa7e93")
+	)
+	(wire
+		(pts
 			(xy 100.33 148.59) (xy 100.33 151.13)
 		)
 		(stroke
@@ -7560,7 +7839,7 @@
 	)
 	(bus
 		(pts
-			(xy 110.49 125.73) (xy 114.3 125.73)
+			(xy 113.03 125.73) (xy 114.3 125.73)
 		)
 		(stroke
 			(width 0)
@@ -7577,6 +7856,16 @@
 			(type default)
 		)
 		(uuid "27bfc627-c070-44c5-bed1-4ceb30080b81")
+	)
+	(wire
+		(pts
+			(xy 33.02 179.07) (xy 33.02 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "290ed6e2-2b8c-4d90-8a46-bd2e781c0285")
 	)
 	(wire
 		(pts
@@ -8378,9 +8667,19 @@
 		)
 		(uuid "84483e93-cede-4ccf-af72-45df99c8f392")
 	)
+	(wire
+		(pts
+			(xy 33.02 177.8) (xy 27.94 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "852fde06-e432-49c4-9960-13d49a6da56f")
+	)
 	(bus
 		(pts
-			(xy 114.3 130.81) (xy 110.49 130.81)
+			(xy 114.3 130.81) (xy 113.03 130.81)
 		)
 		(stroke
 			(width 0)
@@ -8427,6 +8726,26 @@
 			(type default)
 		)
 		(uuid "8d65678f-dc85-42b2-baf5-246617089693")
+	)
+	(wire
+		(pts
+			(xy 33.02 168.91) (xy 33.02 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f627636-92be-49c6-a614-62eab80184ae")
+	)
+	(wire
+		(pts
+			(xy 124.46 115.57) (xy 133.35 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9010de38-804b-4e27-a6fb-4958a873b3d3")
 	)
 	(wire
 		(pts
@@ -8687,6 +9006,16 @@
 			(type default)
 		)
 		(uuid "be5e40d3-7b2b-404a-a7b8-78c6c9d253c2")
+	)
+	(wire
+		(pts
+			(xy 124.46 118.11) (xy 133.35 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf2e29f4-fbe5-4e26-b530-e0910f305f1f")
 	)
 	(wire
 		(pts
@@ -9150,6 +9479,26 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 175.26) (xy 27.94 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f50f288d-e5d9-4ae3-aea5-3d96aceac587")
+	)
+	(wire
+		(pts
+			(xy 33.02 170.18) (xy 27.94 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f521e3cd-8f0e-4307-808b-28ca03d99b02")
+	)
+	(wire
+		(pts
 			(xy 109.22 73.66) (xy 97.79 73.66)
 		)
 		(stroke
@@ -9558,6 +9907,16 @@
 		)
 		(uuid "72a3666f-5874-4b50-839a-908c121a8c46")
 	)
+	(label "SCL"
+		(at 33.02 172.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "746d2c2d-1dac-4f7d-a1ec-365622f773a6")
+	)
 	(label "USB_RAW+"
 		(at 101.6 162.56 180)
 		(effects
@@ -9627,6 +9986,16 @@
 			(justify right bottom)
 		)
 		(uuid "85e364ea-efb5-4af7-9cac-0c6a06090912")
+	)
+	(label "SDA"
+		(at 124.46 118.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "919c5d9e-476e-40d3-b494-5674e3856397")
 	)
 	(label "CS_5V"
 		(at 39.37 88.9 180)
@@ -9718,6 +10087,16 @@
 		)
 		(uuid "aebd46c9-e8a6-420d-a1b4-426aca4f9a29")
 	)
+	(label "SDA"
+		(at 33.02 175.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b0baee70-0754-422c-90f3-7017dda9756b")
+	)
 	(label "swdio"
 		(at 46.99 52.07 180)
 		(effects
@@ -9787,6 +10166,16 @@
 			(justify left bottom)
 		)
 		(uuid "c7aa32ad-8292-43e0-b4f7-b2afe4240116")
+	)
+	(label "SCL"
+		(at 124.46 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ce00237c-5dc7-4cd9-8bd4-1c5ce7ecff62")
 	)
 	(label "MOSI"
 		(at 175.26 153.67 180)
@@ -9975,7 +10364,7 @@
 	)
 	(hierarchical_label "i_source_sel[1..4]"
 		(shape input)
-		(at 110.49 130.81 180)
+		(at 113.03 130.81 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10008,7 +10397,7 @@
 	)
 	(hierarchical_label "\"sel_v\"{1mA 100uA 10uA 1uA}"
 		(shape input)
-		(at 110.49 125.73 180)
+		(at 113.03 125.73 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10363,6 +10752,84 @@
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/1b75f3a9-4fb7-402a-8d2e-33bfa6f5411b"
 					(reference "J703")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+4V")
+		(at 33.02 168.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "03bbad49-6548-46f4-add9-3d457a0d478f")
+		(property "Reference" "#PWR0721"
+			(at 33.02 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 33.02 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+4V\""
+			(at 33.02 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ff3fa15c-1c4f-4765-8f0f-a94ea8b7a8d1")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/1b75f3a9-4fb7-402a-8d2e-33bfa6f5411b"
+					(reference "#PWR0721")
 					(unit 1)
 				)
 			)
@@ -11596,6 +12063,84 @@
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/1b75f3a9-4fb7-402a-8d2e-33bfa6f5411b"
 					(reference "#PWR0714")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 33.02 179.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "28d70cdd-249d-4c1f-b211-039a1aa27943")
+		(property "Reference" "#PWR0730"
+			(at 33.02 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 32.893 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 33.02 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "90f1ed21-3cdd-40e9-834f-5b538952f268")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/1b75f3a9-4fb7-402a-8d2e-33bfa6f5411b"
+					(reference "#PWR0730")
 					(unit 1)
 				)
 			)
@@ -13969,6 +14514,92 @@
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/1b75f3a9-4fb7-402a-8d2e-33bfa6f5411b"
 					(reference "C714")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x04_Pin")
+		(at 22.86 172.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "cf161f39-6700-4635-96ed-4e979031e00b")
+		(property "Reference" "J704"
+			(at 23.495 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04_Pin"
+			(at 23.495 167.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 22.86 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 22.86 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 22.86 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ed2f0ab0-fed8-4d65-801e-fa486e96e9a6")
+		)
+		(pin "1"
+			(uuid "97c85063-7185-4fab-827c-d464f367128c")
+		)
+		(pin "3"
+			(uuid "a81b82ae-cadc-479c-acca-16b5a82c306d")
+		)
+		(pin "4"
+			(uuid "350c3055-f7b0-4b96-92fe-77db0c3783ce")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/1b75f3a9-4fb7-402a-8d2e-33bfa6f5411b"
+					(reference "J704")
 					(unit 1)
 				)
 			)

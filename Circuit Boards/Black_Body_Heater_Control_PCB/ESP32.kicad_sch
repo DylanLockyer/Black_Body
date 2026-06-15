@@ -5016,6 +5016,10 @@
 		(uuid "0fb44c27-9216-4e6f-8c22-78b2e2a010c2")
 	)
 	(no_connect
+		(at 144.78 105.41)
+		(uuid "17935e98-828f-492a-949f-6f73acee1329")
+	)
+	(no_connect
 		(at 46.99 55.88)
 		(uuid "2155fc62-5a37-4aaf-ad95-b6788033d76d")
 	)
@@ -5068,16 +5072,8 @@
 		(uuid "820480c6-68aa-4c3c-8a49-3f0267f852ed")
 	)
 	(no_connect
-		(at 144.78 97.79)
-		(uuid "8daddf2a-1ca2-4ae6-a9b7-aab3b844ff55")
-	)
-	(no_connect
 		(at 36.83 55.88)
 		(uuid "9634e6e5-1928-4782-ae3c-fa3075b56a65")
-	)
-	(no_connect
-		(at 144.78 100.33)
-		(uuid "9702d133-fcce-4f77-a51e-5d603cc82ffb")
 	)
 	(no_connect
 		(at 175.26 115.57)
@@ -5114,6 +5110,24 @@
 	(no_connect
 		(at 144.78 90.17)
 		(uuid "fb627c60-0b14-46c7-a04f-7eeb25230049")
+	)
+	(bus_entry
+		(at 129.54 95.25)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2dd23b0f-4485-493b-95d0-eb672056c7c7")
+	)
+	(bus_entry
+		(at 129.54 97.79)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d43ff3eb-2ffd-4cc9-9874-91cff07f9740")
 	)
 	(wire
 		(pts
@@ -5195,6 +5209,16 @@
 		)
 		(uuid "17070afc-67b9-4d72-b988-e6b347d09909")
 	)
+	(bus
+		(pts
+			(xy 128.27 95.25) (xy 129.54 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "173d0e4d-2537-4a56-86ea-a1b3d1837cee")
+	)
 	(wire
 		(pts
 			(xy 59.69 105.41) (xy 54.61 105.41)
@@ -5234,6 +5258,16 @@
 			(type default)
 		)
 		(uuid "1fe07200-f704-4d7e-bf43-cab8793b125d")
+	)
+	(bus
+		(pts
+			(xy 129.54 95.25) (xy 129.54 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20b1784b-7735-4d98-b810-143d039227b7")
 	)
 	(wire
 		(pts
@@ -5397,6 +5431,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 100.33) (xy 144.78 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41f4a16b-9f23-4c20-b1d9-e5f86058f16c")
+	)
+	(wire
+		(pts
 			(xy 77.47 58.42) (xy 74.93 58.42)
 		)
 		(stroke
@@ -5414,16 +5458,6 @@
 			(type default)
 		)
 		(uuid "4b2b6254-2106-4e3c-9e32-122a2d30bf46")
-	)
-	(wire
-		(pts
-			(xy 140.97 105.41) (xy 144.78 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c80a588-27e5-4ce6-9b18-424b032e28bc")
 	)
 	(wire
 		(pts
@@ -6007,6 +6041,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 97.79) (xy 144.78 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2ddae1c-8a6d-480c-9305-0a2b2aa08afd")
+	)
+	(wire
+		(pts
 			(xy 210.82 82.55) (xy 223.52 82.55)
 		)
 		(stroke
@@ -6525,6 +6569,16 @@
 		)
 		(uuid "2314087e-8166-43da-b7aa-96ec02ac67ac")
 	)
+	(label "i2c.sda"
+		(at 132.08 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "25ad8bb2-151a-4fe4-878c-617ca1704a03")
+	)
 	(label "ESP_D+"
 		(at 187.96 82.55 0)
 		(effects
@@ -6574,6 +6628,16 @@
 			(justify right bottom)
 		)
 		(uuid "5160ea75-5105-49d8-bd2a-65cc389f74d6")
+	)
+	(label "i2c.scl"
+		(at 132.08 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5715db4c-1cda-44ae-8185-d0e480cad294")
 	)
 	(label "CS1"
 		(at 187.96 110.49 180)
@@ -6806,16 +6870,16 @@
 		)
 		(uuid "4d63a091-f36a-476c-9e56-fd4b4fbeb8ed")
 	)
-	(hierarchical_label "FET"
+	(hierarchical_label "i2c{sda scl}"
 		(shape input)
-		(at 140.97 105.41 180)
+		(at 128.27 95.25 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "944db93e-47f6-47a4-a7cb-16d5e581dc8d")
+		(uuid "e3621ba8-4311-4c5d-958a-3b7acad6c207")
 	)
 	(hierarchical_label "I_SENSE"
 		(shape input)
@@ -6840,7 +6904,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0241fdaa-3e94-453c-993a-71d2aeea880c")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR0205"
 			(at 52.07 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -6900,7 +6964,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR031")
+					(reference "#PWR0205")
 					(unit 1)
 				)
 			)
@@ -6918,7 +6982,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "03186d8e-cee8-4ed5-9032-911f1dbfb576")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR0202"
 			(at 46.99 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -6978,7 +7042,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR08")
+					(reference "#PWR0202")
 					(unit 1)
 				)
 			)
@@ -6996,7 +7060,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a9ac7d0-87c4-4ccc-ba84-5552103fcfe1")
-		(property "Reference" "C8"
+		(property "Reference" "C203"
 			(at 63.5 109.2199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7060,7 +7124,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "C8")
+					(reference "C203")
 					(unit 1)
 				)
 			)
@@ -7077,7 +7141,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1c0f6593-878a-41f5-9f3f-334159840db6")
-		(property "Reference" "C9"
+		(property "Reference" "C204"
 			(at 83.82 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7141,7 +7205,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "C9")
+					(reference "C204")
 					(unit 1)
 				)
 			)
@@ -7159,7 +7223,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1c5c55c6-fc76-441d-8356-da55e6d13e89")
-		(property "Reference" "SW4"
+		(property "Reference" "SW201"
 			(at 41.91 48.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7227,7 +7291,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "SW4")
+					(reference "SW201")
 					(unit 1)
 				)
 			)
@@ -7245,7 +7309,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2ab3583c-2db9-48ff-93f2-df5efd5381c1")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR0207"
 			(at 59.69 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -7305,7 +7369,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR027")
+					(reference "#PWR0207")
 					(unit 1)
 				)
 			)
@@ -7323,7 +7387,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2e12517c-c59d-47bc-b71a-2fd0b65ad44e")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR0216"
 			(at 143.51 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -7383,7 +7447,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR014")
+					(reference "#PWR0216")
 					(unit 1)
 				)
 			)
@@ -7401,7 +7465,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "365c2802-9f13-48a2-b8f9-044d235b0810")
-		(property "Reference" "C6"
+		(property "Reference" "C207"
 			(at 153.67 55.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7465,7 +7529,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "C6")
+					(reference "C207")
 					(unit 1)
 				)
 			)
@@ -7482,7 +7546,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "39d3a24b-46e4-43d5-a2d6-e2808a73e1cd")
-		(property "Reference" "U4"
+		(property "Reference" "U203"
 			(at 200.66 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7561,7 +7625,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "U4")
+					(reference "U203")
 					(unit 1)
 				)
 			)
@@ -7579,7 +7643,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "401902e5-5285-40c4-9520-cf2c259e2abc")
-		(property "Reference" "D1"
+		(property "Reference" "D202"
 			(at 221.9325 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7641,7 +7705,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "D1")
+					(reference "D202")
 					(unit 1)
 				)
 			)
@@ -7658,7 +7722,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "40b7be4c-907f-4aad-9c58-907f614ace7a")
-		(property "Reference" "R10"
+		(property "Reference" "R201"
 			(at 55.88 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7722,7 +7786,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "R10")
+					(reference "R201")
 					(unit 1)
 				)
 			)
@@ -7740,7 +7804,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "44a7cd4a-db58-4e84-bd13-eaa2b93ff7c6")
-		(property "Reference" "U1"
+		(property "Reference" "U202"
 			(at 162.1633 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7921,7 +7985,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "U1")
+					(reference "U202")
 					(unit 1)
 				)
 			)
@@ -7939,7 +8003,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4633161c-2295-484e-bf13-d8f4eddc681a")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR0204"
 			(at 50.8 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -7999,7 +8063,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR032")
+					(reference "#PWR0204")
 					(unit 1)
 				)
 			)
@@ -8016,7 +8080,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4ab0db01-efd1-4ff1-abb3-2220dcc1fe8e")
-		(property "Reference" "R7"
+		(property "Reference" "R206"
 			(at 220.98 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8078,7 +8142,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "R7")
+					(reference "R206")
 					(unit 1)
 				)
 			)
@@ -8095,7 +8159,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "52607166-0470-4192-b678-c34e828a9178")
-		(property "Reference" "R8"
+		(property "Reference" "R207"
 			(at 219.71 67.31 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8157,7 +8221,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "R8")
+					(reference "R207")
 					(unit 1)
 				)
 			)
@@ -8175,7 +8239,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "56ac19dd-5f63-4031-a46f-f827fe6a2b3a")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR0201"
 			(at 31.75 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -8235,7 +8299,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR015")
+					(reference "#PWR0201")
 					(unit 1)
 				)
 			)
@@ -8253,7 +8317,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5d88eb72-6637-45ab-abc9-05a6ff9ce99c")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR0213"
 			(at 129.54 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -8313,7 +8377,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR021")
+					(reference "#PWR0213")
 					(unit 1)
 				)
 			)
@@ -8331,7 +8395,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f7ebb3f-0b32-4bc4-8e70-1b2ccfca83fa")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR0215"
 			(at 137.16 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -8391,7 +8455,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR013")
+					(reference "#PWR0215")
 					(unit 1)
 				)
 			)
@@ -8408,7 +8472,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "60126874-05ba-4d2d-a303-90faf645bba8")
-		(property "Reference" "R11"
+		(property "Reference" "R205"
 			(at 187.96 113.03 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8472,7 +8536,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "R11")
+					(reference "R205")
 					(unit 1)
 				)
 			)
@@ -8490,7 +8554,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "69e0ebc8-08af-42a1-8221-61998a19d803")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR0210"
 			(at 91.44 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -8550,7 +8614,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR025")
+					(reference "#PWR0210")
 					(unit 1)
 				)
 			)
@@ -8567,7 +8631,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6e56902e-1155-4755-aaf1-e4fa1f8006f3")
-		(property "Reference" "C10"
+		(property "Reference" "C202"
 			(at 43.18 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8631,7 +8695,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "C10")
+					(reference "C202")
 					(unit 1)
 				)
 			)
@@ -8649,7 +8713,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "75447659-112b-461f-bf86-4a8c31ffd01e")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR0221"
 			(at 213.36 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -8709,7 +8773,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR020")
+					(reference "#PWR0221")
 					(unit 1)
 				)
 			)
@@ -8727,7 +8791,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7fc7c031-3cb5-419b-8560-7bd21cb659d7")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR0203"
 			(at 50.8 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -8787,7 +8851,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR026")
+					(reference "#PWR0203")
 					(unit 1)
 				)
 			)
@@ -8805,7 +8869,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "807008f3-34fb-4086-932a-6fa7c512edcc")
-		(property "Reference" "C14"
+		(property "Reference" "C201"
 			(at 35.56 109.2199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8869,7 +8933,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "C14")
+					(reference "C201")
 					(unit 1)
 				)
 			)
@@ -8887,7 +8951,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "88789fe8-4850-4953-bda4-50669ef2020f")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR0212"
 			(at 129.54 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -8947,7 +9011,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR022")
+					(reference "#PWR0212")
 					(unit 1)
 				)
 			)
@@ -8965,7 +9029,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aa4683f1-1731-4372-9c48-76736dbef15f")
-		(property "Reference" "C7"
+		(property "Reference" "C206"
 			(at 140.97 55.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9029,7 +9093,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "C7")
+					(reference "C206")
 					(unit 1)
 				)
 			)
@@ -9047,7 +9111,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ac4e88e8-f6a0-405a-9e81-6e49538f8469")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR0219"
 			(at 205.74 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -9107,7 +9171,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR017")
+					(reference "#PWR0219")
 					(unit 1)
 				)
 			)
@@ -9125,7 +9189,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ae4c0310-0935-4af6-b84b-a76215bb6a81")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR0214"
 			(at 134.62 127 0)
 			(hide yes)
 			(show_name no)
@@ -9185,7 +9249,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR033")
+					(reference "#PWR0214")
 					(unit 1)
 				)
 			)
@@ -9204,7 +9268,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b3991a5a-20c9-4fe6-b937-69d34f495969")
-		(property "Reference" "J1"
+		(property "Reference" "J203"
 			(at 255.27 71.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9313,7 +9377,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "J1")
+					(reference "J203")
 					(unit 1)
 				)
 			)
@@ -9331,7 +9395,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b9eb3c3c-8111-4796-a0a7-54fa02836839")
-		(property "Reference" "R6"
+		(property "Reference" "R202"
 			(at 88.9 110.4899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9395,7 +9459,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "R6")
+					(reference "R202")
 					(unit 1)
 				)
 			)
@@ -9413,7 +9477,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bff246aa-f138-44c3-88bd-ba6f10a24623")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR0218"
 			(at 193.04 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -9473,7 +9537,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR030")
+					(reference "#PWR0218")
 					(unit 1)
 				)
 			)
@@ -9491,7 +9555,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c3446b76-4030-4955-a529-c093ac3a50a8")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR0206"
 			(at 53.34 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -9551,7 +9615,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR023")
+					(reference "#PWR0206")
 					(unit 1)
 				)
 			)
@@ -9569,7 +9633,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c44ef25c-0475-4d50-a997-643f9c4b93bb")
-		(property "Reference" "J2"
+		(property "Reference" "J201"
 			(at 68.58 166.3699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9653,7 +9717,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "J2")
+					(reference "J201")
 					(unit 1)
 				)
 			)
@@ -9671,7 +9735,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ca1654e2-ebb2-4fcb-87b8-3a862ffbf19a")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR0220"
 			(at 205.74 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -9731,7 +9795,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR016")
+					(reference "#PWR0220")
 					(unit 1)
 				)
 			)
@@ -9749,7 +9813,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cd87d32d-a80a-4fe7-8c59-a45a1cc0d726")
-		(property "Reference" "D2"
+		(property "Reference" "D201"
 			(at 90.17 120.9674 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9824,7 +9888,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "D2")
+					(reference "D201")
 					(unit 1)
 				)
 			)
@@ -9842,7 +9906,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf44bdad-d687-4a06-9415-6c8ca207c15f")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR0211"
 			(at 93.98 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -9902,7 +9966,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR024")
+					(reference "#PWR0211")
 					(unit 1)
 				)
 			)
@@ -9919,7 +9983,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d723a96b-b92a-4765-ae7d-1dfb47ab53cf")
-		(property "Reference" "R12"
+		(property "Reference" "R204"
 			(at 128.27 113.03 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9981,7 +10045,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "R12")
+					(reference "R204")
 					(unit 1)
 				)
 			)
@@ -9999,7 +10063,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d82d77f9-40fe-4af3-8b93-5d2fea8a3162")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR0223"
 			(at 243.84 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -10059,7 +10123,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR019")
+					(reference "#PWR0223")
 					(unit 1)
 				)
 			)
@@ -10077,7 +10141,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd30e278-5a19-463e-aec3-5dcbebc1030c")
-		(property "Reference" "SW3"
+		(property "Reference" "SW202"
 			(at 82.55 48.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10145,7 +10209,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "SW3")
+					(reference "SW202")
 					(unit 1)
 				)
 			)
@@ -10163,7 +10227,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e12de325-232b-4088-92dc-0fd48a25ab01")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR0208"
 			(at 86.36 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -10223,7 +10287,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR028")
+					(reference "#PWR0208")
 					(unit 1)
 				)
 			)
@@ -10241,7 +10305,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e4e7d86e-7c02-41eb-9aaf-721f9c12fc88")
-		(property "Reference" "J4"
+		(property "Reference" "J202"
 			(at 139.065 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10309,7 +10373,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "J4")
+					(reference "J202")
 					(unit 1)
 				)
 			)
@@ -10326,7 +10390,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f0c475e2-0b60-4000-8c8f-6e3ad67e9d8e")
-		(property "Reference" "R9"
+		(property "Reference" "R203"
 			(at 95.25 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10390,7 +10454,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "R9")
+					(reference "R203")
 					(unit 1)
 				)
 			)
@@ -10408,7 +10472,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f3d0db50-9b7a-429b-a4e8-d2547be1600a")
-		(property "Reference" "U5"
+		(property "Reference" "U201"
 			(at 46.99 99.06 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10473,7 +10537,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "U5")
+					(reference "U201")
 					(unit 1)
 				)
 			)
@@ -10491,7 +10555,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f6f06d9f-5eac-4c75-88f4-4c06655025c3")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR0222"
 			(at 214.63 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -10551,7 +10615,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR018")
+					(reference "#PWR0222")
 					(unit 1)
 				)
 			)
@@ -10568,7 +10632,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f7d80381-4669-422f-b242-0a675f0f2014")
-		(property "Reference" "C15"
+		(property "Reference" "C205"
 			(at 135.89 113.03 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10632,7 +10696,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "C15")
+					(reference "C205")
 					(unit 1)
 				)
 			)
@@ -10650,7 +10714,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fafdac0f-ba08-42d3-a370-68843c34c887")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR0217"
 			(at 160.02 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -10710,7 +10774,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR012")
+					(reference "#PWR0217")
 					(unit 1)
 				)
 			)
@@ -10728,7 +10792,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fe45af41-f6a0-4075-8b16-60857b5c39b0")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR0209"
 			(at 86.36 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -10788,7 +10852,7 @@
 		(instances
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "#PWR029")
+					(reference "#PWR0209")
 					(unit 1)
 				)
 			)

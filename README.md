@@ -5,7 +5,7 @@
     - [Temperature Sensor Design Choices](#temperature-sensor-design-choices)
 
 # Purpose
-The goal for this project is to control a black body heater. The black body module will be mounted to the 4K stage of the cryostat and must be heated to >40K. This is accomplished by using 4x 10ohm heaters in series (40 ohm equivalent)with a maximum heat output of 10W (20V @ 5A).
+The goal for this project is to control a black body heater. The black body module will be mounted to the 4K stage of the cryostat and must be heated to >40K. This is accomplished by using 4x 10ohm heaters in series (40 ohm equivalent)with a maximum heat output of 10W (20V @ 0.5A).
 
 # Design Choices
 Overall design includes 2 PCB's (printed circuit boards) - one includes the microcontroller and heater control (voltage and current sensing, voltage PWMing), the other reads the temperature from the Germanium RTD sensor or silicone diode temperature sensor. 
