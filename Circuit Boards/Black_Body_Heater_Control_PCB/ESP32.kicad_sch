@@ -7276,6 +7276,17 @@
 				)
 			)
 		)
+		(property "MPN" "SW_MEC_5E"
+			(at 41.91 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "376d6696-c71d-4994-9f54-f15d18544877")
 		)
@@ -7604,6 +7615,17 @@
 				)
 			)
 		)
+		(property "MPN" "USBLC6-2SC6"
+			(at 205.74 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "7a7b8459-1399-4fca-a242-6980df1d5244")
 		)
@@ -7626,6 +7648,103 @@
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
 					(reference "U203")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_MEC_5E")
+		(at 82.55 58.42 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e3dfbac-a245-4b0e-90c2-26bc72ec4d57")
+		(property "Reference" "SW202"
+			(at 82.55 48.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_MEC_5E"
+			(at 82.55 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "-switch:430471035826"
+			(at 82.55 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.apem.com/medias/download/MEC_switches_serie_MULTIMEC5E.pdf"
+			(at 82.55 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "MEC 5E single pole normally-open tactile switch"
+			(at 82.55 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "SW_MEC_5E"
+			(at 82.55 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "5388b78f-de76-4ed2-80a5-a47c66e167e6")
+		)
+		(pin "3"
+			(uuid "de59140c-ec6b-4546-b492-eae08aca4e6b")
+		)
+		(pin "2"
+			(uuid "03158a0e-ecbc-4077-bd01-cd47a48e0ce4")
+		)
+		(pin "1"
+			(uuid "b609bb97-c932-4aba-955b-2b5b6d9efb54")
+		)
+		(instances
+			(project "Black_Body_Heater_Control"
+				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
+					(reference "SW202")
 					(unit 1)
 				)
 			)
@@ -7686,6 +7805,17 @@
 			)
 		)
 		(property "Description" "40V 600mV@1A 1A SOD-323 Schottky Barrier Diodes, SOD-323"
+			(at 222.25 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "1N5819WS"
 			(at 222.25 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7849,6 +7979,17 @@
 			)
 		)
 		(property "Description" "RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, onboard antenna, SMD"
+			(at 160.02 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ESP32-S3-WROOM-1-N8R8"
 			(at 160.02 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -9323,6 +9464,17 @@
 				)
 			)
 		)
+		(property "MPN" "UJ20-C-H-G-SMT-1-P16-TR"
+			(at 243.84 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "A4"
 			(uuid "d6c8eb19-9ac0-409b-a4c5-d752aba8aa83")
 		)
@@ -9688,6 +9840,18 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "MPN" "5040500891"
+			(at 54.61 158.75 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
 			)
 		)
 		(pin "4"
@@ -10130,92 +10294,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_MEC_5E")
-		(at 82.55 58.42 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dd30e278-5a19-463e-aec3-5dcbebc1030c")
-		(property "Reference" "SW202"
-			(at 82.55 48.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_MEC_5E"
-			(at 82.55 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "-switch:430471035826"
-			(at 82.55 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.apem.com/medias/download/MEC_switches_serie_MULTIMEC5E.pdf"
-			(at 82.55 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "MEC 5E single pole normally-open tactile switch"
-			(at 82.55 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "4"
-			(uuid "987a3e5d-b392-4946-bbdc-53678e04104a")
-		)
-		(pin "3"
-			(uuid "e86d3152-3fc7-45e3-b19d-9550f6520d7a")
-		)
-		(pin "2"
-			(uuid "fe96e55e-107a-4792-8fe7-6a7acb006bfb")
-		)
-		(pin "1"
-			(uuid "8b74c26f-d1eb-4891-a5b0-01cd956b9bca")
-		)
-		(instances
-			(project "Black_Body_Heater_Control"
-				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/81e90e05-0519-429e-85ab-ffede3727917"
-					(reference "SW202")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 86.36 106.68 0)
 		(unit 1)
@@ -10300,10 +10378,10 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "e4e7d86e-7c02-41eb-9aaf-721f9c12fc88")
 		(property "Reference" "J202"
 			(at 139.065 147.32 0)
@@ -10515,6 +10593,17 @@
 			)
 		)
 		(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
+			(at 46.99 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "AMS1117-3.3"
 			(at 46.99 105.41 0)
 			(hide yes)
 			(show_name no)
