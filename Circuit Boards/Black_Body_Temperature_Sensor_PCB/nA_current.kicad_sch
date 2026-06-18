@@ -1925,6 +1925,12 @@
 		(uuid "ab2ccd41-d845-4db8-b1a0-3bd854047376")
 	)
 	(junction
+		(at 152.4 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b18f19ad-7d22-48de-b455-6f4514a0716c")
+	)
+	(junction
 		(at 66.04 168.91)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2402,6 +2408,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 80.01) (xy 152.4 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f2f28d5-e77c-4755-ae61-0514a8c7a08c")
+	)
+	(wire
+		(pts
 			(xy 102.87 93.98) (xy 127 93.98)
 		)
 		(stroke
@@ -2449,6 +2465,16 @@
 			(type default)
 		)
 		(uuid "b0529f90-2f07-4e24-83da-4f5ea9082d65")
+	)
+	(wire
+		(pts
+			(xy 148.59 83.82) (xy 152.4 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4464234-405a-4817-ab9b-b4888c63337a")
 	)
 	(wire
 		(pts
@@ -2542,6 +2568,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 83.82) (xy 157.48 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2e1e5f7-b729-4ed9-bb1c-15714c9464da")
+	)
+	(wire
+		(pts
 			(xy 83.82 96.52) (xy 127 96.52)
 		)
 		(stroke
@@ -2589,26 +2625,6 @@
 			(type default)
 		)
 		(uuid "ebd1b54d-1ef2-4099-a52e-2dbc4f57a62b")
-	)
-	(wire
-		(pts
-			(xy 152.4 80.01) (xy 152.4 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ebf71902-6b9d-4706-811c-dcfb5f735cfa")
-	)
-	(wire
-		(pts
-			(xy 152.4 83.82) (xy 157.48 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ed10f1e6-a88a-423b-a5fd-8452c17458f5")
 	)
 	(wire
 		(pts
@@ -3810,7 +3826,7 @@
 		(uuid "124950c9-2c98-4f58-91fd-255e90debdbc")
 	)
 	(label "V-"
-		(at 154.94 83.82 0)
+		(at 148.59 83.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3930,7 +3946,7 @@
 		(uuid "dbe34079-eee7-4957-9855-998ccc429ee8")
 	)
 	(label "V-"
-		(at 88.9 73.66 180)
+		(at 96.52 73.66 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4077,6 +4093,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 58.42 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "4fbc44c7-11cb-4ba3-abde-b62f3e9119b6")
 		)
@@ -4159,6 +4186,17 @@
 				)
 			)
 		)
+		(property "MPN" "ERA-3AEB2263V"
+			(at 102.87 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e5283057-2a05-4d3d-b8ae-34e524ca6eb1")
 		)
@@ -4184,10 +4222,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1cc35836-59d2-4d26-9187-3beaa7140653")
 		(property "Reference" "R305"
-			(at 78.74 86.3599 0)
+			(at 78.74 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4198,7 +4235,7 @@
 			)
 		)
 		(property "Value" "10M"
-			(at 78.74 88.8999 0)
+			(at 78.74 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4231,6 +4268,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 76.2 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW060310M0DHEAP"
 			(at 76.2 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4323,6 +4371,17 @@
 				)
 			)
 		)
+		(property "MPN" "ERA-3AEB2262V"
+			(at 83.82 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1df26f55-0964-4b9f-8039-82332c3b7996")
 		)
@@ -4402,6 +4461,17 @@
 				)
 			)
 		)
+		(property "MPN" "CL10C201JB8NNNC"
+			(at 170.18 104.14 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "51af1680-8456-42c3-88b6-cef2d19681e4")
 		)
@@ -4423,7 +4493,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -4474,6 +4544,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 83.82 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ERA-3AEB104V"
 			(at 83.82 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4566,6 +4647,17 @@
 				)
 			)
 		)
+		(property "MPN" "ERA-3AEB272V"
+			(at 161.29 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ce67bc8c-a9a0-4f51-a8df-db63b169f634")
 		)
@@ -4638,6 +4730,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 102.87 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RN73H1JTTD1004B25"
 			(at 102.87 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4730,6 +4833,17 @@
 				)
 			)
 		)
+		(property "MPN" "HVC0603T1006FET"
+			(at 93.98 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "09553581-8b62-4ed3-b212-2294efa473f2")
 		)
@@ -4801,6 +4915,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 62.23 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 62.23 148.59 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4885,6 +5010,17 @@
 			)
 		)
 		(property "Description" "1μA to 10mA 3-Terminal Adjustable Current Source, SO-8"
+			(at 152.4 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LM334M"
 			(at 152.4 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -5066,6 +5202,17 @@
 				)
 			)
 		)
+		(property "MPN" "LT1004-1.2"
+			(at 157.48 87.63 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "54c77be8-9b87-470f-a7a4-a1ca3c0f8e59")
 		)
@@ -5228,6 +5375,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 66.04 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "3e8455ee-79e3-4c4f-a1d2-327a3c1389b8")
 		)
@@ -5298,6 +5456,17 @@
 		)
 		(property "Description" "Picoamp Input Current, Microvolt Offset, Low Noise Op Amp"
 			(at 170.18 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LT1008"
+			(at 170.18 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5481,6 +5650,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 58.42 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b4351f5d-09a9-4dd3-9525-41e859df6443")
 		)
@@ -5552,6 +5732,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 66.04 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 66.04 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -5643,6 +5834,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 58.42 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "839818e5-8c9d-4de9-805a-fbe7e12fb627")
 		)
@@ -5714,6 +5916,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 58.42 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 58.42 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -5882,6 +6095,17 @@
 				)
 			)
 		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 62.23 168.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3822771d-d65b-4563-8dd8-02f8fc9bef6f")
 		)
@@ -6041,6 +6265,17 @@
 				)
 			)
 		)
+		(property "MPN" "TMUX1112PWR"
+			(at 137.16 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "5"
 			(uuid "5b0cc45a-c9d3-4067-80fd-46b5335b3c05")
 		)
@@ -6164,6 +6399,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 66.04 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "86f9c485-cd7f-47d1-9822-fcb4c040cee9")
 		)
@@ -6235,6 +6481,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 62.23 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 62.23 158.75 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6325,6 +6582,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 66.04 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "6912b4fe-2376-44ba-ab28-e3ef90910213")
 		)
@@ -6396,6 +6664,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 62.23 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 62.23 179.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

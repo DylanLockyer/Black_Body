@@ -4403,6 +4403,17 @@
 				)
 			)
 		)
+		(property "MPN" "ERA-3AEB103V"
+			(at 185.42 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "5ce5cda7-5d85-453d-af74-bbd21a62a67b")
 		)
@@ -4485,6 +4496,17 @@
 				)
 			)
 		)
+		(property "MPN" "TB002-500-02BE"
+			(at 50.8 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5835d119-dc79-41f9-9768-46eed9ae8bb4")
 		)
@@ -4556,6 +4578,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 123.19 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 123.19 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -4648,6 +4681,17 @@
 				)
 			)
 		)
+		(property "MPN" "ERA-3AEB103V"
+			(at 193.04 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "65feaa19-116a-47e6-9935-66248e9a534f")
 		)
@@ -4684,7 +4728,7 @@
 				)
 			)
 		)
-		(property "Value" "5"
+		(property "Value" "4.99"
 			(at 104.14 77.47 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4718,6 +4762,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 104.14 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RN73C1J4R99BTD"
+			(at 104.14 77.47 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4798,6 +4853,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 220.98 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 220.98 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -4889,6 +4955,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 45.72 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "bab6a932-84d1-4793-a69b-efda36f76bdd")
 		)
@@ -4960,6 +5037,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 220.98 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 220.98 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -5051,6 +5139,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 220.98 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "eac26fe2-1d7b-4428-b25a-0e2ad883b805")
 		)
@@ -5122,6 +5221,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 208.28 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TMUX1112PWR"
 			(at 208.28 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -5255,6 +5365,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 213.36 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "30855045-82f2-42f5-b0ca-74bc846b3eb1")
 		)
@@ -5326,6 +5447,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 115.57 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 115.57 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -5417,6 +5549,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 220.98 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "4f629828-2ee7-414a-a808-c5159d6a0779")
 		)
@@ -5488,6 +5631,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 49.53 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 49.53 143.51 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5656,6 +5810,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 53.34 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "6019fa4c-6f4c-495c-a84a-82998c97b351")
 		)
@@ -5727,6 +5892,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 123.19 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 123.19 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -5895,6 +6071,17 @@
 				)
 			)
 		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 217.17 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5f9aaa3c-3ffa-4cbb-aaad-084b9549b261")
 		)
@@ -5966,6 +6153,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 213.36 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 213.36 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -6057,6 +6255,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 45.72 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "fdc808c9-6fea-4e23-b349-a19df53fdc6d")
 		)
@@ -6128,6 +6337,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 115.57 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 115.57 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -6218,6 +6438,17 @@
 				)
 			)
 		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 119.38 175.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "14f9ff74-f44d-47ae-a40c-9361e674a71b")
 		)
@@ -6289,6 +6520,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 119.38 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 119.38 165.1 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6380,6 +6622,17 @@
 				)
 			)
 		)
+		(property "MPN" "TB002-500-02BE"
+			(at 50.8 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d94d48cb-0990-49ef-9823-ddd366f3001e")
 		)
@@ -6460,6 +6713,17 @@
 				)
 			)
 		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 217.17 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9ce372cc-a951-4ea1-898b-f603608ea4d0")
 		)
@@ -6496,7 +6760,7 @@
 				)
 			)
 		)
-		(property "Value" "35k"
+		(property "Value" "33.2k"
 			(at 104.14 82.55 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6530,6 +6794,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 104.14 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ERA-3AEB3322V"
+			(at 104.14 82.55 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6619,6 +6894,17 @@
 				)
 			)
 		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 119.38 154.94 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f30d4b62-88a8-479b-b763-10bd5a4e7120")
 		)
@@ -6629,6 +6915,84 @@
 			(project "Black_Body_Temperature_Sensor_PCB"
 				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
 					(reference "R409")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 38.1 38.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6bfca8cc-d347-483d-8f35-5c000a3d6f53")
+		(property "Reference" "#PWR0412"
+			(at 38.1 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 38.1 43.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 38.1 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 38.1 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "24cba26c-adab-41a8-b4a8-1728e6dc0cb5")
+		)
+		(instances
+			(project "Black_Body_Temperature_Sensor_PCB"
+				(path "/e46fba8d-0294-4f4f-927d-8614bb9d51d3/4094c958-ded6-41d9-bb08-a88dca4a947b"
+					(reference "#PWR0412")
 					(unit 1)
 				)
 			)
@@ -6690,6 +7054,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 49.53 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 49.53 173.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6781,6 +7156,17 @@
 				)
 			)
 		)
+		(property "MPN" ""
+			(at 223.52 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ed93ca1a-35a9-42d4-9d9e-b7e7685f3496")
 		)
@@ -6849,6 +7235,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 123.19 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 123.19 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -7018,6 +7415,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 115.57 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "2045599f-1fec-4966-a8ba-0c671b7b78b9")
 		)
@@ -7089,6 +7497,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 217.17 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 217.17 25.4 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7180,6 +7599,17 @@
 				)
 			)
 		)
+		(property "MPN" ""
+			(at 223.52 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7a672775-ccf3-45c3-bc78-4aeb982baadd")
 		)
@@ -7248,6 +7678,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 217.17 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 217.17 55.88 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7327,6 +7768,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 104.14 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ERA-3AEB4990V"
+			(at 104.14 80.01 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7495,6 +7947,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 123.19 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "457719ea-9dac-4a6a-9122-4f8d55c704c5")
 		)
@@ -7566,6 +8029,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 49.53 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 49.53 163.83 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7655,6 +8129,17 @@
 				)
 			)
 		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 119.38 144.78 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d7fefc68-9533-4690-bea3-2165a9f3def1")
 		)
@@ -7726,6 +8211,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 53.34 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 53.34 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -7895,6 +8391,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 45.72 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "492816cf-845b-43ae-a571-36d4cee73bb6")
 		)
@@ -7966,6 +8473,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 115.57 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 115.57 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -8136,6 +8654,17 @@
 				)
 			)
 		)
+		(property "MPN" ""
+			(at 184.15 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1b907b3e-fc75-444c-ba15-b7918e699847")
 		)
@@ -8204,6 +8733,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 53.34 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 53.34 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -8286,6 +8826,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 125.73 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TMUX1112PWR"
 			(at 125.73 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -8420,6 +8971,17 @@
 				)
 			)
 		)
+		(property "MPN" "TMUX1112PWR"
+			(at 161.29 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "5"
 			(uuid "f4eb8e0b-e71f-4f8b-97b0-f740db036ced")
 		)
@@ -8533,6 +9095,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 213.36 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 213.36 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -8702,6 +9275,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 213.36 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c672a72b-1c14-41a5-bbce-16a28cd4f0d2")
 		)
@@ -8851,6 +9435,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 49.53 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 49.53 153.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9097,6 +9692,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R61E225ME15D"
+			(at 53.34 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "17dd8d03-6b90-4916-9487-caf2dfd90026")
 		)
@@ -9168,6 +9774,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 45.72 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R61E225ME15D"
 			(at 45.72 147.32 0)
 			(hide yes)
 			(show_name no)
