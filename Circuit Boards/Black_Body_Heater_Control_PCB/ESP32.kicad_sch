@@ -7115,6 +7115,17 @@
 				)
 			)
 		)
+		(property "MPN" "CL10A226MP8NUNE"
+			(at 59.69 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "54049a07-2da0-44d7-8d46-498a41a3d04e")
 		)
@@ -7186,6 +7197,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 91.44 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KB8NNNC"
 			(at 91.44 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -7521,6 +7543,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 149.86 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KB8NNNC"
 			(at 149.86 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7907,6 +7940,17 @@
 				)
 			)
 		)
+		(property "MPN" "ERA-3AEB103V"
+			(at 53.34 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b3bc321c-155e-43f5-a215-ad1a358dcccc")
 		)
@@ -8241,7 +8285,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 219.71 60.452 90)
 			(hide yes)
 			(show_name no)
@@ -8265,6 +8309,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 220.98 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 219.71 62.23 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8320,7 +8375,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 219.71 62.992 90)
 			(hide yes)
 			(show_name no)
@@ -8344,6 +8399,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 219.71 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 219.71 64.77 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8668,6 +8734,17 @@
 				)
 			)
 		)
+		(property "MPN" "ERA-3AEB103V"
+			(at 186.69 115.57 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "dc83c9cb-45b8-4db8-a898-18a7dd221471")
 		)
@@ -8817,6 +8894,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 50.8 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KB8NNNC"
 			(at 50.8 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -9065,6 +9153,17 @@
 				)
 			)
 		)
+		(property "MPN" "GRM188R6YA106MA73D"
+			(at 31.75 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8976f09a-dcc2-4ce9-95e4-1608d1f44acf")
 		)
@@ -9215,6 +9314,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 137.16 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10A226MP8NUNE"
 			(at 137.16 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -9558,7 +9668,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "1.33k"
 			(at 88.9 113.0299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9592,6 +9702,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 86.36 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ERA-3AEB1331V"
 			(at 86.36 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -10043,6 +10164,17 @@
 				)
 			)
 		)
+		(property "MPN" "LTST-C191KRKT"
+			(at 86.36 120.65 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4f5738c0-39b8-47db-ad25-6f729bcec250")
 		)
@@ -10191,6 +10323,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 128.27 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ERA-3AEB103V"
+			(at 128.27 110.49 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10523,6 +10666,17 @@
 				)
 			)
 		)
+		(property "MPN" "ERA-3AEB103V"
+			(at 93.98 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7c2066f1-2021-4bde-a847-0305073a5dd0")
 		)
@@ -10766,6 +10920,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 134.62 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C0603C105K4RACTU"
 			(at 134.62 115.57 0)
 			(hide yes)
 			(show_name no)

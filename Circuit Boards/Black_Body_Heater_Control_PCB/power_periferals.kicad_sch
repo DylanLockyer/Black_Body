@@ -607,7 +607,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Amplifier_Operational:TLV9061xDBV"
+		(symbol "Amplifier_Operational:LM358"
 			(pin_names
 				(offset 0.127)
 			)
@@ -617,7 +617,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -1.27 6.35 0)
+				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -627,8 +627,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "TLV9061xDBV"
-				(at -1.27 3.81 0)
+			(property "Value" "LM358"
+				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -638,30 +638,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-				(at -15.24 -19.05 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9061.pdf"
-				(at 0 20.32 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "10-MHz, RRIO, CMOS Operational Amplifiers for Cost-Sensitive Systems, SOT-23-5"
+			(property "Footprint" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -672,7 +649,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "single opamp rail to rail input output"
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -683,7 +660,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SOT?23*"
+			(property "Description" "Low-Power, Dual Operational Amplifiers, DIP-8/SOIC-8/TO-99-8"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -694,7 +671,39 @@
 					)
 				)
 			)
-			(symbol "TLV9061xDBV_0_1"
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "dual opamp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LM358_1_1"
 				(polyline
 					(pts
 						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
@@ -707,44 +716,6 @@
 						(type background)
 					)
 				)
-				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "V-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 7.62 270)
-					(length 3.81)
-					(name "V+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "TLV9061xDBV_1_1"
 				(pin output line
 					(at 7.62 0 180)
 					(length 2.54)
@@ -756,6 +727,24 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -781,6 +770,38 @@
 						)
 					)
 				)
+			)
+			(symbol "LM358_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin input line
 					(at -7.62 -2.54 0)
 					(length 2.54)
@@ -791,7 +812,63 @@
 							)
 						)
 					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LM358_3_1"
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1258,6 +1335,160 @@
 					(at 0 -3.81 90)
 					(length 1.27)
 					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Diode:SMAJ24A"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SMAJ24A"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SMA"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
+				(at -1.27 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "400W unidirectional Transient Voltage Suppressor, 24.0Vr, SMA(DO-214AC)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "unidirectional diode TVS voltage suppressor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "D*SMA*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SMAJ24A_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SMAJ24A_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2312,9 +2543,9 @@
 		)
 		(uuid "bc6d674e-6c51-41c5-839e-7224130bc10d")
 	)
-	(text_box "Based off TI application note for a VCCS using npn bjt. R306 sets gain to 1/10 meaning voltage input of 2.5v gives current output of 500mA."
+	(text_box "Based off TI application note for a VCCS using npn bjt. R306 sets gain to 1/5 meaning voltage input of 2.5v gives current output of 500mA."
 		(exclude_from_sim no)
-		(at 69.85 173.7886 0)
+		(at 58.42 173.7886 0)
 		(size 30.48 15.4414)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -2331,6 +2562,12 @@
 			(justify left top)
 		)
 		(uuid "d908fb63-eab7-4560-92fb-996e68fa5549")
+	)
+	(junction
+		(at 251.46 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "10f70d14-e4f4-4511-99b8-e99501de1864")
 	)
 	(junction
 		(at 168.91 55.88)
@@ -2429,6 +2666,12 @@
 		(uuid "908ebf72-e0df-4a5f-90aa-40df1af2ce21")
 	)
 	(junction
+		(at 251.46 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "911b6afb-75da-48d2-989c-361017037ec4")
+	)
+	(junction
 		(at 229.87 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2525,12 +2768,24 @@
 		(uuid "f6144cc2-0e8e-4277-a2ea-36bfdf36db32")
 	)
 	(no_connect
+		(at 113.03 130.81)
+		(uuid "306f7959-b07f-4096-b8fe-82a50aaedec7")
+	)
+	(no_connect
+		(at 97.79 133.35)
+		(uuid "6cfe9030-ee17-431c-b53a-6bcf0695a607")
+	)
+	(no_connect
 		(at 46.99 146.05)
 		(uuid "ae0a1e4d-14c0-43d2-af26-57c266bc8764")
 	)
 	(no_connect
 		(at 69.85 148.59)
 		(uuid "bdf8579c-431d-4370-83e9-5cf0c71b1bc2")
+	)
+	(no_connect
+		(at 97.79 128.27)
+		(uuid "dea43822-910f-4c7c-90d7-a0f2cdef03e3")
 	)
 	(bus_entry
 		(at 27.94 146.05)
@@ -2632,16 +2887,6 @@
 	)
 	(wire
 		(pts
-			(xy 254 128.27) (xy 254 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1ccdb889-be48-4a8b-9ee7-ca379bf5ee0c")
-	)
-	(wire
-		(pts
 			(xy 34.29 143.51) (xy 46.99 143.51)
 		)
 		(stroke
@@ -2739,16 +2984,6 @@
 			(type default)
 		)
 		(uuid "39e7ebf0-6ba6-42d0-8cc6-88ce1dc6bc10")
-	)
-	(wire
-		(pts
-			(xy 254 134.62) (xy 254 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3a865f2d-9e66-4f45-a04d-d926253d9aaf")
 	)
 	(wire
 		(pts
@@ -2862,7 +3097,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 129.54) (xy 260.35 129.54)
+			(xy 251.46 128.27) (xy 260.35 128.27)
 		)
 		(stroke
 			(width 0)
@@ -3009,6 +3244,16 @@
 			(type default)
 		)
 		(uuid "66337146-eea0-4fce-a2ba-72c01d7158d4")
+	)
+	(wire
+		(pts
+			(xy 260.35 128.27) (xy 260.35 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68628fdd-afda-42ff-96d2-c8f7d4564746")
 	)
 	(wire
 		(pts
@@ -3592,6 +3837,16 @@
 	)
 	(wire
 		(pts
+			(xy 260.35 135.89) (xy 260.35 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edced896-bcc7-4910-93a5-2ca5b02d143a")
+	)
+	(wire
+		(pts
 			(xy 266.7 69.85) (xy 266.7 77.47)
 		)
 		(stroke
@@ -3672,7 +3927,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 134.62) (xy 260.35 134.62)
+			(xy 251.46 135.89) (xy 260.35 135.89)
 		)
 		(stroke
 			(width 0)
@@ -6090,6 +6345,17 @@
 				)
 			)
 		)
+		(property "MPN" "CL10B104KB8NNNC"
+			(at 168.91 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6b96b237-0050-457a-8cde-94adf5fdc79f")
 		)
@@ -6160,6 +6426,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 52.07 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KB8NNNC"
+			(at 52.07 50.8 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6326,6 +6603,17 @@
 				)
 			)
 		)
+		(property "MPN" "CL10B104KB8NNNC"
+			(at 45.72 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d633ec4e-bcfb-4343-ba1a-f247b1be62da")
 		)
@@ -6372,7 +6660,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 32.512 138.43 90)
 			(hide yes)
 			(show_name no)
@@ -6396,6 +6684,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 34.29 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 34.29 138.43 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6675,7 +6974,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "1.33k"
 			(at 74.93 137.16 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6709,6 +7008,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 74.93 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ERA-3AEB1331V"
+			(at 74.93 137.16 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6790,6 +7100,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 158.75 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C0603C105K4RACTU"
 			(at 158.75 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -6882,6 +7203,17 @@
 				)
 			)
 		)
+		(property "MPN" "ERA-3AEB104V"
+			(at 167.64 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "d1831807-5923-4c4f-b855-1bd662910600")
 		)
@@ -6964,6 +7296,17 @@
 				)
 			)
 		)
+		(property "MPN" "CRCW0603162KFKEA"
+			(at 229.87 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e60cc43b-1277-4a2f-b374-b5be07905cdb")
 		)
@@ -7010,7 +7353,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 29.972 138.43 90)
 			(hide yes)
 			(show_name no)
@@ -7034,6 +7377,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 31.75 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD075K1L"
+			(at 31.75 138.43 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7114,6 +7468,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 50.8 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RCWE0805R100FKEA"
+			(at 50.8 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7326,6 +7691,17 @@
 				)
 			)
 		)
+		(property "MPN" "C0603C105K4RACTU"
+			(at 148.59 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6baece33-29a0-450c-a718-342d5cf60124")
 		)
@@ -7442,7 +7818,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "22.1k"
+		(property "Value" "22.6k"
 			(at 232.41 73.6599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7476,6 +7852,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 229.87 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ERA-3AEB2262V"
 			(at 229.87 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -7580,6 +7967,114 @@
 		)
 	)
 	(symbol
+		(lib_id "Amplifier_Operational:LM358")
+		(at 92.71 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "53c48217-b22f-43c6-a7e9-2dc8df9518ed")
+		(property "Reference" "U305"
+			(at 95.25 139.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM358"
+			(at 95.25 142.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 92.71 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf"
+			(at 92.71 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Low-Power, Dual Operational Amplifiers, DIP-8/SOIC-8/TO-99-8"
+			(at 92.71 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LM358BAIDR"
+			(at 92.71 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "5cd3d8f8-0765-4b0a-94b4-28e470ad25d2")
+		)
+		(pin "6"
+			(uuid "c1590d1b-0448-4906-9d9e-0c58a2c7210a")
+		)
+		(pin "7"
+			(uuid "08b28f69-411d-4f63-80ff-97033e519358")
+		)
+		(pin "1"
+			(uuid "e40c7219-5627-4fa7-be43-ab2b345a19e5")
+		)
+		(pin "3"
+			(uuid "3e3f32db-b873-40c5-82d4-8c7fb30e6bcc")
+		)
+		(pin "8"
+			(uuid "2ea3dfdf-b4d8-4a5a-99c7-bb86fc649ebe")
+		)
+		(pin "2"
+			(uuid "24b61c0b-479d-436c-bef6-c05741209cb5")
+		)
+		(pin "4"
+			(uuid "e3521f47-157d-437c-a205-8742933cac5f")
+		)
+		(instances
+			(project "Black_Body_Heater_Control"
+				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
+					(reference "U305")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 167.64 139.7 180)
 		(unit 1)
@@ -7646,6 +8141,17 @@
 				)
 			)
 		)
+		(property "MPN" "ERA-3AEB103V"
+			(at 167.64 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "d9ea5afb-25f7-416c-9695-6b392abfa120")
 		)
@@ -7663,7 +8169,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 254 128.27 0)
+		(at 251.46 128.27 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7674,7 +8180,7 @@
 		(fields_autoplaced yes)
 		(uuid "5d74cba8-8587-444e-b9b1-2e973737e358")
 		(property "Reference" "#PWR0313"
-			(at 254 132.08 0)
+			(at 251.46 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7685,7 +8191,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 254 123.19 0)
+			(at 251.46 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7695,7 +8201,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 254 128.27 0)
+			(at 251.46 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7706,7 +8212,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 254 128.27 0)
+			(at 251.46 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7717,7 +8223,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 254 128.27 0)
+			(at 251.46 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7793,6 +8299,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 78.74 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KB8NNNC"
 			(at 78.74 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -7892,6 +8409,116 @@
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
 					(reference "#PWR0308")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:LM358")
+		(at 92.71 146.05 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6968a8b6-9b66-4d9a-8740-863485e25d33")
+		(property "Reference" "U305"
+			(at 92.71 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LM358"
+			(at 92.71 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 92.71 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf"
+			(at 92.71 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Low-Power, Dual Operational Amplifiers, DIP-8/SOIC-8/TO-99-8"
+			(at 92.71 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LM358BAIDR"
+			(at 92.71 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "5cd3d8f8-0765-4b0a-94b4-28e470ad25d2")
+		)
+		(pin "6"
+			(uuid "c1590d1b-0448-4906-9d9e-0c58a2c7210a")
+		)
+		(pin "7"
+			(uuid "08b28f69-411d-4f63-80ff-97033e519358")
+		)
+		(pin "1"
+			(uuid "e40c7219-5627-4fa7-be43-ab2b345a19e5")
+		)
+		(pin "3"
+			(uuid "3e3f32db-b873-40c5-82d4-8c7fb30e6bcc")
+		)
+		(pin "8"
+			(uuid "2ea3dfdf-b4d8-4a5a-99c7-bb86fc649ebe")
+		)
+		(pin "2"
+			(uuid "24b61c0b-479d-436c-bef6-c05741209cb5")
+		)
+		(pin "4"
+			(uuid "e3521f47-157d-437c-a205-8742933cac5f")
+		)
+		(instances
+			(project "Black_Body_Heater_Control"
+				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
+					(reference "U305")
+					(unit 3)
 				)
 			)
 		)
@@ -8143,6 +8770,98 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:SMAJ24A")
+		(at 251.46 132.08 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7c1c3315-1f05-4b46-a5e6-f592bf6f39e5")
+		(property "Reference" "D301"
+			(at 252.73 130.81 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMAJ24A"
+			(at 252.73 133.35 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 246.38 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
+			(at 251.46 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "400W unidirectional Transient Voltage Suppressor, 24.0Vr, SMA(DO-214AC)"
+			(at 251.46 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "SMAJ24A"
+			(at 251.46 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "be2cd1aa-2d78-4c17-aed6-0096469c868a")
+		)
+		(pin "2"
+			(uuid "ebd61cf7-3b43-4737-8fef-5719853af92c")
+		)
+		(instances
+			(project "Black_Body_Heater_Control"
+				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
+					(reference "D301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 106.68 146.05 270)
 		(unit 1)
@@ -8163,7 +8882,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "500"
 			(at 106.68 146.05 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8197,6 +8916,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 106.68 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ERA-3AEB4990V"
+			(at 106.68 146.05 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8403,7 +9133,7 @@
 		(dnp no)
 		(uuid "958cb894-6407-4564-87fc-f82fd113d535")
 		(property "Reference" "C301"
-			(at 96.52 152.4 90)
+			(at 101.6 161.29 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8413,7 +9143,7 @@
 			)
 		)
 		(property "Value" "100nf"
-			(at 96.52 154.94 90)
+			(at 96.52 156.21 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8446,6 +9176,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 97.79 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B104KB8NNNC"
+			(at 97.79 160.02 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8527,6 +9268,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 266.7 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM188R6YA106MA73D"
 			(at 266.7 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -8632,7 +9384,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 254 135.89 0)
+		(at 251.46 135.89 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8643,7 +9395,7 @@
 		(fields_autoplaced yes)
 		(uuid "9f7b6bee-4d01-4366-827d-4da506ab37a0")
 		(property "Reference" "#PWR0314"
-			(at 254 142.24 0)
+			(at 251.46 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8654,7 +9406,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 254 140.97 0)
+			(at 251.46 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8664,7 +9416,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 254 135.89 0)
+			(at 251.46 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8675,7 +9427,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 254 135.89 0)
+			(at 251.46 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8686,7 +9438,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 254 135.89 0)
+			(at 251.46 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8765,6 +9517,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 243.84 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM188R6YA106MA73D"
 			(at 243.84 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -8935,6 +9698,17 @@
 				)
 			)
 		)
+		(property "MPN" "CL10B104KB8NNNC"
+			(at 204.47 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "404e35b7-5960-451a-9385-b79e35b1fdc2")
 		)
@@ -9005,6 +9779,17 @@
 		)
 		(property "Description" "Inductor"
 			(at 218.44 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "SRR1208-120ML"
+			(at 218.44 58.42 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9096,6 +9881,17 @@
 				)
 			)
 		)
+		(property "MPN" "C0603C105K4RACTU"
+			(at 138.43 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1f9382e1-88b4-4243-9e27-f86ff875bf0e")
 		)
@@ -9106,106 +9902,6 @@
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
 					(reference "C302")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Amplifier_Operational:TLV9061xDBV")
-		(at 92.71 146.05 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c6204c56-6bcb-4b81-975f-bab9e7cb8f23")
-		(property "Reference" "U303"
-			(at 95.25 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TLV9061xDBV"
-			(at 96.52 139.7 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 77.47 165.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9061.pdf"
-			(at 92.71 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "10-MHz, RRIO, CMOS Operational Amplifiers for Cost-Sensitive Systems, SOT-23-5"
-			(at 92.71 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "TLV9061xDBV"
-			(at 92.71 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "14dc7332-1648-4dee-a9f8-1c309d90fa06")
-		)
-		(pin "5"
-			(uuid "271fee57-4255-45f3-86a7-930fa565683b")
-		)
-		(pin "3"
-			(uuid "6b91026b-99c9-40d0-b3c1-37e4a4638970")
-		)
-		(pin "1"
-			(uuid "1983013e-dfe6-4a48-aee6-052146cf7d41")
-		)
-		(pin "4"
-			(uuid "e3fca1d8-0f16-4751-b2ba-9648780818ac")
-		)
-		(instances
-			(project "Black_Body_Heater_Control"
-				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
-					(reference "U303")
 					(unit 1)
 				)
 			)
@@ -9285,6 +9981,114 @@
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
 					(reference "#PWR0305")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:LM358")
+		(at 105.41 130.81 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ccd4179d-4bc0-4d3f-8b45-8c39600155c3")
+		(property "Reference" "U305"
+			(at 110.49 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM358"
+			(at 110.49 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 105.41 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf"
+			(at 105.41 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Low-Power, Dual Operational Amplifiers, DIP-8/SOIC-8/TO-99-8"
+			(at 105.41 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LM358BAIDR"
+			(at 105.41 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "5cd3d8f8-0765-4b0a-94b4-28e470ad25d2")
+		)
+		(pin "6"
+			(uuid "c1590d1b-0448-4906-9d9e-0c58a2c7210a")
+		)
+		(pin "7"
+			(uuid "08b28f69-411d-4f63-80ff-97033e519358")
+		)
+		(pin "1"
+			(uuid "e40c7219-5627-4fa7-be43-ab2b345a19e5")
+		)
+		(pin "3"
+			(uuid "3e3f32db-b873-40c5-82d4-8c7fb30e6bcc")
+		)
+		(pin "8"
+			(uuid "2ea3dfdf-b4d8-4a5a-99c7-bb86fc649ebe")
+		)
+		(pin "2"
+			(uuid "24b61c0b-479d-436c-bef6-c05741209cb5")
+		)
+		(pin "4"
+			(uuid "e3521f47-157d-437c-a205-8742933cac5f")
+		)
+		(instances
+			(project "Black_Body_Heater_Control"
+				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
+					(reference "U305")
+					(unit 2)
 				)
 			)
 		)
@@ -9493,7 +10297,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "500"
 			(at 97.79 165.1 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9527,6 +10331,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 97.79 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ERA-3AEB4990V"
+			(at 97.79 165.1 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9764,6 +10579,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 255.27 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM188R6YA106MA73D"
 			(at 255.27 66.04 0)
 			(hide yes)
 			(show_name no)
