@@ -1,6 +1,6 @@
 LTspice 24.1.10 for Windows
-Circuit: C:\Users\dylan\Downloads\power_supply.net
-Start Time: Fri May 29 11:02:22 2026
+Circuit: C:\Users\dylan\Documents\GitHub\Black_Body\Simulations\Temperature_Sensor_PCB\LTspice_power_supply\power_supply.net
+Start Time: Mon Jun 22 20:15:07 2026
 solver = Normal
 Maximum thread count: 22
 tnom = 27
@@ -147,10 +147,10 @@ Source Step = 99.9921%
 Source stepping failed
 
 Pseudo Transient succeeded in finding the operating point at 5.65199 s.
-Total elapsed time: 6.314 seconds.
+Total elapsed time: 11.826 seconds.
 
 Files loaded:
-C:\Users\dylan\Downloads\power_supply.net
+C:\Users\dylan\Documents\GitHub\Black_Body\Simulations\Temperature_Sensor_PCB\LTspice_power_supply\power_supply.net
 C:\Users\dylan\AppData\Local\LTspice\lib\sub\LT3042.sub
 C:\Users\dylan\AppData\Local\LTspice\lib\sub\LT3094.sub
 

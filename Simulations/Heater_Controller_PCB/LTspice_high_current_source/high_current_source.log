@@ -1,6 +1,6 @@
 LTspice 24.1.10 for Windows
-Circuit: C:\Users\dylan\Documents\GitHub\Black_Body\Simulations\LTspice_high_current_source\high_current_source.net
-Start Time: Fri Jun 12 15:02:46 2026
+Circuit: C:\Users\dylan\Documents\GitHub\Black_Body\Simulations\Heater_Controller_PCB\LTspice_high_current_source\high_current_source.net
+Start Time: Mon Jun 22 11:14:21 2026
 solver = Normal
 Maximum thread count: 22
 tnom = 27
@@ -27,10 +27,10 @@ Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
 .step 
-Total elapsed time: 0.097 seconds.
+Total elapsed time: 0.053 seconds.
 
 Files loaded:
-C:\Users\dylan\Documents\GitHub\Black_Body\Simulations\LTspice_high_current_source\high_current_source.net
+C:\Users\dylan\Documents\GitHub\Black_Body\Simulations\Heater_Controller_PCB\LTspice_high_current_source\high_current_source.net
 C:\Users\dylan\AppData\Local\LTspice\lib\cmp\standard.bjt
 C:\Users\dylan\AppData\Local\LTspice\lib\sub\LTC.lib
 
