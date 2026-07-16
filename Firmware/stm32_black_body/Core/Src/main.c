@@ -108,21 +108,14 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+  current_source(cur_1ua);
+  current_direction(right);
+  current_measurement_resistor(_500);
   while (1)
   {
     /* USER CODE END WHILE */
-    current_source(cur_10na);
     HAL_Delay(5000);
-    current_source(cur_100na);
-    HAL_Delay(5000);
-    //current_source(cur_1ua);
-    //HAL_Delay(5000);
-    //current_source(cur_10ua);
-    //HAL_Delay(5000);
-    //current_source(cur_100ua);
-    //HAL_Delay(5000);
-    //current_source(cur_1ma);
-    //HAL_Delay(5000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

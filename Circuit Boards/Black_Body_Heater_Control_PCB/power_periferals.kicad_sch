@@ -8491,28 +8491,28 @@
 			)
 		)
 		(pin "5"
-			(uuid "5cd3d8f8-0765-4b0a-94b4-28e470ad25d2")
+			(uuid "5cd3d8f8-0765-4b0a-94b4-28e470ad25d3")
 		)
 		(pin "6"
-			(uuid "c1590d1b-0448-4906-9d9e-0c58a2c7210a")
+			(uuid "c1590d1b-0448-4906-9d9e-0c58a2c7210b")
 		)
 		(pin "7"
-			(uuid "08b28f69-411d-4f63-80ff-97033e519358")
+			(uuid "08b28f69-411d-4f63-80ff-97033e519359")
 		)
 		(pin "1"
-			(uuid "e40c7219-5627-4fa7-be43-ab2b345a19e5")
+			(uuid "e40c7219-5627-4fa7-be43-ab2b345a19e6")
 		)
 		(pin "3"
-			(uuid "3e3f32db-b873-40c5-82d4-8c7fb30e6bcc")
+			(uuid "3e3f32db-b873-40c5-82d4-8c7fb30e6bcd")
 		)
 		(pin "8"
-			(uuid "2ea3dfdf-b4d8-4a5a-99c7-bb86fc649ebe")
+			(uuid "2ea3dfdf-b4d8-4a5a-99c7-bb86fc649ebf")
 		)
 		(pin "2"
-			(uuid "24b61c0b-479d-436c-bef6-c05741209cb5")
+			(uuid "24b61c0b-479d-436c-bef6-c05741209cb6")
 		)
 		(pin "4"
-			(uuid "e3521f47-157d-437c-a205-8742933cac5f")
+			(uuid "e3521f47-157d-437c-a205-8742933cac60")
 		)
 		(instances
 			(project "Black_Body_Heater_Control"
@@ -10061,28 +10061,28 @@
 			)
 		)
 		(pin "5"
-			(uuid "5cd3d8f8-0765-4b0a-94b4-28e470ad25d2")
+			(uuid "5cd3d8f8-0765-4b0a-94b4-28e470ad25d4")
 		)
 		(pin "6"
-			(uuid "c1590d1b-0448-4906-9d9e-0c58a2c7210a")
+			(uuid "c1590d1b-0448-4906-9d9e-0c58a2c7210c")
 		)
 		(pin "7"
-			(uuid "08b28f69-411d-4f63-80ff-97033e519358")
+			(uuid "08b28f69-411d-4f63-80ff-97033e51935a")
 		)
 		(pin "1"
-			(uuid "e40c7219-5627-4fa7-be43-ab2b345a19e5")
+			(uuid "e40c7219-5627-4fa7-be43-ab2b345a19e7")
 		)
 		(pin "3"
-			(uuid "3e3f32db-b873-40c5-82d4-8c7fb30e6bcc")
+			(uuid "3e3f32db-b873-40c5-82d4-8c7fb30e6bce")
 		)
 		(pin "8"
-			(uuid "2ea3dfdf-b4d8-4a5a-99c7-bb86fc649ebe")
+			(uuid "2ea3dfdf-b4d8-4a5a-99c7-bb86fc649ec0")
 		)
 		(pin "2"
-			(uuid "24b61c0b-479d-436c-bef6-c05741209cb5")
+			(uuid "24b61c0b-479d-436c-bef6-c05741209cb7")
 		)
 		(pin "4"
-			(uuid "e3521f47-157d-437c-a205-8742933cac5f")
+			(uuid "e3521f47-157d-437c-a205-8742933cac61")
 		)
 		(instances
 			(project "Black_Body_Heater_Control"

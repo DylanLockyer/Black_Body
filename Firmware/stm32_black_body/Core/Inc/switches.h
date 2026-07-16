@@ -32,5 +32,5 @@ typedef enum {
 
 // Expose current source adjustment settings
 bool current_source(current current_level);
-bool current_measurment_resistor(cur_resistor shunt_resistance);
+bool current_measurement_resistor(cur_resistor shunt_resistance);
 bool current_direction(cur_direction direction);

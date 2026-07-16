@@ -9,10 +9,10 @@
 // then connecting the correct current source to the output
 bool current_source(current current_level){
     // Open all switches
-    HAL_GPIO_WritePin(i_sense_sel1_GPIO_Port, i_sense_sel1_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(i_sense_sel3_GPIO_Port, i_sense_sel3_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(i_sense_sel2_GPIO_Port, i_sense_sel2_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(i_sense_sel4_GPIO_Port, i_sense_sel4_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(i_source_sel1_GPIO_Port, i_source_sel1_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(i_source_sel3_GPIO_Port, i_source_sel3_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(i_source_sel2_GPIO_Port, i_source_sel2_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(i_source_sel4_GPIO_Port, i_source_sel4_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(sel_10na_neg_GPIO_Port, sel_10na_neg_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(sel_10na_pos_GPIO_Port, sel_10na_pos_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(sel_100na_neg_GPIO_Port, sel_100na_neg_Pin, GPIO_PIN_RESET);
@@ -76,11 +76,11 @@ bool current_source(current current_level){
         // Use na_source
         // Commented out as is connects unused output through resistor
         //HAL_GPIO_WritePin(i_sense_sel1_GPIO_Port, i_sense_sel1_Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(i_sense_sel3_GPIO_Port, i_sense_sel3_Pin, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(i_source_sel3_GPIO_Port, i_source_sel3_Pin, GPIO_PIN_SET);
     }
     else {
         // Use ma_source
-        HAL_GPIO_WritePin(i_sense_sel2_GPIO_Port, i_sense_sel2_Pin, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(i_source_sel2_GPIO_Port, i_source_sel2_Pin, GPIO_PIN_SET);
         // Commented out as is connects unused output through resistor
         //HAL_GPIO_WritePin(i_sense_sel4_GPIO_Port, i_sense_sel4_Pin, GPIO_PIN_SET);
     }
@@ -131,6 +131,7 @@ bool current_measurement_resistor(cur_resistor shunt_resistance){
 }
 
 // Sets direction for current
+// Left is backwards (flows from I- to I+)
 bool current_direction(cur_direction direction){
 
     // Turn all switches off
@@ -148,8 +149,8 @@ bool current_direction(cur_direction direction){
             break;
         case 1:
             //Current flows right
-            HAL_GPIO_WritePin(hbridge_sel1_GPIO_Port, hbridge_sel1_Pin, GPIO_PIN_RESET);
-            HAL_GPIO_WritePin(hbridge_sel3_GPIO_Port, hbridge_sel3_Pin, GPIO_PIN_RESET);
+            HAL_GPIO_WritePin(hbridge_sel1_GPIO_Port, hbridge_sel1_Pin, GPIO_PIN_SET);
+            HAL_GPIO_WritePin(hbridge_sel3_GPIO_Port, hbridge_sel3_Pin, GPIO_PIN_SET);
             break;
         case 2:
             // Turn off all switches (already all open)
