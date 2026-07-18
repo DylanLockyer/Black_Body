@@ -31,7 +31,12 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "stm32g4xx_hal_gpio.h"
+#include "stm32g4xx_hal_spi.h"
+#include "stm32g4xx_hal_tim.h"
+
 #include "switches.h"
+#include "ADS131M04.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -49,6 +54,8 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -59,6 +66,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define sel_v_1ma_Pin GPIO_PIN_13
 #define sel_v_1ma_GPIO_Port GPIOC
+#define hbridge_sel1_Pin GPIO_PIN_14
+#define hbridge_sel1_GPIO_Port GPIOC
 #define i_source_sel4_Pin GPIO_PIN_15
 #define i_source_sel4_GPIO_Port GPIOC
 #define ADC_DRDY_Pin GPIO_PIN_0
@@ -79,26 +88,24 @@ void Error_Handler(void);
 #define i_sense_sel4_GPIO_Port GPIOA
 #define hbridge_sel3_Pin GPIO_PIN_4
 #define hbridge_sel3_GPIO_Port GPIOA
-#define hbridge_sel1_Pin GPIO_PIN_5
-#define hbridge_sel1_GPIO_Port GPIOA
-#define hbridge_sel2_Pin GPIO_PIN_6
-#define hbridge_sel2_GPIO_Port GPIOA
-#define sel_10na_pos_Pin GPIO_PIN_7
-#define sel_10na_pos_GPIO_Port GPIOA
 #define sel_100na_pos_Pin GPIO_PIN_4
 #define sel_100na_pos_GPIO_Port GPIOC
 #define i_source_sel1_Pin GPIO_PIN_5
 #define i_source_sel1_GPIO_Port GPIOC
 #define sel_100na_neg_Pin GPIO_PIN_0
 #define sel_100na_neg_GPIO_Port GPIOB
-#define sel_t_1ma_Pin GPIO_PIN_1
+#define hbridge_sel2_Pin GPIO_PIN_1
+#define hbridge_sel2_GPIO_Port GPIOB
+#define sel_10na_pos_Pin GPIO_PIN_2
+#define sel_10na_pos_GPIO_Port GPIOB
+#define sel_t_1ma_Pin GPIO_PIN_10
 #define sel_t_1ma_GPIO_Port GPIOB
-#define sel_t_1ua_Pin GPIO_PIN_2
+#define sel_t_1ua_Pin GPIO_PIN_11
 #define sel_t_1ua_GPIO_Port GPIOB
-#define sel_10na_neg_Pin GPIO_PIN_10
-#define sel_10na_neg_GPIO_Port GPIOB
-#define ADC_CLKIN_Pin GPIO_PIN_8
-#define ADC_CLKIN_GPIO_Port GPIOA
+#define sel_10na_neg_Pin GPIO_PIN_6
+#define sel_10na_neg_GPIO_Port GPIOC
+#define SPI3_CS_Pin GPIO_PIN_15
+#define SPI3_CS_GPIO_Port GPIOA
 #define sel_v_10ua_Pin GPIO_PIN_2
 #define sel_v_10ua_GPIO_Port GPIOD
 #define sel_v_100ua_Pin GPIO_PIN_4
