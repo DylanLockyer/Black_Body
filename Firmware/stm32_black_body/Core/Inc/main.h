@@ -72,6 +72,7 @@ void Error_Handler(void);
 #define i_source_sel4_GPIO_Port GPIOC
 #define ADC_DRDY_Pin GPIO_PIN_0
 #define ADC_DRDY_GPIO_Port GPIOC
+#define ADC_DRDY_EXTI_IRQn EXTI0_IRQn
 #define i_source_sel3_Pin GPIO_PIN_1
 #define i_source_sel3_GPIO_Port GPIOC
 #define i_source_sel2_Pin GPIO_PIN_2

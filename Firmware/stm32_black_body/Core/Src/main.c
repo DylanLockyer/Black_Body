@@ -18,8 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "ADS131M04.h"
-#include "stm32g4xx_hal_tim.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -71,6 +69,7 @@ static void MX_TIM1_Init(void);
 /* USER CODE BEGIN 0 */
 
 ADS131M04 spi_params;
+volatile uint8_t adc_flag = 0;
 
 /* USER CODE END 0 */
 
@@ -131,10 +130,13 @@ int main(void)
   ADS131M04_Init(&ADS_hdev);
 
   // Read register
-  uint16_t reg_data = 0;
-  ADS131M04_Read_Reg(&ADS_hdev, ADS_ID, &reg_data);
+  int32_t reg_data[4] = {0};
   while (1)
   {
+    if (adc_flag == 1){
+      ADS131M04_ADC_Read(&ADS_hdev, reg_data);
+      adc_flag = 0;
+    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -469,7 +471,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : ADC_DRDY_Pin */
   GPIO_InitStruct.Pin = ADC_DRDY_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(ADC_DRDY_GPIO_Port, &GPIO_InitStruct);
 
@@ -500,13 +502,23 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(sel_v_10ua_GPIO_Port, &GPIO_InitStruct);
 
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
   /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+  if (GPIO_Pin == ADC_DRDY_Pin){
+    adc_flag = 1;
+  } else {
+    __NOP();
+  }
+}
 /* USER CODE END 4 */
 
 /**
