@@ -3,6 +3,7 @@
 #include <Arduino.h>
 #include "DAC60501.h"
 #include <LittleFS.h>
+#include "STM32_Receive.h"
 
 // Wifi libraries
 #include <WiFi.h>
@@ -11,7 +12,7 @@
 #include <DNSServer.h>
 
 // Wifi definitions
-const char *WIFI_NAME = "Temperature Probe";
+const char *WIFI_NAME = "Black Body";
 
 // I2C config
 #define SDA_PIN 8
@@ -22,6 +23,7 @@ const char *WIFI_NAME = "Temperature Probe";
 
 // Max current output
 #define MAX_CURRENT 0.5
+
 
 struct SensorReading {
   volatile float temperature = NAN; // Kelvin, from GR-300-AA via profile interpolation

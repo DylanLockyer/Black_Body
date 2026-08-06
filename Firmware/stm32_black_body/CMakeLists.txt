@@ -47,6 +47,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
     "Library/Switches/switches.c"
     "Library/ADS131M04/ADS131M04.c"
+    "Library/External_Interface/External_Interface.c"
+    "Library/Ring_Buffer/Ring_Buffer.c"
 )
 
 # Add include paths
@@ -54,6 +56,8 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
     "Library/Switches"
     "Library/ADS131M04"
+    "Library/External_Interface"
+    "Library/Ring_Buffer"
 )
 
 # Add project symbols (macros)

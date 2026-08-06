@@ -1,6 +1,6 @@
 #pragma once
+
 #include <stdbool.h>
-#include "main.h"
 
 // Type for switching current source
 typedef enum {

@@ -12,6 +12,9 @@ SensorReading latestReading;
 // DAC initilization
 DAC60501 dac(I2C_ADDRESS_SCL);
 
+// SPI communication with temp probe
+STM32Sensor sensor(SPI_CS);
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
@@ -24,17 +27,31 @@ void setup() {
   
   // Initilize wifi
   wifi_setup();
+
+  // Initilize temperature probe SPI read
+  sensor.begin();
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
   dns.processNextRequest();
-  float current = get_current();
-  float voltage = get_voltage() + 0.5; // 0.5 is an offset
-  latestReading.current = current;
-  latestReading.voltage = voltage;
-  latestReading.resistance = 3502;
-  latestReading.temperature = 2.65;
+
+  // Temp probe SPI receive
+  Sensor_Data data;
+  sensor.read(&data);
+  if (sensor.read(&data)) {
+    // Send data to website
+    latestReading.current = data.current;
+    latestReading.voltage = data.voltage;
+    latestReading.resistance = data.resistance;
+    latestReading.temperature = 2.65;
+  }
+
+
+  // Read data for heater 
+  //float heater_current = get_current();
+  //float heater_voltage = get_voltage() + 0.5; // 0.5 is an offset
+
 }
 
 
@@ -49,6 +66,7 @@ void wifi_setup(){
   WiFi.mode(WIFI_AP);
   WiFi.softAPConfig(apIP, apIP, subnet);
   WiFi.softAP(WIFI_NAME);
+  WiFi.setSleep(false);
 
   // Initialize dns
   dns.start(53, "*", apIP);

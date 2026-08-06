@@ -37,6 +37,9 @@ extern "C" {
 
 #include "switches.h"
 #include "ADS131M04.h"
+#include "External_Interface.h"
+#include "Ring_Buffer.h"
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -66,8 +69,6 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define sel_v_1ma_Pin GPIO_PIN_13
 #define sel_v_1ma_GPIO_Port GPIOC
-#define hbridge_sel1_Pin GPIO_PIN_14
-#define hbridge_sel1_GPIO_Port GPIOC
 #define i_source_sel4_Pin GPIO_PIN_15
 #define i_source_sel4_GPIO_Port GPIOC
 #define ADC_DRDY_Pin GPIO_PIN_0
@@ -89,22 +90,26 @@ void Error_Handler(void);
 #define i_sense_sel4_GPIO_Port GPIOA
 #define hbridge_sel3_Pin GPIO_PIN_4
 #define hbridge_sel3_GPIO_Port GPIOA
+#define hbridge_sel1_Pin GPIO_PIN_5
+#define hbridge_sel1_GPIO_Port GPIOA
+#define hbridge_sel2_Pin GPIO_PIN_6
+#define hbridge_sel2_GPIO_Port GPIOA
+#define sel_10na_pos_Pin GPIO_PIN_7
+#define sel_10na_pos_GPIO_Port GPIOA
 #define sel_100na_pos_Pin GPIO_PIN_4
 #define sel_100na_pos_GPIO_Port GPIOC
 #define i_source_sel1_Pin GPIO_PIN_5
 #define i_source_sel1_GPIO_Port GPIOC
 #define sel_100na_neg_Pin GPIO_PIN_0
 #define sel_100na_neg_GPIO_Port GPIOB
-#define hbridge_sel2_Pin GPIO_PIN_1
-#define hbridge_sel2_GPIO_Port GPIOB
-#define sel_10na_pos_Pin GPIO_PIN_2
-#define sel_10na_pos_GPIO_Port GPIOB
-#define sel_t_1ma_Pin GPIO_PIN_10
+#define sel_t_1ma_Pin GPIO_PIN_1
 #define sel_t_1ma_GPIO_Port GPIOB
-#define sel_t_1ua_Pin GPIO_PIN_11
+#define sel_t_1ua_Pin GPIO_PIN_2
 #define sel_t_1ua_GPIO_Port GPIOB
-#define sel_10na_neg_Pin GPIO_PIN_6
-#define sel_10na_neg_GPIO_Port GPIOC
+#define sel_10na_neg_Pin GPIO_PIN_10
+#define sel_10na_neg_GPIO_Port GPIOB
+#define SPI2_CS_Pin GPIO_PIN_12
+#define SPI2_CS_GPIO_Port GPIOB
 #define SPI3_CS_Pin GPIO_PIN_15
 #define SPI3_CS_GPIO_Port GPIOA
 #define sel_v_10ua_Pin GPIO_PIN_2
@@ -119,7 +124,9 @@ void Error_Handler(void);
 #define sel_t_10ua_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-
+void change_current(current source_current, cur_direction direction, Sensor_Data *data);
+float map(uint32_t x, uint32_t x_min, uint32_t x_max, float y_min, float y_max);
+float float_abs(float x);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

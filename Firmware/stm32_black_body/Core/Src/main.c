@@ -18,6 +18,8 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "Ring_Buffer.h"
+#include "switches.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -68,9 +70,10 @@ static void MX_TIM1_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+ring_buffer voltage_buff;
+ring_buffer current_buff;
 ADS131M04 spi_params;
 volatile uint8_t adc_flag = 0;
-
 /* USER CODE END 0 */
 
 /**
@@ -114,10 +117,6 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  current_source(cur_1ua);
-  current_direction(right);
-  current_measurement_resistor(_500);
-
   // Config External ADC read
   ADS131M04 ADS_hdev;
   ADS_hdev.clk_channel = TIM_CHANNEL_1;
@@ -126,17 +125,67 @@ int main(void)
   ADS_hdev.cs_pin = SPI3_CS_Pin;
   ADS_hdev.hspi = &hspi3;
 
+  // Initilize spi_data struct
+  Sensor_Data spi_data;
+
+  // Change current parameters and change spi_data struct
+  change_current(cur_1ua, right, &spi_data);
   // Initilise external adc
   ADS131M04_Init(&ADS_hdev);
-
-  // Read register
+ 
+  // ADC buffer
   int32_t reg_data[4] = {0};
+
+  // Ring buffer
+  ring_buffer v_buff;
+  ring_buffer i_buff; 
+  ringBufferInit(&v_buff);
+  ringBufferInit(&i_buff);
   while (1)
   {
+    // Read adc data once drdy interupt fires
     if (adc_flag == 1){
       ADS131M04_ADC_Read(&ADS_hdev, reg_data);
+
+      // Get shunt resistance value
+      float shunt_resistance = 0;
+      switch(spi_data.shunt_resistor){
+        case 0:
+          shunt_resistance = 3.2;
+          break;
+        case 1:
+          shunt_resistance = 8.2;
+          break;
+        case 2:
+          shunt_resistance = 503;
+          break;
+        case 3:
+          shunt_resistance = 33200;
+          break;
+        default:
+          shunt_resistance = 1;
+          break;
+
+      }
+
+      // Save data to send over spi
+
+      // 6 comes from adc max range of 1.2 * gain of 200 converted to mv
+      spi_data.voltage = float_abs(map(reg_data[1], -8388608, 8388607, -6.0, 6.0)) * 1.2;  // 1.2 is correction factor
+      
+      // 6 comes from adc max range of 1.2 * gain of 200 converted to mv
+      // Works on the principle of I = V/R using the shunt resistance
+      // Multiply by 1000 to convert to uA
+      spi_data.current = float_abs(map(reg_data[0], -8388608, 8388607, -6, 6)) / shunt_resistance * 1000;
+      spi_data.resistance = spi_data.voltage / spi_data.current * 1000;
+
+      // Reset drdy flag
       adc_flag = 0;
     }
+
+    // Send data over spi
+    external_interface_send(&spi_data, &hspi2);
+    HAL_Delay(50);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -255,12 +304,13 @@ static void MX_SPI2_Init(void)
   /* USER CODE END SPI2_Init 1 */
   /* SPI2 parameter configuration*/
   hspi2.Instance = SPI2;
-  hspi2.Init.Mode = SPI_MODE_SLAVE;
+  hspi2.Init.Mode = SPI_MODE_MASTER;
   hspi2.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi2.Init.DataSize = SPI_DATASIZE_4BIT;
+  hspi2.Init.DataSize = SPI_DATASIZE_8BIT;
   hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
-  hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi2.Init.CLKPhase = SPI_PHASE_2EDGE;
   hspi2.Init.NSS = SPI_NSS_SOFT;
+  hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
   hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi2.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -298,7 +348,7 @@ static void MX_SPI3_Init(void)
   hspi3.Init.Direction = SPI_DIRECTION_2LINES;
   hspi3.Init.DataSize = SPI_DATASIZE_8BIT;
   hspi3.Init.CLKPolarity = SPI_POLARITY_LOW;
-  hspi3.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi3.Init.CLKPhase = SPI_PHASE_2EDGE;
   hspi3.Init.NSS = SPI_NSS_SOFT;
   hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
   hspi3.Init.FirstBit = SPI_FIRSTBIT_MSB;
@@ -306,7 +356,7 @@ static void MX_SPI3_Init(void)
   hspi3.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
   hspi3.Init.CRCPolynomial = 7;
   hspi3.Init.CRCLength = SPI_CRC_LENGTH_DATASIZE;
-  hspi3.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+  hspi3.Init.NSSPMode = SPI_NSS_PULSE_DISABLE;
   if (HAL_SPI_Init(&hspi3) != HAL_OK)
   {
     Error_Handler();
@@ -442,28 +492,26 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, sel_v_1ma_Pin|hbridge_sel1_Pin|i_source_sel4_Pin|i_source_sel3_Pin
-                          |i_source_sel2_Pin|i_sense_sel1_Pin|sel_100na_pos_Pin|i_source_sel1_Pin
-                          |sel_10na_neg_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, sel_v_1ma_Pin|i_source_sel4_Pin|i_source_sel3_Pin|i_source_sel2_Pin
+                          |i_sense_sel1_Pin|sel_100na_pos_Pin|i_source_sel1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, i_sense_sel2_Pin|i_sense_sel3_Pin|hbridge_sel4_Pin|i_sense_sel4_Pin
-                          |hbridge_sel3_Pin|SPI3_CS_Pin, GPIO_PIN_RESET);
+                          |hbridge_sel3_Pin|hbridge_sel1_Pin|hbridge_sel2_Pin|sel_10na_pos_Pin
+                          |SPI3_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, sel_100na_neg_Pin|hbridge_sel2_Pin|sel_10na_pos_Pin|sel_t_1ma_Pin
-                          |sel_t_1ua_Pin|sel_v_100ua_Pin|sel_v_1ua_Pin|sel_t_100ua_Pin
+  HAL_GPIO_WritePin(GPIOB, sel_100na_neg_Pin|sel_t_1ma_Pin|sel_t_1ua_Pin|sel_10na_neg_Pin
+                          |SPI2_CS_Pin|sel_v_100ua_Pin|sel_v_1ua_Pin|sel_t_100ua_Pin
                           |sel_t_10ua_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(sel_v_10ua_GPIO_Port, sel_v_10ua_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : sel_v_1ma_Pin hbridge_sel1_Pin i_source_sel4_Pin i_source_sel3_Pin
-                           i_source_sel2_Pin i_sense_sel1_Pin sel_100na_pos_Pin i_source_sel1_Pin
-                           sel_10na_neg_Pin */
-  GPIO_InitStruct.Pin = sel_v_1ma_Pin|hbridge_sel1_Pin|i_source_sel4_Pin|i_source_sel3_Pin
-                          |i_source_sel2_Pin|i_sense_sel1_Pin|sel_100na_pos_Pin|i_source_sel1_Pin
-                          |sel_10na_neg_Pin;
+  /*Configure GPIO pins : sel_v_1ma_Pin i_source_sel4_Pin i_source_sel3_Pin i_source_sel2_Pin
+                           i_sense_sel1_Pin sel_100na_pos_Pin i_source_sel1_Pin */
+  GPIO_InitStruct.Pin = sel_v_1ma_Pin|i_source_sel4_Pin|i_source_sel3_Pin|i_source_sel2_Pin
+                          |i_sense_sel1_Pin|sel_100na_pos_Pin|i_source_sel1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -476,19 +524,21 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(ADC_DRDY_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : i_sense_sel2_Pin i_sense_sel3_Pin hbridge_sel4_Pin i_sense_sel4_Pin
-                           hbridge_sel3_Pin SPI3_CS_Pin */
+                           hbridge_sel3_Pin hbridge_sel1_Pin hbridge_sel2_Pin sel_10na_pos_Pin
+                           SPI3_CS_Pin */
   GPIO_InitStruct.Pin = i_sense_sel2_Pin|i_sense_sel3_Pin|hbridge_sel4_Pin|i_sense_sel4_Pin
-                          |hbridge_sel3_Pin|SPI3_CS_Pin;
+                          |hbridge_sel3_Pin|hbridge_sel1_Pin|hbridge_sel2_Pin|sel_10na_pos_Pin
+                          |SPI3_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : sel_100na_neg_Pin hbridge_sel2_Pin sel_10na_pos_Pin sel_t_1ma_Pin
-                           sel_t_1ua_Pin sel_v_100ua_Pin sel_v_1ua_Pin sel_t_100ua_Pin
+  /*Configure GPIO pins : sel_100na_neg_Pin sel_t_1ma_Pin sel_t_1ua_Pin sel_10na_neg_Pin
+                           SPI2_CS_Pin sel_v_100ua_Pin sel_v_1ua_Pin sel_t_100ua_Pin
                            sel_t_10ua_Pin */
-  GPIO_InitStruct.Pin = sel_100na_neg_Pin|hbridge_sel2_Pin|sel_10na_pos_Pin|sel_t_1ma_Pin
-                          |sel_t_1ua_Pin|sel_v_100ua_Pin|sel_v_1ua_Pin|sel_t_100ua_Pin
+  GPIO_InitStruct.Pin = sel_100na_neg_Pin|sel_t_1ma_Pin|sel_t_1ua_Pin|sel_10na_neg_Pin
+                          |SPI2_CS_Pin|sel_v_100ua_Pin|sel_v_1ua_Pin|sel_t_100ua_Pin
                           |sel_t_10ua_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -519,6 +569,46 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
     __NOP();
   }
 }
+
+void change_current(current source_current, cur_direction direction, Sensor_Data *data){
+  current_source(source_current);
+  current_direction(direction);
+
+  // Set shunt based on current source
+  cur_resistor shunt_resistor = 0;
+  if (source_current < 2){
+    shunt_resistor = _33k2;
+  }
+  else if (source_current < 4){
+    shunt_resistor = _500;
+  }
+  else if (source_current < 5){
+    shunt_resistor = _5;
+  }
+  else if (source_current < 6){
+    shunt_resistor = none;
+  } 
+  else {
+    shunt_resistor = disable;
+  }
+  current_measurement_resistor(shunt_resistor);
+
+  // Update data to send to ESP32
+  data->cur_direction = direction;
+  data->cur_source = source_current;
+  data->shunt_resistor = shunt_resistor;
+}
+
+float map(uint32_t x, uint32_t x_min, uint32_t x_max, float y_min, float y_max){
+  return (float)(x - x_min) * (y_max - y_min) / (float)(x_max - x_min) + y_min;
+}
+
+float float_abs(float x){
+  if (x >= 0.0) return x;
+  else return x * (-1);
+}
+
+
 /* USER CODE END 4 */
 
 /**
