@@ -554,6 +554,7 @@
       "netlist": "",
       "plot": "C:/Users/dylan/Downloads/",
       "specctra_dsn": "",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -714,7 +715,7 @@
         "uuid": "f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0"
       }
     ],
-    "used_designators": "U303,U305,D301",
+    "used_designators": "J301,#PWR312,#PWR319-321,R309-310,U303,U305,C302-304,D301",
     "variants": []
   },
   "sheets": [

@@ -146,10 +146,10 @@ int main(void)
     // Read adc data once drdy interupt fires
     if (adc_flag == 1){
       ADS131M04_ADC_Read(&ADS_hdev, reg_data);
-
       // Get shunt resistance value
       float shunt_resistance = 0;
       switch(spi_data.shunt_resistor){
+        
         case 0:
           shunt_resistance = 3.2;
           break;
