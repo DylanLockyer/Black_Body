@@ -85,6 +85,16 @@
 		)
 		(uuid "86177459-2fe8-46a6-8b4f-abd2af6e41f8")
 	)
+	(wire
+		(pts
+			(xy 129.54 97.79) (xy 180.34 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4c4ddeb-0b0e-4a3d-bba2-779182bb12e6")
+	)
 	(sheet
 		(at 78.74 74.93)
 		(size 50.8 50.8)
@@ -123,16 +133,6 @@
 				(justify left top)
 			)
 		)
-		(pin "V_SENSE" input
-			(at 129.54 100.33 0)
-			(uuid "1376d234-c4ea-406e-a3f6-dc64d288add8")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "I_SENSE" input
 			(at 129.54 95.25 0)
 			(uuid "27458410-4eb5-480c-a8a4-a0f74f244501")
@@ -146,6 +146,26 @@
 		(pin "i2c{sda scl}" input
 			(at 129.54 104.14 0)
 			(uuid "67275d9f-072f-4b8e-90c5-cbdebe68d287")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "V_SENSE+" input
+			(at 129.54 100.33 0)
+			(uuid "da921720-b964-43b5-8de7-a6bda96c4696")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "V_SENSE-" input
+			(at 129.54 97.79 0)
+			(uuid "878061cd-b294-4bf2-97a0-d34019849b96")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -209,9 +229,9 @@
 				(justify left)
 			)
 		)
-		(pin "V_SENSE" input
-			(at 180.34 100.33 180)
-			(uuid "c8e167db-9cd7-4e1e-aaad-0afb2a8b680c")
+		(pin "i2c{sda scl}" input
+			(at 180.34 104.14 180)
+			(uuid "ba0553f5-18ec-414c-9483-7f0dbf70a124")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -219,9 +239,19 @@
 				(justify left)
 			)
 		)
-		(pin "i2c{sda scl}" input
-			(at 180.34 104.14 180)
-			(uuid "ba0553f5-18ec-414c-9483-7f0dbf70a124")
+		(pin "V_SENSE-" input
+			(at 180.34 97.79 180)
+			(uuid "0e8e9131-2dca-4c0f-aa95-a6a1b9da278a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "V_SENSE+" input
+			(at 180.34 100.33 180)
+			(uuid "e4f01d96-516a-41e5-b496-b5926f639765")
 			(effects
 				(font
 					(size 1.27 1.27)

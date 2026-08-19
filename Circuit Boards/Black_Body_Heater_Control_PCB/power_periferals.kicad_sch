@@ -664,7 +664,7 @@
 				)
 			)
 			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-				(at 1.27 1.27 0)
+				(at 0 -22.86 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -675,7 +675,7 @@
 				)
 			)
 			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina181.pdf"
-				(at 3.81 3.81 0)
+				(at 0 -20.32 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -686,7 +686,7 @@
 				)
 			)
 			(property "Description" "Bidirectional, Low- and High-Side Voltage Output, Current-Sense Amplifier, SOT-23-6"
-				(at 0 0 0)
+				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -757,7 +757,7 @@
 					(name "GND"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
@@ -775,7 +775,7 @@
 					(name "+"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
@@ -793,7 +793,7 @@
 					(name "-"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
@@ -829,7 +829,7 @@
 					(name "V+"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
@@ -2415,7 +2415,7 @@
 	)
 	(text "VOLTAGE MEASUREMENT"
 		(exclude_from_sim no)
-		(at 167.894 121.412 0)
+		(at 148.844 108.712 0)
 		(effects
 			(font
 				(size 2 2)
@@ -2545,7 +2545,7 @@
 	)
 	(text_box "Measurement of voltage input to calculate power over load. Max load voltage of ~36V"
 		(exclude_from_sim no)
-		(at 172.72 144.78 0)
+		(at 152.4 142.24 0)
 		(size 29.21 14.1714)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -2658,7 +2658,7 @@
 		(uuid "4644bfb6-ec42-4758-a88d-09d74822647b")
 	)
 	(junction
-		(at 167.64 134.62)
+		(at 148.59 121.92)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4f2994c3-f48b-4dc9-bda8-e77d655c55f2")
@@ -2747,6 +2747,12 @@
 		(color 0 0 0 0)
 		(uuid "cd82c43e-e846-4e39-a29c-6d5f7c20042c")
 	)
+	(junction
+		(at 173.99 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eded4d35-6f78-4e57-b233-79787c5f81db")
+	)
 	(no_connect
 		(at 113.03 130.81)
 		(uuid "306f7959-b07f-4096-b8fe-82a50aaedec7")
@@ -2791,13 +2797,23 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 143.51) (xy 167.64 144.78)
+			(xy 148.59 130.81) (xy 148.59 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "07ba353b-9361-4678-b310-39bfcdac050f")
+	)
+	(wire
+		(pts
+			(xy 162.56 113.03) (xy 173.99 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08ba02f1-e0f0-4d65-9b51-b655a74d0330")
 	)
 	(wire
 		(pts
@@ -2851,6 +2867,16 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 123.19) (xy 173.99 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c2022b7-4bb6-4cd7-bc91-1d289294e2b9")
+	)
+	(wire
+		(pts
 			(xy 34.29 143.51) (xy 46.99 143.51)
 		)
 		(stroke
@@ -2868,6 +2894,16 @@
 			(type default)
 		)
 		(uuid "24354128-6f5e-48c0-a066-867c867a0766")
+	)
+	(wire
+		(pts
+			(xy 171.45 121.92) (xy 173.99 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27ab90a7-1ce3-462f-928a-b827be02ba56")
 	)
 	(wire
 		(pts
@@ -2931,7 +2967,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 134.62) (xy 167.64 134.62)
+			(xy 146.05 121.92) (xy 148.59 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3321,7 +3357,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 135.89) (xy 167.64 134.62)
+			(xy 148.59 123.19) (xy 148.59 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3461,7 +3497,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 134.62) (xy 167.64 133.35)
+			(xy 148.59 121.92) (xy 148.59 120.65)
 		)
 		(stroke
 			(width 0)
@@ -3471,7 +3507,17 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 125.73) (xy 167.64 125.73)
+			(xy 173.99 121.92) (xy 173.99 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6e3adb7-0b62-4b4f-a7c1-7164c358327b")
+	)
+	(wire
+		(pts
+			(xy 137.16 113.03) (xy 148.59 113.03)
 		)
 		(stroke
 			(width 0)
@@ -3658,6 +3704,16 @@
 			(type default)
 		)
 		(uuid "e731d7c1-8cdb-4a4f-b479-d74a031e9928")
+	)
+	(wire
+		(pts
+			(xy 173.99 130.81) (xy 173.99 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e733bed3-afc5-4664-a1cd-35f37c2c2c7b")
 	)
 	(wire
 		(pts
@@ -5661,6 +5717,16 @@
 		)
 		(uuid "16e49647-f2ad-445d-85cd-6bb4cf8177ed")
 	)
+	(label "LOAD-"
+		(at 162.56 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1f7b0017-be98-4865-9c69-2032928c2ede")
+	)
 	(label "i2c.scl"
 		(at 44.45 148.59 180)
 		(effects
@@ -5712,7 +5778,7 @@
 		(uuid "82047101-8e29-4108-b214-4073a1911480")
 	)
 	(label "LOAD+"
-		(at 156.21 125.73 0)
+		(at 137.16 113.03 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5782,9 +5848,9 @@
 		)
 		(uuid "0345a7c0-0abf-4c43-81fe-50dabe06d9c9")
 	)
-	(hierarchical_label "V_SENSE"
+	(hierarchical_label "V_SENSE+"
 		(shape input)
-		(at 165.1 134.62 180)
+		(at 146.05 121.92 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5792,6 +5858,17 @@
 			(justify right)
 		)
 		(uuid "a4bde773-e66d-4b26-91c0-a8f73b0ff89b")
+	)
+	(hierarchical_label "V_SENSE-"
+		(shape input)
+		(at 171.45 121.92 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "be95935d-a2fe-47c7-9b5c-9f358cb70b46")
 	)
 	(hierarchical_label "I_SENSE"
 		(shape input)
@@ -6284,6 +6361,84 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 173.99 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "22047a76-9183-48a8-84dc-4c9387de2f60")
+		(property "Reference" "#PWR0322"
+			(at 173.99 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 173.99 137.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 173.99 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8cd163f3-54ab-447b-9843-ed9dad8abaea")
+		)
+		(instances
+			(project "Black_Body_Heater_Control"
+				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
+					(reference "#PWR0322")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 45.72 134.62 0)
 		(unit 1)
 		(body_style 1)
@@ -6608,7 +6763,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 167.64 129.54 180)
+		(at 148.59 116.84 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6619,7 +6774,7 @@
 		(fields_autoplaced yes)
 		(uuid "3de7d041-2fe4-403e-a860-751c246f3dd9")
 		(property "Reference" "R307"
-			(at 170.18 128.2699 0)
+			(at 151.13 115.5699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6630,7 +6785,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 170.18 130.8099 0)
+			(at 151.13 118.1099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6641,7 +6796,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 169.418 129.54 90)
+			(at 150.368 116.84 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6652,7 +6807,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 129.54 0)
+			(at 148.59 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6663,7 +6818,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 167.64 129.54 0)
+			(at 148.59 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6674,7 +6829,7 @@
 			)
 		)
 		(property "MPN" "ERA-3AEB104V"
-			(at 167.64 129.54 0)
+			(at 148.59 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7509,7 +7664,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 167.64 139.7 180)
+		(at 148.59 127 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7520,7 +7675,7 @@
 		(fields_autoplaced yes)
 		(uuid "5a7ca024-16f1-4c96-8ae7-1b2bd9d2e6e1")
 		(property "Reference" "R308"
-			(at 170.18 138.4299 0)
+			(at 151.13 125.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7531,7 +7686,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 170.18 140.9699 0)
+			(at 151.13 128.2699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7542,7 +7697,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 169.418 139.7 90)
+			(at 150.368 127 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7553,7 +7708,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 139.7 0)
+			(at 148.59 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7564,7 +7719,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 167.64 139.7 0)
+			(at 148.59 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7575,7 +7730,7 @@
 			)
 		)
 		(property "MPN" "ERA-3AEB103V"
-			(at 167.64 139.7 0)
+			(at 148.59 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8114,7 +8269,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 167.64 144.78 0)
+		(at 148.59 132.08 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8125,7 +8280,7 @@
 		(fields_autoplaced yes)
 		(uuid "6aca503f-5bb6-4206-8d08-7f3ea6a613ce")
 		(property "Reference" "#PWR0311"
-			(at 167.64 151.13 0)
+			(at 148.59 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8136,7 +8291,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 167.64 149.86 0)
+			(at 148.59 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8146,7 +8301,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 144.78 0)
+			(at 148.59 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8157,7 +8312,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 144.78 0)
+			(at 148.59 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8168,7 +8323,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 167.64 144.78 0)
+			(at 148.59 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8323,7 +8478,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 120.65 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -8961,6 +9116,99 @@
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
 					(reference "C301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 173.99 127 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a9e3343-c2a4-46cf-8195-58b51517cfad")
+		(property "Reference" "R313"
+			(at 176.53 125.7299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 176.53 128.2699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 175.768 127 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 173.99 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ERA-3AEB103V"
+			(at 173.99 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7dbaf9b8-5cf9-484a-888b-4eec404d4f1a")
+		)
+		(pin "1"
+			(uuid "9393c6b4-e813-4055-992f-0d6652f82144")
+		)
+		(instances
+			(project "Black_Body_Heater_Control"
+				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
+					(reference "R313")
 					(unit 1)
 				)
 			)
@@ -9720,6 +9968,99 @@
 			(project "Black_Body_Heater_Control"
 				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
 					(reference "#PWR0306")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 173.99 116.84 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d49ce589-c79e-470d-b69a-7c620fcb0b5d")
+		(property "Reference" "R312"
+			(at 176.53 115.5699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100k"
+			(at 176.53 118.1099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 175.768 116.84 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 173.99 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ERA-3AEB104V"
+			(at 173.99 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "289932d2-49ba-44ca-9da4-805c36efcb2b")
+		)
+		(pin "1"
+			(uuid "13de360b-4597-4507-a0f2-e826e9c8b569")
+		)
+		(instances
+			(project "Black_Body_Heater_Control"
+				(path "/f3dd8e24-b1a1-45ed-a541-b7ae36b7e8e0/1986740f-e0a2-4083-b861-6e4dc96daf6f"
+					(reference "R312")
 					(unit 1)
 				)
 			)
