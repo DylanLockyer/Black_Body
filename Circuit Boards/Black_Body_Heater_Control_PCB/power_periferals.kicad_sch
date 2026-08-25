@@ -7011,6 +7011,17 @@
 				)
 			)
 		)
+		(property "MPN" "ERA-3AEB103V"
+			(at 182.88 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ac89aa88-30f1-4cbf-97c9-390020c9dd88")
 		)
@@ -7295,6 +7306,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 182.88 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ERJ-3EKF1371V"
 			(at 182.88 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -8351,10 +8373,10 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "75d043ce-d65d-4fc0-b9d9-c3a90b886e82")
 		(property "Reference" "J301"
@@ -8764,6 +8786,17 @@
 				)
 			)
 		)
+		(property "MPN" "C1608X5R1E685K080AC"
+			(at 135.89 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "d2822ae4-82f5-4edc-a010-8957e8ef41f5")
 		)
@@ -8789,10 +8822,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "871e75ac-ce5f-491d-aa57-335489d5bd91")
 		(property "Reference" "C303"
-			(at 176.53 54.6099 0)
+			(at 175.26 54.61 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8803,7 +8835,7 @@
 			)
 		)
 		(property "Value" "330pf"
-			(at 176.53 57.1499 0)
+			(at 175.26 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8836,6 +8868,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 172.72 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C0603C331J5GACTU"
 			(at 172.72 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -9591,6 +9634,17 @@
 				)
 			)
 		)
+		(property "MPN" "TPSM84209RKHR"
+			(at 154.94 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "56421967-8a17-4b3b-83ea-40ae52a12211")
 		)
@@ -9684,6 +9738,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 196.85 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM32EC81C476KE15L"
 			(at 196.85 62.23 0)
 			(hide yes)
 			(show_name no)
