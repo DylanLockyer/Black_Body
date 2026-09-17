@@ -46,6 +46,12 @@ void loop() {
     latestReading.resistance = data.resistance;
     latestReading.temperature = 2.65;
   }
+  //Serial.print("Current: ");
+  //Serial.print(latestReading.current);
+  //Serial.print(" Voltage: ");
+  //Serial.print(latestReading.voltage);
+  //Serial.print(" Resistance: ");
+  //Serial.println(latestReading.resistance);
 
 
   // Read data for heater 

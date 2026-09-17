@@ -171,12 +171,12 @@ int main(void)
       // Save data to send over spi
 
       // 6 comes from adc max range of 1.2 * gain of 200 converted to mv
-      spi_data.voltage = float_abs(map(reg_data[1], -8388608, 8388607, -6.0, 6.0)) * 1.2;  // 1.2 is correction factor
-      
+      spi_data.voltage = float_abs(map(reg_data[1], -8388608, 8388607, -6.0, 6.0)); 
+
       // 6 comes from adc max range of 1.2 * gain of 200 converted to mv
       // Works on the principle of I = V/R using the shunt resistance
       // Multiply by 1000 to convert to uA
-      spi_data.current = float_abs(map(reg_data[0], -8388608, 8388607, -6, 6)) / shunt_resistance * 1000;
+      spi_data.current = float_abs(map(reg_data[0], -8388608, 8388607, -6.0, 6.0)); // shunt_resistance * 1000;
       spi_data.resistance = spi_data.voltage / spi_data.current * 1000;
 
       // Reset drdy flag
@@ -185,7 +185,7 @@ int main(void)
 
     // Send data over spi
     external_interface_send(&spi_data, &hspi2);
-    HAL_Delay(50);
+    HAL_Delay(200);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

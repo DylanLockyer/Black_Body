@@ -45,16 +45,13 @@ void STM32Sensor::begin()
         SPI_DMA_CH_AUTO
     );
 
-    if (ret != ESP_OK) {
-        Serial.printf(
-            "SPI slave initialization failed: %s\n",
-            esp_err_to_name(ret)
-        );
+    //if (ret != ESP_OK) {
+        //Serial.printf(
+            //"SPI slave initialization failed: %s\n",
+            //esp_err_to_name(ret)
+        //);
 
-        while (true) {
-            delay(1000);
-        }
-    }
+    //}
 
     // DMA-capable buffers
     _rxBuffer = (uint8_t *)heap_caps_malloc(
