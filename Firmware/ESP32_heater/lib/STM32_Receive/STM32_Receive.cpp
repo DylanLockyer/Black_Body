@@ -45,13 +45,13 @@ void STM32Sensor::begin()
         SPI_DMA_CH_AUTO
     );
 
-    //if (ret != ESP_OK) {
-        //Serial.printf(
-            //"SPI slave initialization failed: %s\n",
-            //esp_err_to_name(ret)
-        //);
+    if (ret != ESP_OK) {
+        Serial.printf(
+            "SPI slave initialization failed: %s\n",
+            esp_err_to_name(ret)
+        );
 
-    //}
+    }
 
     // DMA-capable buffers
     _rxBuffer = (uint8_t *)heap_caps_malloc(
@@ -98,6 +98,11 @@ bool STM32Sensor::read(Sensor_Data *data)
     trans.tx_buffer = _txBuffer;
 
     // SEnd data
+    // Diagnostic timeout: long enough that a slow/jittery STM32 master
+    // won't cause spurious failures, short enough to get a "still no
+    // transaction" log roughly every 100ms if the master isn't talking
+    // at all. Once confirmed working, switch to portMAX_DELAY (this task
+    // has nothing else to do while waiting for the master).
     esp_err_t ret = spi_slave_transmit(
         SPI_HOST,
         &trans,
@@ -119,6 +124,5 @@ bool STM32Sensor::read(Sensor_Data *data)
     data->cur_source = (current_source)((_rxBuffer[12] >> 5) & 0x07);
     data->current_direction = (cur_direction)((_rxBuffer[12] >> 3) & 0x3);
     data->shunt_resistor = (cur_resistor)((_rxBuffer[12]>>1) & 0x03);
-    Serial.println(data->resistance);
     return true;
 }

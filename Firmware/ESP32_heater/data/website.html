@@ -118,10 +118,15 @@
   button:active{ transform:translateY(1px); }
   button#btnSaveProfile{ color:var(--accent); border-color:var(--accent-dim); }
   button#btnDeleteProfile{ color:var(--bad); border-color:#5a1c1c; }
-  .filebtn{ display:inline-flex; align-items:center; }
   .profile-select-row{ display:flex; gap:8px; margin-bottom:8px; width:100%; }
   .profile-select-row select{ flex:1; }
-  .profile-btn-row{ display:flex; gap:8px; flex-wrap:wrap; }
+  .profile-btn-row{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .fit-status{
+    font-family:var(--mono); font-size:11px; letter-spacing:1px;
+    color:var(--text-faint); margin-left:auto;
+  }
+  .fit-status.ok{ color:var(--accent); }
+  .fit-status.bad{ color:var(--bad); }
 
   textarea#profileText{
     width:100%; min-height:96px; resize:vertical;
@@ -133,6 +138,31 @@
   textarea#profileText::placeholder{ color:var(--text-faint); }
 
   canvas#profileChart{ width:100%; height:260px; display:block; }
+
+  /* ---------- Debug section (below profile) ---------- */
+  .debug-section{
+    margin-top:16px; padding-top:14px;
+    border-top:1px solid var(--panel-border);
+  }
+  .debug-header{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom:10px;
+  }
+  .debug-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap:10px 16px;
+  }
+  .debug-item{
+    display:flex; flex-direction:column; gap:3px;
+  }
+  .debug-item label{
+    font-family:var(--mono); font-size:10px; letter-spacing:2px; color:var(--text-faint);
+  }
+  .debug-item span{
+    font-family:var(--mono); font-size:15px; color:var(--text);
+    font-variant-numeric:tabular-nums;
+  }
 
   /* ---------- Readout panel (right) ---------- */
   .readout-header{
@@ -157,13 +187,80 @@
   }
   .sub-readings span{ font-size:18px; color:var(--text); font-variant-numeric:tabular-nums; }
 
-  #timeRange{ align-self:flex-start; }
-
   canvas#tempChart{ width:100%; height:360px; display:block; margin-top:8px; }
 
   /* ---------- Heat page ---------- */
-  #heatPage{ grid-template-columns:1fr; }
-  #heatPage .panel{ display:flex; align-items:center; justify-content:center; min-height:300px; color:var(--text-faint); font-family:var(--mono); letter-spacing:2px; font-size:13px; }
+  #heatPage{
+    grid-template-columns: minmax(300px, 1fr) minmax(340px, 1fr);
+    gap:20px;
+    align-items:start;
+  }
+  @media (max-width: 880px){
+    #heatPage{ grid-template-columns: 1fr; }
+  }
+
+  canvas#heatTempChart{ width:100%; height:260px; display:block; margin-top:8px; }
+
+  .heater-readout{
+    display:flex; align-items:baseline; gap:10px; margin-bottom:4px;
+  }
+  .heater-readout .big-reading{ font-size:clamp(40px, 6vw, 60px); }
+
+  .heater-controls-row{
+    display:flex; align-items:center; gap:14px; margin-top:16px;
+    padding-top:14px; border-top:1px solid var(--panel-border);
+  }
+  button#btnStartStop{
+    font-size:12px; letter-spacing:2px; padding:10px 22px;
+    color:var(--heat); border-color:var(--heat-dim);
+  }
+  button#btnStartStop.running{
+    color:#1a0e00; background:var(--heat); border-color:var(--heat); box-shadow:0 0 14px -2px var(--heat);
+  }
+  .running-indicator{
+    display:flex; align-items:center; gap:8px;
+    font-family:var(--mono); font-size:12px; letter-spacing:2px; color:var(--text-dim);
+  }
+  .running-indicator .dot{ background:var(--text-faint); }
+  .running-indicator.on .dot{ background:var(--heat); box-shadow:0 0 8px 1px var(--heat); animation:pulse 1.6s ease-in-out infinite; }
+  .running-indicator.on span:last-child{ color:var(--heat); }
+
+  .control-row{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:10px; }
+  .control-row input[type="number"]{
+    font-family:var(--mono); font-size:13px; letter-spacing:1px;
+    background:#050707; color:var(--text);
+    border:1px solid var(--panel-border); border-radius:4px;
+    padding:9px 10px; width:120px;
+  }
+  .control-row input[type="number"]:focus{ outline:none; border-color:var(--accent-dim); }
+  button#btnSendTarget, button#btnSendPid, button#btnSendManual{
+    color:var(--heat); border-color:var(--heat-dim);
+  }
+
+  .pid-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;
+    margin-bottom:12px;
+  }
+  .pid-grid label{
+    display:flex; flex-direction:column; gap:5px;
+    font-family:var(--mono); font-size:10px; letter-spacing:2px; color:var(--text-faint);
+  }
+  .pid-grid input[type="number"]{
+    font-family:var(--mono); font-size:13px;
+    background:#050707; color:var(--text);
+    border:1px solid var(--panel-border); border-radius:4px;
+    padding:9px 10px; width:100%;
+  }
+  .pid-grid input[type="number"]:focus{ outline:none; border-color:var(--accent-dim); }
+
+  .checkbox-row{
+    display:flex; align-items:center; gap:8px;
+    font-family:var(--mono); font-size:11px; letter-spacing:1px; color:var(--text-dim);
+    cursor:pointer;
+  }
+  .checkbox-row input[type="checkbox"]{ width:15px; height:15px; accent-color:var(--heat); }
+
+  button:disabled, input:disabled{ opacity:0.35; cursor:not-allowed; }
 </style>
 </head>
 <body>
@@ -185,7 +282,7 @@
 
     <!-- LEFT: profile -->
     <section class="panel">
-      <h2>PROFILE — TEMPERATURE vs RESISTANCE</h2>
+      <h2>PROFILE — TEMPERATURE vs RESISTANCE (GR-300-AA)</h2>
 
       <div class="profile-select-row">
         <select id="profileSelect"><option value="">— saved profiles —</option></select>
@@ -194,12 +291,26 @@
         <button id="btnLoadProfile" type="button">LOAD</button>
         <button id="btnDeleteProfile" type="button">DELETE</button>
         <button id="btnSaveProfile" type="button">SAVE TO DEVICE</button>
-        <label class="filebtn">LOAD FROM FILE<input type="file" id="fileInput" accept=".csv,.txt" hidden></label>
+        <span class="fit-status" id="fitStatus"></span>
       </div>
 
-      <textarea id="profileText" placeholder="temperature_K, resistance_ohm&#10;e.g.&#10;4.2, 1200&#10;10, 640&#10;77, 210"></textarea>
+      <textarea id="profileText" placeholder="temperature_K, resistance_ohm&#10;e.g. from a GR-300-AA data sheet table&#10;0.3, 35180&#10;1.0, 875.7&#10;4.2, 94.46&#10;10, 33.20&#10;77.4, 3.504"></textarea>
 
       <canvas id="profileChart"></canvas>
+
+      <div class="debug-section">
+        <div class="debug-header">
+          <h2 style="margin-bottom:0; border-bottom:none; padding-bottom:0;">DEBUG</h2>
+          <button id="btnToggleDebug" type="button">HIDE</button>
+        </div>
+        <div class="debug-grid" id="debugGrid">
+          <div class="debug-item"><label>CURRENT SOURCE</label><span id="dbgCurSource">--</span></div>
+          <div class="debug-item"><label>CURRENT DIRECTION</label><span id="dbgCurDirection">--</span></div>
+          <div class="debug-item"><label>SHUNT RESISTOR</label><span id="dbgShuntResistor">--</span></div>
+          <div class="debug-item"><label>FIT VALID</label><span id="dbgFitValid">--</span></div>
+          <div class="debug-item"><label>ACTIVE PROFILE</label><span id="dbgActiveProfile">--</span></div>
+        </div>
+      </div>
     </section>
 
     <!-- RIGHT: live readout + graph -->
@@ -211,13 +322,6 @@
           <div><label>VOLTAGE</label><span id="voltValue">-- mV</span></div>
           <div><label>CURRENT</label><span id="curValue">-- uA</span></div>
         </div>
-        <select id="timeRange">
-          <option value="10">10 S</option>
-          <option value="30">30 S</option>
-          <option value="60" selected>1 MIN</option>
-          <option value="180">3 MIN</option>
-          <option value="600">10 MIN</option>
-        </select>
       </div>
       <canvas id="tempChart"></canvas>
     </section>
@@ -226,7 +330,61 @@
 
   <!-- ===================== HEAT ===================== -->
   <main id="heatPage" class="page">
-    <section class="panel">COMING SOON</section>
+
+    <!-- LEFT: temperature + heater output -->
+    <section class="panel">
+      <h2>TEMPERATURE</h2>
+      <div class="heater-readout">
+        <div class="big-reading"><span id="heatTempValue">--</span><span class="unit">K</span></div>
+      </div>
+      <canvas id="heatTempChart"></canvas>
+
+      <div class="debug-section">
+        <div class="debug-header">
+          <h2 style="margin-bottom:0; border-bottom:none; padding-bottom:0;">HEATER OUTPUT</h2>
+        </div>
+        <div class="debug-grid">
+          <div class="debug-item"><label>VOLTAGE DROP</label><span id="heaterVoltage">-- V</span></div>
+          <div class="debug-item"><label>CURRENT</label><span id="heaterCurrent">-- A</span></div>
+          <div class="debug-item"><label>POWER</label><span id="heaterPower">-- W</span></div>
+          <div class="debug-item"><label>% MAX POWER</label><span id="heaterPowerPct">-- %</span></div>
+        </div>
+      </div>
+
+      <div class="heater-controls-row">
+        <button id="btnStartStop" type="button">START</button>
+        <div class="running-indicator" id="runningIndicator">
+          <span class="dot"></span><span id="runningText">STOPPED</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: setpoint / PID / manual override -->
+    <section class="panel">
+      <h2>TARGET TEMPERATURE</h2>
+      <div class="control-row">
+        <input type="number" id="targetTempInput" placeholder="K" step="0.1">
+        <button id="btnSendTarget" type="button">SEND</button>
+      </div>
+
+      <h2 style="margin-top:20px;">PID GAINS</h2>
+      <div class="pid-grid">
+        <label>Kp <input type="number" id="pidKp" step="0.001"></label>
+        <label>Ki <input type="number" id="pidKi" step="0.001"></label>
+        <label>Kd <input type="number" id="pidKd" step="0.001"></label>
+      </div>
+      <div class="control-row">
+        <button id="btnSendPid" type="button">SEND &amp; SAVE</button>
+      </div>
+
+      <h2 style="margin-top:20px;">MANUAL OVERRIDE</h2>
+      <div class="control-row">
+        <label class="checkbox-row"><input type="checkbox" id="manualEnable">ENABLE</label>
+        <input type="number" id="manualCurrentInput" min="0" max="0.5" step="0.01" placeholder="0 – 0.5 A">
+        <button id="btnSendManual" type="button">SEND</button>
+      </div>
+    </section>
+
   </main>
 
 </div>
@@ -251,8 +409,13 @@
   var statusEl = document.getElementById("status");
   var statusText = document.getElementById("statusText");
   var lastGoodDataTime = 0;
-  var POLL_MS = 500;
-  var STALE_MS = POLL_MS * 3;
+  // Polling was fast enough (500ms poll / 1.5s stale) that brief hiccups —
+  // a slow SPI transaction, a retried TCP segment on the softAP — flipped
+  // the badge to OFFLINE and back on their own, reading as "cutting out".
+  // Slower polling and a more tolerant staleness window fix that without
+  // hiding an actually-dead connection for long.
+  var POLL_MS = 1000;
+  var STALE_MS = POLL_MS * 5;
 
   function setStatus(live){
     statusEl.classList.toggle("live", live);
@@ -268,14 +431,134 @@
   var resValue  = document.getElementById("resValue");
   var voltValue = document.getElementById("voltValue");
   var curValue  = document.getElementById("curValue");
-  var timeRangeSel = document.getElementById("timeRange");
 
+  var WINDOW_MS = 5 * 60 * 1000; // fixed 5 minute rolling window
   var history = []; // { t: ms, temp, res, volt, cur }
+
+  // Debug panel: shows every debug field at once, and can be hidden.
+  var dbgCurSource = document.getElementById("dbgCurSource");
+  var dbgCurDirection = document.getElementById("dbgCurDirection");
+  var dbgShuntResistor = document.getElementById("dbgShuntResistor");
+  var dbgFitValid = document.getElementById("dbgFitValid");
+  var dbgActiveProfile = document.getElementById("dbgActiveProfile");
+
+  function renderDebugValues(d){
+    dbgCurSource.textContent = (typeof d.curSource === "number") ? d.curSource : "--";
+    dbgCurDirection.textContent = (typeof d.curDirection === "number") ? d.curDirection : "--";
+    dbgShuntResistor.textContent = (typeof d.shuntResistor === "number") ? d.shuntResistor : "--";
+    dbgFitValid.textContent = (typeof d.fitValid === "boolean") ? (d.fitValid ? "YES" : "NO") : "--";
+    dbgActiveProfile.textContent = (typeof d.activeProfile === "string" && d.activeProfile.length)
+      ? d.activeProfile : "(none)";
+  }
+
+  var debugGrid = document.getElementById("debugGrid");
+  var btnToggleDebug = document.getElementById("btnToggleDebug");
+  var debugVisible = true;
+  btnToggleDebug.addEventListener("click", function(){
+    debugVisible = !debugVisible;
+    debugGrid.style.display = debugVisible ? "" : "none";
+    btnToggleDebug.textContent = debugVisible ? "HIDE" : "SHOW";
+  });
 
   function fmt(n, digits){
     if (n === null || n === undefined || isNaN(n)) return "--";
     return Number(n).toFixed(digits);
   }
+
+  /* ---------------- Heat page: readouts + controls ---------------- */
+  var heatTempValue = document.getElementById("heatTempValue");
+  var heaterVoltageEl = document.getElementById("heaterVoltage");
+  var heaterCurrentEl = document.getElementById("heaterCurrent");
+  var heaterPowerEl = document.getElementById("heaterPower");
+  var heaterPowerPctEl = document.getElementById("heaterPowerPct");
+
+  var btnStartStop = document.getElementById("btnStartStop");
+  var runningIndicator = document.getElementById("runningIndicator");
+  var runningText = document.getElementById("runningText");
+
+  var targetTempInput = document.getElementById("targetTempInput");
+  var btnSendTarget = document.getElementById("btnSendTarget");
+
+  var pidKpInput = document.getElementById("pidKp");
+  var pidKiInput = document.getElementById("pidKi");
+  var pidKdInput = document.getElementById("pidKd");
+  var btnSendPid = document.getElementById("btnSendPid");
+
+  var manualEnable = document.getElementById("manualEnable");
+  var manualCurrentInput = document.getElementById("manualCurrentInput");
+  var btnSendManual = document.getElementById("btnSendManual");
+
+  var heaterRunning = false; // last known state from the device
+
+  function isFocused(el){ return document.activeElement === el; }
+
+  function renderHeaterValues(d){
+    heatTempValue.textContent = fmt(typeof d.temperature === "number" ? d.temperature : NaN, 2);
+
+    var hv = typeof d.heaterVoltage === "number" ? d.heaterVoltage : NaN;
+    var hc = typeof d.heaterCurrent === "number" ? d.heaterCurrent : NaN;
+    var maxPower = typeof d.heaterMaxPowerW === "number" ? d.heaterMaxPowerW : NaN;
+    var power = hv * hc;
+
+    heaterVoltageEl.textContent = fmt(hv, 3) + " V";
+    heaterCurrentEl.textContent = fmt(hc, 3) + " A";
+    heaterPowerEl.textContent = fmt(power, 2) + " W";
+    heaterPowerPctEl.textContent = (isFinite(power) && maxPower > 0)
+      ? fmt(power / maxPower * 100, 1) + " %" : "--";
+
+    heaterRunning = !!d.heaterRunning;
+    btnStartStop.textContent = heaterRunning ? "STOP" : "START";
+    btnStartStop.classList.toggle("running", heaterRunning);
+    runningIndicator.classList.toggle("on", heaterRunning);
+    runningText.textContent = heaterRunning ? "RUNNING" : "STOPPED";
+
+    // Manual override only makes sense while the PID loop is stopped.
+    manualEnable.disabled = heaterRunning;
+    manualCurrentInput.disabled = heaterRunning;
+    btnSendManual.disabled = heaterRunning;
+    if (!isFocused(manualEnable)) manualEnable.checked = !!d.manualOverride;
+    if (!isFocused(manualCurrentInput) && typeof d.manualCurrent === "number") {
+      manualCurrentInput.value = d.manualCurrent;
+    }
+
+    if (!isFocused(targetTempInput) && typeof d.targetTemperature === "number") {
+      targetTempInput.value = d.targetTemperature;
+    }
+    if (!isFocused(pidKpInput) && typeof d.pidKp === "number") pidKpInput.value = d.pidKp;
+    if (!isFocused(pidKiInput) && typeof d.pidKi === "number") pidKiInput.value = d.pidKi;
+    if (!isFocused(pidKdInput) && typeof d.pidKd === "number") pidKdInput.value = d.pidKd;
+  }
+
+  btnStartStop.addEventListener("click", function(){
+    fetch(heaterRunning ? "/heater/stop" : "/heater/start", { method: "POST" })
+      .catch(function(){ alert("Could not reach device."); });
+  });
+
+  btnSendTarget.addEventListener("click", function(){
+    var v = parseFloat(targetTempInput.value);
+    if (!isFinite(v)) { alert("Enter a target temperature."); return; }
+    fetch("/heater/target?value=" + encodeURIComponent(v), { method: "POST" })
+      .catch(function(){ alert("Could not reach device."); });
+  });
+
+  btnSendPid.addEventListener("click", function(){
+    var kp = parseFloat(pidKpInput.value);
+    var ki = parseFloat(pidKiInput.value);
+    var kd = parseFloat(pidKdInput.value);
+    if (!isFinite(kp) || !isFinite(ki) || !isFinite(kd)) { alert("Enter valid Kp/Ki/Kd values."); return; }
+    fetch("/heater/pid?kp=" + encodeURIComponent(kp) + "&ki=" + encodeURIComponent(ki) + "&kd=" + encodeURIComponent(kd),
+      { method: "POST" })
+      .catch(function(){ alert("Could not reach device."); });
+  });
+
+  btnSendManual.addEventListener("click", function(){
+    var enabled = manualEnable.checked;
+    var cur = parseFloat(manualCurrentInput.value);
+    if (!isFinite(cur)) cur = 0;
+    fetch("/heater/manual?enabled=" + (enabled ? "1" : "0") + "&current=" + encodeURIComponent(cur), { method: "POST" })
+      .then(function(r){ if (r.status === 409) alert("Stop the PID loop before using manual override."); })
+      .catch(function(){ alert("Could not reach device."); });
+  });
 
   function pollData(){
     fetch("/data", { cache: "no-store" })
@@ -294,12 +577,14 @@
 
         tempValue.textContent = fmt(point.temp, 2);
         resValue.textContent  = fmt(point.res, 1) + " \u2126";
-        voltValue.textContent = fmt(point.volt, 3) + " V";
-        curValue.textContent  = fmt(point.cur, 3) + " A";
+        voltValue.textContent = fmt(point.volt, 3) + " mV";
+        curValue.textContent  = fmt(point.cur, 3) + " uA";
+
+        renderDebugValues(d);
+        renderHeaterValues(d);
 
         history.push(point);
-        var windowMs = parseInt(timeRangeSel.value, 10) * 1000;
-        var cutoff = Date.now() - windowMs - 1000;
+        var cutoff = Date.now() - WINDOW_MS - 1000;
         while (history.length && history[0].t < cutoff) history.shift();
 
         drawTempChart();
@@ -310,7 +595,6 @@
   }
   setInterval(pollData, POLL_MS);
   pollData();
-  timeRangeSel.addEventListener("change", drawTempChart);
 
   /* ---------------- Canvas helpers ---------------- */
   function setupCanvas(canvas){
@@ -325,11 +609,20 @@
     return { ctx: ctx, w: w, h: h };
   }
 
-  function niceScale(min, max, pad){
-    if (!isFinite(min) || !isFinite(max)){ return { min:0, max:1 }; }
+  function niceScale(min, max, pad, minRange){
+    if (!isFinite(min) || !isFinite(max)){ return { min:0, max: (minRange || 1) }; }
     if (min === max){ min -= 1; max += 1; }
     var range = max - min;
-    return { min: min - range*pad, max: max + range*pad };
+    var scale = { min: min - range*pad, max: max + range*pad };
+    if (minRange){
+      var span = scale.max - scale.min;
+      if (span < minRange){
+        var center = (scale.max + scale.min) / 2;
+        scale.min = center - minRange / 2;
+        scale.max = center + minRange / 2;
+      }
+    }
+    return scale;
   }
 
   function drawAxes(ctx, w, h, margin, xLabel, yLabel){
@@ -372,32 +665,36 @@
   }
 
   /* ---------------- Temperature vs time chart ---------------- */
+  // Same 5-minute temperature history feeds both the measure page's chart
+  // and the heat page's chart, so they're always drawn from a single
+  // function called with each canvas in turn.
   var tempCanvas = document.getElementById("tempChart");
+  var heatTempCanvas = document.getElementById("heatTempChart");
+  var TEMP_CHART_MIN_RANGE_K = 5; // y-range must always span at least this many K
 
-  function drawTempChart(){
-    var setup = setupCanvas(tempCanvas);
+  function drawTempChartOn(canvas){
+    var setup = setupCanvas(canvas);
     var ctx = setup.ctx, w = setup.w, h = setup.h;
     ctx.clearRect(0, 0, w, h);
 
     var margin = { l: 46, r: 14, t: 12, b: 22 };
-    var windowMs = parseInt(timeRangeSel.value, 10) * 1000;
     var now = Date.now();
     var pts = history.filter(function(p){ return isFinite(p.temp); });
 
     var temps = pts.map(function(p){ return p.temp; });
     var yMin = temps.length ? Math.min.apply(null, temps) : 0;
     var yMax = temps.length ? Math.max.apply(null, temps) : 1;
-    var scale = niceScale(yMin, yMax, 0.15);
+    var scale = niceScale(yMin, yMax, 0.15, TEMP_CHART_MIN_RANGE_K);
 
     gridLines(ctx, w, h, margin, scale.min, scale.max, 4);
-    drawAxes(ctx, w, h, margin, "TIME", "K");
+    drawAxes(ctx, w, h, margin, "TIME (5 MIN WINDOW)", "K");
 
     if (pts.length > 1){
       ctx.strokeStyle = "#3fd6ff";
       ctx.lineWidth = 2;
       ctx.beginPath();
       pts.forEach(function(p, i){
-        var xFrac = 1 - (now - p.t) / windowMs;
+        var xFrac = 1 - (now - p.t) / WINDOW_MS;
         var x = margin.l + xFrac * (w - margin.l - margin.r);
         var yFrac = (p.temp - scale.min) / (scale.max - scale.min);
         var y = (h - margin.b) - yFrac * (h - margin.b - margin.t);
@@ -407,10 +704,16 @@
     }
   }
 
+  function drawTempChart(){
+    drawTempChartOn(tempCanvas);
+    drawTempChartOn(heatTempCanvas);
+  }
+
   /* ---------------- Profile (temp vs resistance) ---------------- */
   var profileText = document.getElementById("profileText");
   var profileCanvas = document.getElementById("profileChart");
   var profileSelect = document.getElementById("profileSelect");
+  var fitStatus = document.getElementById("fitStatus");
 
   function parseProfile(text){
     var pts = [];
@@ -470,7 +773,7 @@
   profileText.addEventListener("input", drawProfileChart);
   window.addEventListener("resize", function(){ drawProfileChart(); drawTempChart(); });
 
-  /* ---------------- Profile IO (device + file) ---------------- */
+  /* ---------------- Profile IO (device) ---------------- */
   function refreshProfileList(){
     fetch("/profiles", { cache: "no-store" })
       .then(function(r){ return r.json(); })
@@ -495,6 +798,8 @@
       .then(function(text){
         profileText.value = text;
         drawProfileChart();
+        fitStatus.textContent = "";
+        fitStatus.className = "fit-status";
       })
       .catch(function(){ alert("Could not load profile from device."); });
   });
@@ -511,24 +816,29 @@
   document.getElementById("btnSaveProfile").addEventListener("click", function(){
     var name = prompt("Save profile as:");
     if (!name) return;
+    fitStatus.textContent = "FITTING…";
+    fitStatus.className = "fit-status";
     fetch("/profile/save?name=" + encodeURIComponent(name), {
       method: "POST",
       headers: { "Content-Type": "text/plain" },
       body: profileText.value
     })
-      .then(function(){ refreshProfileList(); })
-      .catch(function(){ alert("Could not save profile to device."); });
-  });
-
-  document.getElementById("fileInput").addEventListener("change", function(e){
-    var file = e.target.files[0];
-    if (!file) return;
-    var reader = new FileReader();
-    reader.onload = function(){
-      profileText.value = reader.result;
-      drawProfileChart();
-    };
-    reader.readAsText(file);
+      .then(function(r){ return r.json(); })
+      .then(function(resp){
+        refreshProfileList();
+        if (resp && resp.fitValid){
+          fitStatus.textContent = "FIT OK";
+          fitStatus.className = "fit-status ok";
+        } else {
+          fitStatus.textContent = "FIT FAILED";
+          fitStatus.className = "fit-status bad";
+        }
+      })
+      .catch(function(){
+        alert("Could not save profile to device.");
+        fitStatus.textContent = "";
+        fitStatus.className = "fit-status";
+      });
   });
 
   /* ---------------- Initial paint ---------------- */

@@ -4,6 +4,7 @@
 #include "DAC60501.h"
 #include <LittleFS.h>
 #include "STM32_Receive.h"
+#include "CurveFit.h"
 
 // Wifi libraries
 #include <WiFi.h>
@@ -22,7 +23,17 @@ const char *WIFI_NAME = "Black Body";
 #define ADC_MAX_VOLTAGE 2.5
 
 // Max current output
-#define MAX_CURRENT 0.5
+#define MAX_CURRENT 0.3
+
+// Upper end of the get_voltage() ADC mapping range; also used as the
+// reference for MAX_HEATER_POWER_W below.
+#define HEATER_VOLTAGE_FULL_SCALE 36.3f
+
+// Used as the denominator for the "% of max power" readout on the heat
+// page. This is an estimate (full-scale current x full-scale voltage),
+// not a measured heater rating, since the true max power depends on the
+// heater's resistance.
+#define MAX_HEATER_POWER_W (MAX_CURRENT * 12.0f)
 
 
 struct SensorReading {
@@ -30,6 +41,31 @@ struct SensorReading {
   volatile float resistance  = NAN; // Ohms, computed from voltage/current
   volatile float voltage     = 0.0f; // Volts
   volatile float current     = 0.0f; // Amps
+
+  uint8_t curSource;
+  uint8_t curDirection;
+  uint8_t shuntResistor;
+};
+
+// Heater board feedback + last commanded output, published by heaterTask.
+struct HeaterReading {
+  volatile float voltage       = 0.0f; // Volts, from get_voltage()
+  volatile float current       = 0.0f; // Amps, from get_current()
+  volatile float outputCurrent = 0.0f; // Amps, last value passed to set_output_current()
+};
+
+// Heater control setpoints, written from the web server's request handlers
+// and read by heaterTask. Guarded by dataMutex, same as latestReading.
+struct HeaterControl {
+  volatile bool  running            = false; // PID loop active
+  volatile float targetTemperature  = NAN;   // Kelvin; NOT persisted to flash
+  volatile bool  manualOverride     = false; // only honored while !running
+  volatile float manualCurrent      = 0.0f;  // Amps, 0..MAX_CURRENT
+
+  // Persisted to LittleFS (see PID_CONFIG_FILE in main.cpp) and restored on boot.
+  float pidKp = 2.0f;
+  float pidKi = 0.1f;
+  float pidKd = 0.0f;
 };
 
 // Shunt amplifier goes to GPIO13

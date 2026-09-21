@@ -4,6 +4,8 @@
 #include <Arduino.h>
 #include "driver/spi_slave.h"
 #include "esp_heap_caps.h"
+#include <LittleFS.h>
+#include <math.h>
 
 // Temp Probe spi cs pin
 #define SPI_CS 39

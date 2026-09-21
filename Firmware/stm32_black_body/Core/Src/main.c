@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "Ring_Buffer.h"
+#include "stm32g4xx_hal.h"
 #include "switches.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -50,6 +51,9 @@ SPI_HandleTypeDef hspi3;
 TIM_HandleTypeDef htim1;
 
 PCD_HandleTypeDef hpcd_USB_FS;
+
+float volt_scale = 0.0;
+float resistance_shift = 0.0;
 
 /* USER CODE BEGIN PV */
 
@@ -129,7 +133,8 @@ int main(void)
   Sensor_Data spi_data;
 
   // Change current parameters and change spi_data struct
-  change_current(cur_1ua, right, &spi_data);
+  change_current(cur_100ua, right, &spi_data);
+  HAL_Delay(1000);
   // Initilise external adc
   ADS131M04_Init(&ADS_hdev);
  
@@ -141,6 +146,8 @@ int main(void)
   ring_buffer i_buff; 
   ringBufferInit(&v_buff);
   ringBufferInit(&i_buff);
+  // Debugging counter
+  //int count = 0;
   while (1)
   {
     // Read adc data once drdy interupt fires
@@ -171,21 +178,30 @@ int main(void)
       // Save data to send over spi
 
       // 6 comes from adc max range of 1.2 * gain of 200 converted to mv
-      spi_data.voltage = float_abs(map(reg_data[1], -8388608, 8388607, -6.0, 6.0)); 
+      spi_data.voltage = float_abs(map(reg_data[1], -8388608, 8388607, -6.0, 6.0)) * volt_scale; 
 
       // 6 comes from adc max range of 1.2 * gain of 200 converted to mv
       // Works on the principle of I = V/R using the shunt resistance
       // Multiply by 1000 to convert to uA
-      spi_data.current = float_abs(map(reg_data[0], -8388608, 8388607, -6.0, 6.0)); // shunt_resistance * 1000;
-      spi_data.resistance = spi_data.voltage / spi_data.current * 1000;
+      spi_data.current = float_abs(map(reg_data[0], -8388608, 8388607, -6.0, 6.0)) / shunt_resistance * 1000;
+      spi_data.resistance = spi_data.voltage / spi_data.current * 1000 + resistance_shift;
 
       // Reset drdy flag
       adc_flag = 0;
+      external_interface_send(&spi_data, &hspi2);
     }
 
-    // Send data over spi
-    external_interface_send(&spi_data, &hspi2);
-    HAL_Delay(200);
+    autoset_current(&spi_data);
+
+    //Debugging
+    //if (count >= 200) {
+      //if (spi_data.cur_source == 5) change_current(cur_100ua, right, &spi_data);
+      //else if (spi_data.cur_source == 4) change_current(cur_1ma, right, &spi_data);
+      //count = 0;
+    //}
+    //count++;
+    //End debugging
+    HAL_Delay(5);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -570,10 +586,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
   }
 }
 
-void change_current(current source_current, cur_direction direction, Sensor_Data *data){
-  current_source(source_current);
-  current_direction(direction);
 
+void set_shunt(current source_current, Sensor_Data *data){
   // Set shunt based on current source
   cur_resistor shunt_resistor = 0;
   if (source_current < 2){
@@ -592,11 +606,92 @@ void change_current(current source_current, cur_direction direction, Sensor_Data
     shunt_resistor = disable;
   }
   current_measurement_resistor(shunt_resistor);
+  
+  // Update shunt value sent to esp32
+  data->shunt_resistor = shunt_resistor;
+}
+
+void autoset_current(Sensor_Data *spi_data){
+  int changed = 0;
+  switch((int)spi_data->cur_source){
+    //case 0:
+      //if (spi_data->voltage < 0.06){
+        //current_source(cur_100na);
+        //spi_data->cur_source = cur_100na;
+        //HAL_Delay(100);
+      //}
+      //break;
+    //case 1:
+      //if (spi_data->voltage < 0.2){
+        //current_source(cur_1ua);
+        //spi_data->cur_source = cur_1ua;
+        //HAL_Delay(100);
+      //}
+      //else if (spi_data->voltage > 0.8){
+        //current_source(cur_10na);
+        //spi_data->cur_source = cur_10na;
+        //HAL_Delay(100);
+      //}
+      //break;
+    //case 2:
+      //if (spi_data->voltage < 0.5){
+        //current_source(cur_10ua);
+        //spi_data->cur_source = cur_10ua;
+        //HAL_Delay(100);
+      //}
+      //else if (spi_data->voltage > 3){
+        //current_source(cur_100na);
+        //spi_data->cur_source = cur_100na;
+        //HAL_Delay(100);
+      //}
+      //break;
+    case 3:
+      if (spi_data->voltage < 0.4){
+        current_source(cur_100ua, &volt_scale, &resistance_shift);
+        spi_data->cur_source = cur_100ua;
+        changed = 1;
+      }
+      //else if (spi_data->voltage > 5.0){
+        //current_source(cur_1ua);
+        //spi_data->cur_source = cur_1ua;
+        //HAL_Delay(100);
+      //}
+      break;
+    case 4:
+      if (spi_data->voltage < 0.4){
+        current_source(cur_1ma, &volt_scale, &resistance_shift);
+        spi_data->cur_source = cur_1ma;
+        changed = 1;
+      }
+      else if (spi_data->voltage > 5.0){
+        current_source(cur_10ua, &volt_scale, &resistance_shift);
+        spi_data->cur_source = cur_10ua;
+        changed = 1;
+      }
+      break;
+    case 5:
+      if (spi_data->voltage > 5.0){
+        current_source(cur_100ua, &volt_scale, &resistance_shift);
+        spi_data->cur_source = cur_100ua;
+        HAL_Delay(100);
+        changed = 1;
+      }
+      break;
+  }
+  if (changed == 1){
+    set_shunt(spi_data->cur_source, spi_data);
+  }
+}
+
+void change_current(current source_current, cur_direction direction, Sensor_Data *data){
+  current_source(source_current, &volt_scale, &resistance_shift);
+  current_direction(direction);
+
+  set_shunt(source_current, data);
 
   // Update data to send to ESP32
   data->cur_direction = direction;
   data->cur_source = source_current;
-  data->shunt_resistor = shunt_resistor;
 }
 
 float map(uint32_t x, uint32_t x_min, uint32_t x_max, float y_min, float y_max){

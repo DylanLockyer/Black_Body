@@ -7,7 +7,7 @@
 // Change output current source.
 // Works by closing all switches, then setting the current source resistors
 // then connecting the correct current source to the output
-bool current_source(current current_level){
+bool current_source(current current_level, float *volt_scale, float *resistance_shift){
     // Open all switches
     HAL_GPIO_WritePin(i_source_sel1_GPIO_Port, i_source_sel1_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(i_source_sel3_GPIO_Port, i_source_sel3_Pin, GPIO_PIN_RESET);
@@ -26,7 +26,7 @@ bool current_source(current current_level){
     HAL_GPIO_WritePin(sel_v_1ma_GPIO_Port, sel_v_1ma_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(sel_t_1ma_GPIO_Port, sel_t_1ma_Pin, GPIO_PIN_RESET);
     
-    HAL_Delay(300); // Wait to give switches time to open
+    HAL_Delay(30); // Wait to give switches time to open
 
     // if current_level = block then close all switches
     if (current_level == 6) return true;
@@ -52,11 +52,15 @@ bool current_source(current current_level){
             //10ua current source
             HAL_GPIO_WritePin(sel_v_10ua_GPIO_Port, sel_v_10ua_Pin, GPIO_PIN_SET);
             HAL_GPIO_WritePin(sel_t_10ua_GPIO_Port, sel_t_10ua_Pin, GPIO_PIN_SET);
+            *volt_scale = 1;
+            *resistance_shift = 2.3;
             break;
         case 4:
             //100ua current source
             HAL_GPIO_WritePin(sel_v_100ua_GPIO_Port, sel_v_100ua_Pin, GPIO_PIN_SET);
             HAL_GPIO_WritePin(sel_t_100ua_GPIO_Port, sel_t_100ua_Pin, GPIO_PIN_SET);
+            *volt_scale = 0.9029;
+            *resistance_shift = 0;
             break;
         case 5:
             //1ma current source
@@ -68,8 +72,6 @@ bool current_source(current current_level){
             return false;
             break;
     }
-
-    HAL_Delay(300); // Wait to give switches time to close
 
     // Connect correct current source to coresponding output
     if (current_level <= 1){
@@ -85,7 +87,7 @@ bool current_source(current current_level){
         //HAL_GPIO_WritePin(i_sense_sel4_GPIO_Port, i_sense_sel4_Pin, GPIO_PIN_SET);
     }
 
-    HAL_Delay(300); // Wait to give switches time to open
+    HAL_Delay(30); // Wait to give switches time to open
 
     return true;
 }
