@@ -187,8 +187,8 @@ int main(void)
       spi_data.resistance = spi_data.voltage / spi_data.current * 1000 + resistance_shift;
 
       // Reset drdy flag
-      adc_flag = 0;
       external_interface_send(&spi_data, &hspi2);
+      adc_flag = 0;
     }
 
     autoset_current(&spi_data);
@@ -201,7 +201,6 @@ int main(void)
     //}
     //count++;
     //End debugging
-    HAL_Delay(5);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

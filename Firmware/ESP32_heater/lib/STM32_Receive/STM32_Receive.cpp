@@ -86,7 +86,7 @@ bool STM32Sensor::read(Sensor_Data *data)
     //if (digitalRead(_cs) == HIGH) return false;
 
     // Clear buffers before every transaction
-    memset(_rxBuffer, 0, SPI_BYTES);
+    memset(_rxBuffer, 1, SPI_BYTES);
     memset(_txBuffer, 0, SPI_BYTES);
 
     spi_slave_transaction_t trans = {};
@@ -106,14 +106,14 @@ bool STM32Sensor::read(Sensor_Data *data)
     esp_err_t ret = spi_slave_transmit(
         SPI_HOST,
         &trans,
-        5
+        pdMS_TO_TICKS(100)
     );
 
     if (ret != ESP_OK) {
-        Serial.printf(
-            "SPI receive failed: %s\n",
-            esp_err_to_name(ret)
-        );
+        //Serial.printf(
+            //"SPI receive failed: %s\n",
+            //esp_err_to_name(ret)
+        //);
 
         return false;
     }

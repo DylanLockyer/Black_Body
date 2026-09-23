@@ -291,17 +291,15 @@ static void sensorTask(void *pvParameters) {
 
   for (;;) {
     Sensor_Data data;
-    // A transaction can complete successfully (ESP_OK) even when the STM32
-    // master hasn't actually clocked a real frame yet (slave/master sync
-    // edge case) — that reads back as all-zero bytes. Publishing that
-    // straight to latestReading is what was showing up in the UI as a
-    // "connected but all zeros" glitch, so reject it here instead: a real
-    // reading always has resistance > 0.
-    if (sensor.read(&data) && data.resistance > 0.0f) {
+    if (sensor.read(&data) && data.resistance > 1.0 && data.resistance < 50000.0) {
       float temperature = NAN;
 
       if (xSemaphoreTake(dataMutex, portMAX_DELAY) == pdTRUE) {
-        if (gCurveFit.isValid()) {
+        // resistance == 0 means no sensor is connected (or the reading is
+        // otherwise invalid), so there's nothing to evaluate the curve
+        // fit against — report temperature as null rather than a bogus
+        // extrapolated value.
+        if (gCurveFit.isValid() && data.resistance > 0.0f) {
           temperature = gCurveFit.evaluate(data.resistance);
         }
 
@@ -323,12 +321,12 @@ static void sensorTask(void *pvParameters) {
         xSemaphoreGive(dataMutex);
       }
 
-      Serial.print(data.resistance);
-      Serial.print(" ohm; ");
-      Serial.print(data.voltage, 6);
-      Serial.print(" mV; ");
-      Serial.print(data.current, 6);
-      Serial.println(" uA");
+      //Serial.print(data.resistance);
+      //Serial.print(" ohm; ");
+      //Serial.print(data.voltage, 6);
+      //Serial.print(" mV; ");
+      //Serial.print(data.current, 6);
+      //Serial.println(" uA");
     }
 
     // sensor.read() already blocks briefly inside spi_slave_transmit's own
@@ -508,7 +506,7 @@ void wifi_setup(){
       "\"manualOverride\":%s,\"manualCurrent\":%.4f,"
       "\"pidKp\":%.6f,\"pidKi\":%.6f,\"pidKd\":%.6f,"
       "\"heaterVoltage\":%.4f,\"heaterCurrent\":%.4f,\"heaterOutputCurrent\":%.4f,"
-      "\"heaterMaxPowerW\":%.4f}",
+      "\"heaterMaxCurrent\":%.4f}",
       tempValid ? String(snapshot.temperature, 4).c_str() : "null",
       snapshot.resistance,
       snapshot.voltage, snapshot.current,
@@ -521,7 +519,7 @@ void wifi_setup(){
       heaterCtrl.manualCurrent,
       heaterCtrl.pidKp, heaterCtrl.pidKi, heaterCtrl.pidKd,
       heaterSnapshot.voltage, heaterSnapshot.current, heaterSnapshot.outputCurrent,
-      (double)MAX_HEATER_POWER_W);
+      (double)MAX_CURRENT);
     request->send(200, "application/json", buf);
   });
 
@@ -725,8 +723,10 @@ float get_current(){
 
 // Returns voltage read from pcb
 float get_voltage(){
-  float tmp = (float)analogRead(voltage_pin);
-  return map(tmp, 0, 4095, 0, HEATER_VOLTAGE_FULL_SCALE);
+  float v_high = (float)analogRead(voltage_pin_high);
+  float v_low = (float)analogRead(voltage_pin_low);
+
+  return map(v_high, 0, 4095, 0, HEATER_VOLTAGE_FULL_SCALE) - map(v_low, 0, 4095, 0, HEATER_VOLTAGE_FULL_SCALE);
 }
 
 // Sets output current to a max of MAX_CURRENT (0.5A)

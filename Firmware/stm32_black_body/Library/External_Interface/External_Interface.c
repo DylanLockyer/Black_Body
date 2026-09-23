@@ -15,7 +15,7 @@ void external_interface_send(Sensor_Data *data, SPI_HandleTypeDef *hspi){
     tx[12] = (data->cur_source << 5) | ((data->cur_direction << 3) & 0x18) | ((data->shunt_resistor << 1) & 0x06);
 
     HAL_GPIO_WritePin(SPI2_CS_GPIO_Port, SPI2_CS_Pin, GPIO_PIN_RESET);
-    HAL_StatusTypeDef status = HAL_SPI_TransmitReceive(hspi, tx, rx, INTERFACE_BYTES, 20);
+    HAL_StatusTypeDef status = HAL_SPI_TransmitReceive(hspi, tx, rx, INTERFACE_BYTES, 100);
     HAL_GPIO_WritePin(SPI2_CS_GPIO_Port, SPI2_CS_Pin, GPIO_PIN_SET);
 
     if (status != HAL_OK){

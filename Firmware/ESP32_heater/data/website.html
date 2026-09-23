@@ -236,6 +236,9 @@
   button#btnSendTarget, button#btnSendPid, button#btnSendManual{
     color:var(--heat); border-color:var(--heat-dim);
   }
+  button#btnSendManual.on{
+    color:#1a0e00; background:var(--heat); border-color:var(--heat); box-shadow:0 0 14px -2px var(--heat);
+  }
 
   .pid-grid{
     display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;
@@ -301,9 +304,9 @@
       <div class="debug-section">
         <div class="debug-header">
           <h2 style="margin-bottom:0; border-bottom:none; padding-bottom:0;">DEBUG</h2>
-          <button id="btnToggleDebug" type="button">HIDE</button>
+          <button id="btnToggleDebug" type="button">SHOW</button>
         </div>
-        <div class="debug-grid" id="debugGrid">
+        <div class="debug-grid" id="debugGrid" style="display:none;">
           <div class="debug-item"><label>CURRENT SOURCE</label><span id="dbgCurSource">--</span></div>
           <div class="debug-item"><label>CURRENT DIRECTION</label><span id="dbgCurDirection">--</span></div>
           <div class="debug-item"><label>SHUNT RESISTOR</label><span id="dbgShuntResistor">--</span></div>
@@ -379,9 +382,8 @@
 
       <h2 style="margin-top:20px;">MANUAL OVERRIDE</h2>
       <div class="control-row">
-        <label class="checkbox-row"><input type="checkbox" id="manualEnable">ENABLE</label>
         <input type="number" id="manualCurrentInput" min="0" max="0.5" step="0.01" placeholder="0 – 0.5 A">
-        <button id="btnSendManual" type="button">SEND</button>
+        <button id="btnSendManual" type="button">OFF</button>
       </div>
     </section>
 
@@ -453,7 +455,7 @@
 
   var debugGrid = document.getElementById("debugGrid");
   var btnToggleDebug = document.getElementById("btnToggleDebug");
-  var debugVisible = true;
+  var debugVisible = false;
   btnToggleDebug.addEventListener("click", function(){
     debugVisible = !debugVisible;
     debugGrid.style.display = debugVisible ? "" : "none";
@@ -484,11 +486,11 @@
   var pidKdInput = document.getElementById("pidKd");
   var btnSendPid = document.getElementById("btnSendPid");
 
-  var manualEnable = document.getElementById("manualEnable");
   var manualCurrentInput = document.getElementById("manualCurrentInput");
   var btnSendManual = document.getElementById("btnSendManual");
 
   var heaterRunning = false; // last known state from the device
+  var manualOn = false; // last known manual-override state from the device
 
   function isFocused(el){ return document.activeElement === el; }
 
@@ -497,14 +499,15 @@
 
     var hv = typeof d.heaterVoltage === "number" ? d.heaterVoltage : NaN;
     var hc = typeof d.heaterCurrent === "number" ? d.heaterCurrent : NaN;
-    var maxPower = typeof d.heaterMaxPowerW === "number" ? d.heaterMaxPowerW : NaN;
+    var outputCurrent = typeof d.heaterOutputCurrent === "number" ? d.heaterOutputCurrent : NaN;
+    var maxCurrent = typeof d.heaterMaxCurrent === "number" ? d.heaterMaxCurrent : NaN;
     var power = hv * hc;
 
     heaterVoltageEl.textContent = fmt(hv, 3) + " V";
     heaterCurrentEl.textContent = fmt(hc, 3) + " A";
     heaterPowerEl.textContent = fmt(power, 2) + " W";
-    heaterPowerPctEl.textContent = (isFinite(power) && maxPower > 0)
-      ? fmt(power / maxPower * 100, 1) + " %" : "--";
+    heaterPowerPctEl.textContent = (isFinite(outputCurrent) && maxCurrent > 0)
+      ? fmt(outputCurrent / maxCurrent * 100, 1) + " %" : "--";
 
     heaterRunning = !!d.heaterRunning;
     btnStartStop.textContent = heaterRunning ? "STOP" : "START";
@@ -513,10 +516,11 @@
     runningText.textContent = heaterRunning ? "RUNNING" : "STOPPED";
 
     // Manual override only makes sense while the PID loop is stopped.
-    manualEnable.disabled = heaterRunning;
     manualCurrentInput.disabled = heaterRunning;
     btnSendManual.disabled = heaterRunning;
-    if (!isFocused(manualEnable)) manualEnable.checked = !!d.manualOverride;
+    manualOn = !!d.manualOverride;
+    btnSendManual.textContent = manualOn ? "ON" : "OFF";
+    btnSendManual.classList.toggle("on", manualOn);
     if (!isFocused(manualCurrentInput) && typeof d.manualCurrent === "number") {
       manualCurrentInput.value = d.manualCurrent;
     }
@@ -552,7 +556,7 @@
   });
 
   btnSendManual.addEventListener("click", function(){
-    var enabled = manualEnable.checked;
+    var enabled = !manualOn;
     var cur = parseFloat(manualCurrentInput.value);
     if (!isFinite(cur)) cur = 0;
     fetch("/heater/manual?enabled=" + (enabled ? "1" : "0") + "&current=" + encodeURIComponent(cur), { method: "POST" })

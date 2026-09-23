@@ -23,17 +23,10 @@ const char *WIFI_NAME = "Black Body";
 #define ADC_MAX_VOLTAGE 2.5
 
 // Max current output
-#define MAX_CURRENT 0.3
+#define MAX_CURRENT 0.5
 
-// Upper end of the get_voltage() ADC mapping range; also used as the
-// reference for MAX_HEATER_POWER_W below.
+// Upper end of the get_voltage() ADC mapping range.
 #define HEATER_VOLTAGE_FULL_SCALE 36.3f
-
-// Used as the denominator for the "% of max power" readout on the heat
-// page. This is an estimate (full-scale current x full-scale voltage),
-// not a measured heater rating, since the true max power depends on the
-// heater's resistance.
-#define MAX_HEATER_POWER_W (MAX_CURRENT * 12.0f)
 
 
 struct SensorReading {
@@ -69,10 +62,11 @@ struct HeaterControl {
 };
 
 // Shunt amplifier goes to GPIO13
-const int current_pin = 13; 
+const int current_pin = 5; 
 
 // Voltage measuring resistor divider goes to GPIO12
-const int voltage_pin = 12;
+const int voltage_pin_high = 6;
+const int voltage_pin_low = 4;
 
 void wifi_setup();
 
