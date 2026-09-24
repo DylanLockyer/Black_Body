@@ -18,7 +18,7 @@ The enclosure has five connections on its edges:
 | **USB COM** | USB port to the ESP32 heater/control board |
 | **USB PROG** | USB port to the STM32 sensor board |
 
-Before powering on, connect the temperature probe to **SENSOR** (I and V screw terminals) using the probe's datasheet to match pinout and the heater to **HEATER**, then plug the power adapter's output into **Vin**. The USB ports are only needed when reprogramming the firmware (see [Programming](#programming)) — they aren't used for normal operation.
+Before powering on, connect the temperature probe to **SENSOR** (I and V screw terminals) using the probe's datasheet to match pinout and the heater to **HEATER**, then plug the power adapter's output into **Vin**. The USB ports are only needed when reprogramming the firmware (see [Programming](#programming)) — they aren't used for normal operation. For the first power up after delivery it is recommended to use a resistor connected via 4 wire kelvin sensing to the Sensor I/V to ensure it wasn't damaged in transit.
 
 ## Powering On
 
