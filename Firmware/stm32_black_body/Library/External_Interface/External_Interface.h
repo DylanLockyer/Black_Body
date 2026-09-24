@@ -9,6 +9,9 @@
 #include "switches.h"
 
 #define INTERFACE_BYTES 16
+// Number of payload bytes covered by the checksum (everything except the
+// checksum byte itself); must match STM32_Receive.h on the ESP32 side.
+#define INTERFACE_PAYLOAD_BYTES 13
 
 typedef struct {
     float resistance;

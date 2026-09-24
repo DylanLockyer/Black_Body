@@ -1,5 +1,19 @@
 #include "STM32_Receive.h"
 
+// XOR checksum over the payload bytes, matching External_Interface.c on the
+// STM32 side. Lets us detect (and drop) a transaction that got corrupted
+// because the SPI slave peripheral wasn't armed yet when the STM32 master
+// started clocking -- which otherwise shows up as an occasional wild,
+// out-of-nowhere reading.
+static uint8_t checksum(const uint8_t *buf, size_t len)
+{
+    uint8_t chk = 0;
+    for (size_t i = 0; i < len; i++) {
+        chk ^= buf[i];
+    }
+    return chk;
+}
+
 STM32Sensor::STM32Sensor(uint8_t csPin)
     : _cs(csPin),
       _rxBuffer(nullptr),
@@ -115,6 +129,15 @@ bool STM32Sensor::read(Sensor_Data *data)
             //esp_err_to_name(ret)
         //);
 
+        return false;
+    }
+
+    // Reject a transaction whose checksum doesn't match: the STM32 master
+    // can start clocking a transfer in the small window before this task
+    // re-arms spi_slave_transmit, which shifts out stale/undefined bytes
+    // instead of the real frame. Silently dropping it (rather than
+    // publishing it) is what stops those as random spikes in the reading.
+    if (checksum(_rxBuffer, SPI_PAYLOAD_BYTES) != _rxBuffer[SPI_PAYLOAD_BYTES]) {
         return false;
     }
 

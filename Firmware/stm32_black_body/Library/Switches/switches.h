@@ -2,6 +2,15 @@
 
 #include <stdbool.h>
 
+
+// Resistance scaling
+#define _10ua_shift 2.3
+#define _10ua_scale 1
+#define _100ua_shift 0.2
+#define _100ua_scale 0.9029
+#define _1ma_shift 0
+#define _1ma_scale 0.66
+
 // Type for switching current source
 typedef enum {
     cur_10na,

@@ -14,6 +14,9 @@
 #define SPI_MOSI 40
 
 #define SPI_BYTES 16
+// Number of payload bytes covered by the checksum (everything except the
+// checksum byte itself); must match External_Interface.h on the STM32 side.
+#define SPI_PAYLOAD_BYTES 13
 
 #define SPI_HOST SPI2_HOST
 /* Must match the STM32-side layout exactly (packed, same field order). */

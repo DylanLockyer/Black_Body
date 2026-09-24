@@ -178,20 +178,32 @@ int main(void)
       // Save data to send over spi
 
       // 6 comes from adc max range of 1.2 * gain of 200 converted to mv
-      spi_data.voltage = float_abs(map(reg_data[1], -8388608, 8388607, -6.0, 6.0)) * volt_scale; 
+      float raw_voltage = float_abs(map(reg_data[1], -8388608, 8388607, -6.0, 6.0));
 
       // 6 comes from adc max range of 1.2 * gain of 200 converted to mv
       // Works on the principle of I = V/R using the shunt resistance
       // Multiply by 1000 to convert to uA
-      spi_data.current = float_abs(map(reg_data[0], -8388608, 8388607, -6.0, 6.0)) / shunt_resistance * 1000;
-      spi_data.resistance = spi_data.voltage / spi_data.current * 1000 + resistance_shift;
+      float raw_current = float_abs(map(reg_data[0], -8388608, 8388607, -6.0, 6.0)) / shunt_resistance * 1000;
+
+      // Smooth minor ADC noise with a 20-sample rolling average before
+      // sending over SPI (resistance is then derived from the averaged
+      // V/I so it inherits the same smoothing).
+      spi_data.voltage = (float)bufferAddAverage((double)raw_voltage, &v_buff);
+      spi_data.current = (float)bufferAddAverage((double)raw_current, &i_buff);
+      spi_data.resistance = (spi_data.voltage / spi_data.current * 1000 * volt_scale) + resistance_shift;
 
       // Reset drdy flag
       external_interface_send(&spi_data, &hspi2);
       adc_flag = 0;
     }
 
-    autoset_current(&spi_data);
+    if (autoset_current(&spi_data)){
+      // Current source (and therefore the voltage/current scale) just
+      // changed: drop the old samples so the rolling average doesn't blend
+      // readings taken at two different ranges.
+      ringBufferInit(&v_buff);
+      ringBufferInit(&i_buff);
+    }
 
     //Debugging
     //if (count >= 200) {
@@ -610,7 +622,7 @@ void set_shunt(current source_current, Sensor_Data *data){
   data->shunt_resistor = shunt_resistor;
 }
 
-void autoset_current(Sensor_Data *spi_data){
+int autoset_current(Sensor_Data *spi_data){
   int changed = 0;
   switch((int)spi_data->cur_source){
     //case 0:
@@ -680,6 +692,7 @@ void autoset_current(Sensor_Data *spi_data){
   if (changed == 1){
     set_shunt(spi_data->cur_source, spi_data);
   }
+  return changed;
 }
 
 void change_current(current source_current, cur_direction direction, Sensor_Data *data){

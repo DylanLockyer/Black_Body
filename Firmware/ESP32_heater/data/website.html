@@ -128,16 +128,33 @@
   .fit-status.ok{ color:var(--accent); }
   .fit-status.bad{ color:var(--bad); }
 
-  textarea#profileText{
-    width:100%; min-height:96px; resize:vertical;
-    background:#050707; color:var(--text);
-    border:1px solid var(--panel-border); border-radius:4px;
-    font-family:var(--mono); font-size:12px; padding:10px; line-height:1.5;
-    margin-bottom:14px;
+  .seg-formula{
+    font-family:var(--mono); font-size:11px; color:var(--text-faint);
+    letter-spacing:0.5px; margin-bottom:10px;
   }
-  textarea#profileText::placeholder{ color:var(--text-faint); }
 
-  canvas#profileChart{ width:100%; height:260px; display:block; }
+  table.seg-table{
+    width:100%; border-collapse:collapse; margin-bottom:10px;
+    font-family:var(--mono); font-size:11px;
+  }
+  table.seg-table th{
+    text-align:left; font-weight:600; letter-spacing:1px;
+    color:var(--text-faint); padding:0 6px 6px 0;
+    border-bottom:1px solid var(--panel-border);
+  }
+  table.seg-table td{ padding:4px 6px 4px 0; }
+  table.seg-table input[type="number"]{
+    width:100%; min-width:66px;
+    font-family:var(--mono); font-size:11px;
+    background:#050707; color:var(--text);
+    border:1px solid var(--panel-border); border-radius:3px;
+    padding:6px 7px;
+  }
+  table.seg-table input[type="number"]:focus{ outline:none; border-color:var(--accent-dim); }
+  table.seg-table button.btnRemoveSegment{
+    padding:6px 9px; color:var(--bad); border-color:#5a1c1c;
+  }
+
 
   /* ---------- Debug section (below profile) ---------- */
   .debug-section{
@@ -285,7 +302,7 @@
 
     <!-- LEFT: profile -->
     <section class="panel">
-      <h2>PROFILE — TEMPERATURE vs RESISTANCE (GR-300-AA)</h2>
+      <h2>CALIBRATION — RESISTANCE → TEMPERATURE (GR-300-AA)</h2>
 
       <div class="profile-select-row">
         <select id="profileSelect"><option value="">— saved profiles —</option></select>
@@ -297,9 +314,17 @@
         <span class="fit-status" id="fitStatus"></span>
       </div>
 
-      <textarea id="profileText" placeholder="temperature_K, resistance_ohm&#10;e.g. from a GR-300-AA data sheet table&#10;0.3, 35180&#10;1.0, 875.7&#10;4.2, 94.46&#10;10, 33.20&#10;77.4, 3.504"></textarea>
+      <div class="seg-formula">ln(T) = c0·ln(R)&sup3; + c1·ln(R)&sup2; + c2·ln(R) + c3, per segment matched by [R min, R max)</div>
 
-      <canvas id="profileChart"></canvas>
+      <table class="seg-table" id="segTable">
+        <thead>
+          <tr><th>R MIN (&#8486;)</th><th>R MAX (&#8486;)</th><th>c0</th><th>c1</th><th>c2</th><th>c3</th><th></th></tr>
+        </thead>
+        <tbody id="segTableBody"></tbody>
+      </table>
+      <div class="profile-btn-row" style="margin-bottom:14px;">
+        <button id="btnAddSegment" type="button">+ SEGMENT</button>
+      </div>
 
       <div class="debug-section">
         <div class="debug-header">
@@ -310,7 +335,7 @@
           <div class="debug-item"><label>CURRENT SOURCE</label><span id="dbgCurSource">--</span></div>
           <div class="debug-item"><label>CURRENT DIRECTION</label><span id="dbgCurDirection">--</span></div>
           <div class="debug-item"><label>SHUNT RESISTOR</label><span id="dbgShuntResistor">--</span></div>
-          <div class="debug-item"><label>FIT VALID</label><span id="dbgFitValid">--</span></div>
+          <div class="debug-item"><label>CAL VALID</label><span id="dbgCalValid">--</span></div>
           <div class="debug-item"><label>ACTIVE PROFILE</label><span id="dbgActiveProfile">--</span></div>
         </div>
       </div>
@@ -441,14 +466,14 @@
   var dbgCurSource = document.getElementById("dbgCurSource");
   var dbgCurDirection = document.getElementById("dbgCurDirection");
   var dbgShuntResistor = document.getElementById("dbgShuntResistor");
-  var dbgFitValid = document.getElementById("dbgFitValid");
+  var dbgCalValid = document.getElementById("dbgCalValid");
   var dbgActiveProfile = document.getElementById("dbgActiveProfile");
 
   function renderDebugValues(d){
     dbgCurSource.textContent = (typeof d.curSource === "number") ? d.curSource : "--";
     dbgCurDirection.textContent = (typeof d.curDirection === "number") ? d.curDirection : "--";
     dbgShuntResistor.textContent = (typeof d.shuntResistor === "number") ? d.shuntResistor : "--";
-    dbgFitValid.textContent = (typeof d.fitValid === "boolean") ? (d.fitValid ? "YES" : "NO") : "--";
+    dbgCalValid.textContent = (typeof d.calValid === "boolean") ? (d.calValid ? "YES" : "NO") : "--";
     dbgActiveProfile.textContent = (typeof d.activeProfile === "string" && d.activeProfile.length)
       ? d.activeProfile : "(none)";
   }
@@ -713,69 +738,72 @@
     drawTempChartOn(heatTempCanvas);
   }
 
-  /* ---------------- Profile (temp vs resistance) ---------------- */
-  var profileText = document.getElementById("profileText");
-  var profileCanvas = document.getElementById("profileChart");
+  /* ---------------- Calibration segments (resistance -> temperature) ---------------- */
+  var segTableBody = document.getElementById("segTableBody");
   var profileSelect = document.getElementById("profileSelect");
   var fitStatus = document.getElementById("fitStatus");
+  var SEG_FIELDS = ["rMin", "rMax", "c0", "c1", "c2", "c3"];
 
-  function parseProfile(text){
-    var pts = [];
-    text.split("\n").forEach(function(line){
-      line = line.trim();
-      if (!line || line.indexOf("#") === 0) return;
-      var parts = line.split(/[,\s\t]+/).filter(Boolean);
-      if (parts.length < 2) return;
-      var t = parseFloat(parts[0]);
-      var r = parseFloat(parts[1]);
-      if (isFinite(t) && isFinite(r)) pts.push({ t: t, r: r });
+  // GR-300-AA default: 3 piecewise cubic segments in ln(R)->ln(T), matched
+  // to the manufacturer's R-T table to within ~0.001 K. Mirrors the
+  // "GR-300-AA" profile the firmware seeds on first boot; only used here to
+  // pre-fill the table before anything has been loaded from the device.
+  var DEFAULT_SEGMENTS = [
+    { rMin: 248.8, rMax: 1000000, c0: -0.0091414284, c1: 0.2467387139, c2: -2.5443885697, c3: 8.7550629529 },
+    { rMin: 33.2, rMax: 248.8, c0: 0.027577728, c1: -0.3426015171, c2: 0.5804353397, c3: 3.2875860941 },
+    { rMin: 0, rMax: 33.2, c0: -0.0910341581, c1: 0.5621404413, c2: -1.92412108, c3: 6.0572837321 }
+  ];
+
+  function addSegmentRow(seg){
+    seg = seg || { rMin: 0, rMax: 0, c0: 0, c1: 0, c2: 0, c3: 0 };
+    var tr = document.createElement("tr");
+    SEG_FIELDS.forEach(function(field){
+      var td = document.createElement("td");
+      var input = document.createElement("input");
+      input.type = "number";
+      input.step = "any";
+      input.className = "seg-" + field;
+      input.value = seg[field];
+      td.appendChild(input);
+      tr.appendChild(td);
     });
-    pts.sort(function(a,b){ return a.t - b.t; });
-    return pts;
+    var tdBtn = document.createElement("td");
+    var btnRemove = document.createElement("button");
+    btnRemove.type = "button";
+    btnRemove.className = "btnRemoveSegment";
+    btnRemove.textContent = "\u00d7";
+    btnRemove.addEventListener("click", function(){
+      tr.remove();
+    });
+    tdBtn.appendChild(btnRemove);
+    tr.appendChild(tdBtn);
+    segTableBody.appendChild(tr);
   }
 
-  function drawProfileChart(){
-    var setup = setupCanvas(profileCanvas);
-    var ctx = setup.ctx, w = setup.w, h = setup.h;
-    ctx.clearRect(0, 0, w, h);
-
-    var margin = { l: 52, r: 14, t: 12, b: 26 };
-    var pts = parseProfile(profileText.value);
-
-    var rs = pts.map(function(p){ return p.r; });
-    var ts = pts.map(function(p){ return p.t; });
-    var yScale = niceScale(rs.length ? Math.min.apply(null, rs) : 0, rs.length ? Math.max.apply(null, rs) : 1, 0.15);
-    var xScale = niceScale(ts.length ? Math.min.apply(null, ts) : 0, ts.length ? Math.max.apply(null, ts) : 1, 0.1);
-
-    gridLines(ctx, w, h, margin, yScale.min, yScale.max, 4);
-    drawAxes(ctx, w, h, margin, "TEMPERATURE (K)", "RESISTANCE (\u2126)");
-
-    if (pts.length){
-      ctx.strokeStyle = "#3fd6ff";
-      ctx.fillStyle = "#3fd6ff";
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      pts.forEach(function(p, i){
-        var xFrac = (p.t - xScale.min) / (xScale.max - xScale.min);
-        var x = margin.l + xFrac * (w - margin.l - margin.r);
-        var yFrac = (p.r - yScale.min) / (yScale.max - yScale.min);
-        var y = (h - margin.b) - yFrac * (h - margin.b - margin.t);
-        if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-      });
-      ctx.stroke();
-      pts.forEach(function(p){
-        var xFrac = (p.t - xScale.min) / (xScale.max - xScale.min);
-        var x = margin.l + xFrac * (w - margin.l - margin.r);
-        var yFrac = (p.r - yScale.min) / (yScale.max - yScale.min);
-        var y = (h - margin.b) - yFrac * (h - margin.b - margin.t);
-        ctx.beginPath();
-        ctx.arc(x, y, 3, 0, Math.PI*2);
-        ctx.fill();
-      });
-    }
+  function setSegmentRows(segments){
+    segTableBody.innerHTML = "";
+    segments.forEach(addSegmentRow);
   }
-  profileText.addEventListener("input", drawProfileChart);
-  window.addEventListener("resize", function(){ drawProfileChart(); drawTempChart(); });
+
+  function readSegmentsFromTable(){
+    var segments = [];
+    Array.prototype.forEach.call(segTableBody.children, function(tr){
+      var seg = {};
+      SEG_FIELDS.forEach(function(field){
+        var input = tr.querySelector(".seg-" + field);
+        seg[field] = input ? parseFloat(input.value) : NaN;
+      });
+      var allFinite = SEG_FIELDS.every(function(f){ return isFinite(seg[f]); });
+      if (allFinite && seg.rMax > seg.rMin) segments.push(seg);
+    });
+    return segments;
+  }
+
+  document.getElementById("btnAddSegment").addEventListener("click", function(){
+    addSegmentRow();
+  });
+
+  window.addEventListener("resize", drawTempChart);
 
   /* ---------------- Profile IO (device) ---------------- */
   function refreshProfileList(){
@@ -798,10 +826,10 @@
     var name = profileSelect.value;
     if (!name) return;
     fetch("/profile/load?name=" + encodeURIComponent(name), { cache: "no-store" })
-      .then(function(r){ return r.text(); })
-      .then(function(text){
-        profileText.value = text;
-        drawProfileChart();
+      .then(function(r){ if (!r.ok) throw new Error("not found"); return r.json(); })
+      .then(function(d){
+        var segments = (d && d.segments) ? d.segments : [];
+        setSegmentRows(segments);
         fitStatus.textContent = "";
         fitStatus.className = "fit-status";
       })
@@ -820,21 +848,23 @@
   document.getElementById("btnSaveProfile").addEventListener("click", function(){
     var name = prompt("Save profile as:");
     if (!name) return;
-    fitStatus.textContent = "FITTING…";
+    var segments = readSegmentsFromTable();
+    if (!segments.length){ alert("Add at least one valid segment (R max > R min) first."); return; }
+    fitStatus.textContent = "SAVING…";
     fitStatus.className = "fit-status";
     fetch("/profile/save?name=" + encodeURIComponent(name), {
       method: "POST",
-      headers: { "Content-Type": "text/plain" },
-      body: profileText.value
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ segments: segments })
     })
       .then(function(r){ return r.json(); })
       .then(function(resp){
         refreshProfileList();
-        if (resp && resp.fitValid){
-          fitStatus.textContent = "FIT OK";
+        if (resp && resp.ok){
+          fitStatus.textContent = "SAVED";
           fitStatus.className = "fit-status ok";
         } else {
-          fitStatus.textContent = "FIT FAILED";
+          fitStatus.textContent = "SAVE FAILED";
           fitStatus.className = "fit-status bad";
         }
       })
@@ -846,7 +876,7 @@
   });
 
   /* ---------------- Initial paint ---------------- */
-  drawProfileChart();
+  setSegmentRows(DEFAULT_SEGMENTS);
   drawTempChart();
 
 })();

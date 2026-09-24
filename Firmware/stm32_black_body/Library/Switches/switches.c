@@ -52,20 +52,22 @@ bool current_source(current current_level, float *volt_scale, float *resistance_
             //10ua current source
             HAL_GPIO_WritePin(sel_v_10ua_GPIO_Port, sel_v_10ua_Pin, GPIO_PIN_SET);
             HAL_GPIO_WritePin(sel_t_10ua_GPIO_Port, sel_t_10ua_Pin, GPIO_PIN_SET);
-            *volt_scale = 1;
-            *resistance_shift = 2.3;
+            *volt_scale = _10ua_scale;
+            *resistance_shift = _10ua_shift;
             break;
         case 4:
             //100ua current source
             HAL_GPIO_WritePin(sel_v_100ua_GPIO_Port, sel_v_100ua_Pin, GPIO_PIN_SET);
             HAL_GPIO_WritePin(sel_t_100ua_GPIO_Port, sel_t_100ua_Pin, GPIO_PIN_SET);
-            *volt_scale = 0.9029;
-            *resistance_shift = 0;
+            *volt_scale = _100ua_scale;
+            *resistance_shift = _100ua_shift;
             break;
         case 5:
             //1ma current source
             HAL_GPIO_WritePin(sel_v_1ma_GPIO_Port, sel_v_1ma_Pin, GPIO_PIN_SET);
             HAL_GPIO_WritePin(sel_t_1ma_GPIO_Port, sel_t_1ma_Pin, GPIO_PIN_SET);
+            *volt_scale = _1ma_scale;
+            *resistance_shift = _1ma_shift;
             break;
         default:
             //do nothing

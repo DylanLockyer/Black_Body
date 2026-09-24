@@ -4,7 +4,7 @@
 #include "DAC60501.h"
 #include <LittleFS.h>
 #include "STM32_Receive.h"
-#include "CurveFit.h"
+#include "SegmentedCalibration.h"
 
 // Wifi libraries
 #include <WiFi.h>

@@ -1,5 +1,6 @@
 #include "main.h"
-#include "CurveFit.h"
+#include "SegmentedCalibration.h"
+#include <ArduinoJson.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <freertos/semphr.h>
@@ -14,7 +15,7 @@ AsyncWebServer server(80);
 SensorReading latestReading;
 
 // Heater control state / feedback. Guarded by dataMutex, same as
-// latestReading/gCurveFit (see the FreeRTOS task / synchronization note
+// latestReading/gCal (see the FreeRTOS task / synchronization note
 // below for why).
 HeaterReading latestHeaterReading;
 HeaterControl gHeater;
@@ -26,19 +27,35 @@ DAC60501 dac(I2C_ADDRESS_SCL);
 STM32Sensor sensor(SPI_CS);
 
 // ---------------------------------------------------------------------
-// Profile / curve-fit state
+// Profile / calibration state
 // ---------------------------------------------------------------------
-// A "profile" is a saved calibration table (temperature_K, resistance_ohm
-// pairs, e.g. taken from a manufacturer's data sheet such as the
-// GR-300-AA table) that gets turned into a polynomial fit on the ESP32
-// so live resistance readings can be converted to temperature locally,
-// without needing the browser to do any math.
+// A "profile" is a saved calibration: a small set of piecewise cubic
+// segments (see SegmentedCalibration.h) mapping resistance -> temperature,
+// e.g. transcribed/interpolated from a manufacturer data sheet such as the
+// GR-300-AA table. Unlike an on-device least-squares fit, every
+// coefficient and every segment's resistance range is set directly and
+// edited as-is from the web UI, so live resistance readings can be
+// converted to temperature locally without needing the browser to do any
+// math.
 
 static const char *PROFILES_DIR = "/profiles";
 static const char *ACTIVE_PROFILE_FILE = "/active_profile.txt";
-static const int FIT_DEGREE = 4; // reasonable default for a single-decade-ish span; see NOTE below
 
-CurveFit gCurveFit;
+// Default calibration for a GR-300-AA-style sensor: 3 piecewise cubic
+// segments in ln(R)->ln(T), matching the manufacturer's R-T table to
+// within ~0.001 K. Seeded as the "GR-300-AA" profile on first boot only
+// (see seedDefaultProfileIfMissing); fully editable afterward.
+static const char *DEFAULT_PROFILE_NAME = "GR-300-AA";
+static const CalSegment DEFAULT_CAL_SEGMENTS[3] = {
+    // R >= 248.8 ohm (T <= 2 K)
+    { 248.8f, 1.0e6f, -0.0091414284f, 0.2467387139f, -2.5443885697f, 8.7550629529f },
+    // 33.2 ohm <= R < 248.8 ohm (2 K <= T <= 10 K)
+    { 33.2f, 248.8f, 0.027577728f, -0.3426015171f, 0.5804353397f, 3.2875860941f },
+    // R < 33.2 ohm (T >= 10 K)
+    { 0.0f, 33.2f, -0.0910341581f, 0.5621404413f, -1.92412108f, 6.0572837321f },
+};
+
+SegmentedCalibration gCal;
 String gActiveProfileName = "";
 
 // ---------------------------------------------------------------------
@@ -52,7 +69,7 @@ String gActiveProfileName = "";
 // portal responder in loop(). dataMutex guards every field that both
 // sensorTask (writer) and the async web server's request handlers
 // (readers/writers, running on a different task) touch: latestReading,
-// gCurveFit, and gActiveProfileName.
+// gCal, and gActiveProfileName.
 static TaskHandle_t sensorTaskHandle = nullptr;
 static TaskHandle_t heaterTaskHandle = nullptr;
 static SemaphoreHandle_t dataMutex = nullptr;
@@ -98,106 +115,48 @@ static void restoreHeaterConfigOnBoot() {
   }
 }
 
-static String profileCsvPath(const String &name) {
-  return String(PROFILES_DIR) + "/" + name + ".csv";
-}
-static String profileFitPath(const String &name) {
-  return String(PROFILES_DIR) + "/" + name + ".fit";
+static String profileSegPath(const String &name) {
+  return String(PROFILES_DIR) + "/" + name + ".seg";
 }
 
-// Parses "temperature_K, resistance_ohm" lines (same format the web UI's
-// textarea uses / same format a user would transcribe from a data-sheet
-// table like the GR-300-AA one). Lines starting with '#' or that don't
-// parse as two numbers are skipped.
-static int parseProfileCsv(const String &csv, float *tempsOut, float *resOut, int maxPoints) {
-  int count = 0;
-  int start = 0;
-  int len = csv.length();
-  while (start < len && count < maxPoints) {
-    int nl = csv.indexOf('\n', start);
-    String line = (nl == -1) ? csv.substring(start) : csv.substring(start, nl);
-    line.trim();
-    if (line.length() > 0 && line[0] != '#') {
-      // Split on comma (fallback to whitespace if no comma present).
-      int comma = line.indexOf(',');
-      String aStr, bStr;
-      if (comma != -1) {
-        aStr = line.substring(0, comma);
-        bStr = line.substring(comma + 1);
-      } else {
-        int sp = line.indexOf(' ');
-        if (sp != -1) {
-          aStr = line.substring(0, sp);
-          bStr = line.substring(sp + 1);
-        }
-      }
-      aStr.trim();
-      bStr.trim();
-      if (aStr.length() > 0 && bStr.length() > 0) {
-        float t = aStr.toFloat();
-        float r = bStr.toFloat();
-        if (r > 0.0f) {
-          tempsOut[count] = t;
-          resOut[count] = r;
-          count++;
-        }
-      }
-    }
-    if (nl == -1) break;
-    start = nl + 1;
-  }
-  return count;
-}
+// Validates and persists a segment set as profile `name`. Returns true on
+// success (segments rejected as invalid are never written).
+static bool saveSegmentsForProfile(const String &name, const CalSegment *segments, int numSegments) {
+  SegmentedCalibration cal;
+  if (!cal.setSegments(segments, numSegments)) return false;
 
-// Fits and persists the coefficients for `name` from raw CSV text.
-// Returns true if the fit succeeded (the profile is still saved either way).
-static bool computeAndStoreFit(const String &name, const String &csvText) {
-  const int MAX_POINTS = 64;
-  float temps[MAX_POINTS];
-  float res[MAX_POINTS];
-  int n = parseProfileCsv(csvText, temps, res, MAX_POINTS);
-
-  // NOTE: FIT_DEGREE is capped to n-1 so small profiles (e.g. 3-4 points)
-  // still produce a valid fit instead of silently failing.
-  int degree = FIT_DEGREE;
-  if (degree > n - 1) degree = n - 1;
-  if (degree < 1) return false;
-
-  CurveFit fit;
-  if (!fit.fit(res, temps, n, degree)) return false;
-
-  char buf[256];
-  size_t written = fit.serialize(buf, sizeof(buf));
+  char buf[512];
+  size_t written = cal.serialize(buf, sizeof(buf));
   if (written == 0) return false;
 
-  File f = LittleFS.open(profileFitPath(name), "w");
+  File f = LittleFS.open(profileSegPath(name), "w");
   if (!f) return false;
   f.print(buf);
   f.close();
   return true;
 }
 
-static bool loadFitForProfile(const String &name) {
-  File f = LittleFS.open(profileFitPath(name), "r");
+static bool loadCalibrationForProfile(const String &name) {
+  File f = LittleFS.open(profileSegPath(name), "r");
   if (!f) return false;
   String contents = f.readString();
   f.close();
-  return gCurveFit.deserialize(contents.c_str());
+  return gCal.deserialize(contents.c_str());
 }
 
 // Called from the async web server's request-handler context (a different
-// task than sensorTask), so gActiveProfileName/gCurveFit are updated under
+// task than sensorTask), so gActiveProfileName/gCal are updated under
 // dataMutex — sensorTask reads both on every SPI sample.
 static void setActiveProfile(const String &name) {
   if (dataMutex != nullptr && xSemaphoreTake(dataMutex, portMAX_DELAY) == pdTRUE) {
     gActiveProfileName = name;
-    loadFitForProfile(name); // ok if it fails; gCurveFit just stays invalid
+    loadCalibrationForProfile(name); // ok if it fails; gCal just stays invalid
     xSemaphoreGive(dataMutex);
   } else {
     // dataMutex not created yet (e.g. called during early boot) — safe to
     // touch directly since sensorTask can't be running yet at that point.
     gActiveProfileName = name;
-    loadFitForProfile(name);
+    loadCalibrationForProfile(name);
   }
   File f = LittleFS.open(ACTIVE_PROFILE_FILE, "w");
   if (f) {
@@ -216,8 +175,57 @@ static void restoreActiveProfileOnBoot() {
   name.trim();
   if (name.length() > 0) {
     gActiveProfileName = name;
-    loadFitForProfile(name);
+    loadCalibrationForProfile(name);
   }
+}
+
+// Creates the built-in "GR-300-AA" profile and marks it active, but only on
+// a device's very first boot (i.e. no active-profile record exists yet).
+// Gives the device a working calibration out of the box while leaving
+// every later boot's user-edited profiles untouched.
+static void seedDefaultProfileIfMissing() {
+  if (LittleFS.exists(ACTIVE_PROFILE_FILE)) return;
+  if (!saveSegmentsForProfile(DEFAULT_PROFILE_NAME, DEFAULT_CAL_SEGMENTS, 3)) return;
+  File f = LittleFS.open(ACTIVE_PROFILE_FILE, "w");
+  if (f) {
+    f.print(DEFAULT_PROFILE_NAME);
+    f.close();
+  }
+}
+
+// Parses a JSON body of the form {"segments":[{"rMin":..,"rMax":..,
+// "c0":..,"c1":..,"c2":..,"c3":..}, ...]} as sent by the web UI's segment
+// table. Segments with a missing/non-numeric field or rMax <= rMin are
+// silently skipped. Returns the number of segments parsed into `out`
+// (capped at maxSegments), or 0 on a malformed body.
+static int parseSegmentsJson(const char *json, CalSegment *out, int maxSegments) {
+  JsonDocument doc;
+  if (deserializeJson(doc, json) != DeserializationError::Ok) return 0;
+
+  JsonArrayConst segs = doc["segments"].as<JsonArrayConst>();
+  if (segs.isNull()) return 0;
+
+  int n = 0;
+  for (JsonObjectConst seg : segs) {
+    if (n >= maxSegments) break;
+    if (!seg["rMin"].is<float>() || !seg["rMax"].is<float>() ||
+        !seg["c0"].is<float>() || !seg["c1"].is<float>() ||
+        !seg["c2"].is<float>() || !seg["c3"].is<float>()) {
+      continue;
+    }
+    float rMin = seg["rMin"];
+    float rMax = seg["rMax"];
+    if (!(rMax > rMin)) continue;
+
+    out[n].rMin = rMin;
+    out[n].rMax = rMax;
+    out[n].c0 = seg["c0"];
+    out[n].c1 = seg["c1"];
+    out[n].c2 = seg["c2"];
+    out[n].c3 = seg["c3"];
+    n++;
+  }
+  return n;
 }
 
 void setup() {
@@ -225,7 +233,7 @@ void setup() {
   Serial.begin(115200);
   delay(1000);
 
-  // Created before anything else touches latestReading/gCurveFit.
+  // Created before anything else touches latestReading/gCal.
   dataMutex = xSemaphoreCreateMutex();
 
   dac.init(SDA_PIN, SCL_PIN, STANDARD_MODE);
@@ -284,7 +292,7 @@ void loop() {
 }
 
 // Dedicated FreeRTOS task: polls the STM32 over SPI as fast as it can and
-// publishes results into latestReading/gCurveFit-derived temperature under
+// publishes results into latestReading/gCal-derived temperature under
 // dataMutex. Runs forever on core 0, independent of loop()/WiFi (core 1).
 static void sensorTask(void *pvParameters) {
   (void)pvParameters;
@@ -296,21 +304,22 @@ static void sensorTask(void *pvParameters) {
 
       if (xSemaphoreTake(dataMutex, portMAX_DELAY) == pdTRUE) {
         // resistance == 0 means no sensor is connected (or the reading is
-        // otherwise invalid), so there's nothing to evaluate the curve
-        // fit against — report temperature as null rather than a bogus
-        // extrapolated value.
-        if (gCurveFit.isValid() && data.resistance > 0.0f) {
-          temperature = gCurveFit.evaluate(data.resistance);
+        // otherwise invalid), so there's nothing to evaluate the
+        // calibration against — report temperature as null rather than a
+        // bogus extrapolated value.
+        if (gCal.isValid() && data.resistance > 0.0f) {
+          temperature = gCal.evaluate(data.resistance);
         }
 
         latestReading.current = data.current;
         latestReading.voltage = data.voltage;
         latestReading.resistance = data.resistance;
         // Convert resistance -> temperature locally using the active
-        // calibration profile's fitted curve, when one is loaded. Falls
-        // back to NAN (reported as "temperature":null) if no fit is
-        // active yet, rather than silently reporting resistance as if it
-        // were temperature.
+        // calibration profile's piecewise segments, when one is loaded.
+        // Falls back to NAN (reported as "temperature":null) if no
+        // calibration is active yet, or the resistance falls outside every
+        // configured segment, rather than silently reporting resistance as
+        // if it were temperature.
         latestReading.temperature = temperature;
 
         // Debug-only raw fields, surfaced by the debug panel in the UI.
@@ -428,6 +437,7 @@ void wifi_setup(){
   if (!LittleFS.exists(PROFILES_DIR)) {
     LittleFS.mkdir(PROFILES_DIR);
   }
+  seedDefaultProfileIfMissing();
 
   // Initialize wifi
   WiFi.mode(WIFI_AP);
@@ -474,19 +484,19 @@ void wifi_setup(){
 
   // Send data to website. Runs on the AsyncTCP task, a different task
   // than sensorTask, so it takes a quick snapshot under dataMutex rather
-  // than reading latestReading/gCurveFit directly.
+  // than reading latestReading/gCal directly.
   server.on("/data", HTTP_GET, [](AsyncWebServerRequest *request) {
     SensorReading snapshot;
     HeaterReading heaterSnapshot;
     HeaterControl heaterCtrl;
-    bool fitValid = false;
+    bool calValid = false;
     String activeProfile;
 
     if (dataMutex != nullptr && xSemaphoreTake(dataMutex, portMAX_DELAY) == pdTRUE) {
       snapshot = latestReading;
       heaterSnapshot = latestHeaterReading;
       heaterCtrl = gHeater;
-      fitValid = gCurveFit.isValid();
+      calValid = gCal.isValid();
       activeProfile = gActiveProfileName;
       xSemaphoreGive(dataMutex);
     } else {
@@ -500,7 +510,7 @@ void wifi_setup(){
     bool targetValid = !isnan(heaterCtrl.targetTemperature);
     snprintf(buf, sizeof(buf),
       "{\"temperature\":%s,\"resistance\":%.3f,\"voltage\":%.4f,\"current\":%.4f,"
-      "\"fitValid\":%s,\"activeProfile\":\"%s\","
+      "\"calValid\":%s,\"activeProfile\":\"%s\","
       "\"curSource\":%u,\"curDirection\":%u,\"shuntResistor\":%u,"
       "\"heaterRunning\":%s,\"targetTemperature\":%s,"
       "\"manualOverride\":%s,\"manualCurrent\":%.4f,"
@@ -510,7 +520,7 @@ void wifi_setup(){
       tempValid ? String(snapshot.temperature, 4).c_str() : "null",
       snapshot.resistance,
       snapshot.voltage, snapshot.current,
-      fitValid ? "true" : "false",
+      calValid ? "true" : "false",
       activeProfile.c_str(),
       snapshot.curSource, snapshot.curDirection, snapshot.shuntResistor,
       heaterCtrl.running ? "true" : "false",
@@ -610,10 +620,10 @@ void wifi_setup(){
       File entry = dir.openNextFile();
       while (entry) {
         String name = String(entry.name());
-        // Only list the raw CSV files; strip the directory prefix and extension.
+        // Only list the segment files; strip the directory prefix and extension.
         int slash = name.lastIndexOf('/');
         if (slash != -1) name = name.substring(slash + 1);
-        if (name.endsWith(".csv")) {
+        if (name.endsWith(".seg")) {
           name = name.substring(0, name.length() - 4);
           if (!first) json += ",";
           json += "\"" + name + "\"";
@@ -626,34 +636,56 @@ void wifi_setup(){
     request->send(200, "application/json", json);
   });
 
-  // GET /profile/load?name=X -> raw CSV text of the saved profile
+  // GET /profile/load?name=X -> {"segments":[{"rMin":..,"rMax":..,"c0":..,"c1":..,"c2":..,"c3":..},...]}
   server.on("/profile/load", HTTP_GET, [](AsyncWebServerRequest *request) {
     if (!request->hasParam("name")) {
       request->send(400, "text/plain", "missing name");
       return;
     }
     String name = request->getParam("name")->value();
-    String path = profileCsvPath(name);
-    if (!LittleFS.exists(path)) {
+    File f = LittleFS.open(profileSegPath(name), "r");
+    if (!f) {
       request->send(404, "text/plain", "not found");
       return;
     }
-    request->send(LittleFS, path, "text/plain");
+    String contents = f.readString();
+    f.close();
+
+    SegmentedCalibration cal;
+    if (!cal.deserialize(contents.c_str())) {
+      request->send(500, "text/plain", "corrupt profile");
+      return;
+    }
+
+    JsonDocument doc;
+    JsonArray segs = doc["segments"].to<JsonArray>();
+    for (int i = 0; i < cal.numSegments(); i++) {
+      const CalSegment &s = cal.segments()[i];
+      JsonObject o = segs.add<JsonObject>();
+      o["rMin"] = s.rMin;
+      o["rMax"] = s.rMax;
+      o["c0"] = s.c0;
+      o["c1"] = s.c1;
+      o["c2"] = s.c2;
+      o["c3"] = s.c3;
+    }
+    String json;
+    serializeJson(doc, json);
+    request->send(200, "application/json", json);
   });
 
-  // POST /profile/delete?name=X -> removes the profile's csv + fit files
+  // POST /profile/delete?name=X -> removes the profile's segment file
   server.on("/profile/delete", HTTP_POST, [](AsyncWebServerRequest *request) {
     if (!request->hasParam("name")) {
       request->send(400, "text/plain", "missing name");
       return;
     }
     String name = request->getParam("name")->value();
-    LittleFS.remove(profileCsvPath(name));
-    LittleFS.remove(profileFitPath(name));
+    LittleFS.remove(profileSegPath(name));
     if (gActiveProfileName == name) {
       if (dataMutex != nullptr && xSemaphoreTake(dataMutex, portMAX_DELAY) == pdTRUE) {
         gActiveProfileName = "";
-        gCurveFit.reset();
+        gCal.reset();
         xSemaphoreGive(dataMutex);
       }
       LittleFS.remove(ACTIVE_PROFILE_FILE);
@@ -661,16 +693,16 @@ void wifi_setup(){
     request->send(200, "text/plain", "OK");
   });
 
-  // POST /profile/save?name=X, raw text body = CSV content.
-  // Streams the body straight to a LittleFS file, then (once fully
-  // received) parses it and computes/stores the curve fit and marks
-  // this profile as active.
+  // POST /profile/save?name=X, JSON body = {"segments":[...]} as built by
+  // the web UI's segment table. Buffers the body in request->_tempObject
+  // (freed automatically by ESPAsyncWebServer once the request is done),
+  // then once fully received, validates/stores the segments and marks this
+  // profile as active.
   server.on(
     "/profile/save", HTTP_POST,
     [](AsyncWebServerRequest *request) {
-      // Final response is sent from the body handler once the file is
-      // fully written and the fit has been computed, so nothing to do here
-      // unless there was no body at all (e.g. name missing).
+      // Final response is sent from the body handler once the segments
+      // have been parsed, so nothing to do here unless params are missing.
       if (!request->hasParam("name")) {
         request->send(400, "text/plain", "missing name");
       }
@@ -678,32 +710,29 @@ void wifi_setup(){
     nullptr,
     [](AsyncWebServerRequest *request, uint8_t *data, size_t len, size_t index, size_t total) {
       if (!request->hasParam("name")) return;
+
+      if (request->_tempObject == nullptr) {
+        request->_tempObject = calloc(total + 1, sizeof(uint8_t));
+        if (request->_tempObject == nullptr) {
+          request->send(500, "text/plain", "out of memory");
+          return;
+        }
+      }
+      memcpy((uint8_t *)request->_tempObject + index, data, len);
+
+      if (index + len != total) return; // wait for the rest of the body
+
       String name = request->getParam("name")->value();
-      String path = profileCsvPath(name);
+      const char *body = (const char *)request->_tempObject;
 
-      File f;
-      if (index == 0) {
-        f = LittleFS.open(path, "w");
-      } else {
-        f = LittleFS.open(path, "a");
-      }
-      if (f) {
-        f.write(data, len);
-        f.close();
-      }
+      CalSegment segments[CAL_MAX_SEGMENTS];
+      int numSegments = parseSegmentsJson(body, segments, CAL_MAX_SEGMENTS);
 
-      if (index + len == total) {
-        // Whole body received; compute the fit and activate this profile.
-        File full = LittleFS.open(path, "r");
-        String csvText = full ? full.readString() : String("");
-        if (full) full.close();
+      bool ok = numSegments > 0 && saveSegmentsForProfile(name, segments, numSegments);
+      if (ok) setActiveProfile(name); // loads what we just wrote
 
-        bool fitOk = computeAndStoreFit(name, csvText);
-        setActiveProfile(name); // loads the fit we just wrote, if any
-
-        String resp = String("{\"ok\":true,\"fitValid\":") + (fitOk ? "true" : "false") + "}";
-        request->send(200, "application/json", resp);
-      }
+      String resp = String("{\"ok\":") + (ok ? "true" : "false") + "}";
+      request->send(200, "application/json", resp);
     });
 
   server.begin();

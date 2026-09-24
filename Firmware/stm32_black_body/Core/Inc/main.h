@@ -127,7 +127,7 @@ void Error_Handler(void);
 void change_current(current source_current, cur_direction direction, Sensor_Data *data);
 float map(uint32_t x, uint32_t x_min, uint32_t x_max, float y_min, float y_max);
 float float_abs(float x);
-void autoset_current(Sensor_Data *spi_data);
+int autoset_current(Sensor_Data *spi_data);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
